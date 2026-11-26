@@ -39,3 +39,5 @@ The APSL and GPL components retain their existing license separation. Proprietar
 ## CPU vendor portability
 
 Intel is the initial implementation target, not the permanent platform boundary. AMD compatibility is a planned subsequent effort. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. The exact AMD adaptation mechanism remains open.
+
+The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common source, FKI ABI, build system and runtime, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

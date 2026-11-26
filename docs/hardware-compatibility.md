@@ -28,3 +28,5 @@ Record CPU model and stepping, host kernel, firmware where relevant, RAM, graphi
 Graphics, SMP, NMI, runtime isolation and physical hosted lifecycle require independent qualification. A successful build on a CPU does not establish runtime compatibility.
 
 For exact representative kernel versions and scoped build/runtime tests, see the [Linux host compatibility matrix](../research/2026-11/hosted/linux-kernel-compatibility.md). No general 6.x deployment guarantee is implied. Checkpoint 240 narrowed ongoing development regression to the running Liquorix kernel 7.3.5-2 and selected 6.19.14-2. No new physical insertion is established by the later guest-only results.
+
+AMD-model QEMU TCG guests on Intel are a planned development lane, not physical AMD results. Start with EPYC-v1, verify effective features, expand only as needed, and independently qualify actual AMD hardware before claiming support. See [testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

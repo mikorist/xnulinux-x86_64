@@ -31,3 +31,7 @@ The project intends to publish its own code and redistributable dependencies acc
 ## Why keep failed experiments?
 
 They record actual constraints and prevent repeated work. See [lessons learned](../research/2026-11/lessons-learned.md).
+
+## Can AMD development start without an AMD computer?
+
+Yes. The planned early test lane uses QEMU TCG with AMD CPU models on the existing Intel Linux host. It can establish scoped emulated behavior, but real AMD hardware is needed for final physical qualification. See [testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

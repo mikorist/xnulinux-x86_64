@@ -107,7 +107,7 @@ The project targets standard x86_64 PCs. Current development and qualification f
 - Earlier host-service and VM regression series covered representative distribution kernels from Linux 6.0 through 6.19.
 - Current focused regression targets: Linux `7.3.5-2-liquorix-amd64` and `6.19.14-2-liquorix-amd64`.
 
-The historical kernel matrix covers specific components and configurations, not a guarantee of full XNU compatibility with every Linux release. AMD x86_64 support is planned after the stable Intel hosted baseline; it has not yet been demonstrated. A minimum supported CPU or kernel version has not yet been established.
+The historical kernel matrix covers specific components and configurations, not a guarantee of full XNU compatibility with every Linux release. AMD x86_64 support is planned after the stable Intel hosted baseline; it has not yet been demonstrated. A minimum supported CPU or kernel version has not yet been established. The intended implementation shares its source tree, FKI ABI, build system and Darwin runtime across Intel and AMD. Planned AMD development starts with isolated QEMU TCG CPU-model tests on Intel hardware; physical AMD qualification follows separately. See the [cross-vendor testing plan](docs/testing.md#planned-cross-vendor-x86_64-test-strategy).
 
 ## XNU versions
 
