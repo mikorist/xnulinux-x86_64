@@ -67,9 +67,9 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Reviewed technical snapshot: November 26, 2026, checkpoint 397.**
+**Reviewed technical snapshot: November 26, 2026, checkpoint 437.**
 
-The development infrastructure now includes a dedicated Ryzen compute host in parallel with Intel. New technical results are subject to the same review and publication cycle.
+The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437.
 
 The following results are recorded in the local development journal and experimental evidence. They describe different test environments and are not a claim that the complete hosted kernel is already running.
 
@@ -105,6 +105,10 @@ Checkpoints 358-377 qualified private typed task/thread resources, reference and
 Checkpoints 378-397 verified retained-source provenance, rebuilt 15 native reference objects from an isolated 496-input closure, and replayed both the 258-input private candidate and its 174-input runtime subset on both selected Linux guests. See the [provenance and reproduction report](research/2026-11/hosted/hosted-provenance-reproduction.md).
 
 These are source-backed and bounded integration tests. They do **not** establish native XNU stack switching, a complete hosted world switch, native scheduler dispatch, or a booted hosted Darwin userspace.
+
+### Cross-host reproduction and AMD component testing
+
+Both hosts independently reproduced the selected 297 OSFMK C objects (290 original references, four historical compatibility references and three new strict references) and a byte-identical 4,598,216-byte relocatable Mach-O after canonicalizing input paths and timestamps. This is not a complete kernel link. Actual Ryzen nested KVM runs now match all 94 functional marker groups on both selected guest kernels; strict qualification remains HOLD on the SRSO guest warning. See the [checkpoint 437 report](research/2026-11/hosted/osfmk-cross-host-reproduction.md).
 
 ## Hardware and Linux compatibility
 
