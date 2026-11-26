@@ -2,7 +2,11 @@
 
 ## Is this a Hackintosh?
 
-No. The intended design hosts XNU within Linux rather than replacing Linux with a conventional macOS installation.
+No. The goal is to adapt XNU to standard PC hardware through Linux, rather than make a PC pretend to be a Mac. The intended design hosts XNU within Linux rather than replacing Linux with a conventional macOS installation. See [project philosophy](project-philosophy.md).
+
+## Why PC if the current target is Intel?
+
+PC describes the intended platform, x86_64 the architecture, and Intel the initial implementation and qualification target. AMD and other configurations require separate evidence; no AMD support is claimed.
 
 ## Does it need QEMU?
 

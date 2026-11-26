@@ -1,6 +1,6 @@
 # Development roadmap
 
-The sequence below reflects project priorities rather than release dates.
+The sequence below reflects project priorities rather than release dates. The [project philosophy](project-philosophy.md) is XNU for the PC: reuse Linux hardware infrastructure, initially qualify Intel x86_64 systems, and avoid dependence on traditional Hackintosh setups.
 
 | Stage | Acceptance criterion |
 | --- | --- |

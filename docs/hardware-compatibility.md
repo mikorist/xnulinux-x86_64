@@ -3,7 +3,9 @@
 > [!NOTE]
 > A development machine, target machine and emulated CPU model are three different things. This matrix is not a supported-hardware list.
 
-Snapshot: checkpoint 317, 2026-11-26.
+PC hardware is the project target; Intel is the current qualified research lane. See [project philosophy](project-philosophy.md).
+
+Historical hardware snapshot: checkpoint 317, 2026-11-26. Later guest-only milestones do not imply additional physical hardware qualification.
 
 | CPU or model | Environment | Recorded status |
 | --- | --- | --- |

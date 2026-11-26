@@ -1,6 +1,6 @@
 # Target architecture
 
-The x86_64 port targets physical Intel Linux hosts. QEMU is a development and regression environment, not a required production layer.
+The project brings XNU to standard x86_64 PCs running Linux, initially targeting Intel hardware. [Adapt XNU to the PC, not the PC to the Mac](project-philosophy.md). QEMU is a development and regression environment, not a required production layer.
 
 ```mermaid
 flowchart TD
@@ -12,7 +12,7 @@ flowchart TD
     L --> F[fki.ko / host interface]
     F --> K[Linux x86_64 kernel]
     N[Linux applications] --> K
-    K --> P[Physical Intel hardware]
+    K --> P[Physical x86_64 PC (Intel first)]
 ```
 
 *Proposed architecture, not a demonstrated end-to-end implementation.*

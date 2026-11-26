@@ -1,10 +1,10 @@
 # xnulinux-x86_64
 
-**Native XNU hosting on Intel-based Linux systems.**
+**XNU for the PC. Native XNU hosting on x86_64 Linux.**
 
 An independently maintained x86_64 development project derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux), the original ARM64 implementation.
 
-The goal is to run compatible Darwin and macOS software directly on an Intel Linux host, using Apple's open-source XNU kernel and a Linux Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or a Hackintosh installation.
+The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs running Linux, initially targeting Intel processors, using Apple's open-source XNU kernel and a Linux Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or a Hackintosh installation.
 
 > [!IMPORTANT]
 > **Experimental research project, not an installable release.**
@@ -12,6 +12,18 @@ The goal is to run compatible Darwin and macOS software directly on an Intel Lin
 > The Intel research has reached native standalone Darwin userspace execution, physical ring-0 execution of selected XNU components, and integrated hosted memory, clock, CPU and scheduler-facing experiments. A complete hosted XNU boot and macOS application execution on Linux have not yet been demonstrated.
 >
 > Most Intel development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as Intel-qualified merely because it is present.
+
+## Project philosophy
+
+**Adapt XNU to the PC, not the PC to the Mac.**
+
+The long-term goal of XNULINUX is to eliminate the need for traditional Hackintosh setups by leveraging the existing Linux hardware infrastructure and bringing XNU to standard x86_64 PC hardware.
+
+Rather than making a PC pretend to be a Mac, we aim to make XNU work with the PC as it is.
+
+PC is the project identity, x86_64 is the target architecture, and Intel is the current implementation and qualification target. AMD support is not currently claimed. Linux remains responsible for physical hardware and host resources; the project aims to reuse that infrastructure rather than require Mac hardware emulation. This is an independent, experimental open-source project and is not affiliated with Apple Inc.
+
+See [project philosophy](docs/project-philosophy.md) for the design principles.
 
 ## What we want to build
 
@@ -51,7 +63,7 @@ QEMU/KVM are development and regression environments, not intended requirements 
 
 ## Current development status
 
-**Research snapshot: November 26, 2026, checkpoint 317.**
+**Research snapshot: November 26, 2026, checkpoint 377.**
 
 The following results are recorded in the local development journal and experimental evidence. They describe different test environments and are not a claim that the complete hosted kernel is already running.
 
@@ -88,7 +100,7 @@ These are source-backed and bounded integration tests. They do **not** establish
 
 ## Hardware and Linux compatibility
 
-The project targets Intel x86_64 hardware, including investigation of older Intel generations rather than only the most recent Macs.
+The project targets standard x86_64 PCs. Current development and qualification focus on Intel processors, including older generations, rather than matching a particular Mac model.
 
 - Physical development host: Intel Core i5-7500T (Kaby Lake), Debian Linux.
 - Older Intel target under investigation: Core i7-4770 (Haswell).
@@ -144,7 +156,7 @@ macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated
 
 ## Incremental public development
 
-Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
+Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. The fourth documents task/thread and IPC resource qualification through checkpoint 377. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
 
 ## Documentation and research archive
 

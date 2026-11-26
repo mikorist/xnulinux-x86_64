@@ -48,3 +48,5 @@ See also the [selected evidence manifest](2026-11/evidence-manifest.md).
 Reports are selected thematic summaries. Complete reproduction bundles and individual checkpoint coverage remain under preparation.
 
 The [public metadata validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable. Reports remain scoped to their original evidence; individual chapters and historical results have not all been independently replayed.
+
+These records support the [XNU for the PC philosophy](../docs/project-philosophy.md). Historical Intel-specific results retain their original scope.

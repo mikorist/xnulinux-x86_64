@@ -1,6 +1,6 @@
 # Contributing to xnulinux x86_64
 
-Thank you for contributing to the Intel port of [xnulinux](https://github.com/AFK-surf/xnulinux).
+Thank you for contributing to XNU for the PC, the x86_64 project derived from [xnulinux](https://github.com/AFK-surf/xnulinux). The current implementation targets Intel. See [project philosophy](docs/project-philosophy.md).
 
 This is experimental kernel research. Contributions are welcome in the form of source changes, reproducible tests, technical documentation, dependency audits and reports of failed approaches. A build that fails for a well-understood reason can be a valuable contribution.
 

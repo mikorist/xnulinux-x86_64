@@ -48,3 +48,5 @@ See the [qualification matrix](qualification-matrix.md) and [research journal](.
 | [AI methodology](../AI-METHODOLOGY.md) | Parallel research and evidence policy |
 
 These documents describe an experimental project. Supported installation instructions will be added only after the corresponding workflows have been verified.
+
+[Project philosophy: XNU for the PC](project-philosophy.md)
