@@ -4,6 +4,8 @@ This project uses parallel AI-assisted research and implementation with human ov
 
 Intel and AMD Ryzen development uses separate working environments and a shared source, evidence review and integration history. One maintainer-controlled integrator handles public publication. A build on an AMD host, an AMD-model TCG guest, nested KVM and bare-metal AMD Linux execution are distinct evidence classes.
 
+The broader engineering task is a PC compatibility platform, not just a successful boot. Independent builds, cross-vendor tests, negative controls and physical hardware qualification must preserve their distinct scope. See [platform scope](docs/platform-scope.md).
+
 ## Workflow
 
 1. Read the durable project decisions and the latest verified research checkpoint.

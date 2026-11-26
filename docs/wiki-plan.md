@@ -5,6 +5,7 @@ Repository Markdown remains the canonical documentation so changes can be review
 Proposed entry points:
 
 - [Project overview](../README.md)
+- [Platform scope and evidence](platform-scope.md)
 - [Architecture](architecture.md)
 - [Subsystem reference](subsystems/README.md)
 - [Source tree guide](source-map.md)

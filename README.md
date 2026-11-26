@@ -1,6 +1,6 @@
 # xnulinux-x86_64
 
-**XNU for the PC. Native XNU hosting on x86_64 Linux. Intel and AMD Ryzen development in parallel.**
+**XNU for the PC: building a shared XNU/Darwin compatibility platform for Intel and AMD x86_64 Linux systems.**
 
 An independently maintained x86_64 development project derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux), the original ARM64 implementation.
 
@@ -16,6 +16,12 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 > Checkpoint 457: all 1,089 baseline inputs and the full standalone executable were reproduced byte-for-byte across Intel and Ryzen. A separate AMD-aware early initialization candidate passed EPYC Milan diagnostics on both hosts and the complete Intel standalone PID 1 regression. AMD admission remains HOLD. Checkpoint 460 separately confirms native Ryzen Linux KVM CP426 component replay (strict 94/94 on both guest kernels) and SRSO Safe RET; guest TSA and Hyper-V SRSO remain HOLD. See [the full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md).
 >
 > Most experimental development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as x86_64-qualified merely because it is present.
+
+## Beyond a conventional port
+
+XNULINUX x86_64 is developing a complete PC-oriented compatibility platform, not merely a kernel port for one CPU or a set of CPU-specific patches. The intended platform combines a vendor-aware XNU machine layer, Linux-hosted execution and a shared Darwin runtime supporting headless, desktop and seamless application modes. The complete platform is the engineering goal, not a claim of present functionality.
+
+Independent Intel and Ryzen builds, CPU-model experiments, negative tests, cross-vendor regressions and native hardware measurements are central to this work. The reviewed baseline includes byte-identical reproduction of the 1,089-input standalone executable, early AMD machine-layer diagnostics under Milan TCG, a full Intel PID 1 regression, and native AMD KVM component replay with strict 94/94 results on each of two Linux guest kernels. SRSO qualification applies to that native KVM configuration; guest TSA and Hyper-V SRSO remain open. See [platform scope and evidence](docs/platform-scope.md).
 
 ## Project philosophy
 
@@ -116,7 +122,7 @@ Through checkpoint 457, all 1,089 baseline named inputs and the full strict exec
 
 ## Hardware and Linux compatibility
 
-The project targets standard x86_64 PCs. Current development proceeds on both Intel and AMD Ryzen, including investigation of older Intel generations, rather than matching a particular Mac model.
+The project targets standard x86_64 PCs, not a single CPU model. Current development proceeds on both Intel and AMD Ryzen, including investigation of older Intel generations, rather than matching a particular Mac model.
 
 - Intel reference and regression host: Core i5-7500T (Kaby Lake), Debian Linux.
 - Primary compute and AMD development host: Ryzen 7 5700X (Zen 3, 8 cores / 16 threads), Linux under WSL2.
@@ -161,9 +167,9 @@ The original discussion and earlier public milestone report are available in [up
 
 ## Open source, licensing and attribution
 
-The x86_64 port is intended to be fully open source, including its required build tools and dependencies. The Linux FKI and XNU sides retain separate licensing and provenance: GPL-2.0-only and APSL-2.0 respectively, with file-specific licenses preserved. See [LICENSE](LICENSE) and [LICENSES](LICENSES/). License compatibility and source redistribution remain subject to review.
+The x86_64 platform implementation is intended to be fully open source, including its required build tools and dependencies. The Linux FKI and XNU sides retain separate licensing and provenance: GPL-2.0-only and APSL-2.0 respectively, with file-specific licenses preserved. See [LICENSE](LICENSE) and [LICENSES](LICENSES/). License compatibility and source redistribution remain subject to review.
 
-Proprietary macOS system components, libraries and applications are separate from the open-source port. No proprietary Apple system images or binaries are distributed by this project. Compatibility does not grant permission to use or redistribute proprietary software; applicable licenses and hardware restrictions must be respected.
+Proprietary macOS system components, libraries and applications are separate from the open-source platform implementation. No proprietary Apple system images or binaries are distributed by this project. Compatibility does not grant permission to use or redistribute proprietary software; applicable licenses and hardware restrictions must be respected.
 
 This project preserves the Git history and attribution of [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux). The original ARM64 project remains independently maintained by its authors. Its documentation and achievements are not presented as x86_64 results.
 

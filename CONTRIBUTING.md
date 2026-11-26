@@ -1,6 +1,6 @@
 # Contributing to xnulinux x86_64
 
-Thank you for contributing to XNU for the PC, the x86_64 project derived from [xnulinux](https://github.com/AFK-surf/xnulinux). Development proceeds in parallel on Intel and AMD Ryzen with one shared x86_64 implementation. See [project philosophy](docs/project-philosophy.md).
+Thank you for contributing to XNU for the PC, the x86_64 project derived from [xnulinux](https://github.com/AFK-surf/xnulinux). Development proceeds in parallel on Intel and AMD Ryzen with one shared x86_64 implementation. Contributions target a complete PC-oriented XNU/Darwin compatibility platform, with qualification scoped to each layer. See [platform scope](docs/platform-scope.md). See [project philosophy](docs/project-philosophy.md).
 
 This is experimental kernel research. Contributions are welcome in the form of source changes, reproducible tests, technical documentation, dependency audits and reports of failed approaches. A build that fails for a well-understood reason can be a valuable contribution.
 
@@ -30,7 +30,7 @@ Review the current remote state before integration. Never force-push the referen
 
 ## Source and build rules
 
-- Keep Intel and ARM64 configurations, generated headers and patch series separate.
+- Keep shared x86_64 and ARM64 configurations, generated headers and patch series separate; Intel and AMD share the x86_64 source baseline.
 - Preserve pinned source checkouts; record necessary source changes as reviewable patches.
 - Avoid placeholder implementations presented as real providers, fake SDK headers and silent test bypasses.
 - Preserve relevant diagnostic failures and document the reason for changing approach.
@@ -40,7 +40,7 @@ Review the current remote state before integration. Never force-push the referen
 
 Include commands, compiler/linker versions, execution environment, exit status, observed boundary and relevant artifact checksums. State which tests were not run and why. A verifier exit code alone is not evidence of a successful boot.
 
-A change affecting common code needs an appropriate ARM64 regression assessment in addition to Intel tests. The maintainer reviews the change, test evidence and license boundary before integration. After integration, rerun relevant checks on the combined revision.
+A change affecting common code needs an appropriate ARM64 regression assessment in addition to relevant Intel and AMD regressions. The maintainer reviews the change, test evidence and license boundary before integration. After integration, rerun relevant checks on the combined revision.
 
 ## AI-assisted contributions
 

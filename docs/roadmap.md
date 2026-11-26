@@ -1,11 +1,11 @@
 # Development roadmap
 
-The sequence below reflects project priorities rather than release dates. The [project philosophy](project-philosophy.md) is XNU for the PC: reuse Linux hardware infrastructure, initially qualify Intel x86_64 systems, and avoid dependence on traditional Hackintosh setups.
+The sequence below reflects project priorities rather than release dates. The [project philosophy](project-philosophy.md) is XNU for the PC: reuse Linux hardware infrastructure, qualify Intel and AMD x86_64 systems in parallel, and avoid dependence on traditional Hackintosh setups.
 
 | Stage | Acceptance criterion |
 | --- | --- |
 | Standalone reference | Root mount, file lookup/read, user-mode execution and traps |
-| Hosted Intel integration | Verified FKI and world switch; memory, interrupts, SMP and lifecycle tests |
+| Shared Intel/AMD hosted integration | Verified FKI and world switch; memory, interrupts, SMP and lifecycle tests |
 | Hosted Darwin | Root filesystem, userspace and executable programs on the hosted path |
 | Headless | Repeatable CLI and service execution |
 | Desktop | Compatible graphical environment; software rendering first |
@@ -28,6 +28,8 @@ Hosted integration may proceed in parallel with standalone reference tests. GPU 
 After stable physical Linux-hosted execution of the Monterey baseline, the next planned x86_64 port targets XNU 12377 (Tahoe). Retain Monterey as a separate version target; reuse validated host infrastructure through version-specific adapters. The exact Tahoe source pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory.
 
 ## Parallel Intel and AMD x86_64 development
+
+The roadmap is for a complete PC compatibility platform, not merely a successful kernel boot. Machine-layer portability, cross-vendor regressions, safe host integration, Darwin runtime and application modes are distinct acceptance gates. See [platform scope and evidence](platform-scope.md).
 
 The long-term platform scope includes both Intel and AMD x86_64 Linux PCs. Continue the Intel hosted baseline while developing AMD compatibility in parallel. Evaluate native AMD-aware XNU adaptation and, where necessary, a narrowly scoped compatibility view of CPU identity and capabilities presented to XNU. Select the approach through actual CPU, memory, interrupt, timing, scheduler and userspace tests. Preserve Linux host ownership and expose only capabilities that the hardware and implementation can support. No clean AMD hosted runtime or bare-metal qualification is claimed yet. Do not change the current Intel implementation sequence or source pins merely to announce this goal.
 

@@ -1,6 +1,6 @@
 # Reproduction and evidence index
 
-The public reproduction bundle is under preparation. The historical observations are documented, but a clean public replay has not been performed.
+Independent Intel/Ryzen reproduction and native AMD KVM component qualification are recorded in the [platform evidence overview](platform-scope.md). The public reproduction bundle is under preparation. The historical observations are documented, but a clean public replay has not been performed.
 
 | Experiment | Required evidence |
 | --- | --- |

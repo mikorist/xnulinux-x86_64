@@ -4,6 +4,8 @@ For chronological individual experiments, see the [research monograph](monograph
 
 Experimental milestones, not product releases. Current development runs in parallel on Intel and AMD Ryzen. Historical reports retain the original CPU, accelerator and test scope. Runtime results listed here concern standalone research unless explicitly stated otherwise.
 
+The [platform scope and evidence overview](../docs/platform-scope.md) connects the individual research tracks to the complete PC-oriented XNU/Darwin platform goal. It does not replace historical reports or broaden their qualification.
+
 ## [November 2026](2026-11/README.md)
 
 | Topic | Report |

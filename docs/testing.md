@@ -1,5 +1,7 @@
 # Testing and evidence
 
+The platform is developed through independent build reproduction, cross-vendor CPU-model probes, negative controls, and separately qualified native hardware execution. A working kernel on one model is insufficient to establish PC-platform compatibility. See [platform scope and evidence](platform-scope.md).
+
 ## Evidence classes
 
 | Class | What it establishes |

@@ -5,7 +5,7 @@
 
 PC hardware is the project target; Intel is the established reference research lane, with bounded physical results; Ryzen is the primary compute and parallel AMD development host. See [project philosophy](project-philosophy.md).
 
-Historical physical hardware evidence: checkpoint 317, 2026-11-26; current development environments are listed separately. Later guest-only milestones do not imply additional physical hardware qualification.
+Physical Intel component evidence is recorded through checkpoint 317; CP460 adds scoped native Ryzen Linux KVM qualification. Development environments, emulated models and physical hardware remain separate evidence classes. See [platform scope](platform-scope.md).
 
 | CPU or model | Environment | Recorded status |
 | --- | --- | --- |
@@ -16,6 +16,7 @@ Historical physical hardware evidence: checkpoint 317, 2026-11-26; current devel
 | QEMU Broadwell-v2 | Isolated Linux guest | FKI module lifecycle, cooperative SMP and bounded service regression confirmed |
 | Other Intel generations | Physical hosts | Not qualified by these records |
 | AMD Ryzen 7 5700X (Zen 3) | WSL2 development host | Operational compute environment; no native AMD hosted qualification |
+| QEMU EPYC-Rome-v1 / EPYC-Genoa-v1 | AMD model / decoder fixtures | Cache and topology investigation; not complete XNU runtime or physical CPU qualification |
 | QEMU EPYC-Milan-v1 | Isolated TCG guest | Active Zen 3 model development and regression lane; not native AMD execution |
 | AMD Ryzen 7 5700X | Nested KVM under WSL2 | Both selected Linux guests: 94/94 functional marker groups; strict SRSO HOLD, not bare-metal qualification |
 | AMD Ryzen 7 5700X | Native Linux KVM | CP426 strict 94/94 on both selected guests, SRSO Safe RET; guest TSA and CPU feature dependency HOLD; not full XNU boot |

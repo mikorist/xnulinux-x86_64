@@ -17,6 +17,10 @@ flowchart TD
 
 *Proposed architecture, not a demonstrated end-to-end implementation.*
 
+## Platform layers
+
+The architecture is intended as a complete PC-oriented compatibility platform, beyond the initial architecture port. A vendor-aware machine layer handles actual CPU identity, cache geometry, topology, time and processor-resource contracts. A common hosted execution and FKI boundary must preserve Linux ownership; a shared Darwin runtime provides the intended application modes. Each layer has independent acceptance criteria. See [platform scope and evidence](platform-scope.md).
+
 ## Source versions
 
 | Architecture | XNU baseline |
@@ -38,6 +42,6 @@ The APSL and GPL components retain their existing license separation. Proprietar
 
 ## CPU vendor portability
 
-Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. The exact AMD adaptation mechanism remains open.
+Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. Early native AMD-aware discovery has executed under Milan TCG; full AMD admission, downstream machine services and hosted ownership remain open.
 
 The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common source, FKI ABI, build system and runtime, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

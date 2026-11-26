@@ -4,9 +4,13 @@
 
 No. The goal is to adapt XNU to standard PC hardware through Linux, rather than make a PC pretend to be a Mac. The intended design hosts XNU within Linux rather than replacing Linux with a conventional macOS installation. See [project philosophy](project-philosophy.md).
 
-## Why PC if the current target is Intel?
+## Is this still just an x86_64 port?
 
-PC describes the intended platform, x86_64 the architecture, and Intel the established reference and qualification lane. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. Native AMD adaptation or an XNU-facing compatibility layer will be evaluated; neither is yet qualified. Other configurations likewise require separate evidence.
+The initial port is now part of a larger engineering goal: one PC-oriented XNU/Darwin compatibility platform for Intel and AMD Linux systems, including the machine layer, hosted execution, a common runtime and headless, desktop and seamless modes. The platform is still experimental; kernel boot alone does not establish application compatibility. See [platform scope and evidence](platform-scope.md).
+
+## Why PC rather than Intel?
+
+PC describes the intended platform, x86_64 the architecture, and Intel the established reference and qualification lane. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. Early AMD-aware machine-layer discovery is qualified as a diagnostic under Milan TCG; native AMD KVM component replay is qualified at CP460. Complete AMD boot and hosted execution remain open. Other configurations likewise require separate evidence.
 
 ## Does it need QEMU?
 

@@ -5,6 +5,10 @@ The original ARM64 implementation is preserved in the [arm64-reference branch](h
 
 This cleanup retires the ARM-specific deployment path, DGX tools, ARM world-switch/entry code, in-tree ARM FKI driver, ARM CI, ARM test programs and the old macOS 27 patch series from the active x86_64 tree. They are not replacements for the x86_64 implementation. No supported x86_64 build or installation procedure is supplied by this cleanup.
 
+## Platform scope
+
+The project has evolved beyond an architecture port into development of a shared Intel/AMD PC-oriented XNU/Darwin compatibility platform. See [platform scope and evidence](platform-scope.md) for the intended layers, qualification boundaries and current reviewed results.
+
 ## Retained reference components
 
 | Directory | Reason for retention |
@@ -27,6 +31,7 @@ See the [qualification matrix](qualification-matrix.md) and [research journal](.
 
 | Document | Purpose |
 | --- | --- |
+| [Platform scope](platform-scope.md) | Complete PC platform goal and reviewed evidence |
 | [Architecture](architecture.md) | Target hosted execution model |
 | [Subsystem reference](subsystems/README.md) | Boot, Mach, scheduler, IOKit, BSD and FKI |
 | [Source map](source-map.md) | Pinned XNU source layout |
