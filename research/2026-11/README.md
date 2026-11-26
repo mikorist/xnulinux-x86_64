@@ -43,3 +43,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 | [Hosted provenance and reproduction research](hosted/hosted-provenance-reproduction.md) | hosted |
 | [Parallel Intel and Ryzen development: checkpoints 398-417](hosted/parallel-intel-ryzen.md) | hosted |
 | [Cross-host OSFMK reproduction and AMD KVM component qualification](hosted/osfmk-cross-host-reproduction.md) | hosted |
+| [Full executable reproduction and early AMD machine-layer research](hosted/amd-machine-layer.md) | machine layer |

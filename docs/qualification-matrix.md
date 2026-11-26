@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 437, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research checkpoint 457, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -41,6 +41,8 @@ Snapshot: research checkpoint 437, 2026-11-26. Results apply to the stated scope
 | Ryzen source toolchain | Independently rebuilt custom Clang 24; 15 reference objects and dependencies exact; expanded OSFMK C closure | Complete XNU build and link |
 | Cross-host OSFMK C reproduction | 290 original, four historical compatibility, three new strict reference objects match; byte-identical 297-object relocatable after canonical paths and input timestamps | Integrated MIG ABI, other subsystems and complete kernel link/runtime |
 | Cross-compiler IPC/reference objects | Historical stock compiler limits superseded for the 15-unit custom Clang 24 closure; selected IPC layouts remain static evidence | Executable ABI and native runtime |
+| Cross-host full executable | 1,089 exact selected inputs, identical strict Mach-O and Broadwell standalone PID 1 on both hosts | Independent regeneration of retained text inputs and public source review |
+| AMD-aware early machine layer | Actual Milan TCG pre-admission discovery on both hosts; 1,092-input links, 35 matching sections; Intel full PID 1 regression | AMD admission, downstream machine services and strict SRSO qualification |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
