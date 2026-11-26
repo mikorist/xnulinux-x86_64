@@ -42,6 +42,7 @@ Experimental milestones, not product releases. Current development runs in paral
 | Host integration | [Hosted provenance and reproduction research](2026-11/hosted/hosted-provenance-reproduction.md) |
 | Project history | [Intel repository separation](2026-11/history/intel-repository-separation.md) |
 | Project history | [Public progress update: native Darwin PID 1](2026-11/history/public-progress-update-01.md) |
+| Host integration | [Cross-host OSFMK reproduction and AMD KVM qualification](2026-11/hosted/osfmk-cross-host-reproduction.md) |
 | Cross-cutting | [Failed approaches and lessons](2026-11/lessons-learned.md) |
 
 See also the [selected evidence manifest](2026-11/evidence-manifest.md).

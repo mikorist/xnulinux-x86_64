@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 417, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research checkpoint 437, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -36,10 +36,11 @@ Snapshot: research checkpoint 417, 2026-11-26. Results apply to the stated scope
 | Hosted private task and ledger | Two-kernel component qualification through 357: reference-owned tasks, exclusive IPC metadata binding, ledger template and schema, constructor rollback | Native task, real IPC ports, active pmap and native scheduler remain open |
 | Hosted private task/thread/IPC resources | Checkpoint 377: typed Linux caches, private reference and rollback checks, IPC geometry and metadata lifetime; two-kernel private Git replay | Native zones, task/thread creation, active pmap, real Mach IPC and dispatch remain open |
 | Reference build reproduction | Checkpoint 397: 496-input isolated closure, 15 byte-identical Mach-O objects; 258/174-input dual-kernel private replay | Full source/toolchain rebuild, redistribution review and native execution remain open |
-| Ryzen development environment | Independent dual-kernel builds, 94 strict marker groups under Broadwell-v2 TCG | KVM and native AMD qualification |
-| AMD-model guest replay | 94 marker groups on both kernels; strict HOLD on SRSO warning | Clean strict replay, physical AMD qualification |
-| Ryzen source toolchain | 42 config and 33 MIG headers exact; cctools synthetic probe; 496 exact inputs | Custom Clang 24, complete XNU build and link |
-| Cross-compiler IPC/reference objects | 10/15 units compile; exact dependency and external symbol sets for ten; three selected IPC layouts match | Five failed units, executable ABI and native runtime |
+| Ryzen development environment | Independent dual-kernel builds, 94 strict marker groups under Broadwell-v2 TCG; actual Ryzen nested KVM component tests | Native AMD qualification and full hosted boot |
+| AMD-model guest replay | Actual Ryzen nested KVM: 94/94 functional marker groups on both kernels; strict HOLD on SRSO warning | Clean strict replay, physical AMD qualification |
+| Ryzen source toolchain | Independently rebuilt custom Clang 24; 15 reference objects and dependencies exact; expanded OSFMK C closure | Complete XNU build and link |
+| Cross-host OSFMK C reproduction | 290 original, four historical compatibility, three new strict reference objects match; byte-identical 297-object relocatable after canonical paths and input timestamps | Integrated MIG ABI, other subsystems and complete kernel link/runtime |
+| Cross-compiler IPC/reference objects | Historical stock compiler limits superseded for the 15-unit custom Clang 24 closure; selected IPC layouts remain static evidence | Executable ABI and native runtime |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
