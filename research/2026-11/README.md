@@ -44,4 +44,5 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 | [Parallel Intel and Ryzen development: checkpoints 398-417](hosted/parallel-intel-ryzen.md) | hosted |
 | [Cross-host OSFMK reproduction and AMD KVM component qualification](hosted/osfmk-cross-host-reproduction.md) | hosted |
 | [Full executable reproduction and early AMD machine-layer research](hosted/amd-machine-layer.md) | machine layer |
+| [Vendor-aware machine-layer contracts and early runtime validation](hosted/amd-machine-layer-followup.md) | machine layer |
 | [Native AMD KVM component replay and SRSO qualification](hosted/native-amd-kvm.md) | Hardware qualification |

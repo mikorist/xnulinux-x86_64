@@ -22,6 +22,8 @@ The next candidate replaced cpuid.o and added three discovery/projection objects
 
 In both isolated EPYC Milan runs, actual XNU early initialization populated the unpublished CPU information structure with AuthenticAMD, family 19h, model 1, 32 KiB L1 instruction and data caches, 512 KiB L2 and 32 MiB L3. The test deliberately stopped before admission to unqualified machine paths. The CPU information publication pointer remained null. Both Broadwell early controls passed; the complete Intel-host Broadwell regression with the new candidate also reached the owned PID 1 at ring 3, getpid=1, uid=0 and Mach task-self port 515. This is instrumented standalone evidence only.
 
+For the subsequent reviewed CP458-477 results, see [vendor-aware machine-layer contracts and early runtime validation](amd-machine-layer-followup.md).
+
 ## Remaining boundaries
 
 AMD admission and full AMD standalone boot remain open. Downstream work includes LBR/PMU, machine-check semantics, microcode reporting and ownership, TSC calibration, PAT/MTRR, commpage and APIC/scheduler topology. Strict SRSO qualification remains HOLD: extended IBPB support was absent in the observed WSL2 and default WHP views even after an owner firmware update. System-mode TCG cannot establish physical microcode protection. No mitigation was weakened. Native AMD Linux or supported future hypervisor exposure is required for final qualification; functional experiments can proceed independently.

@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 457 with CP460 native AMD update, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research checkpoint 477, including CP460 native AMD update, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -44,6 +44,7 @@ Snapshot: research checkpoint 457 with CP460 native AMD update, 2026-11-26. Resu
 | Cross-compiler IPC/reference objects | Historical stock compiler limits superseded for the 15-unit custom Clang 24 closure; selected IPC layouts remain static evidence | Executable ABI and native runtime |
 | Cross-host full executable | 1,089 exact selected inputs, identical strict Mach-O and Broadwell standalone PID 1 on both hosts | Independent regeneration of retained text inputs and public source review |
 | AMD-aware early machine layer | Actual Milan TCG pre-admission discovery on both hosts; 1,092-input links, 35 matching sections; Intel full PID 1 regression | AMD admission and downstream machine services |
+| AMD downstream machine metadata | CP477: 1,102-input strict links, actual Milan TCG pre-admission checks on both hosts; full Intel PID 1 CP475 | Actual AMD admission, MCA handling, memory-type ownership, timer activation and full hosted runtime |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
