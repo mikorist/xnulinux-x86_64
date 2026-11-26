@@ -6,7 +6,7 @@ Use this template only after the release checklist is satisfied. Replace all pla
 
 - Version / research milestone:
 - Exact public commit and tag:
-- Intel XNU source revision:
+- x86_64 XNU source revision:
 - FKI ABI revision:
 - Date:
 - Release classification (research milestone or product release):

@@ -2,6 +2,8 @@
 
 This project uses parallel AI-assisted research and implementation with human oversight. Agents work on bounded technical questions; results are judged by evidence, not by the confidence of generated explanations.
 
+Intel and AMD Ryzen development uses separate working environments and a shared source, evidence review and integration history. One maintainer-controlled integrator handles public publication. A build on an AMD host, an AMD-model TCG guest, nested KVM and bare-metal AMD Linux execution are distinct evidence classes.
+
 ## Workflow
 
 1. Read the durable project decisions and the latest verified research checkpoint.

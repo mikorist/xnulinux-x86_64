@@ -2,7 +2,7 @@
 
 ## Project status
 
-The x86_64 port is experimental. No production-supported Intel release or security-maintenance lifetime is asserted by this policy. Research checkpoints, local diagnostic images and proposed product versions are not supported release lines.
+The x86_64 port is experimental. No production-supported x86_64 release or security-maintenance lifetime is asserted by this policy. Research checkpoints, local diagnostic images and proposed product versions are not supported release lines.
 
 Kernel hosting involves privileged execution and shared host resources. Experimental builds may crash or corrupt state. Use isolated development systems, recoverable test environments and reviewed test inputs.
 

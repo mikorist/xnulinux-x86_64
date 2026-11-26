@@ -3,9 +3,9 @@
 > [!NOTE]
 > A development machine, target machine and emulated CPU model are three different things. This matrix is not a supported-hardware list.
 
-PC hardware is the project target; Intel is the current qualified research lane. See [project philosophy](project-philosophy.md).
+PC hardware is the project target; Intel is the established reference research lane, with bounded physical results; Ryzen is the primary compute and parallel AMD development host. See [project philosophy](project-philosophy.md).
 
-Historical hardware snapshot: checkpoint 317, 2026-11-26. Later guest-only milestones do not imply additional physical hardware qualification.
+Historical physical hardware evidence: checkpoint 317, 2026-11-26; current development environments are listed separately. Later guest-only milestones do not imply additional physical hardware qualification.
 
 | CPU or model | Environment | Recorded status |
 | --- | --- | --- |
@@ -15,6 +15,8 @@ Historical hardware snapshot: checkpoint 317, 2026-11-26. Later guest-only miles
 | QEMU Broadwell-v2 | Standalone TCG | Read-only root mount, native PID 1 and terminal-only replay confirmed |
 | QEMU Broadwell-v2 | Isolated Linux guest | FKI module lifecycle, cooperative SMP and bounded service regression confirmed |
 | Other Intel generations | Physical hosts | Not qualified by these records |
+| AMD Ryzen 7 5700X (Zen 3) | WSL2 development host | Operational compute environment; no native AMD hosted qualification |
+| QEMU EPYC-Milan-v1 | Isolated TCG guest | Active Zen 3 model development and regression lane; not native AMD execution |
 | AMD x86_64 | Physical hosts | Active parallel development; bare-metal qualification pending |
 
 The development host records identify Debian 13 and Clang 19.1.7; these are observations rather than minimum supported versions.

@@ -2,7 +2,7 @@
 
 For chronological individual experiments, see the [research monograph](monograph/README.md).
 
-Experimental milestones, not product releases. Runtime results listed here concern standalone research unless explicitly stated otherwise.
+Experimental milestones, not product releases. Current development runs in parallel on Intel and AMD Ryzen. Historical reports retain the original CPU, accelerator and test scope. Runtime results listed here concern standalone research unless explicitly stated otherwise.
 
 ## [November 2026](2026-11/README.md)
 

@@ -1,6 +1,6 @@
 # Community collaboration
 
-The Intel port is developed in a fork of AFK-surf/xnulinux. Participation in the fork does not imply endorsement or maintenance by the original project.
+The x86_64 port is developed in a fork of AFK-surf/xnulinux. Participation in the fork does not imply endorsement or maintenance by the original project.
 
 ## Discussions
 

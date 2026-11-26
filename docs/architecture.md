@@ -1,6 +1,6 @@
 # Target architecture
 
-The project brings XNU to standard x86_64 PCs running Linux, initially targeting Intel hardware. [Adapt XNU to the PC, not the PC to the Mac](project-philosophy.md). QEMU is a development and regression environment, not a required production layer.
+The project brings XNU to standard x86_64 PCs running Linux, targeting Intel and AMD x86_64 hardware. [Adapt XNU to the PC, not the PC to the Mac](project-philosophy.md). QEMU is a development and regression environment, not a required production layer.
 
 ```mermaid
 flowchart TD
@@ -38,6 +38,6 @@ The APSL and GPL components retain their existing license separation. Proprietar
 
 ## CPU vendor portability
 
-Intel is the initial implementation target, not the permanent platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. The exact AMD adaptation mechanism remains open.
+Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. The exact AMD adaptation mechanism remains open.
 
 The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common source, FKI ABI, build system and runtime, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

@@ -15,7 +15,7 @@ A source pin or local image number is not a product release number. XNU 8020.140
 
 Use annotated research milestone tags only after the maintainer verifies a meaningful, reproducible result at a public commit. A possible naming scheme is `research/x86_64/<milestone>`. Example names are illustrative; no tag is created by this document.
 
-For a future distributable Intel product, consider a separate pre-1.0 version series such as `v0.x.y`, with prerelease qualifiers where necessary. Adopt the actual numbering convention only after maintainer review and compatibility criteria are defined.
+For a future distributable x86_64 product, consider a separate pre-1.0 version series such as `v0.x.y`, with prerelease qualifiers where necessary. Adopt the actual numbering convention only after maintainer review and compatibility criteria are defined.
 
 Breaking FKI contract changes require an explicit ABI revision and compatible loader/runtime selection. Do not infer ABI compatibility merely from matching product versions.
 

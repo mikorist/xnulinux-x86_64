@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 397, 2026-11-26. Results apply to the stated scope only.
+Snapshot: research checkpoint 397, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active; new technical evidence is reviewed separately from this snapshot.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |

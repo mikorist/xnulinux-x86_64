@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: GPL-2.0-only -->
-# Intel development tree
+# x86_64 development tree: Intel and AMD Ryzen
 
 The original ARM64 implementation is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference), pinned at `7ed7153bd34b4d906a0f02320efc774850d5a5b0`. Its [original README](https://github.com/mikorist/xnulinux-x86_64/blob/arm64-reference/README.md), documentation, graphics screenshots, build scripts, CI and source remain available there. The historical license notice about the screenshots refers to those archived files.
 
-This cleanup retires the ARM-specific deployment path, DGX tools, ARM world-switch/entry code, in-tree ARM FKI driver, ARM CI, ARM test programs and the old macOS 27 patch series from the active Intel tree. They are not replacements for the Intel implementation. No Intel build or installation procedure is supplied by this cleanup.
+This cleanup retires the ARM-specific deployment path, DGX tools, ARM world-switch/entry code, in-tree ARM FKI driver, ARM CI, ARM test programs and the old macOS 27 patch series from the active x86_64 tree. They are not replacements for the x86_64 implementation. No supported x86_64 build or installation procedure is supplied by this cleanup.
 
 ## Retained reference components
 
@@ -17,9 +17,9 @@ This cleanup retires the ARM-specific deployment path, DGX tools, ARM world-swit
 | `scripts/`, `tools/`, `tests/` | Selected generic or potentially reusable tooling; inherited references to retired ARM scripts are historical and do not constitute supported instructions. |
 | `LICENSE`, `LICENSES/` | Original licenses and attribution preserved. |
 
-GPU acceleration is deferred until the Intel runtime reaches the required graphics interfaces. Retained graphics scripts may assume ARM64 or Apple Silicon; do not run them as Intel instructions. The Intel source and tested build entry points will be integrated separately after review. See the [project README](../README.md) for the current research status.
+GPU acceleration is deferred until the shared x86_64 runtime reaches the required graphics interfaces. Retained graphics scripts may assume ARM64 or Apple Silicon; do not assume they apply to x86_64. The x86_64 source and tested build entry points will be integrated separately after review. See the [project README](../README.md) for the current research status.
 
-## Current Intel research
+## Current research: Intel reference and parallel AMD development
 
 See the [qualification matrix](qualification-matrix.md) and [research journal](../research/README.md). The [Mach-O validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable in userspace.
 

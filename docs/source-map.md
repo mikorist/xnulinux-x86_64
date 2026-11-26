@@ -4,7 +4,7 @@ The following paths were inspected in the pinned Apple XNU 8020.140.41 checkout.
 
 | Path | Area |
 | --- | --- |
-| osfmk/i386/ and osfmk/x86_64/ | Intel machine-dependent code |
+| osfmk/i386/ and osfmk/x86_64/ | x86 machine-dependent code (vendor-specific paths require review) |
 | osfmk/kern/ | Mach kernel services and startup |
 | osfmk/vm/ | Virtual memory |
 | osfmk/ipc/ and osfmk/mach/ | IPC and Mach interfaces |

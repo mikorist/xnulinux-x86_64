@@ -23,9 +23,9 @@ Through checkpoint 397, source provenance and reference reconstruction have adva
 Hosted integration may proceed in parallel with standalone reference tests. GPU acceleration is not a prerequisite for the first kernel or headless runtime.
 
 
-## Subsequent Intel source target
+## Subsequent x86_64 source target
 
-After stable physical Linux-hosted execution of the Monterey baseline, the next planned Intel port targets XNU 12377 (Tahoe). Retain Monterey as a separate version target; reuse validated host infrastructure through version-specific adapters. The exact Tahoe source pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory.
+After stable physical Linux-hosted execution of the Monterey baseline, the next planned x86_64 port targets XNU 12377 (Tahoe). Retain Monterey as a separate version target; reuse validated host infrastructure through version-specific adapters. The exact Tahoe source pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory.
 
 ## Parallel Intel and AMD x86_64 development
 

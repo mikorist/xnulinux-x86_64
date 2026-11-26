@@ -6,7 +6,7 @@ No. The goal is to adapt XNU to standard PC hardware through Linux, rather than 
 
 ## Why PC if the current target is Intel?
 
-PC describes the intended platform, x86_64 the architecture, and Intel the initial implementation and qualification target. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. Native AMD adaptation or an XNU-facing compatibility layer will be evaluated; neither is yet qualified. Other configurations likewise require separate evidence.
+PC describes the intended platform, x86_64 the architecture, and Intel the established reference and qualification lane. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. Native AMD adaptation or an XNU-facing compatibility layer will be evaluated; neither is yet qualified. Other configurations likewise require separate evidence.
 
 ## Does it need QEMU?
 
@@ -18,7 +18,7 @@ Standalone research has demonstrated root mount, native file reading and executi
 
 ## Why Monterey?
 
-The initial Intel port uses XNU 8020.140.41 as an independent baseline. Newer XNU versions are not mandatory for the first port. See [ADR 0001](adr/0001-independent-xnu-versions.md).
+The shared Monterey development baseline uses XNU 8020.140.41 as an independent baseline. Newer XNU versions are not mandatory for the first port. See [ADR 0001](adr/0001-independent-xnu-versions.md).
 
 ## Will I need the whole macOS desktop?
 

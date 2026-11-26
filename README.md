@@ -1,17 +1,19 @@
 # xnulinux-x86_64
 
-**XNU for the PC. Native XNU hosting on x86_64 Linux.**
+**XNU for the PC. Native XNU hosting on x86_64 Linux. Intel and AMD Ryzen development in parallel.**
 
 An independently maintained x86_64 development project derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux), the original ARM64 implementation.
 
-The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs running Linux, initially targeting Intel processors, using Apple's open-source XNU kernel and a Linux Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or a Hackintosh installation.
+The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs running Linux, targeting both Intel and AMD x86_64 processors, using Apple's open-source XNU kernel and a Linux Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or a Hackintosh installation.
 
 > [!IMPORTANT]
 > **Experimental research project, not an installable release.**
 >
 > The Intel research has reached native standalone Darwin userspace execution, physical ring-0 execution of selected XNU components, and integrated hosted memory, clock, CPU and scheduler-facing experiments. A complete hosted XNU boot and macOS application execution on Linux have not yet been demonstrated.
 >
-> Most Intel development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as Intel-qualified merely because it is present.
+> Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
+>
+> Most experimental development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as x86_64-qualified merely because it is present.
 
 ## Project philosophy
 
@@ -21,7 +23,7 @@ The long-term goal of XNULINUX is to eliminate the need for traditional Hackinto
 
 Rather than making a PC pretend to be a Mac, we aim to make XNU work with the PC as it is.
 
-PC is the project identity, x86_64 is the target architecture, and Intel is the established reference lane, and development now proceeds in parallel on Intel and AMD Ryzen x86_64 systems. Full AMD compatibility has not yet been demonstrated. Linux remains responsible for physical hardware and host resources; the project aims to reuse that infrastructure rather than require Mac hardware emulation. This is an independent, experimental open-source project and is not affiliated with Apple Inc.
+PC is the project identity and x86_64 is the target architecture. Intel is the established reference lane; development now proceeds in parallel on Intel and AMD Ryzen systems. Full AMD compatibility has not yet been demonstrated. Linux remains responsible for physical hardware and host resources; the project aims to reuse that infrastructure rather than require Mac hardware emulation. This is an independent, experimental open-source project and is not affiliated with Apple Inc.
 
 See [project philosophy](docs/project-philosophy.md) for the design principles.
 
@@ -35,7 +37,7 @@ One hosted XNU kernel and a shared Darwin runtime, with three ways to use them:
 | **Desktop** | Run a complete compatible macOS graphical environment, including its system services, Finder and Dock, in a Linux window or fullscreen. |
 | **Headless** | Run Darwin command-line programs, development tools and services without a graphical environment or a mandatory proprietary macOS installation. |
 
-Seamless application execution is a major practical goal of the Intel project. The complete desktop is a separate, optional mode. All three modes are intended to share the same hosted kernel and runtime rather than starting a separate kernel for every application.
+Seamless application execution is a major practical goal of the x86_64 project. The complete desktop is a separate, optional mode. All three modes are intended to share the same hosted kernel and runtime rather than starting a separate kernel for every application.
 
 ## Intended architecture
 
@@ -46,24 +48,26 @@ Seamless application execution is a major practical goal of the Intel project. T
                           |
                   Shared Darwin runtime
                           |
-                 Intel XNU (x86_64)
+                 XNU (x86_64)
                           |
-           xnu.ko / Intel machine-layer adapter
+           xnu.ko / x86_64 machine-layer adapter
                           |
                 Versioned FKI interface
                           |
                   fki.ko (Linux side)
                           |
-            Linux kernel on physical Intel CPU
+            Linux kernel on Intel or AMD CPU
 ```
 
-Linux remains responsible for host resources. The Intel implementation must establish its own CPU-context, memory, interrupt, scheduling and lifecycle contracts. ARM64-specific code is a reference, not a drop-in x86_64 implementation.
+Linux remains responsible for host resources. The shared x86_64 implementation must establish its own CPU-context, memory, interrupt, scheduling and lifecycle contracts. ARM64-specific code is a reference, not a drop-in x86_64 implementation.
 
-QEMU/KVM are development and regression environments, not intended requirements of the finished product.
+CPU-specific behavior is selected by detected capabilities and vendor-aware adapters where necessary. The diagram describes the intended architecture, not a completed implementation. QEMU/KVM are development and regression environments, not intended requirements of the finished product.
 
 ## Current development status
 
-**Research snapshot: November 26, 2026, checkpoint 397.**
+**Reviewed technical snapshot: November 26, 2026, checkpoint 397.**
+
+The development infrastructure now includes a dedicated Ryzen compute host in parallel with Intel. New technical results are subject to the same review and publication cycle.
 
 The following results are recorded in the local development journal and experimental evidence. They describe different test environments and are not a claim that the complete hosted kernel is already running.
 
@@ -102,9 +106,10 @@ These are source-backed and bounded integration tests. They do **not** establish
 
 ## Hardware and Linux compatibility
 
-The project targets standard x86_64 PCs. Current development and qualification focus on Intel processors, including older generations, rather than matching a particular Mac model.
+The project targets standard x86_64 PCs. Current development proceeds on both Intel and AMD Ryzen, including investigation of older Intel generations, rather than matching a particular Mac model.
 
-- Physical development host: Intel Core i5-7500T (Kaby Lake), Debian Linux.
+- Intel reference and regression host: Core i5-7500T (Kaby Lake), Debian Linux.
+- Primary compute and AMD development host: Ryzen 7 5700X (Zen 3, 8 cores / 16 threads), Linux under WSL2.
 - Older Intel target under investigation: Core i7-4770 (Haswell).
 - Earlier host-service and VM regression series covered representative distribution kernels from Linux 6.0 through 6.19.
 - Current focused regression targets: Linux `7.3.5-2-liquorix-amd64` and `6.19.14-2-liquorix-amd64`.
@@ -115,41 +120,42 @@ The historical kernel matrix covers specific components and configurations, not 
 
 | Target | XNU source family | Status |
 | --- | --- | --- |
-| macOS Monterey 12.5 | `8020.140.41` | Current Intel development baseline |
-| macOS Tahoe 26 | `12377` | Next planned Intel port |
+| macOS Monterey 12.5 | `8020.140.41` | Current shared x86_64 development baseline |
+| macOS Tahoe 26 | `12377` | Next planned x86_64 source target |
 
-Monterey remains an independent target for older Intel hardware. After stable physical Linux-hosted Monterey execution is established, the next planned target is Tahoe, the final macOS generation supporting Intel. The upstream `12377.121.6` revision is a reference for that work; the exact Intel Tahoe source pin will be qualified separately.
+Monterey remains an independent target for older Intel hardware. After stable physical Linux-hosted Monterey execution is established, the next planned target is Tahoe, the final macOS generation supporting Intel. The upstream `12377.121.6` revision is a reference for that work; the exact Tahoe x86_64 source pin will be qualified separately.
 
-The intention is to reuse validated Intel FKI infrastructure through version-specific adapters, without mixing incompatible source revisions or build artifacts.
+The intention is to reuse validated common FKI infrastructure through version-specific adapters, without mixing incompatible source revisions or build artifacts.
 
 ## Roadmap
 
 - [x] Standalone Intel XNU build and native test-program execution.
 - [x] Bounded physical execution of selected XNU source components and FKI services.
 - [x] Initial source-backed hosted VM, startup, clock and scheduler-facing integration tests.
-- [ ] Complete Intel hosted machine layer, address-space and execution-context integration.
+- [x] Establish parallel Intel and Ryzen development environments.
+- [ ] Complete shared x86_64 hosted machine layer, address-space and execution-context integration, with vendor-specific qualification where required.
 - [ ] Native hosted task, scheduler, Mach IPC, BSD and userspace startup.
 - [ ] Open headless Darwin runtime and compatible application execution.
 - [ ] Optional graphical desktop and seamless application-window integration.
 - [ ] Reproducible source release, installation and hardware compatibility documentation.
 - [ ] Subsequent XNU 12377 / Tahoe port.
-- [ ] AMD x86_64 compatibility and qualification on Linux PCs.
+- [ ] Continue parallel AMD-model regressions and qualify native AMD execution on Linux PCs.
 
 ## Source availability and research documentation
 
-The Intel work is being developed with several parallel AI-assisted research agents and a human maintainer. Successful and failed experiments are recorded with their source revisions, test conditions, evidence and limitations.
+The x86_64 work is being developed with several parallel AI-assisted research agents and a human maintainer. Successful and failed experiments are recorded with their source revisions, test conditions, evidence and limitations.
 
-The public source tree is being reorganized separately from active local research. Reviewed Intel implementation files, build procedures and research documentation will be integrated incrementally into the [x86_64-port branch](https://github.com/mikorist/xnulinux-x86_64/tree/x86_64-port). There is no supported Intel installation command or public binary release at this stage.
+The public source tree is being reorganized separately from active local research. Reviewed x86_64 implementation files, build procedures and research documentation will be integrated incrementally into the [x86_64-port branch](https://github.com/mikorist/xnulinux-x86_64/tree/x86_64-port). There is no supported x86_64 installation command or public binary release at this stage.
 
 The original discussion and earlier public milestone report are available in [upstream Issue #10](https://github.com/AFK-surf/xnulinux/issues/10) and the [x86_64 progress update](https://github.com/AFK-surf/xnulinux/issues/10#issuecomment-7174745326).
 
 ## Open source, licensing and attribution
 
-The Intel port is intended to be fully open source, including its required build tools and dependencies. The Linux FKI and XNU sides retain separate licensing and provenance: GPL-2.0-only and APSL-2.0 respectively, with file-specific licenses preserved. See [LICENSE](LICENSE) and [LICENSES](LICENSES/). License compatibility and source redistribution remain subject to review.
+The x86_64 port is intended to be fully open source, including its required build tools and dependencies. The Linux FKI and XNU sides retain separate licensing and provenance: GPL-2.0-only and APSL-2.0 respectively, with file-specific licenses preserved. See [LICENSE](LICENSE) and [LICENSES](LICENSES/). License compatibility and source redistribution remain subject to review.
 
 Proprietary macOS system components, libraries and applications are separate from the open-source port. No proprietary Apple system images or binaries are distributed by this project. Compatibility does not grant permission to use or redistribute proprietary software; applicable licenses and hardware restrictions must be respected.
 
-This project preserves the Git history and attribution of [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux). The original ARM64 project remains independently maintained by its authors. Its documentation and achievements are not presented as Intel results.
+This project preserves the Git history and attribution of [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux). The original ARM64 project remains independently maintained by its authors. Its documentation and achievements are not presented as x86_64 results.
 
 Thanks to Heyang Zhou and the original xnulinux contributors, Apple Open Source, [macOS-DroidVM](https://github.com/Droid-VM/macOS-DroidVM), [UniXNU](https://github.com/UniXNU), and the contributors to LLVM, cctools, metal2vulkan, Mesa, virglrenderer and krunkit for their respective upstream work. Original copyright and license notices remain in the source tree and Git history.
 
@@ -159,7 +165,7 @@ macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated
 
 ## Incremental public development
 
-Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. The fourth documents task/thread and IPC resource qualification through checkpoint 377. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
+Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. The fourth documents task/thread and IPC resource qualification through checkpoint 377. The fifth reports provenance and reference reproduction through checkpoint 397. Parallel development continues with a single integration history. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
 
 ## Documentation and research archive
 

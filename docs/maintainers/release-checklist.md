@@ -8,7 +8,7 @@ Use this checklist for an actual public distribution. A documentation-only resea
 - [ ] Independent architecture pins and generated header paths verified.
 - [ ] No unrelated work, unexplained stubs or hidden test bypasses.
 - [ ] All intended patches and dependency manifests available.
-- [ ] Appropriate Intel tests and shared-code ARM64 regressions recorded.
+- [ ] Appropriate Intel and AMD tests (with explicit evidence boundaries) and shared-code ARM64 regressions recorded.
 
 ## Reproduction and qualification
 
@@ -31,7 +31,7 @@ Use this checklist for an actual public distribution. A documentation-only resea
 ## Documentation and publication
 
 - [ ] README, changelog, requirements, compatibility matrix and limitations agree.
-- [ ] Screenshots show the actual Intel configuration and are cleared for publication.
+- [ ] Screenshots show the actual tested configuration and are cleared for publication.
 - [ ] Security-reporting route confirmed available.
 - [ ] Relative links and rendered diagrams checked.
 - [ ] Tag and release target reviewed by maintainer.

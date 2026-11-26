@@ -29,7 +29,7 @@ See [root mount](../research/2026-11/filesystem/first-root-mount.md) and [file r
 
 Intel and AMD share the same source tree, FKI ABI, build system and Darwin runtime. CPU-specific behavior is selected by detected capabilities and vendor-specific adapters where required. Intel remains the established physical reference lane. AMD development and component regressions proceed in parallel now, without waiting for the complete Intel hosted baseline.
 
-AMD development uses isolated QEMU TCG guests on Intel and a Ryzen 7 5700X WSL2 development host. QEMU 10.0.13 lists EPYC-v1, EPYC-Rome-v1, EPYC-Milan-v1, EPYC-Genoa-v1 and Opteron_G5-v1. Select a documented model, such as EPYC-Milan-v1 for a Zen 3 approximation, using the following CPU selection fragment, not a complete boot command:
+AMD development uses isolated QEMU TCG guests on Intel and a Ryzen 7 5700X WSL2 development host. On the Intel host, QEMU 10.0.13 lists EPYC-v1, EPYC-Rome-v1, EPYC-Milan-v1, EPYC-Genoa-v1 and Opteron_G5-v1. Select a documented model, such as EPYC-Milan-v1 for a Zen 3 approximation, using the following CPU selection fragment, not a complete boot command:
 
 ```sh
 -accel tcg -cpu EPYC-Milan-v1
