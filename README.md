@@ -78,7 +78,7 @@ These milestones were established in isolated standalone QEMU tests. The PID 1 f
 | Scheduler-facing work | Original non-realtime queue operations across 96 priorities, realtime queues across 31 priorities, priority-selected C callbacks on two Linux workers, failure cancellation/recovery and FKI elapsed-clock accounting. |
 | Mach IPC | Restricted private entry-table allocation, generation, lookup, reuse and exhaustion tests. No live Mach port objects or end-to-end hosted IPC yet. |
 
-The latest integrated cooperative scheduler-facing regression (checkpoint 307) passed on both selected Linux guest kernels. Checkpoints 308-317 qualified private IPC-entry lifecycle, running timer setup and expiry, realtime selection boundaries and independent 4,096-operation queue models. The checkpoint 317 integrated result records 181 identical common inputs and 49 marker groups appearing twice on each selected Linux guest kernel. This is not a native hosted boot.
+The latest integrated cooperative scheduler-facing regression (checkpoint 307) passed on both selected Linux guest kernels. Checkpoints 308-317 qualified private IPC-entry lifecycle, running timer setup and expiry, realtime selection boundaries and independent 4,096-operation queue models. The checkpoint 317 integrated result records 181 identical common inputs and 49 marker groups appearing twice on each selected Linux guest kernel. This is not a native hosted boot. Checkpoints 318-337 added owned worker service lifetimes, transactional result publication, private startup callback coverage and canonical Git replay. The final private candidate passed on both selected Linux kernels with 191 verified inputs and 62 required marker patterns (58 repeated and four singleton patterns). See the [latest component and replay report](research/2026-11/hosted/hosted-bootstrap-replay.md).
 
 These are source-backed and bounded integration tests. They do **not** establish native XNU stack switching, a complete hosted world switch, native scheduler dispatch, or a booted hosted Darwin userspace.
 
@@ -140,7 +140,7 @@ macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated
 
 ## Incremental public development
 
-Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
+Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
 
 ## Documentation and research archive
 

@@ -37,3 +37,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 | [Hosted clock, entropy and PRNG lifecycle](hosted/hosted-clock-entropy-runtime.md) | hosted |
 | [Hosted startup, scheduler and private IPC](hosted/hosted-startup-scheduler-ipc.md) | hosted |
 | [Intel repository separation](history/intel-repository-separation.md) | history |
+| [Hosted component integration and canonical Git replay](hosted/hosted-bootstrap-replay.md) | hosted |

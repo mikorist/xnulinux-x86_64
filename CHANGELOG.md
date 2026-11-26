@@ -37,6 +37,7 @@ There is no x86_64 product release represented by this document. The entries bel
 - Private calendar/entropy/PRNG negotiation, runtime retirement and two-kernel reload regression.
 - Original startup, native-layout CPU/thread/processor records, priority queues, cooperative continuations, running timers and private IPC integrated through checkpoint 317.
 - Current Linux regression reduced to two exact kernels; historical matrices preserved.
+- Checkpoints 318-337: explicit-input private Git replay, shared worker service lifecycle and result rollback, expanded private startup callbacks, and final two-kernel replay of 191 inputs. Public standalone evidence verifier and scoped report added; full candidate remains held for review.
 - Public repository renamed and ARM-only deployment retired; original reference branch preserved.
 
 See the [kernel image history](docs/kernel-history.md), [research journal](research/README.md) and [qualification matrix](docs/qualification-matrix.md).

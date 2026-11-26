@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 317, 2026-11-26. Results apply to the stated scope only.
+Snapshot: research checkpoint 337, 2026-11-26. Results apply to the stated scope only.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -20,7 +20,7 @@ Snapshot: research checkpoint 317, 2026-11-26. Results apply to the stated scope
 | Original linked XNU PE instructions | Selected Mach-O bytes executed in Linux userspace on physical Intel | Privileged original Mach-O entry |
 | Original XNU PE source components | Recompiled ELF subset executed in physical CPL0 | Complete XNU machine layer, pmap and scheduler |
 | Intel transition mechanisms | Freestanding protected mapping and cooperative Linux tests | Full Linux-to-XNU world switch and exceptional paths |
-| Linux host versions | Historical representative 6.0–6.19 suites; current two-kernel milestones through 317 | Full hosted runtime, additional configurations and physical coverage |
+| Linux host versions | Historical representative 6.0–6.19 suites; current two-kernel private Git replay through 337 | Full hosted runtime, additional configurations and physical coverage |
 | Split FKI memory service | Isolated guest and physical pair; bounded allocation/copy/cleanup | Fault injection and complete VM integration |
 | XNU page ownership and primitives | Restricted original source and hosted zero/copy adapters pass physical CPL0 | Full native pmap and vm_page_copy semantics |
 | FKI multi-session and alias lifetime | Physical four-CPU race tests and corrected warning gate | Independent XNU mappings, hardware TLB and fault injection |
@@ -30,9 +30,9 @@ Snapshot: research checkpoint 317, 2026-11-26. Results apply to the stated scope
 | Inactive root and map ownership | Opaque hierarchy, source-backed reference and indexed map gates | Active hardware translations and complete native pmap |
 | Boot metadata and PE | Actual linked header, original accessors, boot layout/seed on two kernels | Real native firmware/CPU boot handoff |
 | Hosted clock/entropy | Negotiated live services, private PRNG and reload lifecycle | Native registration and production qualification |
-| Startup and CPU/thread | Exact-layout records, private scalar/counter callbacks and metadata | Native phase completion, task creation |
-| Scheduler and timers | Original queue operations and cooperative Linux callback/elapsed tests | Native context switching, dispatch, IRQ integration |
-| Hosted private IPC | Entry-table lifecycle, stale name rejection and drain | Real Mach ports, task adapter and native messaging |
+| Startup and CPU/thread | Exact-layout records, private scalar/counter callbacks, stack geometry, zone record count and BSD argument data; four phase-1 records unbound | Native phase completion, task creation |
+| Scheduler and timers | Original queue operations, joined cooperative workers, private runtime and transactional result tests | Native context switching, dispatch, IRQ integration |
+| Hosted private IPC | Private shared metadata owner, 63-name capacity, unchanged exhaustion output, stale name rejection and drain | Real Mach ports, task adapter and native messaging |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
