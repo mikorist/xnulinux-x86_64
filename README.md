@@ -11,7 +11,7 @@ The goal is to run compatible Darwin and macOS software directly on an Intel Lin
 >
 > The Intel research has reached native standalone Darwin userspace execution, physical ring-0 execution of selected XNU components, and integrated hosted memory, clock, CPU and scheduler-facing experiments. A complete hosted XNU boot and macOS application execution on Linux have not yet been demonstrated.
 >
-> Most Intel development is still local. This repository currently retains inherited ARM64 source files while reviewed Intel code and documentation are prepared for integration. Do not use the inherited ARM64 build instructions as Intel installation instructions.
+> Most Intel development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as Intel-qualified merely because it is present.
 
 ## What we want to build
 
