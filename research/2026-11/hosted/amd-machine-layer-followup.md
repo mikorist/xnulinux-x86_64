@@ -31,6 +31,8 @@ CP477 links 1,102 inputs with zero undefined symbols on both hosts. Static and o
 
 Both CP477 Milan runs passed the prior discovery assertions and stopped deliberately with the CPU publication pointer still null. CP477 itself had not completed the full Intel PID 1 regression at this review boundary.
 
+For the next reviewed CP478-497 results, see [topology, Darwin ABI, extended-state metadata and build reproducibility](topology-state-and-reproducibility.md).
+
 ## Qualification and release boundaries
 
 The native Ryzen Linux KVM CP426 replay is strict PASS (94/94 on each of Linux 7.3.5 and 6.19.14), with SRSO Safe RET for that tested configuration. Guest TSA, guest CPU feature dependency and Hyper-V SRSO exposure remain separate open items. The broader original aggregate/control HOLD remains recorded. No mitigation was changed.

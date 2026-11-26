@@ -46,6 +46,7 @@ The [platform scope and evidence overview](../docs/platform-scope.md) connects t
 | Project history | [Public progress update: native Darwin PID 1](2026-11/history/public-progress-update-01.md) |
 | Host integration | [Cross-host OSFMK reproduction and AMD KVM qualification](2026-11/hosted/osfmk-cross-host-reproduction.md) |
 | Machine layer | [Full executable reproduction and early AMD machine-layer research](2026-11/hosted/amd-machine-layer.md) |
+| Machine layer | [Topology, Darwin ABI, extended-state metadata and build reproducibility](2026-11/hosted/topology-state-and-reproducibility.md) |
 | Machine layer | [Vendor-aware machine-layer contracts and early runtime validation](2026-11/hosted/amd-machine-layer-followup.md) |
 | Hardware qualification | [Native AMD KVM component replay and SRSO qualification](2026-11/hosted/native-amd-kvm.md) |
 | Cross-cutting | [Failed approaches and lessons](2026-11/lessons-learned.md) |

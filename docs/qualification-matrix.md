@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 477, including CP460 native AMD update, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research checkpoint 497, including CP460 native AMD update, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -44,7 +44,9 @@ Snapshot: research checkpoint 477, including CP460 native AMD update, 2026-11-26
 | Cross-compiler IPC/reference objects | Historical stock compiler limits superseded for the 15-unit custom Clang 24 closure; selected IPC layouts remain static evidence | Executable ABI and native runtime |
 | Cross-host full executable | 1,089 exact selected inputs, identical strict Mach-O and Broadwell standalone PID 1 on both hosts | Independent regeneration of retained text inputs and public source review |
 | AMD-aware early machine layer | Actual Milan TCG pre-admission discovery on both hosts; 1,092-input links, 35 matching sections; Intel full PID 1 regression | AMD admission and downstream machine services |
-| AMD downstream machine metadata | CP477: 1,102-input strict links, actual Milan TCG pre-admission checks on both hosts; full Intel PID 1 CP475 | Actual AMD admission, MCA handling, memory-type ownership, timer activation and full hosted runtime |
+| AMD downstream machine metadata | CP495-v2: 1,109-input strict links, actual Milan TCG pre-admission on both hosts; full same-candidate Intel PID 1 CP497 | Actual AMD admission, FPU activation, MCA handling, memory-type ownership, timer activation and hosted runtime |
+| Cross-host section reproducibility | CP495-v2: 35/35 section content hashes and 47,220 non-STAB tuples match | Full raw binary identity and public retained-input regeneration |
+| AMD APIC/LLC and Darwin ABI | Linux guest membership masks and actual UP XNU previews; generic ARCH1 grading helper passes | Numeric legacy cache ID HOLD, XNU SMP, actual AMD exec |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 

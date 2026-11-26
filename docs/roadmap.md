@@ -37,6 +37,8 @@ Use isolated AMD-model TCG guest regressions now, on Intel or the Ryzen 7 5700X 
 
 Through checkpoint 457, the full standalone reference executable is byte-identical across the two development hosts. The AMD-aware diagnostic reaches actual early CPU discovery under Milan TCG, while the new candidate preserves the Intel PID 1 baseline. Next qualify AMD-specific LBR/PMU, MCA, TSC, PAT/MTRR, commpage and topology before AMD admission. Keep strict SRSO qualification separate from functional development. See the [machine-layer report](../research/2026-11/hosted/amd-machine-layer.md).
 
+CP497 closes the corrected 1,109-input candidate review: cross-host section equivalence, bounded topology, generic Darwin subtype grading, guarded XSAVE observation and local synthetic metadata refresh. Continue actual AMD initialization, FPU lifecycle and native/hosted ownership qualification; do not treat the pre-admission diagnostic as a boot. See the [topology and state report](../research/2026-11/hosted/topology-state-and-reproducibility.md).
+
 CP477 extends early AMD discovery with independently tested clock, performance, MCA, memory-type, XSAVE, TLB, TSCI and MONITOR contracts. Continue required machine initialization, microcode/commpage and topology, with Intel full regression and explicit standalone versus hosted ownership. See the [follow-up report](../research/2026-11/hosted/amd-machine-layer-followup.md).
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).

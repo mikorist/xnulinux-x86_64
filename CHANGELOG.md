@@ -31,6 +31,8 @@ There is no x86_64 product release represented by this document. The entries bel
 
 ### Research milestones (2026-11-26)
 
+- Checkpoints 478-497: commpage ERMS and microcode provenance, APIC/LLC membership, generic Darwin subtype grading, guarded enabled XSAVE observation and synthetic post-activation metadata refresh. Corrected embedded source paths and premature SIMD code generation; independent 1,109-input strict links, all 35 section contents and 47,220 non-STAB tuples match, actual Milan TCG pre-admission and full same-candidate Intel PID 1 PASS. Complete binary identity, AMD admission and hosted runtime remain open. Documentation-only increment.
+
 - Checkpoints 458-477: vendor-aware clock, optional performance services, read-only MCA/PAT/MTRR snapshots, physical-width bounds, XSAVE and TLB projection, invariant TSC correction and MONITOR geometry validation. Independent strict 1,102-input links and Milan TCG pre-admission checks pass; full Intel PID 1 regression through CP475. Native CP460 SRSO PASS remains scoped; guest TSA, Hyper-V SRSO, full AMD admission and hosted boot remain open. Documentation-only increment.
 
 - Real FKI-backed process mappings and typed lifetime tickets, including inherited mappings and external page references.
