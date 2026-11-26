@@ -18,6 +18,7 @@ Historical physical hardware evidence: checkpoint 317, 2026-11-26; current devel
 | AMD Ryzen 7 5700X (Zen 3) | WSL2 development host | Operational compute environment; no native AMD hosted qualification |
 | QEMU EPYC-Milan-v1 | Isolated TCG guest | Active Zen 3 model development and regression lane; not native AMD execution |
 | AMD Ryzen 7 5700X | Nested KVM under WSL2 | Both selected Linux guests: 94/94 functional marker groups; strict SRSO HOLD, not bare-metal qualification |
+| AMD Ryzen 7 5700X | Native Linux KVM | CP426 strict 94/94 on both selected guests, SRSO Safe RET; guest TSA and CPU feature dependency HOLD; not full XNU boot |
 | AMD x86_64 | Physical hosts | Active parallel development; bare-metal qualification pending |
 
 The development host records identify Debian 13 and Clang 19.1.7; these are observations rather than minimum supported versions.

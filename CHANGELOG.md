@@ -44,6 +44,7 @@ There is no x86_64 product release represented by this document. The entries bel
 - Checkpoints 398-417: Ryzen build environment and dual-kernel component replay, independent config/MIG/cctools reproduction, 496 exact reference inputs, cross-compiler object and IPC comparisons. Strict AMD runtime, custom Clang 24 and full hosted boot remain open.
 - Checkpoints 418-437: independently source-built custom Clang 24, 297 selected OSFMK C objects and byte-identical relocatable link across Intel/Ryzen; actual Ryzen nested KVM 94/94 functional groups on both kernels, strict SRSO HOLD. No full hosted boot or public source release.
 - Checkpoints 438-457: byte-identical full 1,089-input executable across Intel/Ryzen; standalone Broadwell PID 1 replay on both hosts; AMD-aware early XNU discovery under Milan TCG, 35 matching final sections of the separate candidate, and full Intel regression. AMD admission and strict SRSO qualification remain HOLD; source export remains held.
+- Checkpoint 460 (early documentation update): native Ryzen Linux KVM CP426 component replay strict 94/94 on both selected kernels, SRSO Safe RET. Guest TSA and CPU feature dependency remain open; original aggregate HOLD retained. No full AMD XNU boot or source release.
 - Public repository renamed and ARM-only deployment retired; original reference branch preserved.
 
 See the [kernel image history](docs/kernel-history.md), [research journal](research/README.md) and [qualification matrix](docs/qualification-matrix.md).

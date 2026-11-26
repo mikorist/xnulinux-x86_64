@@ -25,3 +25,5 @@ Original host_notify_init and ipc_voucher_init bodies with the original queue in
 ## Remaining gates
 
 The custom Clang 24 toolchain, complete source-only kernel rebuild, full hosted boot, strict AMD runtime and physical AMD qualification remain open. The existing integrated hosted component candidate remains held for source provenance and licensing review. This documentation increment does not export private sources, binary artifacts, or claim an installable release.
+
+**CP460 update:** the historical TCG result above is unchanged; [native AMD Linux KVM](native-amd-kvm.md) subsequently passed both strict component replays and SRSO Safe RET, with guest TSA separately open.

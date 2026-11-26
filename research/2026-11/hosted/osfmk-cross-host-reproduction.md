@@ -29,3 +29,5 @@ Both strict runs remain HOLD solely because of the SRSO guest boot warning, whic
 ## Remaining gates
 
 Continue the shared Intel/Ryzen build with integrated MIG provider consistency and additional kernel components. Keep strict SRSO HOLD separate from functional development. Source redistribution and licensing review, full-image reproduction and end-to-end hosted runtime remain open. This documentation increment contains no private source snapshots or binary artifacts.
+
+**CP460 update:** [native AMD Linux KVM](native-amd-kvm.md) passed both strict component replays and SRSO Safe RET; the nested Hyper-V results above remain historical and platform-specific. Guest TSA remains open.

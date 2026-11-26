@@ -34,4 +34,4 @@ They record actual constraints and prevent repeated work. See [lessons learned](
 
 ## How is AMD development organized?
 
-A Ryzen 7 5700X WSL2 development environment is now operational alongside the Intel Linux host. Both use the shared source and kernel targets. TCG establishes scoped emulated behavior; nested KVM component runs on actual Ryzen now match 94/94 functional marker groups on both selected kernels, with strict SRSO HOLD; bare-metal AMD Linux qualification remains necessary. See [testing](testing.md#planned-cross-vendor-x86_64-test-strategy).
+A Ryzen 7 5700X WSL2 development environment is now operational alongside the Intel Linux host. Both use the shared source and kernel targets. TCG establishes scoped emulated behavior; nested KVM component runs on actual Ryzen now match 94/94 functional marker groups on both selected kernels, with strict SRSO HOLD in Hyper-V. Native Ryzen Linux KVM subsequently passed strict 94/94 on both selected kernels (CP460); SRSO Safe RET is confirmed for that configuration. Guest TSA, CPU feature dependency and complete AMD XNU boot remain open. See [testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

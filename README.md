@@ -13,7 +13,7 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
-> Checkpoint 457: all 1,089 baseline inputs and the full standalone executable were reproduced byte-for-byte across Intel and Ryzen. A separate AMD-aware early initialization candidate passed EPYC Milan diagnostics on both hosts and the complete Intel standalone PID 1 regression. AMD admission and strict SRSO qualification remain HOLD. See [the full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md).
+> Checkpoint 457: all 1,089 baseline inputs and the full standalone executable were reproduced byte-for-byte across Intel and Ryzen. A separate AMD-aware early initialization candidate passed EPYC Milan diagnostics on both hosts and the complete Intel standalone PID 1 regression. AMD admission remains HOLD. Checkpoint 460 separately confirms native Ryzen Linux KVM CP426 component replay (strict 94/94 on both guest kernels) and SRSO Safe RET; guest TSA and Hyper-V SRSO remain HOLD. See [the full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md).
 >
 > Most experimental development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as x86_64-qualified merely because it is present.
 
@@ -67,7 +67,7 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Reviewed technical snapshot: November 26, 2026, checkpoint 457.**
+**Reviewed technical snapshot: November 26, 2026, checkpoint 457, with checkpoint 460 native AMD qualification update.**
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457.
 
@@ -108,9 +108,11 @@ These are source-backed and bounded integration tests. They do **not** establish
 
 ### Cross-host reproduction and AMD component testing
 
-Both hosts independently reproduced the selected 297 OSFMK C objects (290 original references, four historical compatibility references and three new strict references) and a byte-identical 4,598,216-byte relocatable Mach-O after canonicalizing input paths and timestamps. This earlier milestone was a relocatable link, not a complete kernel link. Actual Ryzen nested KVM runs now match all 94 functional marker groups on both selected guest kernels; strict qualification remains HOLD on the SRSO guest warning. See the [checkpoint 437 report](research/2026-11/hosted/osfmk-cross-host-reproduction.md).
+Both hosts independently reproduced the selected 297 OSFMK C objects (290 original references, four historical compatibility references and three new strict references) and a byte-identical 4,598,216-byte relocatable Mach-O after canonicalizing input paths and timestamps. This earlier milestone was a relocatable link, not a complete kernel link. Actual Ryzen nested KVM runs now match all 94 functional marker groups on both selected guest kernels; strict qualification in that nested Hyper-V environment remains HOLD on the SRSO guest warning. See the [checkpoint 437 report](research/2026-11/hosted/osfmk-cross-host-reproduction.md).
 
 Through checkpoint 457, all 1,089 baseline named inputs and the full strict executable match across hosts. The separate 1,092-input AMD diagnostic links have identical contents and addresses for all 35 sections, not identical complete files. Early AMD discovery executes in XNU under EPYC Milan TCG on both hosts; Intel full PID 1 regression passes on the new candidate. AMD admission and full AMD boot remain open.
+
+**Native AMD update (CP460):** [Native AMD KVM component replay and SRSO qualification](research/2026-11/hosted/native-amd-kvm.md). Both selected guest kernels pass the original strict 94-group verifier on native Ryzen Linux. SRSO is Safe RET on host and guests. Guest TSA and CPU feature dependency remain open; full AMD XNU boot is not qualified.
 
 ## Hardware and Linux compatibility
 
