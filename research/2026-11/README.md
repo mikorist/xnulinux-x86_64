@@ -41,3 +41,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 | [Hosted task ownership and ledger research](hosted/hosted-task-ledger.md) | hosted |
 | [Hosted task, thread and IPC resource lifecycle research](hosted/hosted-task-thread-ipc.md) | hosted |
 | [Hosted provenance and reproduction research](hosted/hosted-provenance-reproduction.md) | hosted |
+| [Parallel Intel and Ryzen development: checkpoints 398-417](hosted/parallel-intel-ryzen.md) | hosted |

@@ -13,6 +13,8 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
+> Checkpoint 417: independent Ryzen builds pass the 94-group component regression under an Intel TCG model on both selected Linux kernels. AMD-model replay remains on strict HOLD due to a guest boot warning. See [the cross-host research report](research/2026-11/hosted/parallel-intel-ryzen.md).
+>
 > Most experimental development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as x86_64-qualified merely because it is present.
 
 ## Project philosophy
