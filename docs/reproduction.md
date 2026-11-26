@@ -1,0 +1,16 @@
+# Reproduction and evidence index
+
+The public reproduction bundle is under preparation. The historical observations are documented, but a clean public replay has not been performed.
+
+| Experiment | Required evidence |
+| --- | --- |
+| Toolchain | Exact pins, patch provenance, compiler probe and output object |
+| Strict link | Ordered input hashes, linker command, executable header and undefined-symbol result |
+| Root mount | Matching kernel, loader, RAM disk, boot plan and replay assertions |
+| Named file read | Matching kernel and owned fixture, lookup/read result and disk integrity comparison |
+
+See [selected evidence manifest](../research/2026-11/evidence-manifest.md).
+
+Do not publish raw register traces or entropy-bearing logs without review. Export minimal reviewed evidence and license-compatible reproduction scripts instead. Historical result hashes identify artifacts; they are not a replacement for the artifacts or build procedures.
+
+A reproduction run must use its own output directory and independently check both verifier outcome and actual guest boundary.

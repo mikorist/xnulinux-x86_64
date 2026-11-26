@@ -22,3 +22,29 @@ GPU acceleration is deferred until the Intel runtime reaches the required graphi
 ## Current Intel research
 
 See the [qualification matrix](qualification-matrix.md) and [research journal](../research/README.md). The [Mach-O validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable in userspace.
+
+## Developer documentation
+
+| Document | Purpose |
+| --- | --- |
+| [Architecture](architecture.md) | Target hosted execution model |
+| [Subsystem reference](subsystems/README.md) | Boot, Mach, scheduler, IOKit, BSD and FKI |
+| [Source map](source-map.md) | Pinned XNU source layout |
+| [Glossary](glossary.md) | Technical terminology |
+| [Reproduction](reproduction.md) | Evidence and replay requirements |
+| [Wiki plan](wiki-plan.md) | Proposed documentation navigation |
+| [Maintainer handbook](maintainers/README.md) | Review, triage, publication and releases |
+| [Hardware compatibility](hardware-compatibility.md) | Observed and target CPU environments |
+| [FAQ](faq.md) | Project scope and common questions |
+| [Contributing](../CONTRIBUTING.md) | Contribution and review rules |
+| [Roadmap](roadmap.md) | Development stages and acceptance criteria |
+| [Build reference](build.md) | Recorded toolchain and source revisions |
+| [Kernel history](kernel-history.md) | Experimental images 1–25 |
+| [Dependencies](dependencies.md) | Provenance and publication gates |
+| [Qualification matrix](qualification-matrix.md) | Confirmed results and remaining tests |
+| [Testing](testing.md) | Evidence classes and verification requirements |
+| [Architecture decisions](adr/README.md) | Accepted project decisions |
+| [Research journal](../research/README.md) | Experimental results and limitations |
+| [AI methodology](../AI-METHODOLOGY.md) | Parallel research and evidence policy |
+
+These documents describe an experimental project. Supported installation instructions will be added only after the corresponding workflows have been verified.

@@ -1,13 +1,48 @@
-# Intel research journal
+# Research journal
 
-Development in progress. These English reports document scoped results from the local research journal through checkpoint 317 (November 26, 2026). They are not installation instructions or complete reproduction bundles.
+For chronological individual experiments, see the [research monograph](monograph/README.md).
 
-| Checkpoints | Research report |
+Experimental milestones, not product releases. Runtime results listed here concern standalone research unless explicitly stated otherwise.
+
+## [November 2026](2026-11/README.md)
+
+| Topic | Report |
 | --- | --- |
-| 217-225 | [FKI process mappings and reference ownership](2026-11/hosted/owned-process-memory.md) |
-| 226-242 | [Inactive root lifecycle](2026-11/hosted/inactive-root-lifecycle.md) |
-| 243-267 | [Indexed VM and boot metadata](2026-11/hosted/indexed-map-and-boot-metadata.md) |
-| 268-287 | [Hosted clock and entropy](2026-11/hosted/hosted-clock-entropy-runtime.md) |
-| 288-317 | [Startup, cooperative scheduler and private IPC](2026-11/hosted/hosted-startup-scheduler-ipc.md) |
+| Toolchain | [Build and strict executable link](2026-11/toolchain/build-and-link.md) |
+| Boot | [Firmware and clock qualification](2026-11/boot/firmware-and-clock.md) |
+| Memory | [Mach VM bootstrap](2026-11/memory/mach-vm.md) |
+| Memory | [Typed allocator qualification](2026-11/memory/typed-allocation.md) |
+| Scheduler | [Scheduler and Mach IPC bootstrap](2026-11/scheduler/bootstrap.md) |
+| IOKit | [Platform and BSD initialization](2026-11/iokit/platform-and-bsd.md) |
+| Crypto | [Provider qualification](2026-11/crypto/provider-qualification.md) |
+| Crypto | [Diagnostic registration checkpoint](2026-11/crypto/registration-checkpoint.md) |
+| Filesystem | [First root mount](2026-11/filesystem/first-root-mount.md) |
+| Filesystem | [First named file read](2026-11/filesystem/first-file-read.md) |
+| Toolchain | [Kernel-mode MIG generation](2026-11/toolchain/mig-kernel-mode.md) |
+| IOKit | [IIG compatibility](2026-11/iokit/iig-compatibility.md) |
+| Userspace | [Native PID 1 and terminal-only replay](2026-11/boot/pid1-terminal-replay.md) |
+| Host integration | [Intel FKI ordinary Linux-context tests](2026-11/hosted/fki-host-services.md) |
+| Host integration | [Intel CPU transition mechanisms and negative controls](2026-11/hosted/intel-transition-mechanisms.md) |
+| Host integration | [Selected linked XNU code and hostcalls](2026-11/hosted/linked-xnu-and-hostcalls.md) |
+| Host integration | [Representative Linux 6.x compatibility matrix](2026-11/hosted/linux-kernel-compatibility.md) |
+| Host integration | [First physical Intel ring-0 execution](2026-11/hosted/physical-ring0.md) |
+| Host integration | [Split FKI memory service and open-source boundary](2026-11/hosted/split-memory-service.md) |
+| Host integration | [Native VM page descriptors and hosted page ownership](2026-11/hosted/vm-page-ownership.md) |
+| Host integration | [Multi-session FKI ownership and corrected warning gate](2026-11/hosted/fki-smp-and-warning-regression.md) |
+| Host integration | [Linux-backed aliases and concurrent mapping lifetime](2026-11/hosted/mapping-lifetime.md) |
+| Host integration | [Source-backed VM objects and resident hashing](2026-11/hosted/vm-object-resident.md) |
+| Host integration | [Restricted final reference and process address-space isolation](2026-11/hosted/vm-final-reference-and-address-spaces.md) |
+| Host integration | [Actual FKI process mappings and reference tickets](2026-11/hosted/owned-process-memory.md) |
+| Host integration | [Inactive root ownership and cancellation](2026-11/hosted/inactive-root-lifecycle.md) |
+| Host integration | [Indexed VM and integrated boot metadata](2026-11/hosted/indexed-map-and-boot-metadata.md) |
+| Host integration | [Hosted clock, entropy and PRNG lifecycle](2026-11/hosted/hosted-clock-entropy-runtime.md) |
+| Host integration | [Hosted startup, scheduler and private IPC](2026-11/hosted/hosted-startup-scheduler-ipc.md) |
+| Project history | [Intel repository separation](2026-11/history/intel-repository-separation.md) |
+| Project history | [Public progress update: native Darwin PID 1](2026-11/history/public-progress-update-01.md) |
+| Cross-cutting | [Failed approaches and lessons](2026-11/lessons-learned.md) |
 
-The [qualification matrix](../docs/qualification-matrix.md) distinguishes confirmed scopes from open work. The [Intel Mach-O validator](../tests/hosted/monterey/mach-header-validator/README.md) is the first small source regression extracted for public integration and tested from Git. The full local candidate remains subject to source, license and reproduction review. Future increments will retain verified source and tests rather than copying every experimental directory.
+See also the [selected evidence manifest](2026-11/evidence-manifest.md).
+
+Reports are selected thematic summaries. Complete reproduction bundles and individual checkpoint coverage remain under preparation.
+
+The [public metadata validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable. Reports remain scoped to their original evidence; individual chapters and historical results have not all been independently replayed.

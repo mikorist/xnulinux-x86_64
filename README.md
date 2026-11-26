@@ -141,3 +141,13 @@ macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated
 ## Incremental public development
 
 Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
+
+## Documentation and research archive
+
+- [Developer documentation](docs/README.md)
+- [Research journal and chronological monograph](research/README.md)
+- [Architecture decisions](docs/adr/README.md)
+- [Contributing](CONTRIBUTING.md) and [security reporting](SECURITY.md)
+- [Changelog](CHANGELOG.md) and [AI-assisted development](AI-METHODOLOGY.md)
+
+The historical reports are edited accounts of recorded experiments; they are not a full public reproduction bundle or a certification of every underlying test.
