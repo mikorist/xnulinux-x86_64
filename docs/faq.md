@@ -6,7 +6,7 @@ No. The goal is to adapt XNU to standard PC hardware through Linux, rather than 
 
 ## Why PC if the current target is Intel?
 
-PC describes the intended platform, x86_64 the architecture, and Intel the initial implementation and qualification target. AMD support is planned after the stable Intel hosted baseline. Native AMD adaptation or an XNU-facing compatibility layer will be evaluated; neither is yet qualified. Other configurations likewise require separate evidence.
+PC describes the intended platform, x86_64 the architecture, and Intel the initial implementation and qualification target. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. Native AMD adaptation or an XNU-facing compatibility layer will be evaluated; neither is yet qualified. Other configurations likewise require separate evidence.
 
 ## Does it need QEMU?
 
@@ -32,6 +32,6 @@ The project intends to publish its own code and redistributable dependencies acc
 
 They record actual constraints and prevent repeated work. See [lessons learned](../research/2026-11/lessons-learned.md).
 
-## Can AMD development start without an AMD computer?
+## How is AMD development organized?
 
-Yes. The planned early test lane uses QEMU TCG with AMD CPU models on the existing Intel Linux host. It can establish scoped emulated behavior, but real AMD hardware is needed for final physical qualification. See [testing](testing.md#planned-cross-vendor-x86_64-test-strategy).
+A Ryzen 7 5700X WSL2 development environment is now operational alongside the Intel Linux host. Both use the shared source and kernel targets. TCG establishes scoped emulated behavior; nested KVM is a separate prospective test lane, and bare-metal AMD Linux qualification remains necessary. See [testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

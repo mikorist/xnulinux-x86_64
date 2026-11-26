@@ -65,3 +65,7 @@ For a security-sensitive report, follow [SECURITY.md](SECURITY.md) rather than p
 ## Communication
 
 Be concrete and respectful. Disagree with an implementation or conclusion using reproducible evidence. Do not make personal attacks or misrepresent other contributors' results.
+
+## Parallel Intel and AMD development
+
+Use one shared x86_64 source tree and FKI ABI. Ryzen and Intel work may proceed in separate workspaces, with one integration history and a common checkpoint review cycle. Identify CPU, accelerator, Linux kernel, compiler, input hashes and evidence scope in contributions. Do not equate AMD-model TCG or nested WSL2 virtualization with bare-metal AMD Linux qualification.

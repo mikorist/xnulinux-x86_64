@@ -12,7 +12,7 @@ flowchart TD
     L --> F[fki.ko / host interface]
     F --> K[Linux x86_64 kernel]
     N[Linux applications] --> K
-    K --> P[Physical x86_64 PC (Intel first)]
+    K --> P[Physical x86_64 PC (Intel and AMD target)]
 ```
 
 *Proposed architecture, not a demonstrated end-to-end implementation.*
@@ -38,6 +38,6 @@ The APSL and GPL components retain their existing license separation. Proprietar
 
 ## CPU vendor portability
 
-Intel is the initial implementation target, not the permanent platform boundary. AMD compatibility is a planned subsequent effort. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. The exact AMD adaptation mechanism remains open.
+Intel is the initial implementation target, not the permanent platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. The exact AMD adaptation mechanism remains open.
 
 The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common source, FKI ABI, build system and runtime, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

@@ -27,12 +27,12 @@ See [root mount](../research/2026-11/filesystem/first-root-mount.md) and [file r
 
 ## Planned cross-vendor x86_64 test strategy
 
-Intel and AMD share the same source tree, FKI ABI, build system and Darwin runtime. CPU-specific behavior is selected by detected capabilities and vendor-specific adapters where required. Intel remains the first physical hosted baseline; short CPU portability probes may accompany shared-interface changes without delaying it. Full AMD regressions follow the stable Intel baseline.
+Intel and AMD share the same source tree, FKI ABI, build system and Darwin runtime. CPU-specific behavior is selected by detected capabilities and vendor-specific adapters where required. Intel remains the established physical reference lane. AMD development and component regressions proceed in parallel now, without waiting for the complete Intel hosted baseline.
 
-AMD development can begin on an Intel Linux host using isolated QEMU TCG guests. QEMU 10.0.13 lists EPYC-v1, EPYC-Rome-v1, EPYC-Milan-v1, EPYC-Genoa-v1 and Opteron_G5-v1. Begin with EPYC-v1 or a documented suitable alternative, using the following CPU selection fragment, not a complete boot command:
+AMD development uses isolated QEMU TCG guests on Intel and a Ryzen 7 5700X WSL2 development host. QEMU 10.0.13 lists EPYC-v1, EPYC-Rome-v1, EPYC-Milan-v1, EPYC-Genoa-v1 and Opteron_G5-v1. Select a documented model, such as EPYC-Milan-v1 for a Zen 3 approximation, using the following CPU selection fragment, not a complete boot command:
 
 ```sh
--accel tcg -cpu EPYC-v1
+-accel tcg -cpu EPYC-Milan-v1
 ```
 
 Verify actual guest vendor, CPUID capabilities and QEMU warnings before interpreting results. A listed model does not guarantee that TCG implements every advertised feature. An Intel KVM guest with an AMD vendor string is not an AMD hardware test. Keep the same pinned XNU sources and two selected Linux kernel targets; build separately for each kernel. Select additional CPU models according to actual risks, rather than running a full matrix on every checkpoint.
@@ -42,6 +42,8 @@ Verify actual guest vendor, CPUID capabilities and QEMU warnings before interpre
 | Physical Intel | Actual Intel hardware behavior in tested scope |
 | Intel guest | Isolated Intel-model behavior under the recorded accelerator |
 | AMD-model TCG guest on Intel | Emulated AMD-model behavior, not physical AMD qualification |
-| Physical AMD | Independent real AMD qualification, with appropriate authorization |
+| AMD-model TCG guest on Ryzen WSL2 | Emulated guest behavior on an AMD compute host, not native AMD qualification |
+| Nested KVM on Ryzen WSL2 | Hardware-assisted virtualized lane; project execution remains to be qualified |
+| Physical AMD Linux | Independent bare-metal qualification, with appropriate authorization |
 
-Record host and guest CPU, effective capabilities, accelerator, kernel, source and input hashes, exact command, test results and limitations. Progress from vendor/feature and build probes to standalone, hosted component and integrated regressions. Real AMD hardware, such as an authorized contributor system or rented physical machine, is required before claiming physical AMD support. QEMU is a development tool, not a required production dependency. No AMD runtime result is asserted by this plan.
+Record host and guest CPU, effective capabilities, accelerator, kernel, source and input hashes, exact command, test results and limitations. Progress from vendor/feature and build probes to standalone, hosted component and integrated regressions. Real AMD hardware, such as an authorized contributor system or rented physical machine, is required before claiming physical AMD support. QEMU is a development tool, not a required production dependency. The Ryzen development environment is operational. This plan does not assert a clean AMD runtime or physical AMD qualification. Technical results are reported through the regular evidence review cycle.

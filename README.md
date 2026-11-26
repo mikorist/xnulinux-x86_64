@@ -21,7 +21,7 @@ The long-term goal of XNULINUX is to eliminate the need for traditional Hackinto
 
 Rather than making a PC pretend to be a Mac, we aim to make XNU work with the PC as it is.
 
-PC is the project identity, x86_64 is the target architecture, and Intel is the current implementation and qualification target. AMD x86_64 support is planned after the stable Intel hosted baseline; it has not yet been demonstrated. Linux remains responsible for physical hardware and host resources; the project aims to reuse that infrastructure rather than require Mac hardware emulation. This is an independent, experimental open-source project and is not affiliated with Apple Inc.
+PC is the project identity, x86_64 is the target architecture, and Intel is the established reference lane, and development now proceeds in parallel on Intel and AMD Ryzen x86_64 systems. Full AMD compatibility has not yet been demonstrated. Linux remains responsible for physical hardware and host resources; the project aims to reuse that infrastructure rather than require Mac hardware emulation. This is an independent, experimental open-source project and is not affiliated with Apple Inc.
 
 See [project philosophy](docs/project-philosophy.md) for the design principles.
 
@@ -109,7 +109,7 @@ The project targets standard x86_64 PCs. Current development and qualification f
 - Earlier host-service and VM regression series covered representative distribution kernels from Linux 6.0 through 6.19.
 - Current focused regression targets: Linux `7.3.5-2-liquorix-amd64` and `6.19.14-2-liquorix-amd64`.
 
-The historical kernel matrix covers specific components and configurations, not a guarantee of full XNU compatibility with every Linux release. AMD x86_64 support is planned after the stable Intel hosted baseline; it has not yet been demonstrated. A minimum supported CPU or kernel version has not yet been established. The intended implementation shares its source tree, FKI ABI, build system and Darwin runtime across Intel and AMD. Planned AMD development starts with isolated QEMU TCG CPU-model tests on Intel hardware; physical AMD qualification follows separately. See the [cross-vendor testing plan](docs/testing.md#planned-cross-vendor-x86_64-test-strategy).
+The historical kernel matrix covers specific components and configurations, not a guarantee of full XNU compatibility with every Linux release. AMD development is active in parallel with Intel; full AMD compatibility remains unqualified. A minimum supported CPU or kernel version has not yet been established. The intended implementation shares its source tree, FKI ABI, build system and Darwin runtime across Intel and AMD. Development now uses both an Intel Linux host and an AMD Ryzen 7 5700X Linux environment under WSL2. Ryzen is a primary compute and AMD development host; Intel remains a separate reference and regression host. AMD-model TCG tests, nested hardware virtualization, and bare-metal qualification remain distinct. See the [cross-vendor testing plan](docs/testing.md#planned-cross-vendor-x86_64-test-strategy).
 
 ## XNU versions
 
