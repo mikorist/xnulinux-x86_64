@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 357, 2026-11-26. Results apply to the stated scope only.
+Snapshot: research checkpoint 377, 2026-11-26. Results apply to the stated scope only.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -32,8 +32,9 @@ Snapshot: research checkpoint 357, 2026-11-26. Results apply to the stated scope
 | Hosted clock/entropy | Negotiated live services, private PRNG and reload lifecycle | Native registration and production qualification |
 | Startup and CPU/thread | Exact-layout records, private scalar/counter callbacks, stack geometry, zone record count and BSD argument data; four phase-1 records unbound | Native phase completion, task creation |
 | Scheduler and timers | Original queue operations, joined cooperative workers, private runtime and transactional result tests | Native context switching, dispatch, IRQ integration |
-| Hosted private IPC | Private shared metadata owner, 63-name capacity, unchanged exhaustion output, stale name rejection and drain | Real Mach ports, task adapter and native messaging |
+| Hosted private IPC (earlier baseline) | Private shared metadata owner, 63-name capacity, unchanged exhaustion output, stale name rejection and drain | Real Mach ports, task adapter and native messaging |
 | Hosted private task and ledger | Two-kernel component qualification through 357: reference-owned tasks, exclusive IPC metadata binding, ledger template and schema, constructor rollback | Native task, real IPC ports, active pmap and native scheduler remain open |
+| Hosted private task/thread/IPC resources | Checkpoint 377: typed Linux caches, private reference and rollback checks, IPC geometry and metadata lifetime; two-kernel private Git replay | Native zones, task/thread creation, active pmap, real Mach IPC and dispatch remain open |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
