@@ -35,3 +35,7 @@ Headless execution targets a minimal open Darwin runtime. Desktop mode targets a
 Linux owns host resources. CPU state, memory, exceptions, interrupts, SMP and module lifecycle require independent hosted qualification. Standalone boot evidence cannot substitute for these tests.
 
 The APSL and GPL components retain their existing license separation. Proprietary frameworks remain separate dependencies, subject to their applicable licenses.
+
+## CPU vendor portability
+
+Intel is the initial implementation target, not the permanent platform boundary. AMD compatibility is a planned subsequent effort. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. The exact AMD adaptation mechanism remains open.

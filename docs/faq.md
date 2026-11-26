@@ -6,7 +6,7 @@ No. The goal is to adapt XNU to standard PC hardware through Linux, rather than 
 
 ## Why PC if the current target is Intel?
 
-PC describes the intended platform, x86_64 the architecture, and Intel the initial implementation and qualification target. AMD and other configurations require separate evidence; no AMD support is claimed.
+PC describes the intended platform, x86_64 the architecture, and Intel the initial implementation and qualification target. AMD support is planned after the stable Intel hosted baseline. Native AMD adaptation or an XNU-facing compatibility layer will be evaluated; neither is yet qualified. Other configurations likewise require separate evidence.
 
 ## Does it need QEMU?
 

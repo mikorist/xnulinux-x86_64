@@ -21,7 +21,7 @@ The long-term goal of XNULINUX is to eliminate the need for traditional Hackinto
 
 Rather than making a PC pretend to be a Mac, we aim to make XNU work with the PC as it is.
 
-PC is the project identity, x86_64 is the target architecture, and Intel is the current implementation and qualification target. AMD support is not currently claimed. Linux remains responsible for physical hardware and host resources; the project aims to reuse that infrastructure rather than require Mac hardware emulation. This is an independent, experimental open-source project and is not affiliated with Apple Inc.
+PC is the project identity, x86_64 is the target architecture, and Intel is the current implementation and qualification target. AMD x86_64 support is planned after the stable Intel hosted baseline; it has not yet been demonstrated. Linux remains responsible for physical hardware and host resources; the project aims to reuse that infrastructure rather than require Mac hardware emulation. This is an independent, experimental open-source project and is not affiliated with Apple Inc.
 
 See [project philosophy](docs/project-philosophy.md) for the design principles.
 
@@ -107,7 +107,7 @@ The project targets standard x86_64 PCs. Current development and qualification f
 - Earlier host-service and VM regression series covered representative distribution kernels from Linux 6.0 through 6.19.
 - Current focused regression targets: Linux `7.3.5-2-liquorix-amd64` and `6.19.14-2-liquorix-amd64`.
 
-The historical kernel matrix covers specific components and configurations, not a guarantee of full XNU compatibility with every Linux release. AMD support is not currently claimed. A minimum supported CPU or kernel version has not yet been established.
+The historical kernel matrix covers specific components and configurations, not a guarantee of full XNU compatibility with every Linux release. AMD x86_64 support is planned after the stable Intel hosted baseline; it has not yet been demonstrated. A minimum supported CPU or kernel version has not yet been established.
 
 ## XNU versions
 
@@ -131,6 +131,7 @@ The intention is to reuse validated Intel FKI infrastructure through version-spe
 - [ ] Optional graphical desktop and seamless application-window integration.
 - [ ] Reproducible source release, installation and hardware compatibility documentation.
 - [ ] Subsequent XNU 12377 / Tahoe port.
+- [ ] AMD x86_64 compatibility and qualification on Linux PCs.
 
 ## Source availability and research documentation
 

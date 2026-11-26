@@ -24,3 +24,7 @@ Hosted integration may proceed in parallel with standalone reference tests. GPU 
 ## Subsequent Intel source target
 
 After stable physical Linux-hosted execution of the Monterey baseline, the next planned Intel port targets XNU 12377 (Tahoe). Retain Monterey as a separate version target; reuse validated host infrastructure through version-specific adapters. The exact Tahoe source pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory.
+
+## AMD x86_64 follow-on target
+
+The long-term platform scope includes both Intel and AMD x86_64 Linux PCs. Complete and stabilize the current Intel hosted baseline first. Then evaluate native AMD-aware XNU adaptation and, where necessary, a narrowly scoped compatibility view of CPU identity and capabilities presented to XNU. Select the approach through actual CPU, memory, interrupt, timing, scheduler and userspace tests. Preserve Linux host ownership and expose only capabilities that the hardware and implementation can support. No AMD runtime or hardware qualification is claimed yet. Do not change the current Intel implementation sequence or source pins merely to announce this goal.

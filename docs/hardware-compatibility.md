@@ -15,7 +15,7 @@ Historical hardware snapshot: checkpoint 317, 2026-11-26. Later guest-only miles
 | QEMU Broadwell-v2 | Standalone TCG | Read-only root mount, native PID 1 and terminal-only replay confirmed |
 | QEMU Broadwell-v2 | Isolated Linux guest | FKI module lifecycle, cooperative SMP and bounded service regression confirmed |
 | Other Intel generations | Physical hosts | Not qualified by these records |
-| AMD x86_64 | Physical hosts | No support claim |
+| AMD x86_64 | Physical hosts | Planned follow-on target after stable Intel hosted baseline; not yet qualified |
 
 The development host records identify Debian 13 and Clang 19.1.7; these are observations rather than minimum supported versions.
 
