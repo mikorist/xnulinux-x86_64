@@ -40,6 +40,7 @@ There is no x86_64 product release represented by this document. The entries bel
 - Checkpoints 318-337: explicit-input private Git replay, shared worker service lifecycle and result rollback, expanded private startup callbacks, and final two-kernel replay of 191 inputs. Public standalone evidence verifier and scoped report added; full candidate remains held for review.
 - Checkpoints 338-357: private task ownership and rollback, retained ledger templates and 60 source-backed keys, two-kernel qualification of 227 inputs, and byte-identical regeneration of 90 outputs using retained reference objects. Full candidate remains held for source and build review.
 - Checkpoints 358-377: private task and thread typed resources, admission and rollback, IPC size geometry, selected-field layout and retirement guards; 255-input two-kernel Git replay and 111-output extraction replay. Full source remains held for provenance and licensing review.
+- Checkpoints 378-397: source notice restoration and provenance verification, 117-output regeneration, 15 byte-identical native reference objects, 1,089-input relink comparison, dual-kernel canonical and minimal runtime replays, and initial CPU vendor probe. Full source remains on HOLD.
 - Public repository renamed and ARM-only deployment retired; original reference branch preserved.
 
 See the [kernel image history](docs/kernel-history.md), [research journal](research/README.md) and [qualification matrix](docs/qualification-matrix.md).

@@ -18,6 +18,8 @@ Through checkpoint 357, private task ownership and ledger construction have pass
 
 Through checkpoint 377, private typed task/thread resources and IPC metadata lifecycle have passed canonical two-kernel replay. Native startup resource ownership, real IPC and native execution remain separate gates. See the [task, thread and IPC report](../research/2026-11/hosted/hosted-task-thread-ipc.md).
 
+Through checkpoint 397, source provenance and reference reconstruction have advanced, with both canonical and minimal private runtime replays passing. Native IPC startup dependencies remain the next integration gate. See the [provenance and reproduction report](../research/2026-11/hosted/hosted-provenance-reproduction.md).
+
 Hosted integration may proceed in parallel with standalone reference tests. GPU acceleration is not a prerequisite for the first kernel or headless runtime.
 
 

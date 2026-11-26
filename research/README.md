@@ -39,6 +39,7 @@ Experimental milestones, not product releases. Runtime results listed here conce
 | Host integration | [Hosted startup, scheduler and private IPC](2026-11/hosted/hosted-startup-scheduler-ipc.md) |
 | Host integration | [Hosted task ownership and ledger research](2026-11/hosted/hosted-task-ledger.md) |
 | Host integration | [Hosted task, thread and IPC resource lifecycle research](2026-11/hosted/hosted-task-thread-ipc.md) |
+| Host integration | [Hosted provenance and reproduction research](2026-11/hosted/hosted-provenance-reproduction.md) |
 | Project history | [Intel repository separation](2026-11/history/intel-repository-separation.md) |
 | Project history | [Public progress update: native Darwin PID 1](2026-11/history/public-progress-update-01.md) |
 | Cross-cutting | [Failed approaches and lessons](2026-11/lessons-learned.md) |

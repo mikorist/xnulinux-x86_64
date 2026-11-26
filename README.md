@@ -63,7 +63,7 @@ QEMU/KVM are development and regression environments, not intended requirements 
 
 ## Current development status
 
-**Research snapshot: November 26, 2026, checkpoint 377.**
+**Research snapshot: November 26, 2026, checkpoint 397.**
 
 The following results are recorded in the local development journal and experimental evidence. They describe different test environments and are not a claim that the complete hosted kernel is already running.
 
@@ -95,6 +95,8 @@ The integrated cooperative scheduler-facing regression (checkpoint 307) passed o
 Checkpoints 338-357 added private task ownership, reference lifecycle, transactional construction, ledger templates and source-backed schema validation. Both selected Linux guests passed the 227-input candidate with 78 marker groups and 152 required marker occurrences each. See the [task and ledger report](research/2026-11/hosted/hosted-task-ledger.md).
 
 Checkpoints 358-377 qualified private typed task/thread resources, reference and allocation rollback, source-derived IPC geometry and non-destructive metadata retirement. Both selected Linux guests passed a fresh private Git-tree replay of 255 inputs and 94 marker groups. See the [task, thread and IPC report](research/2026-11/hosted/hosted-task-thread-ipc.md).
+
+Checkpoints 378-397 verified retained-source provenance, rebuilt 15 native reference objects from an isolated 496-input closure, and replayed both the 258-input private candidate and its 174-input runtime subset on both selected Linux guests. See the [provenance and reproduction report](research/2026-11/hosted/hosted-provenance-reproduction.md).
 
 These are source-backed and bounded integration tests. They do **not** establish native XNU stack switching, a complete hosted world switch, native scheduler dispatch, or a booted hosted Darwin userspace.
 

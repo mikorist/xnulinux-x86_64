@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 377, 2026-11-26. Results apply to the stated scope only.
+Snapshot: research checkpoint 397, 2026-11-26. Results apply to the stated scope only.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -35,6 +35,7 @@ Snapshot: research checkpoint 377, 2026-11-26. Results apply to the stated scope
 | Hosted private IPC (earlier baseline) | Private shared metadata owner, 63-name capacity, unchanged exhaustion output, stale name rejection and drain | Real Mach ports, task adapter and native messaging |
 | Hosted private task and ledger | Two-kernel component qualification through 357: reference-owned tasks, exclusive IPC metadata binding, ledger template and schema, constructor rollback | Native task, real IPC ports, active pmap and native scheduler remain open |
 | Hosted private task/thread/IPC resources | Checkpoint 377: typed Linux caches, private reference and rollback checks, IPC geometry and metadata lifetime; two-kernel private Git replay | Native zones, task/thread creation, active pmap, real Mach IPC and dispatch remain open |
+| Reference build reproduction | Checkpoint 397: 496-input isolated closure, 15 byte-identical Mach-O objects; 258/174-input dual-kernel private replay | Full source/toolchain rebuild, redistribution review and native execution remain open |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
