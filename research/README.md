@@ -37,6 +37,7 @@ Experimental milestones, not product releases. Runtime results listed here conce
 | Host integration | [Indexed VM and integrated boot metadata](2026-11/hosted/indexed-map-and-boot-metadata.md) |
 | Host integration | [Hosted clock, entropy and PRNG lifecycle](2026-11/hosted/hosted-clock-entropy-runtime.md) |
 | Host integration | [Hosted startup, scheduler and private IPC](2026-11/hosted/hosted-startup-scheduler-ipc.md) |
+| Host integration | [Hosted task ownership and ledger research](2026-11/hosted/hosted-task-ledger.md) |
 | Project history | [Intel repository separation](2026-11/history/intel-repository-separation.md) |
 | Project history | [Public progress update: native Darwin PID 1](2026-11/history/public-progress-update-01.md) |
 | Cross-cutting | [Failed approaches and lessons](2026-11/lessons-learned.md) |
