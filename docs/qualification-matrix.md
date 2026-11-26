@@ -1,0 +1,39 @@
+# Qualification matrix
+
+Snapshot: research checkpoint 317, 2026-11-26. Results apply to the stated scope only.
+
+| Area | Recorded status | Remaining qualification |
+| --- | --- | --- |
+| Strict executable link | Confirmed | Clean public reproduction |
+| Legacy clock | Standalone confirmed | Hardware and hosted timers |
+| UEFI | Firmware probe only | XNU handoff and execution |
+| Mach VM | Standalone bootstrap confirmed | Hosted memory, SMP |
+| Scheduler | UP round trip confirmed | SMP and hosted execution |
+| Mach IPC | Startup confirmed | User message exchange |
+| IOKit | Core initialization confirmed | Complete live transport/drivers |
+| PRNG | Diagnostic registration | Entropy and reseed qualification |
+| Crypto | Diagnostic 40-slot registration | Full production security/ABI review |
+| pthread | Static initialization | User synchronization ABI |
+| HFS+ | Restricted read-only fixture mount/read, tested negative paths | General media, writable HFS and journal support |
+| PID 1 / ring 3 | Standalone native execution and terminal-only replay confirmed | Debugger-free boot, general userspace, hosted replay |
+| FKI ordinary Linux services | Guest runtime and physical bounded CPL0 adapter confirmed | Cross-context integration |
+| Original linked XNU PE instructions | Selected Mach-O bytes executed in Linux userspace on physical Intel | Privileged original Mach-O entry |
+| Original XNU PE source components | Recompiled ELF subset executed in physical CPL0 | Complete XNU machine layer, pmap and scheduler |
+| Intel transition mechanisms | Freestanding protected mapping and cooperative Linux tests | Full Linux-to-XNU world switch and exceptional paths |
+| Linux host versions | Historical representative 6.0–6.19 suites; current two-kernel milestones through 317 | Full hosted runtime, additional configurations and physical coverage |
+| Split FKI memory service | Isolated guest and physical pair; bounded allocation/copy/cleanup | Fault injection and complete VM integration |
+| XNU page ownership and primitives | Restricted original source and hosted zero/copy adapters pass physical CPL0 | Full native pmap and vm_page_copy semantics |
+| FKI multi-session and alias lifetime | Physical four-CPU race tests and corrected warning gate | Independent XNU mappings, hardware TLB and fault injection |
+| VM objects and resident hash | Restricted original source subsets pass physical CPL0 | General pager, ledger, native locks and concurrent kernel lookup |
+| Empty-object final reference | Physical metadata allocation/free and selected original transitions | General deallocation/reaper and concurrent kernel references |
+| Native object tickets/process isolation | Native userspace fixture and real FKI-backed process mappings in Linux guests | Production authorization, arbitrary mapping lifetime and independent XNU root |
+| Inactive root and map ownership | Opaque hierarchy, source-backed reference and indexed map gates | Active hardware translations and complete native pmap |
+| Boot metadata and PE | Actual linked header, original accessors, boot layout/seed on two kernels | Real native firmware/CPU boot handoff |
+| Hosted clock/entropy | Negotiated live services, private PRNG and reload lifecycle | Native registration and production qualification |
+| Startup and CPU/thread | Exact-layout records, private scalar/counter callbacks and metadata | Native phase completion, task creation |
+| Scheduler and timers | Original queue operations and cooperative Linux callback/elapsed tests | Native context switching, dispatch, IRQ integration |
+| Hosted private IPC | Entry-table lifecycle, stale name rejection and drain | Real Mach ports, task adapter and native messaging |
+| Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
+| Headless / desktop / seamless | Goals | End-to-end implementation |
+
+The latest research checkpoint must be consulted before using this snapshot for a public status announcement.

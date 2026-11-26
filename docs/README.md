@@ -18,3 +18,7 @@ This cleanup retires the ARM-specific deployment path, DGX tools, ARM world-swit
 | `LICENSE`, `LICENSES/` | Original licenses and attribution preserved. |
 
 GPU acceleration is deferred until the Intel runtime reaches the required graphics interfaces. Retained graphics scripts may assume ARM64 or Apple Silicon; do not run them as Intel instructions. The Intel source and tested build entry points will be integrated separately after review. See the [project README](../README.md) for the current research status.
+
+## Current Intel research
+
+See the [qualification matrix](qualification-matrix.md) and [research journal](../research/README.md). The [Mach-O validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable in userspace.

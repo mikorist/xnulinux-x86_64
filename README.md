@@ -51,7 +51,7 @@ QEMU/KVM are development and regression environments, not intended requirements 
 
 ## Current development status
 
-**Research snapshot: November 26, 2026, checkpoint 311.**
+**Research snapshot: November 26, 2026, checkpoint 317.**
 
 The following results are recorded in the local development journal and experimental evidence. They describe different test environments and are not a claim that the complete hosted kernel is already running.
 
@@ -78,7 +78,7 @@ These milestones were established in isolated standalone QEMU tests. The PID 1 f
 | Scheduler-facing work | Original non-realtime queue operations across 96 priorities, realtime queues across 31 priorities, priority-selected C callbacks on two Linux workers, failure cancellation/recovery and FKI elapsed-clock accounting. |
 | Mach IPC | Restricted private entry-table allocation, generation, lookup, reuse and exhaustion tests. No live Mach port objects or end-to-end hosted IPC yet. |
 
-The latest integrated cooperative scheduler-facing regression (checkpoint 307) passed on both selected Linux guest kernels. Checkpoints 308-311 subsequently qualified private IPC-entry lifecycle, running timer setup and expiry, and realtime selection boundaries.
+The latest integrated cooperative scheduler-facing regression (checkpoint 307) passed on both selected Linux guest kernels. Checkpoints 308-317 qualified private IPC-entry lifecycle, running timer setup and expiry, realtime selection boundaries and independent 4,096-operation queue models. The checkpoint 317 integrated result records 181 identical common inputs and 49 marker groups appearing twice on each selected Linux guest kernel. This is not a native hosted boot.
 
 These are source-backed and bounded integration tests. They do **not** establish native XNU stack switching, a complete hosted world switch, native scheduler dispatch, or a booted hosted Darwin userspace.
 
@@ -137,3 +137,7 @@ Thanks to Heyang Zhou and the original xnulinux contributors, Apple Open Source,
 Copyright © 2026 Heyang Zhou and contributors (original xnulinux).
 
 macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated with or endorsed by Apple.
+
+## Incremental public development
+
+Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
