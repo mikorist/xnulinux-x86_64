@@ -58,3 +58,5 @@ CP632 adds [provisional dependency references](../targets/tahoe/dependency-refer
 CP640: 21 of 25 compared utility source units match across versions, but only three have identical directly referenced pinned paths; other generated and exported dependencies remain unqualified. [CP640](../research/2026-11/checkpoint-640.md).
 
 CP641: [post-kernel platform reuse](post-kernel-platform.md) is a shared architectural plan; the Darwin runtime, IOKit/graphics interfaces and target build remain version-specific until compatible behavior is demonstrated.
+
+The owner-approved CP641 direction extends the shared host platform to disk, networking, input, display, GPU, audio, application presentation and service lifecycle. Keep per-target runtime, framework and IOKit compatibility tests. No duplication by CPU vendor merely to select a host GPU; qualify actual hardware and driver combinations. The implementation gate remains unchanged.

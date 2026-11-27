@@ -1,6 +1,6 @@
 # Post-kernel platform reuse audit (CP641)
 
-Date: 2026-11-27. Research scope: exact public upstream e0835348aedf89b95dbf3cc1f48a98f91ade89db, preserved ARM reference 7ed7153bd34b4d906a0f02320efc774850d5a5b0, x86 snapshot d8e448531e5a5ca4d44df5536767061db673fbf9. All three clean. See the [CP641 research record](../research/2026-11/checkpoint-641.md) for the tracked-file counts and scope. The [upstream source snapshot](https://github.com/AFK-surf/xnulinux/tree/e0835348aedf89b95dbf3cc1f48a98f91ade89db) and [preserved ARM reference](https://github.com/mikorist/xnulinux-x86_64/tree/7ed7153bd34b4d906a0f02320efc774850d5a5b0) are the comparison bases. This is a research plan, not a new implementation gate or a source/license clearance.
+Date: 2026-11-27. Research scope: exact public upstream e0835348aedf89b95dbf3cc1f48a98f91ade89db, preserved ARM reference 7ed7153bd34b4d906a0f02320efc774850d5a5b0, x86 snapshot d8e448531e5a5ca4d44df5536767061db673fbf9. All three clean. See the [CP641 research record](../research/2026-11/checkpoint-641.md) for the tracked-file counts and scope. The [upstream source snapshot](https://github.com/AFK-surf/xnulinux/tree/e0835348aedf89b95dbf3cc1f48a98f91ade89db) and [preserved ARM reference](https://github.com/mikorist/xnulinux-x86_64/tree/7ed7153bd34b4d906a0f02320efc774850d5a5b0) are the comparison bases. The owner approved incorporation of this plan on November 27, 2026, after CP641. It is the development direction, not a new implementation gate or a source/license clearance.
 
 ## Reuse, adapt, design
 - Headless: upstream docs/free-kc.md identifies PureDarwin fork b3b4b2812fdd1c5c251dc3089b5a1a9e00d29970 for arm64 dyld/libSystem/launchd/zsh/toybox. Use as provenance reference, not a copied runtime. Version-matched x86 sources, generated headers, dependency and license closure, signing/trust semantics and real hosted PID1/application tests are required separately for Monterey and Tahoe. No permissive security stub adopted.
@@ -17,7 +17,7 @@ Date: 2026-11-27. Research scope: exact public upstream e0835348aedf89b95dbf3cc1
 ## Licenses
 The root LICENSE is a map, not a single license. GPL-2.0-only host FKI/Linux, scripts and Linux GPU daemon; APSL-2.0 XNU, adapter and most kexts; BSD-2-Clause-Patent display/input/network and Metal shim; MIT DRM protocol/Darwin shim and Mesa/virgl patches; GPL-2.0-or-later CPU Metal plugin and metal2vulkan patches. Source-prefix scan: GPU 49 selected program-source files (9 GPL-2.0-only, 32 GPL-2.0-or-later, 7 MIT, 1 BSD-2-Clause-Patent), kexts 33 (27 APSL-2.0, 5 BSD-2-Clause-Patent, 1 GPL-2.0-only). All selected files have markers, but file scope, upstream attribution, patent notices, combined/linking obligations and transitive licenses remain unreviewed. Root directory summary lists mixed DRM test licenses; follow actual file notices. Upstream fetch scripts declare metal2vulkan GPL-2.0-or-later/LGPL-3.0-or-later, Vulkan-Loader Apache-2.0, Mesa 26.3.1 MIT, LLVM 22.1.8 (verify Apache-2.0 WITH LLVM-exception), Mbed TLS 3.6.8 dual license selected Apache-2.0. The AdrenoMetal fetch note and shim's different license require per-file provenance verification. Do not assume compatible combined distribution from SPDX labels alone; legal review especially GPL-2.0-only versus Apache-2.0, Rust dependency closure, and APSL boundaries. Preserve originals. No proprietary Apple SDK, frameworks, system disk, firmware, kexts or binaries without rights. Apple macOS licenses restrict complete OS use to Apple-branded computers; see https://www.apple.com/legal/sla/. Open-source kernel and open runtime are independent of permission for proprietary software.
 
-## Proposed order (no change to existing gates)
+## Approved development sequence (existing gates unchanged)
 1. Preserve Monterey hosted/AMD milestones and source closure. Prepare Tahoe read-only dependency inventory independently.
 2. Open Darwin runtime, disk/network/input, service start/stop. Version-matched headless smoke on each target.
 3. Software display path and minimal graphical session using owned/open applications.
@@ -25,3 +25,26 @@ The root LICENSE is a map, not a single license. GPL-2.0-only host FKI/Linux, sc
 5. Isolated Linux-only backend regression, hardware-specific capability matrix, then hosted GPU integration and lifecycle.
 6. Separate full desktop and seamless presentation, audio, accessibility, files, app testing, packaging and release gates.
 Do not build three independent kernels or duplicate the GPU transport by CPU vendor. No new physical modules without approval. ARM64 reference remains unchanged.
+
+## Adaptation backlog
+
+Relative effort is a preliminary engineering estimate, not a completion percentage. Revisit estimates after source and interface tests.
+
+| Area | Estimated adaptation | First independent acceptance |
+| --- | --- | --- |
+| Linux GPU daemon / DRM protocol | Low to medium | Host-only protocol and lifecycle tests |
+| Venus / lavapipe | Medium | Target build and owned render/compute output |
+| metal2vulkan | Medium to high | Version-specific API and result tests |
+| XnuCpuMetal plugin | High | Framework/device ABI and lifecycle |
+| Disk, Ethernet, input | Medium | Version-matched IOKit and host I/O tests |
+| Display and kernel collection linker | High | x86 display ABI and target-specific link evidence |
+| PureDarwin runtime | High | Real hosted headless program and service execution |
+| Seamless integration | New development | Individual window lifecycle and host interaction |
+
+Before inventing a new implementation, evaluate maintained, separable open-source candidates (including PureDarwin, Darling and GNUstep where appropriate). Do not assume they are source, binary or license compatible. Track window/surface protocols, audio, files, USB/removable devices, camera/mic, display and accessibility, launcher and service recovery as separate work items.
+
+## Qualification and shared implementation
+
+Keep the host device, graphics and presentation services common across Intel and AMD and across version targets where independently validated. Keep the Darwin-facing runtime, generated headers, device interfaces and private framework ABI version-matched. Host GPU capability is independent of CPU vendor: qualify the actual GPU model, driver and features. Record the tested backend and result separately from any hosted application claim. An Intel CPU with a Radeon or NVIDIA GPU is a legitimate target combination, not a new architecture fork.
+
+Each stage records inputs, exact version, target, host/device, build, positive and negative functional tests, lifecycle/cleanup and limitations. Host-only tests may run independently of hosted kernel development. Open headless and basic software graphics must not depend on proprietary macOS or hardware acceleration. Desktop and seamless have independent acceptance tests; neither requires completion of the other. The Tahoe implementation gate and physical module approval rules are unchanged.

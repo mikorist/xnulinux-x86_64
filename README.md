@@ -35,7 +35,7 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 | Research milestone | Evidence |
 | --- | --- |
 | Monterey standalone Intel-model PID 1 | CP627: ordinary boot without debugger on both hosts, 92.08 s and 91.35 s |
-| Reproducible retained executable | CP630: 1,114 link inputs, including 22 regenerated objects and 1,092 retained; byte-identical CP602 image on both hosts |
+| Reproducible retained executable | CP639: 1,114 link inputs, including 28 regenerated objects and 1,086 retained; byte-identical CP602 image on both hosts |
 | AMD model startup | CP622: admission remains deliberately unqualified; full boot HOLD |
 | Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
 | Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
@@ -60,7 +60,7 @@ The original ARM64 implementation remains preserved in [arm64-reference](https:/
 
 ## Beyond a conventional port
 
-XNULINUX x86_64 is developing a complete PC-oriented compatibility platform, not merely a kernel port for one CPU or a set of CPU-specific patches. The intended platform combines a vendor-aware XNU machine layer, Linux-hosted execution and version-matched Darwin runtimes supporting headless, desktop and seamless application modes. The complete platform is the engineering goal, not a claim of present functionality.
+XNULINUX x86_64 is developing a complete PC-oriented compatibility platform, not merely a kernel port for one CPU or a set of CPU-specific patches. The intended platform combines a vendor-aware XNU machine layer, Linux-hosted execution and version-matched Darwin runtimes supporting headless, desktop and seamless application modes. The complete platform is the engineering goal, not a claim of present functionality. The [approved post-kernel plan](docs/post-kernel-platform.md) maps retained ARM device and GPU sources, software rendering, Linux GPU backends, open runtime and the new desktop/seamless work. We reuse proven components rather than write a new hardware driver for every PC.
 
 Independent Intel and Ryzen builds, CPU-model experiments, negative tests, cross-vendor regressions and native hardware measurements are central to this work. The reviewed baseline includes byte-identical reproduction of the 1,089-input standalone executable, early AMD machine-layer diagnostics under Milan TCG, a full Intel PID 1 regression, and native AMD KVM component replay with strict 94/94 results on each of two Linux guest kernels. SRSO qualification applies to that native KVM configuration; guest TSA and Hyper-V SRSO remain open. See [platform scope and evidence](docs/platform-scope.md).
 

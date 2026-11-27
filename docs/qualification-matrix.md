@@ -87,3 +87,5 @@ CP638: self-contained source staging and historical CP335 Python source identity
 CP639: six additional libkern source objects regenerated per host, 28 regenerated inputs in each exact relink; CP640: scoped Tahoe source/dependency comparison only. No runtime qualification change.
 
 CP641: ARM post-kernel source inventory PASS; retained GPU/kext identity does not qualify x86 graphics, desktop, headless, or seamless execution. Component and transitive license closure remains open. See [platform reuse](post-kernel-platform.md).
+
+CP641 plan approval is a documentation decision, not an additional technical result. Open runtime, software display, CPU Metal, host GPU backend, hosted GPU, desktop and seamless have independent future qualification. No new PASS is inferred from approval.

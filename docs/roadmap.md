@@ -8,8 +8,11 @@ The sequence below reflects project priorities rather than release dates. The [p
 | Shared Intel/AMD hosted integration | Verified FKI and world switch; memory, interrupts, SMP and lifecycle tests |
 | Hosted Darwin | Root filesystem, userspace and executable programs on the hosted path |
 | Headless | Repeatable CLI and service execution |
-| Desktop | Compatible graphical environment; software rendering first |
-| Seamless | Individual application windows integrated with Linux |
+| Software display | Owned framebuffer, presentation and input |
+| CPU graphics | Target-compatible software render/compute tests |
+| Hardware GPU | Host backend, transport, hosted Vulkan/Metal and lifecycle independently qualified |
+| Desktop | Compatible graphical environment with software rendering acceptable |
+| Seamless | Individual application windows, input/focus and lifecycle integrated with Linux |
 | Product readiness | Reproducible installation, compatibility matrix, recovery and regression tests |
 
 The [standalone PID 1 milestone](../research/2026-11/boot/pid1-terminal-replay.md) and [ordinary FKI service tests](../research/2026-11/hosted/fki-host-services.md) are documented separately. Neither satisfies the actual hosted acceptance criteria. Subsequent [physical CPL0 component tests](../research/2026-11/hosted/physical-ring0.md) and [split memory service](../research/2026-11/hosted/split-memory-service.md) provide further bounded evidence. The physical module pair and restricted source-backed page/object/resident/final-reference tests have since passed. The bounded reference registry, real FKI-backed Linux process mappings, inactive root lifetime and indexed map paths have since passed in Linux guests. Boot metadata, clock/entropy and cooperative CPU/thread/queue/IPC gates are integrated through checkpoint 337 on two selected kernels, including canonical private Git replay, owned worker services and expanded private startup callback coverage. The next gates are genuine hosted bootstrap integration, unresolved task construction, native execution context/translation activation, startup dependencies and real Mach IPC. Native hosted boot is still not demonstrated. See [the scheduler and IPC report through 337](../research/2026-11/hosted/hosted-bootstrap-replay.md).
@@ -20,7 +23,7 @@ Through checkpoint 377, private typed task/thread resources and IPC metadata lif
 
 Through checkpoint 397, source provenance and reference reconstruction have advanced, with both canonical and minimal private runtime replays passing. Native IPC startup dependencies remain the next integration gate. See the [provenance and reproduction report](../research/2026-11/hosted/hosted-provenance-reproduction.md).
 
-Hosted integration may proceed in parallel with standalone reference tests. GPU acceleration is not a prerequisite for the first kernel or headless runtime.
+Hosted integration may proceed in parallel with standalone reference tests. GPU acceleration is not a prerequisite for the first kernel, headless runtime or basic desktop. Independent post-kernel source and host-only tests may proceed without changing the Monterey/Tahoe implementation gates. See the [approved platform reuse and adaptation backlog](post-kernel-platform.md).
 
 
 ## Subsequent x86_64 source target
@@ -87,4 +90,4 @@ CP638 confirms self-contained source packaging and the retained Python source li
 
 CP639-640 complete the work series with scoped Monterey source regeneration and Tahoe dependency comparison. Continue Monterey source closure and hosted/AMD qualification, and separate Tahoe release mapping and generated headers. [CP639](../research/2026-11/checkpoint-639.md), [CP640](../research/2026-11/checkpoint-640.md).
 
-CP641 records the [post-kernel platform reuse plan](post-kernel-platform.md): version-matched open runtime and device adapters, software display and rendering, isolated Linux GPU backend tests, then hosted acceleration, desktop and seamless integration. This is a proposed development sequence, not a new qualification or change to the Tahoe implementation gate.
+CP641 records the [post-kernel platform reuse plan](post-kernel-platform.md): version-matched open runtime and device adapters, software display and rendering, isolated Linux GPU backend tests, then hosted acceleration, desktop and seamless integration. The owner approved this development direction after CP641; it is not a new qualification or change to the Tahoe implementation gate.

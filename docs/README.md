@@ -87,4 +87,4 @@ These documents describe an experimental project. Supported installation instruc
 
 For a first visit, use [Getting started](getting-started.md); for a quick explanation of unfamiliar terminology, use the [glossary](glossary.md). Historical research is kept at its original level of technical detail.
 
-[Post-kernel platform reuse](post-kernel-platform.md): ARM reference inventory, GPU/device portability, open runtime, desktop and seamless gaps, licensing and proposed sequence.
+[Post-kernel platform reuse](post-kernel-platform.md): approved development direction, ARM reference inventory, GPU/device portability, open runtime, desktop/seamless backlog, licensing and qualification sequence.

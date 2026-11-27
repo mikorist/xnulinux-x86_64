@@ -35,6 +35,12 @@ Independent source pins, build configurations and patch series are intentional. 
 
 Headless execution targets a minimal open Darwin runtime. Desktop mode targets a compatible complete graphical environment. Seamless mode additionally requires a real Linux window, compositor, input and focus integration layer, not merely hiding the macOS desktop.
 
+## Post-kernel platform
+
+The approved [post-kernel platform plan](post-kernel-platform.md) reuses Linux-owned device services, graphics and presentation infrastructure where independently qualified. Darwin-facing IOKit, graphics and runtime interfaces are target-specific until tested. The preserved ARM GPU and kext files are reference sources, not x86 drivers.
+
+The first graphical path uses an owned framebuffer and a Linux viewer. CPU Metal candidates use metal2vulkan and lavapipe. The hardware path evaluates Venus, XnuDrm, the DRM bridge and virglrenderer over the host Vulkan driver, with independent device qualification. Desktop and seamless share services, but seamless needs an actual window/surface bridge to Wayland/X11. The open headless path is independent of proprietary Apple software.
+
 ## Boundaries
 
 Linux owns host resources. CPU state, memory, exceptions, interrupts, SMP and module lifecycle require independent hosted qualification. Standalone boot evidence cannot substitute for these tests.

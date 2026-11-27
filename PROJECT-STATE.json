@@ -204,6 +204,20 @@
     "upstream_commit": "e0835348aedf89b95dbf3cc1f48a98f91ade89db",
     "runtime": "HOLD",
     "graphics": "HOLD",
-    "license_closure": "HOLD"
+    "license_closure": "HOLD",
+    "plan_decision": {
+      "status": "OWNER_APPROVED_DEVELOPMENT_DIRECTION",
+      "date": "2026-11-27",
+      "scope": "Reuse, adapt and design; no qualification promotion or gate changes",
+      "sequence": [
+        "hosted_baseline",
+        "open_version_matched_runtime",
+        "software_display",
+        "cpu_metal",
+        "independent_host_gpu_then_hosted_gpu",
+        "desktop_and_seamless_independent"
+      ],
+      "independent_preparation_allowed": true
+    }
   }
 }
