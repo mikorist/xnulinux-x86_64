@@ -1,5 +1,9 @@
 # XNULINUX x86_64
 
+<p align="center">
+  <img src="docs/assets/xnulinux-logo.svg" alt="XNULINUX mascot" width="160">
+</p>
+
 **XNU for the PC. One platform, multiple XNU versions, Intel and AMD.**
 
 *GNU's Not Unix. XNU's Not Unix. XNU is not Linux. Hence XNULINUX.*
