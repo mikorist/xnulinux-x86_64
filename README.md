@@ -346,6 +346,14 @@ The [engineering history through CP612](research/2026-11/history/engineering-his
 
 The historical reports are edited accounts of recorded experiments; they are not a full public reproduction bundle or a certification of every underlying test.
 
+
+<p align="center">
+  <sub>Support the maintainer via the existing <a href="https://diyaudio.rs/">diyAudio.rs</a> donation button. Thank you!</sub>
+</p>
+<p align="center">
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AEXH39XRNHZQ2&amp;currency_code=EUR"><img src="https://img.shields.io/badge/PayPal-donate-0070BA?logo=paypal&amp;logoColor=white" alt="Donate via PayPal"></a>
+</p>
+
 ---
 
 <sub>Personal thanks from the maintainer: to Linus Torvalds, for Linux and the engineering culture that grew around it, and to RehabMan, for years of practical knowledge shared with the Hackintosh community. After two decades of working with Hackintoshes, I owe both of you a great deal. Neither is involved in or endorses this project. The original upstream contributors and their work retain full attribution above.</sub>
