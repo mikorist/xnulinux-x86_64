@@ -46,7 +46,7 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP641)
+## Current research boundary (CP642)
 
 **Parallel priorities:** preserve CP627 Intel-model ordinary boot; close Monterey source regeneration and hosted/AMD gates; continue Tahoe source-only preparation; resolve Stage A attribution and pinned build; review outstanding technical windows in order. The approved post-kernel plan adds independent source/host-only preparation, not a requirement to finish graphics before kernel qualification.
 
@@ -93,3 +93,5 @@ CP638 confirms self-contained source packaging and the retained Python source li
 CP639-640 complete the work series with scoped Monterey source regeneration and Tahoe dependency comparison. Continue Monterey source closure and hosted/AMD qualification, and separate Tahoe release mapping and generated headers. [CP639](../research/2026-11/checkpoint-639.md), [CP640](../research/2026-11/checkpoint-640.md).
 
 CP641 records the [post-kernel platform reuse plan](post-kernel-platform.md): version-matched open runtime and device adapters, software display and rendering, isolated Linux GPU backend tests, then hosted acceleration, desktop and seamless integration. The owner approved this development direction after CP641; it is not a new qualification or change to the Tahoe implementation gate.
+
+CP642 independently validates the retained offline framebuffer conversion helper on both x86 hosts; the next display prerequisite is a version-appropriate framebuffer contract, including stride. This does not change the Monterey hosted or Tahoe entry gates. [CP642](../research/2026-11/checkpoint-642.md).

@@ -30,7 +30,7 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP641 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-641.md)**
+**CP642 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-642.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
@@ -147,9 +147,9 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 27, 2026, CP641. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP642. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Seven recorded 20-checkpoint windows (CP498-637) remain open for technical review, with four subsequent checkpoints; all 144 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Seven recorded 20-checkpoint windows (CP498-637) remain open for technical review, with five subsequent checkpoints; all 145 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
 **Next:** continue Monterey source closure and hosted/AMD qualification, Tahoe preparation and the scoped post-kernel reuse plan. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 
@@ -198,7 +198,9 @@ CP639: 28 regenerated inputs in each exact 1,114-input relink. [CP639](research/
 
 CP641: all 68 ARM-reference GPU and 45 kext files are retained exactly; x86 driver and runtime qualification remain open. [Post-kernel platform plan](docs/post-kernel-platform.md), [CP641](research/2026-11/checkpoint-641.md).
 
-**Next:** continue Monterey source closure and independent Tahoe preparation; Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP642: retained framebuffer conversion helper passes independent synthetic tests on both x86_64 hosts; no live display or GPU qualification. [CP642](research/2026-11/checkpoint-642.md).
+
+**Next:** continue Monterey source closure and independent Tahoe preparation; review version-specific runtime and display contracts. Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

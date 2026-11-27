@@ -77,3 +77,5 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP639: additional Monterey source regeneration and exact relink](checkpoint-639.md)
 - [CP640: Tahoe utility dependency comparison (source-only PASS)](checkpoint-640.md)
 - [CP641: ARM post-kernel platform reuse audit](checkpoint-641.md)
+
+- [CP642: synthetic framebuffer conversion replay](checkpoint-642.md)

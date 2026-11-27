@@ -89,3 +89,5 @@ Complete physical Linux-hosted XNU boot and world switch, a complete Darwin appl
 An English developer reference, research index, architecture decisions and reproducibility methodology are being prepared for review. Historical research records are not release tags or claims of upstream integration.
 
 Future entries should describe actual integrated changes by release or Unreleased section; avoid listing every diagnostic build as a released feature.
+
+- CP642: independent synthetic framebuffer conversion replay on both x86 development environments; no display or GPU qualification.

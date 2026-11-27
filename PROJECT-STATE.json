@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 641,
-  "documentation_through": 641,
+  "research_checkpoint": 642,
+  "documentation_through": 642,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       638,
       657
     ],
-    "partial_records": 4,
-    "verified_primary_evidence_hashes": 144,
+    "partial_records": 5,
+    "verified_primary_evidence_hashes": 145,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 620,
+    "indexed_source_records": 621,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -111,9 +111,9 @@
       "release": "HOLD"
     }
   },
-  "next": "Continue Monterey hosted/source and AMD qualification and independent Tahoe preparation; track post-kernel reuse, version-specific runtime and Linux GPU backend prerequisites.",
+  "next": "Continue Monterey clean-source closure and separately review version-specific runtime and display adapter contracts; keep hosted and Tahoe gates.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-641.md",
+    "current_report": "research/2026-11/checkpoint-642.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -218,6 +218,15 @@
         "desktop_and_seamless_independent"
       ],
       "independent_preparation_allowed": true
+    },
+    "framebuffer_conversion": {
+      "checkpoint": 642,
+      "status": "PASS_SYNTHETIC_PACKED_BGRA",
+      "fixtures_per_host": 6,
+      "pixels_per_host": 2138730,
+      "short_inputs_rejected_per_host": 6,
+      "live_display": "HOLD",
+      "stride": "HOLD"
     }
   }
 }

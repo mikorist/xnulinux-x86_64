@@ -20,3 +20,5 @@ These are linked reports, not downloadable kernel artifacts. Consult the [curren
 No new screenshots or videos have been published here yet. Add genuine captures under a version/checkpoint directory when available, with meaningful alt text and a caption stating the exact artifact, test environment, observation, limitations and related report. Do not publish identifying host data, secrets, proprietary material without permission, or mockups as evidence. Large recordings belong in a reviewed release or evidence archive. See the [distribution plan](../maintainers/distribution-plan.md).
 
 [Project home](../../README.md) · [Research journal](../../research/README.md) · [Documentation](../README.md)
+
+CP642: [synthetic framebuffer conversion](../../research/2026-11/checkpoint-642.md), identical PNG output across both x86 development environments. No live display or GPU execution.

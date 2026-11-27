@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP641, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP642, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -89,3 +89,5 @@ CP639: six additional libkern source objects regenerated per host, 28 regenerate
 CP641: ARM post-kernel source inventory PASS; retained GPU/kext identity does not qualify x86 graphics, desktop, headless, or seamless execution. Component and transitive license closure remains open. See [platform reuse](post-kernel-platform.md).
 
 CP641 plan approval is a documentation decision, not an additional technical result. Open runtime, software display, CPU Metal, host GPU backend, hosted GPU, desktop and seamless have independent future qualification. No new PASS is inferred from approval.
+
+CP642: retained framebuffer helper passes six synthetic packed BGRA conversions and six truncated-input controls per host, with identical output hashes. Live display, stride support and GPU execution remain unqualified.

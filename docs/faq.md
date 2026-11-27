@@ -77,3 +77,5 @@ No GPU support list is qualified yet. The design uses Linux-owned graphics servi
 ## Can I download the research tools yet?
 
 The two [public userspace tests](../tests/README.md) are available as source. CP638 confirms self-contained private source staging, but attribution, common pinned binary build and release approval remain open. See the [distribution plan](maintainers/distribution-plan.md).
+
+CP642 independently checks the retained framebuffer-to-PNG helper using owned synthetic buffers. It is not a working x86 display driver or GPU demonstration.
