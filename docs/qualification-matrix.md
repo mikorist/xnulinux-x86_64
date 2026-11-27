@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP635, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP636, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -77,3 +77,5 @@ CP632 verifies 13 Tahoe candidate source tag identities, but authoritative relea
 CP633: clean public source structural validator regression PASS with GCC on both hosts and Clang on Ryzen; Intel Clang runtime dependency HOLD. No distribution qualification.
 
 CP634: physical Intel Clang runtime repair and unmodified validator PASS; isolated MCP dependency HOLD. CP635: public Python verifier synthetic unit tests PASS on both development hosts. Distribution remains HOLD.
+
+CP636: private source archive reproduction and unpacked tests PASS on both development environments; Python verifier copyright attribution and binary distribution HOLD.

@@ -71,3 +71,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP633: public structural validator replay (GCC PASS, Intel Clang dependency HOLD)](checkpoint-633.md)
 - [CP634: physical host Clang runtime repair (host PASS, MCP HOLD)](checkpoint-634.md)
 - [CP635: public Python verifier replay (synthetic PASS)](checkpoint-635.md)
+- [CP636: reproducible source package (source PASS, attribution HOLD)](checkpoint-636.md)

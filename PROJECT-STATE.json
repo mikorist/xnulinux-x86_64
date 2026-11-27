@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 635,
-  "documentation_through": 635,
+  "research_checkpoint": 636,
+  "documentation_through": 636,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 18,
-    "verified_primary_evidence_hashes": 138,
+    "partial_records": 19,
+    "verified_primary_evidence_hashes": 139,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 614,
+    "indexed_source_records": 615,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -83,11 +83,18 @@
       "status": "PASS_SYNTHETIC_DUAL_HOST",
       "test_methods_per_host": 3,
       "distribution": "HOLD"
+    },
+    "research_tools_source_package": {
+      "checkpoint": 636,
+      "status": "PASS_SOURCE_REPRODUCTION",
+      "archive_sha256": "57bc2e36755befa24f9b8c9328479ce9a08d91b7c23c1162d7a84da7292fe847",
+      "attribution": "HOLD",
+      "binary_distribution": "HOLD"
     }
   },
-  "next": "Review Stage A source/license closure and reproducible packaging before CP637; preserve Tahoe release mapping and Monterey qualification gates.",
+  "next": "CP637 Stage A readiness assessment; attribution and binary reproducibility remain open, preserve Tahoe and Monterey gates.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-635.md",
+    "current_report": "research/2026-11/checkpoint-636.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",

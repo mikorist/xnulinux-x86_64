@@ -43,7 +43,7 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP635)
+## Current research boundary (CP636)
 
 The AMD Milan TCG UP path now returns from machine_init and reaches the RTC/lock-timeout observation boundary. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
@@ -78,3 +78,5 @@ CP632 records provisional Tahoe dependency references. Confirm release mapping a
 CP633 verifies the public structural validator from clean source checkouts; three compiler/host runs pass, one Clang runtime dependency is missing. Continue the independent verifier replay before CP637 readiness assessment. [CP633](../research/2026-11/checkpoint-633.md).
 
 CP634-635: physical Intel Clang dependency corrected and public Python verifier replayed on both development hosts. Next: Stage A source/license and packaging review before CP637; existing kernel gates unchanged. [CP635](../research/2026-11/checkpoint-635.md).
+
+CP636 reproduces the source-only tools staging archive independently; resolve copyright attribution and binary reproducibility before any release. CP637 readiness assessment next. [CP636](../research/2026-11/checkpoint-636.md).

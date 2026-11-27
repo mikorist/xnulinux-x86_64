@@ -40,3 +40,5 @@ Add screenshots and short recordings only when they show a real measured result.
 CP633: the existing public structural validator source test passes with GCC on both hosts and Clang on Ryzen. Intel Clang has a missing UBSan runtime dependency. This advances Stage A source test evidence only; binary packaging, reproducibility and final license review remain open. [CP633](../../research/2026-11/checkpoint-633.md).
 
 CP634-635: physical Intel Clang UBSan dependency restored (isolated MCP dependency remains HOLD), and public Python verifier tests pass on both development environments. Review package source/license closure and reproducibility before CP637. No release authorized.
+
+CP636: identical source-only archive and unpacked tests on both hosts. The Python verifier references a generic MIT template with unfilled copyright attribution. Attribution and binary reproducibility remain HOLD; no archive or executable published. [CP636](../../research/2026-11/checkpoint-636.md).
