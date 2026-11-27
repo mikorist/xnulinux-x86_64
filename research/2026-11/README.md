@@ -68,3 +68,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP630: utility source regeneration and exact relink (scoped PASS)](checkpoint-630.md)
 - [CP631: Tahoe source and build-input inventory (source-only PASS)](checkpoint-631.md)
 - [CP632: Tahoe dependency references (tag PASS, release mapping HOLD)](checkpoint-632.md)
+- [CP633: public structural validator replay (GCC PASS, Intel Clang dependency HOLD)](checkpoint-633.md)

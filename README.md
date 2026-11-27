@@ -25,7 +25,7 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP632 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-632.md)**
+**CP633 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-633.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
@@ -109,11 +109,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 27, 2026, CP632. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP633. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and fifteen subsequent checkpoints remain open; all 135 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and sixteen subsequent checkpoints remain open; all 136 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-**Next:** confirm Tahoe release association; audit the public userspace tools for CP637 readiness. Monterey clean-source and AMD work remain open. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
+**Next:** independently replay the public userspace verifier and continue Tahoe release association research. Monterey clean-source and AMD work remain open. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 
 <details>
 <summary>Detailed engineering evidence and checkpoint history</summary>
@@ -146,7 +146,9 @@ CP631: [Tahoe draft descriptor](targets/tahoe/target.json) records the public re
 
 CP632: [candidate dependency references](targets/tahoe/dependency-references.json) verified by tag; release grouping remains provisional. [CP632 report](research/2026-11/checkpoint-632.md).
 
-**Next:** confirm Tahoe release association and independently audit public userspace research tools; Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP633: fresh public structural validator tests pass on both hosts with GCC and on Ryzen with Clang. Intel Clang 19 lacks its UBSan runtime. [CP633 report](research/2026-11/checkpoint-633.md).
+
+**Next:** replay the public verifier and continue Tahoe dependency research; Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

@@ -36,3 +36,5 @@ Add screenshots and short recordings only when they show a real measured result.
 - [Versioning](versioning.md)
 - [GitHub release guidance](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
 - [Reproducible Builds definition](https://reproducible-builds.org/docs/definition/)
+
+CP633: the existing public structural validator source test passes with GCC on both hosts and Clang on Ryzen. Intel Clang has a missing UBSan runtime dependency. This advances Stage A source test evidence only; binary packaging, reproducibility and final license review remain open. [CP633](../../research/2026-11/checkpoint-633.md).

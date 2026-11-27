@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 632,
-  "documentation_through": 632,
+  "research_checkpoint": 633,
+  "documentation_through": 633,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 15,
-    "verified_primary_evidence_hashes": 135,
+    "partial_records": 16,
+    "verified_primary_evidence_hashes": 136,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 611,
+    "indexed_source_records": 612,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -65,11 +65,17 @@
     "complete_amd_boot": "HOLD",
     "complete_hosted_boot": "HOLD",
     "clean_source_build": "HOLD",
-    "source_license_clearance": "HOLD"
+    "source_license_clearance": "HOLD",
+    "public_validator": {
+      "checkpoint": 633,
+      "status": "PASS_GCC_DUAL_HOST_CLANG_DIYA_HOLD",
+      "successful_checks": 687,
+      "distribution": "HOLD"
+    }
   },
-  "next": "Confirm Tahoe authoritative release association; independently audit public userspace tools for CP637 readiness; preserve Monterey and hosted gate.",
+  "next": "Independently replay public userspace verifier; document runtime dependencies and continue Tahoe release association research.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-632.md",
+    "current_report": "research/2026-11/checkpoint-633.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
