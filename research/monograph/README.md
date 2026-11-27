@@ -64,11 +64,14 @@ This chronological series expands the thematic research reports into individual 
 | 0046 | 67 | [External Firehose and historical profiling providers](0046-firehose-and-historical-pgo.md) |
 | 0047 | 68 | [First strict Intel XNU executable link](0047-first-strict-executable.md) |
 
-Coverage snapshot: 47 individual chapters through R0047 (CP68). The retained journal has 621 indexed records through CP642; the next individual chapter is R0048 (CP69). The [engineering history](../2026-11/history/engineering-history-through-612.md) and thematic reports cover later milestones without pretending to be individual-record monograph coverage.
+Coverage snapshot: 47 individual chapters through R0047 (CP68). The retained journal has 734 records through CP755; the next individual chapter is R0048 (CP69). The [engineering history](../2026-11/history/engineering-history-through-612.md) and thematic reports cover later milestones without pretending to be individual-record monograph coverage.
 
 These drafts do not constitute a complete public reproduction bundle. Historical commands, results and hashes require independent review. No new runtime tests were performed for this series.
 
 [Back to research journal](../README.md)
+
+
+The [CP643-755 chronology](../2026-11/updates-643-755/README.md) is a separate scoped research account, not additional monograph chapters or complete individual reproduction bundles.
 
 ---
 

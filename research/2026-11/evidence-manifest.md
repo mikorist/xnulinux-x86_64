@@ -23,3 +23,5 @@ The inspected FILE-READ.json reports:
 - Disk unchanged: true
 
 The complete raw result files and replay inputs have not been exported. See [root mount](filesystem/first-root-mount.md) and [file read](filesystem/first-file-read.md).
+
+The [CP643-755 chronology](updates-643-755/README.md) records all 113 primary evidence identities. Digests identify retained records, not downloadable proof bundles; no individual ledger promotion is implied.

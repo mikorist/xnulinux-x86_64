@@ -1,0 +1,5 @@
+# Approved version-matched open SDK direction
+
+The project now explicitly authorizes parallel development of a source-assembled open Darwin SDK and toolchain, starting with Monterey 12.5 (XNU 8020.140.41). Tahoe 26.5 (XNU 12377.121.6) remains a separate research target until the existing Monterey physical hosted entry gate is satisfied. This is a development decision, not SDK or framework qualification.
+
+CP690 found that the examined PureDarwin wrapper's nominal darwin20.4 prefix differs from its effective macOS 26.5 compiler target and xcrun's reported 11.3 version. Pin the actual compiler target, minimum deployment, SDK/sysroot, generated headers, runtime sources and Mach-O linker metadata; reject silent target/sysroot substitution. Preserve the existing Monterey kernel recipes and all original source references. Distinguish declarations and export stubs from actual libraries. Reuse cross-version components only with documented identity or independently verified ABI/semantics. Keep source provenance, licenses and dual-host evidence. No proprietary SDK redistribution, host protection changes or release promotion.

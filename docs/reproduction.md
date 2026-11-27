@@ -27,6 +27,8 @@ The exact CP602 relink with three regenerated and 1,111 retained inputs is not a
 
 CP627 ordinary Intel-model owned PID 1 completion passes on both hosts with identical kernel, root, loader and initrd. CP629 validates their identity via the Monterey descriptor. HFS was transferred, not independently regenerated on Ryzen. Clean-source and complete public replay remain HOLD. Tahoe uses separate future source/build/runtime qualification. See [CP627](../research/2026-11/checkpoint-627.md) and [CP629](../research/2026-11/checkpoint-629.md).
 
-## Current retained-input boundary
+## Retained-input boundary through CP755
 
 CP639 establishes exact dual-host relink with 28 regenerated and 1,086 retained inputs, not full clean-source reproduction. CP637 shows reproducibility within each GCC environment but different cross-environment binaries for the public C test; CP638 reproduces a self-contained private source package. Distribution still requires attribution, common pinned binary reproduction and separate approval. See [CP639](../research/2026-11/checkpoint-639.md) and [distribution plan](maintainers/distribution-plan.md).
+
+CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retained inputs. CP745-747 establish scoped dual-host compiler and Blocks compile/link regressions; CP754 reaches 249 staged SDK headers. CP755 reproduces an instrumented object from one shared preprocessed input and passes 229 native checks per host; independent preprocessing and final binaries still differ. No complete common native build or source-only kernel replay is established. See [CP643-755 research update](../research/2026-11/updates-643-755/README.md).

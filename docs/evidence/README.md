@@ -7,10 +7,10 @@ Measured results belong here. Planned functionality belongs in the roadmap. A sc
 | Evidence | Report | What it establishes |
 | --- | --- | --- |
 | Ordinary standalone Monterey PID 1 | [CP627](../../research/2026-11/checkpoint-627.md) | Broadwell TCG UP console completion without debugger on both development hosts |
-| Retained executable reproduction | [CP639](../../research/2026-11/checkpoint-639.md) | Matching CP602 executable with 28 regenerated and 1,086 retained inputs |
+| Retained executable reproduction | [CP700](../../research/2026-11/updates-643-755/checkpoint-681-700.md) | Matching CP602 executable with 95 regenerated and 1,019 retained inputs |
 | Native Ryzen Linux KVM components | [CP460](../../research/2026-11/hosted/native-amd-kvm.md) | Scoped component replay, not full hosted XNU |
 | Public userspace tests | [CP633](../../research/2026-11/checkpoint-633.md), [CP634](../../research/2026-11/checkpoint-634.md), [CP635](../../research/2026-11/checkpoint-635.md) | Structural validator and synthetic replay verifier results |
-| Source-only tools archive | [CP638](../../research/2026-11/checkpoint-638.md) | Identical self-contained private source archive; attribution and binary distribution HOLD |
+| Source-only tools archives | [CP742-755](../../research/2026-11/updates-643-755/checkpoint-742-755.md) | Scoped source archives and identical shared-input object; release HOLD |
 | Platform reuse inventory | [CP641](../../research/2026-11/checkpoint-641.md) | 113 retained GPU/kext file identities; no graphics execution or license clearance |
 
 These are linked reports, not downloadable kernel artifacts. Consult the [current state](../../PROJECT-STATE.json) and [qualification matrix](../qualification-matrix.md) for the latest evidence and limits.
@@ -22,6 +22,10 @@ No new screenshots or videos have been published here yet. Add genuine captures 
 [Project home](../../README.md) · [Research journal](../../research/README.md) · [Documentation](../README.md)
 
 CP642: [synthetic framebuffer conversion](../../research/2026-11/checkpoint-642.md), identical PNG output across both x86 development environments. No live display or GPU execution.
+
+
+- [CP643-755 research update](../../research/2026-11/updates-643-755/README.md): 113 individually identified outcomes with primary evidence SHA256 values; retained evidence records are not downloadable here.
+- [CP754-755](../../research/2026-11/updates-643-755/checkpoint-742-755.md): partial SDK declarations and shared-input object reproduction, not runtime or release qualification.
 
 ---
 

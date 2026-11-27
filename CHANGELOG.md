@@ -91,3 +91,11 @@ An English developer reference, research index, architecture decisions and repro
 Future entries should describe actual integrated changes by release or Unreleased section; avoid listing every diagnostic build as a released feature.
 
 - CP642: independent synthetic framebuffer conversion replay on both x86 development environments; no display or GPU qualification.
+
+### Research documentation (CP643-755)
+
+- Published chronological research summaries of all 113 recorded outcomes, including failures and HOLDs, with primary evidence digests.
+- CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retained inputs. CP745-747 establish scoped dual-host compiler and Blocks compile/link regressions; CP754 reaches 249 staged SDK headers. CP755 reproduces an instrumented object from one shared preprocessed input and passes 229 native checks per host; independent preprocessing and final binaries still differ.
+- Complete AMD boot, physical hosted XNU, clean-source build, full SDK/runtime, graphics and release remain HOLD. This increment changes documentation and the public status snapshot only; no source integration, release or regular technical review closure.
+
+[CP643-755 research update](research/2026-11/updates-643-755/README.md).

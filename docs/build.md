@@ -39,6 +39,8 @@ CP616-617 independently recompiled three retained source units and relinked the 
 
 The [Monterey descriptor](../targets/monterey/target.json) records the retained source pin, toolchain identity and four CP626/627 artifacts. CP629 validates identity offline on both hosts and rejects nine negative controls each. It is not a generic build recipe. Tahoe is source research only; use separate version-specific inputs and qualify build orchestration before advertising it. See [version targets](version-targets.md).
 
-## Current CP641 boundary
+## Retained-input boundary through CP755
 
 CP639 independently regenerates 28 of the 1,114 link inputs across both hosts, with the remaining 1,086 retained; the exact CP602 executable is reproduced. CP640 compares 25 utility units and 186 directly pinned source dependencies against Tahoe; only three units have all directly pinned dependencies identical, and all 25 also depend on generated/exported/toolchain inputs. Neither result establishes a full clean-source build or Tahoe compilation. See [CP639](../research/2026-11/checkpoint-639.md) and [CP640](../research/2026-11/checkpoint-640.md).
+
+CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retained inputs. CP745-747 establish scoped dual-host compiler and Blocks compile/link regressions; CP754 reaches 249 staged SDK headers. CP755 reproduces an instrumented object from one shared preprocessed input and passes 229 native checks per host; independent preprocessing and final binaries still differ. These are distinct build and declaration results. The complete clean-source build and source clearance remain HOLD; see [CP643-755 research update](../research/2026-11/updates-643-755/README.md) and the [versioned SDK direction](../research/2026-11/updates-643-755/sdk-direction.md).

@@ -52,7 +52,7 @@ A Ryzen 7 5700X WSL2 development environment is now operational alongside the In
 
 ## What is the latest documented result?
 
-CP641 inventories retained ARM device and GPU sources and records the approved post-kernel development direction. CP639 reproduces the 1,114-input Monterey link with 28 freshly regenerated and 1,086 retained objects. CP627 remains the ordinary Intel-model owned PID 1 boot result. AMD admission, physical hosted execution, Apple launchd, graphics and full clean-source build remain unqualified. See [project state](../PROJECT-STATE.json) and [qualification matrix](qualification-matrix.md).
+CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retained inputs. CP745-747 establish scoped dual-host compiler and Blocks compile/link regressions; CP754 reaches 249 staged SDK headers. CP755 reproduces an instrumented object from one shared preprocessed input and passes 229 native checks per host; independent preprocessing and final binaries still differ. CP627 remains the ordinary Intel-model owned PID 1 boot result. Complete AMD boot, physical hosted XNU, clean-source build, full SDK/runtime, graphics and release remain HOLD. See [CP643-755 research update](../research/2026-11/updates-643-755/README.md) and [qualification matrix](qualification-matrix.md).
 
 ## Is Tahoe replacing Monterey?
 
@@ -76,6 +76,6 @@ No GPU support list is qualified yet. The design uses Linux-owned graphics servi
 
 ## Can I download the research tools yet?
 
-The two [public userspace tests](../tests/README.md) are available as source. CP638 confirms self-contained private source staging, but attribution, common pinned binary build and release approval remain open. See the [distribution plan](maintainers/distribution-plan.md).
+The two [public userspace tests](../tests/README.md) are available as source. CP742 and CP744 reproduce separate private source-only packages; CP755 matches shared-input objects but not final binaries. No package or release has been published. See the [distribution plan](maintainers/distribution-plan.md).
 
 CP642 independently checks the retained framebuffer-to-PNG helper using owned synthetic buffers. It is not a working x86 display driver or GPU demonstration.

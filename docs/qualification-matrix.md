@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP642, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP755, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -59,14 +59,14 @@ Snapshot: research documentation through CP642, 2026-11-27. Last closed regular 
 
 The latest research checkpoint must be consulted before using this snapshot for a public status announcement.
 
-The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. Seven recorded 20-checkpoint windows through CP637 and four later records remain open; verified evidence hashes are not equivalent to technical closure.
+The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. Twelve recorded 20-checkpoint windows through CP737 and 18 later records remain open; verified evidence hashes are not equivalent to technical closure.
 
 ## Version target boundary
 
 | Target | Current evidence | Open qualification |
 | --- | --- | --- |
 | Monterey 8020.140.41 | CP627 scoped Intel-model ordinary PID 1 PASS | AMD admission, native/hosted execution, clean-source build |
-| Tahoe 12377 | CP631 research descriptor and upstream build-input inventory | Dependency pins, qualified target pin, build, ABI, Intel/AMD runtime, native/hosted execution |
+| Tahoe 12377 | CP631 descriptor; CP652 release mapping for 13 dependencies | Qualified target build, ABI, Intel/AMD runtime, native/hosted execution |
 
 CP629: Monterey descriptor identity validation PASS on both hosts; no new build or runtime qualification.
 
@@ -91,3 +91,15 @@ CP641: ARM post-kernel source inventory PASS; retained GPU/kext identity does no
 CP641 plan approval is a documentation decision, not an additional technical result. Open runtime, software display, CPU Metal, host GPU backend, hosted GPU, desktop and seamless have independent future qualification. No new PASS is inferred from approval.
 
 CP642: retained framebuffer helper passes six synthetic packed BGRA conversions and six truncated-input controls per host, with identical output hashes. Live display, stride support and GPU execution remain unqualified.
+
+## CP643-755: scoped research results
+
+- CP700: exact retained link on both hosts, 95 regenerated and 1,019 retained inputs; CP699: 91 independently staged units and 896 paths. Full clean-source reproduction and clearance remain HOLD.
+- CP652-654: official release maps and selected device-header comparisons; source associations do not qualify a Tahoe build.
+- CP644, CP661-689: synthetic framebuffer stride and numerical graphics checks; complete frameworks, licensing, live display and acceleration remain HOLD.
+- CP745-747: scoped compiler frontend, ten code generation fixtures and original Blocks replay across both hosts; eight external imports remain in the Blocks group.
+- CP739: six generic string objects linked with no unresolved imports, not a dynamic library. CP753: UUID relocatable group has four external imports. CP754: 249-header declaration stage; full SDK, dynamic linking and runtime remain HOLD.
+- CP742-744: source-only archives reproduced; component-local verifier notice completed privately, scoped synthetic verifier contract passed. Public notice integration and release remain separate.
+- CP755: shared preprocessed input produced byte-identical instrumented ELF objects; 229/229 native checks on each host. Independent preprocessing and final binaries differ; full common environment and Stage A release remain HOLD.
+
+See [CP643-755 research update](../research/2026-11/updates-643-755/README.md). No new boot qualification or closed technical review is implied.

@@ -34,18 +34,19 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP642 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-642.md)**
+**CP755 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-643-755/README.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
 | Monterey standalone Intel-model PID 1 | CP627: ordinary boot without debugger on both hosts, 92.08 s and 91.35 s |
-| Reproducible retained executable | CP639: 1,114 link inputs, including 28 regenerated objects and 1,086 retained; byte-identical CP602 image on both hosts |
+| Reproducible retained executable | CP700: 95 regenerated and 1,019 retained of 1,114 inputs; exact CP602 image |
 | AMD model startup | CP622: admission remains deliberately unqualified; full boot HOLD |
 | Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
 | Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
-| Tahoe source preparation | CP632: 13 candidate source tag identities verified; release mapping and build HOLD |
-| Research tools distribution | CP638: self-contained source staging PASS; attribution, common binary build and release HOLD |
-| Post-kernel platform | CP641: reuse inventory and approved direction; runtime and graphics HOLD |
+| Tahoe source preparation | CP652: 13 dependency release associations verified; build HOLD |
+| Research tools distribution | CP742-755: scoped source packages and shared-input object PASS; full binary/release HOLD |
+| Post-kernel platform | CP661-689: graphics inventory and synthetic fixtures; full frameworks/display HOLD |
+| Versioned open SDK | CP754: 249 staged headers; declarations only |
 | Clean-source build and complete hosted runtime | HOLD |
 
 See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roadmap.md) and [research chronology](research/README.md). The current public research snapshot is distinct from the last closed regular integration review (CP497).
@@ -151,11 +152,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 27, 2026, CP642. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP755. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Seven recorded 20-checkpoint windows (CP498-637) remain open for technical review, with five subsequent checkpoints; all 145 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Twelve recorded 20-checkpoint windows (CP498-737) remain open for technical review, with 18 subsequent checkpoints; all 258 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-**Next:** continue Monterey source closure and hosted/AMD qualification, Tahoe preparation and the scoped post-kernel reuse plan. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
+**Next:** Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; preserve Tahoe research-only status and review open technical windows in order. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 
 <details>
 <summary>Detailed engineering evidence and checkpoint history</summary>
@@ -204,7 +205,9 @@ CP641: all 68 ARM-reference GPU and 45 kext files are retained exactly; x86 driv
 
 CP642: retained framebuffer conversion helper passes independent synthetic tests on both x86_64 hosts; no live display or GPU qualification. [CP642](research/2026-11/checkpoint-642.md).
 
-**Next:** continue Monterey source closure and independent Tahoe preparation; review version-specific runtime and display contracts. Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP643-755: CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retained inputs. CP745-747 establish scoped dual-host compiler and Blocks compile/link regressions; CP754 reaches 249 staged SDK headers. CP755 reproduces an instrumented object from one shared preprocessed input and passes 229 native checks per host; independent preprocessing and final binaries still differ. Complete AMD boot, physical hosted XNU, clean-source build, full SDK/runtime, graphics and release remain HOLD. [CP643-755 research update](research/2026-11/updates-643-755/README.md).
+
+**Next:** Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; preserve Tahoe research-only status and review open technical windows in order. Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

@@ -79,3 +79,5 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP641: ARM post-kernel platform reuse audit](checkpoint-641.md)
 
 - [CP642: synthetic framebuffer conversion replay](checkpoint-642.md)
+
+- [CP643-755: chronological research update (113 outcomes)](updates-643-755/README.md)

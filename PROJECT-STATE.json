@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 642,
-  "documentation_through": 642,
+  "research_checkpoint": 755,
+  "documentation_through": 755,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_windows": 7,
-    "completed_window_records": 140,
+    "completed_windows": 12,
+    "completed_window_records": 240,
     "partial_window": [
-      638,
-      657
+      738,
+      757
     ],
-    "partial_records": 5,
-    "verified_primary_evidence_hashes": 145,
+    "partial_records": 18,
+    "verified_primary_evidence_hashes": 258,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 621,
+    "indexed_source_records": 734,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -38,7 +38,14 @@
     "regenerated_objects_cp630": 22,
     "retained_objects_cp630": 1092,
     "regenerated_objects_cp639": 28,
-    "retained_objects_cp639": 1086
+    "retained_objects_cp639": 1086,
+    "regenerated_objects_cp700": 95,
+    "retained_objects_cp700": 1019,
+    "source_stage_cp699": {
+      "units": 91,
+      "paths": 896,
+      "status": "PASS_SCOPED_SOURCE_STAGE_AND_OBJECTS"
+    }
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -109,11 +116,37 @@
       "attribution": "HOLD",
       "common_binary_build": "HOLD",
       "release": "HOLD"
+    },
+    "compiler_cp745_747": {
+      "status": "PASS_SCOPED",
+      "ordinary_codegen_fixtures": 10,
+      "blocks_unresolved_imports": 8,
+      "full_compiler_suite": "HOLD"
+    },
+    "sdk_cp754": {
+      "status": "PASS_SCOPED_DECLARATIONS",
+      "staged_headers": 249,
+      "full_sdk": "HOLD",
+      "runtime": "HOLD"
+    },
+    "uuid_cp753": {
+      "status": "PASS_RELOCATABLE_LINK",
+      "unresolved_imports": 4,
+      "runtime": "HOLD"
+    },
+    "research_tools_cp742_755": {
+      "status": "PASS_SCOPED_SOURCE_PACKAGES_AND_SHARED_INPUT_OBJECT",
+      "verifier_notice": "PRIVATE_CANDIDATE_COMPLETED_CP744",
+      "verifier_cases_per_host": 1083,
+      "validator_checks_per_host": 229,
+      "independent_native_preprocessing_identity": false,
+      "final_binary_identity": false,
+      "release": "HOLD"
     }
   },
-  "next": "Continue Monterey clean-source closure and separately review version-specific runtime and display adapter contracts; keep hosted and Tahoe gates.",
+  "next": "Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; preserve Tahoe research-only status and review open technical windows in order.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-642.md",
+    "current_report": "research/2026-11/updates-643-755/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -156,7 +189,8 @@
         "path": "targets/tahoe/dependency-references.json",
         "checkpoint": 632,
         "tag_identities_verified": 13,
-        "release_mapping": "HOLD_PROVISIONAL"
+        "release_mapping": "HOLD_PROVISIONAL",
+        "release_mapping_cp652": "PASS_SCOPED_13_ASSOCIATIONS"
       },
       "utility_comparison": {
         "checkpoint": 640,
@@ -192,6 +226,11 @@
         "research/"
       ],
       "reference": "docs/version-targets.md"
+    },
+    "open_sdk_direction": {
+      "status": "OWNER_APPROVED_DEVELOPMENT_DIRECTION",
+      "reference": "research/2026-11/updates-643-755/sdk-direction.md",
+      "full_sdk": "HOLD"
     }
   },
   "post_kernel_platform": {
@@ -227,6 +266,12 @@
       "short_inputs_rejected_per_host": 6,
       "live_display": "HOLD",
       "stride": "HOLD"
+    },
+    "graphics_cp644_689": {
+      "status": "PASS_SCOPED_SYNTHETIC_FIXTURES_AND_INVENTORY",
+      "full_framework": "HOLD",
+      "live_display": "HOLD",
+      "license_closure": "HOLD"
     }
   }
 }
