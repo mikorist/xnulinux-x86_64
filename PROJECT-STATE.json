@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 633,
-  "documentation_through": 633,
+  "research_checkpoint": 635,
+  "documentation_through": 635,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 16,
-    "verified_primary_evidence_hashes": 136,
+    "partial_records": 18,
+    "verified_primary_evidence_hashes": 138,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 612,
+    "indexed_source_records": 614,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -70,12 +70,24 @@
       "checkpoint": 633,
       "status": "PASS_GCC_DUAL_HOST_CLANG_DIYA_HOLD",
       "successful_checks": 687,
+      "distribution": "HOLD",
+      "physical_intel_clang": {
+        "checkpoint": 634,
+        "status": "PASS",
+        "checks": 229
+      },
+      "isolated_intel_clang": "HOLD"
+    },
+    "public_verifier": {
+      "checkpoint": 635,
+      "status": "PASS_SYNTHETIC_DUAL_HOST",
+      "test_methods_per_host": 3,
       "distribution": "HOLD"
     }
   },
-  "next": "Independently replay public userspace verifier; document runtime dependencies and continue Tahoe release association research.",
+  "next": "Review Stage A source/license closure and reproducible packaging before CP637; preserve Tahoe release mapping and Monterey qualification gates.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-633.md",
+    "current_report": "research/2026-11/checkpoint-635.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",

@@ -69,3 +69,5 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP631: Tahoe source and build-input inventory (source-only PASS)](checkpoint-631.md)
 - [CP632: Tahoe dependency references (tag PASS, release mapping HOLD)](checkpoint-632.md)
 - [CP633: public structural validator replay (GCC PASS, Intel Clang dependency HOLD)](checkpoint-633.md)
+- [CP634: physical host Clang runtime repair (host PASS, MCP HOLD)](checkpoint-634.md)
+- [CP635: public Python verifier replay (synthetic PASS)](checkpoint-635.md)

@@ -15,3 +15,5 @@ The gate checks a private little-endian Intel MH_EXECUTE header snapshot, comman
 New to the project? See [Getting started](../../../../docs/getting-started.md). This is a normal userspace test; it is not an installation step.
 
 Build requirements: POSIX shell, mktemp, a C11 compiler, standard C library development files and the matching UBSan runtime. GCC 14.2 and 15.2 passed on the two Linux development hosts. Clang 21.1.8 passed on Ryzen; Debian Clang 19.1.7 could not link because its UBSan standalone archive was missing. Install the appropriate compiler runtime through your normal distribution package procedure; do not disable UBSan to obtain a PASS. See [CP633](../../../../research/2026-11/checkpoint-633.md).
+
+CP634 update: installing Debian libclang-rt-19-dev restored the physical Intel host Clang test (229/229). The separate isolated MCP environment remains unqualified for Clang. [CP634](../../../../research/2026-11/checkpoint-634.md).
