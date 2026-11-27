@@ -32,3 +32,5 @@ Public main and x86_64-port normally contain the same reviewed increments. The a
 The technical sequence is standalone reference qualification, shared hosted machine layer, hosted Darwin userspace, headless, desktop and seamless modes, with reproducibility and source review throughout. See the roadmap for the actual acceptance gates. The current standalone AMD clock lifecycle and full hosted boot remain open.
 
 Version targets share one repository and central chronology. Monterey is the active baseline; Tahoe source preparation is separate. Track evidence and qualification per version and CPU vendor. See [architecture](architecture.md) and [CP628 comparison](../research/2026-11/checkpoint-628.md).
+
+For the version-target extension principle, logical layout and Tahoe entry gates, see [version-target entry plan](version-targets.md).

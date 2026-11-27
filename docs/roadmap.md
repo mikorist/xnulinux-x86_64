@@ -25,7 +25,7 @@ Hosted integration may proceed in parallel with standalone reference tests. GPU 
 
 ## Subsequent x86_64 source target
 
-One XNULINUX supports multiple version targets. Monterey remains the active baseline; Tahoe preparatory source analysis may proceed in parallel. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe. Retain both targets and develop headless, desktop and seamless for both with shared compatible layers and per-version adapters. The exact Tahoe target pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory.
+One XNULINUX supports multiple version targets. Monterey remains the active baseline; Tahoe preparatory source analysis may proceed in parallel. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe. Retain both targets and develop headless, desktop and seamless for both with shared compatible layers and per-version adapters. The exact Tahoe target pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory. Bounded preparation is recommended after CP630; the implementation gate remains stable physical Linux-hosted Monterey Intel execution. See [version-target entry plan](version-targets.md).
 
 ## Parallel Intel and AMD x86_64 development
 
