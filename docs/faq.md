@@ -61,3 +61,11 @@ No. Monterey remains the active baseline. Tahoe source preparation can proceed s
 ## Does a PASS mean my machine is supported?
 
 Only if the documented test actually covers your configuration and the feature you are asking about. A build on Ryzen, a Broadwell TCG guest on Ryzen, and native Ryzen execution are three different things. See [hardware evidence](hardware-compatibility.md). A green checkmark cannot do the work of a driver.
+
+## Is this GNU/Linux with a different kernel?
+
+No. GNU/Linux refers to a system using Linux and GNU components. XNU is a separate kernel. The project aims to host XNU on Linux, without replacing the Linux host or requiring a particular GNU userland. The recursive-acronym joke is a joke; the architecture is serious.
+
+## What does PID 1 actually mean here?
+
+The current standalone test executes a small project-owned Darwin program as the first userspace process. It is not Apple launchd, Finder or an application compatibility demonstration. [CP627](../research/2026-11/checkpoint-627.md) describes the ordinary boot evidence.

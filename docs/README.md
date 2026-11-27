@@ -59,3 +59,5 @@ The current research snapshot is CP629; the last closed regular review is CP497.
 These documents describe an experimental project. Supported installation instructions will be added only after the corresponding workflows have been verified.
 
 [Project philosophy: XNU for the PC](project-philosophy.md)
+
+For a first visit, use [Getting started](getting-started.md); for a quick explanation of unfamiliar terminology, use the [glossary](glossary.md). Historical research is kept at its original level of technical detail.

@@ -17,3 +17,9 @@ The same principle applies to XNU versions: adding Tahoe or a later target shoul
 ## A note about the name
 
 GNU's Not Unix. XNU's Not Unix. XNU is not Linux. XNULINUX is what we call the attempt to make two very different kernels cooperate. Linux remains Linux, XNU remains XNU, and nobody has to win an operating-system argument for the project to work.
+
+## The name
+
+GNU's Not Unix. XNU's Not Unix. XNU is not Linux. Hence XNULINUX.
+
+The humor ends where the technical distinction begins: Linux remains the host kernel, XNU retains its own semantics, and GNU userspace is neither a requirement nor a target for replacement.

@@ -27,3 +27,7 @@
 | Version target | Independently pinned XNU source, runtime and qualification profile |
 | EFI | Firmware boot environment; a Hackintosh EFI folder is not the intended XNULINUX deployment model |
 | Seamless | Intended individual application windows alongside ordinary Linux applications |
+| GNU | GNU's Not Unix; a project providing free operating-system components, distinct from the Linux kernel |
+| XNULINUX | Project name for the proposed XNU-on-Linux platform, not a new name for GNU/Linux |
+| CP | Numbered research checkpoint, not a software release |
+| PASS | Acceptance criteria met for the stated test scope only |

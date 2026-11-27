@@ -35,3 +35,7 @@ Record target identity separately from CPU model and physical host. CP621-627 il
 ## Writing for humans
 
 Public guides start with the practical question, explain abbreviations on first use and link to the exact evidence. Readers may come from macOS, Hackintosh or Linux. Keep the navigation approachable, the engineering record exact and the humor restrained. Do not turn research measurements or security and licensing rules into jokes. A confident AI paragraph is not a test result; neither is a particularly entertaining one.
+
+## Editorial standard
+
+Write public documentation for human readers from macOS, Hackintosh and Linux communities. Put the current scope and practical entry points before the research history; use precise technical English and restrained dry humor in introductory prose. Preserve the exact wording and meaning of evidence, historical records, license notices and safety boundaries. Personal acknowledgments are not contributor attribution or endorsements. The human maintainer owns editorial decisions; AI-assisted drafting must not invent authorship or results.

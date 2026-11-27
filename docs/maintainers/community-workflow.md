@@ -27,3 +27,5 @@ The maintainer decides when a change is ready for the fork and when a self-conta
 ## Welcoming new readers
 
 Point first-time visitors to [Getting started](../getting-started.md), the FAQ and the current status. Accept questions from every operating-system community without expecting prior kernel expertise. Keep disagreements technical. It is fine to laugh at an awkward interface; it is not fine to laugh at a contributor.
+
+The same standards apply whether someone comes from macOS, OpenCore, GNU/Linux or another Unix-like environment. Explain the relevant distinction before correcting terminology. A useful report is worth more than a distribution argument.

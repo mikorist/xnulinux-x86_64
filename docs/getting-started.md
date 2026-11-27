@@ -2,7 +2,7 @@
 
 **Adapt XNU to the PC, not the PC to the Mac.**
 
-GNU's Not Unix. XNU's Not Unix. And XNU is not Linux. The last distinction matters here: Linux is the host, XNU is a different kernel, and XNULINUX is the project that aims to make them cooperate.
+GNU's Not Unix. XNU's Not Unix. XNU is not Linux. Hence XNULINUX. The last distinction matters here: Linux is the host, XNU is a different kernel, and XNULINUX is the project that aims to make them cooperate.
 
 This is an independent open-source research project. You can follow the research, read the code already published and run small public tests. You cannot install a supported macOS application environment from this repository today.
 
@@ -26,7 +26,7 @@ Read [hardware compatibility](hardware-compatibility.md), [version targets](vers
 
 ## Coming from Linux
 
-Keep your distribution. Keep your package manager. Keep Linux in charge of the physical machine.
+Keep your distribution, package manager, shell and GNU userland (if that is what you use). Linux remains in charge of the physical machine. Nobody is proposing to replace your init system with Finder.
 
 The proposed Foreign Kernel Interface (FKI) connects hosted XNU to Linux services. The intended product does not require a conventional macOS virtual machine. QEMU and KVM are used for isolated development and regression, and a QEMU standalone result must never be called native Linux-hosted execution.
 
@@ -44,7 +44,14 @@ Read the [source map](source-map.md), [build reference](build.md), [contribution
 
 The following are documented public userspace component tests, not kernel builds or macOS installers. Run them on a suitable Linux development system from a checkout of this repository. No root, kernel module insertion or proprietary Apple image is needed.
 
-The synthetic Mach-O metadata test requires GCC with C11 and UBSan support:
+Start with a local checkout, as an ordinary user:
+
+```sh
+git clone https://github.com/mikorist/xnulinux-x86_64.git
+cd xnulinux-x86_64
+```
+
+These commands obtain the public research tree; they do not install XNU. The synthetic Mach-O metadata test requires GCC with C11 and UBSan support:
 
 ```sh
 CC=gcc sh tests/hosted/monterey/mach-header-validator/run.sh
@@ -65,6 +72,6 @@ See the [verifier README](../tests/hosted/monterey/replay-verifier/README.md). A
 
 Check the [current status](../README.md#current-status) and [hardware evidence](hardware-compatibility.md). Report the exact CPU, version target, host Linux kernel and execution environment if you have a genuine test result. If a result is missing, it means unknown, not supported and not necessarily impossible.
 
-There is no public installable x86_64 release or complete clean-source build recipe yet. When those exist, this is where the verified instructions belong. Until then, nobody should need a lucky rabbit's foot or sudo on a production machine.
+There is no public installable x86_64 release or complete clean-source build recipe yet. When those exist, this is where the verified instructions belong. Until then, leave the production machine alone. A research repository is not an installation procedure.
 
 [Back to the project](../README.md) | [FAQ](faq.md) | [Developer documentation](README.md)

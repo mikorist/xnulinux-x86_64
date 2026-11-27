@@ -75,3 +75,9 @@ Use one shared x86_64 source tree and FKI ABI. Ryzen and Intel work may proceed 
 ## A small rule about tone
 
 Be direct, be curious, and keep the jokes aimed at the technology rather than the people using it. A patch may be wrong; the person who sent it is welcome to try again. Facts first, dry humor second. The compiler is already doing enough shouting.
+
+## Documentation for humans
+
+Lead with the question a reader is likely to have. Explain an unfamiliar term on first use or link to the [glossary](docs/glossary.md). Keep the quick answer separate from the detailed evidence. State what works, what is planned and what can be reproduced from the public tree. Give commands only for the environments in which they have been reviewed.
+
+Write in plain technical English. A little dry Unix humor is welcome in introductions and guides; keep specifications, test records, security instructions and license notices precise. Do not imitate another developer's authorship or imply their participation.

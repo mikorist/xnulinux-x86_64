@@ -32,3 +32,5 @@ Group meaningful findings into reviewed reports. Update upstream discussions aft
 ## Development cadence
 
 The maintainer-approved rule after CP620 is chronological publication of every significant reviewed outcome, including PASS, FAIL, HOLD and incomplete experiments. Update the root README, qualification matrix, roadmap and affected indexes together. Ten-checkpoint work series and twenty-checkpoint technical integration reviews remain separate; an open technical review does not delay reviewed documentation. Publish only qualified reusable source and tests; hold unready code with a specific reason. Verify the current [project state manifest](../../PROJECT-STATE.json) against the checkpoint and publication evidence before publishing. Do not infer technical closure or individual-record clearance from a report.
+
+For reader-facing changes, check the entry paths in the root README, getting-started guide, FAQ and documentation index. Keep evidence and current qualification aligned. Preserve historical reports rather than adding jokes or stylistic changes to measured results.

@@ -9,3 +9,5 @@ python3 -B -m unittest -v test_replay_verify.py
 ```
 
 See the [MIT license](../../../../LICENSES/MIT.txt). The full private candidate is not included.
+
+New to the project? See [Getting started](../../../../docs/getting-started.md). No guest image is needed to run these unit tests.

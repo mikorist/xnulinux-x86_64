@@ -2,7 +2,7 @@
 
 **XNU for the PC. One platform, multiple XNU versions, Intel and AMD.**
 
-*XNU is not Linux. That's the point of XNULINUX.*
+*GNU's Not Unix. XNU's Not Unix. XNU is not Linux. Hence XNULINUX.*
 
 XNULINUX is an independent experimental open-source project building a PC-oriented XNU/Darwin compatibility platform on Linux, derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux). The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs through Linux-hosted XNU and a versioned Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or Hackintosh installation.
 
@@ -21,7 +21,7 @@ Coming from macOS, OpenCore or a Linux terminal? You are in the right repository
 | I want to run a test, read the code or contribute | [Developer starting point](docs/getting-started.md#for-developers-and-testers) |
 | I just want to know whether this works yet | [FAQ](docs/faq.md) and [hardware evidence](docs/hardware-compatibility.md) |
 
-No magic EFI folder, no mystery installer, no promise that your graphics card works because someone put its name in a table.
+No magic EFI folder, no mystery installer. If your GPU appears in a source directory, that is not yet a driver for your GPU.
 
 ## Current status
 
@@ -105,7 +105,9 @@ Linux remains responsible for host resources. The shared x86_64 implementation m
 
 CPU-specific behavior is selected by detected capabilities and vendor-aware adapters where necessary. The diagram describes the intended architecture, not a completed implementation. QEMU/KVM are development and regression environments, not intended requirements of the finished product.
 
-## Current development status
+<a id="current-development-status"></a>
+
+## Detailed engineering status
 
 **Current published research snapshot: November 27, 2026, CP629. Last closed regular integration review: CP497.**
 
@@ -274,3 +276,7 @@ The [engineering history through CP612](research/2026-11/history/engineering-his
 - [Changelog](CHANGELOG.md) and [AI-assisted development](AI-METHODOLOGY.md)
 
 The historical reports are edited accounts of recorded experiments; they are not a full public reproduction bundle or a certification of every underlying test.
+
+---
+
+<sub>Personal thanks from the maintainer: to Linus Torvalds, for Linux and the engineering culture that grew around it, and to RehabMan, for years of practical knowledge shared with the Hackintosh community. After two decades of working with Hackintoshes, I owe both of you a great deal. Neither is involved in or endorses this project. The original upstream contributors and their work retain full attribution above.</sub>

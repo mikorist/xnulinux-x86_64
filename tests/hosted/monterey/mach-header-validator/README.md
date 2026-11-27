@@ -11,3 +11,5 @@ CC=gcc sh tests/hosted/monterey/mach-header-validator/run.sh
 The runner builds only a userspace test in a temporary directory with C11 warnings-as-errors and UBSan. On the physical Intel development host, GCC 14.2.0 reported **229 checks, 0 failures**. The exact validator SHA-256 is `ff7b63ef6ecd4613577bb36c216394278783b098d6d9290a060d90f3832c6474`.
 
 The gate checks a private little-endian Intel MH_EXECUTE header snapshot, command bounds, segment/section extents and UUID command size. It does not authenticate a Mach-O image, validate arbitrary load command payloads, map executable pages or implement a boot loader. This is a component regression, not a hosted XNU boot. MIT-licensed source; see LICENSE.
+
+New to the project? See [Getting started](../../../../docs/getting-started.md). This is a normal userspace test; it is not an installation step.
