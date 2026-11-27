@@ -1,6 +1,6 @@
 # Research journal
 
-For chronological individual experiments, see the [research monograph](monograph/README.md).
+For chronological individual experiments, see the [research monograph](monograph/README.md). The monograph now contains 47 chapters through the first strict executable link (CP68); later selected results are documented through CP612.
 
 Experimental milestones, not product releases. Current development runs in parallel on Intel and AMD Ryzen. Historical reports retain the original CPU, accelerator and test scope. Runtime results listed here concern standalone research unless explicitly stated otherwise.
 
