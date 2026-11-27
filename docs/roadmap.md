@@ -43,7 +43,7 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP624)
+## Current research boundary (CP625)
 
 The AMD Milan TCG UP path now returns from machine_init and reaches the RTC/lock-timeout observation boundary. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
@@ -58,3 +58,5 @@ CP622 captures the ordinary serial console: Broadwell reaches BSD buffer initial
 CP623 confirms that serial-only observation cannot validate the original silent PID 1 fixture. Next define a separate owned completion-output fixture and validate its acceptance evidence without changing CP602 or admission requirements. [CP623 report](../research/2026-11/checkpoint-623.md).
 
 CP624 builds the separate console-reporting diagnostic identically on both hosts. The diya HFS image passes offline checks; matching boot preparation and runtime validation remain open. [CP624 report](../research/2026-11/checkpoint-624.md).
+
+CP625 reports ordinary HFS root mount and init load attempt on diya without a debugger. The devfs mount fails with error 2; causal diagnosis and ordinary completion remain open. [CP625 report](../research/2026-11/checkpoint-625.md).
