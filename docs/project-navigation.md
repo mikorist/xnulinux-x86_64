@@ -19,6 +19,7 @@ The [getting-started guide](getting-started.md) is for new readers. Use this pag
 | gpu/, kexts/ | Retained components for later qualification |
 | targets/ | Version descriptors; Monterey identity validated, Tahoe preparation planned |
 | docs/ | Current design, build, testing and maintenance reference |
+| docs/evidence/ | Verified report links and future genuine screenshots/recordings |
 | research/ | Chronological and thematic experimental reports |
 | CHANGELOG.md | Reviewed changes and research milestones |
 | LICENSE, LICENSES/ | Preserved licensing and attribution |

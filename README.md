@@ -4,6 +4,10 @@
 
 *GNU's Not Unix. XNU's Not Unix. XNU is not Linux. Hence XNULINUX.*
 
+**[Start here](docs/getting-started.md) · [Status](#current-status) · [Architecture](docs/architecture.md) · [Tests](docs/getting-started.md#what-you-can-run-today) · [Evidence](docs/evidence/README.md) · [Documentation](docs/README.md)**
+
+---
+
 XNULINUX is an independent experimental open-source project building a PC-oriented XNU/Darwin compatibility platform on Linux, derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux). The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs through Linux-hosted XNU and a versioned Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or Hackintosh installation.
 
 > [!IMPORTANT]
@@ -23,6 +27,9 @@ Coming from macOS, OpenCore or a Linux terminal? You are in the right repository
 
 No magic EFI folder, no mystery installer. If your GPU appears in a source directory, that is not yet a driver for your GPU.
 
+> [!TIP]
+> Want to try something today? The [public userspace tests](docs/getting-started.md#what-you-can-run-today) run on a suitable Linux development system without root, a macOS image or kernel module insertion. They test components, not the complete kernel. For downloadable packages, see the [distribution plan](docs/maintainers/distribution-plan.md).
+
 ## Current status
 
 **CP636 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-636.md)**
@@ -38,6 +45,8 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 | Clean-source build and complete hosted runtime | HOLD |
 
 See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roadmap.md) and [research chronology](research/README.md). The current public research snapshot is distinct from the last closed regular integration review (CP497).
+
+**Reading the results:** PASS means the stated test passed, not that the entire platform works. HOLD means qualification is incomplete. Planned means an intended feature, not a supported one.
 
 ## One platform, extensible version targets
 
@@ -83,6 +92,24 @@ Seamless application execution is a major practical goal of the x86_64 project. 
 
 ## Intended architecture
 
+The diagram is the intended hosted architecture. It is not a screenshot or evidence of a completed runtime.
+
+```mermaid
+flowchart TD
+    H["Headless / Darwin CLI"] --> R["Version-matched Darwin runtime"]
+    D["Desktop"] --> R
+    S["Seamless applications"] --> R
+    R --> X["XNU version target (x86_64)"]
+    X --> L["xnu.ko / machine-layer adapter"]
+    L --> F["Versioned FKI"]
+    F --> K["Linux kernel / fki.ko"]
+    N["Linux applications"] --> K
+    K --> P["Intel or AMD PC"]
+```
+
+<details>
+<summary>Plain-text architecture diagram</summary>
+
 ```text
  Darwin CLI       macOS applications       macOS desktop
       |                   |                     |
@@ -100,6 +127,10 @@ Seamless application execution is a major practical goal of the x86_64 project. 
                           |
             Linux kernel on Intel or AMD CPU
 ```
+
+</details>
+
+Read [the architecture reference](docs/architecture.md) for the detailed design.
 
 Linux remains responsible for host resources. The shared x86_64 implementation must establish its own CPU-context, memory, interrupt, scheduling and lifecycle contracts. ARM64-specific code is a reference, not a drop-in x86_64 implementation.
 
@@ -273,6 +304,10 @@ macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated
 ## Incremental public development
 
 Reviewed research outcomes are published chronologically, including PASS, FAIL and HOLD. Each reporting increment updates this README and the affected status documents. The 20-checkpoint technical integration review remains separate; unqualified code is not promoted merely because its results are published. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. The fourth documents task/thread and IPC resource qualification through checkpoint 377. The fifth reports provenance and reference reproduction through checkpoint 397. Parallel development continues with a single integration history. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
+
+## Evidence and demonstrations
+
+[Evidence index](docs/evidence/README.md) is the entry point for verified results, reports and future screenshots or recordings. No simulated desktop screenshot is presented as a running system.
 
 ## Documentation and research archive
 

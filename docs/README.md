@@ -31,30 +31,54 @@ The current research snapshot is CP636; the last closed regular review is CP497.
 
 ## Developer documentation
 
+### Start using the documentation
+
 | Document | Purpose |
 | --- | --- |
 | [Getting started](getting-started.md) | macOS, Hackintosh, Linux and developer starting points |
+| [FAQ](faq.md) | Project scope and common questions |
+| [Hardware compatibility](hardware-compatibility.md) | Observed and target CPU environments |
+| [Glossary](glossary.md) | Technical terminology |
+| [Roadmap](roadmap.md) | Development stages and acceptance criteria |
+
+### Understand the design
+
+| Document | Purpose |
+| --- | --- |
 | [Platform scope](platform-scope.md) | Complete PC platform goal and reviewed evidence |
 | [Architecture](architecture.md) | Target hosted execution model |
 | [Version targets](version-targets.md) | Monterey, Tahoe and extensible target layout |
 | [Subsystem reference](subsystems/README.md) | Boot, Mach, scheduler, IOKit, BSD and FKI |
 | [Source map](source-map.md) | Pinned XNU source layout |
-| [Glossary](glossary.md) | Technical terminology |
-| [Reproduction](reproduction.md) | Evidence and replay requirements |
-| [Wiki plan](wiki-plan.md) | Proposed documentation navigation |
-| [Maintainer handbook](maintainers/README.md) | Review, triage, publication and releases |
-| [Hardware compatibility](hardware-compatibility.md) | Observed and target CPU environments |
-| [FAQ](faq.md) | Project scope and common questions |
-| [Contributing](../CONTRIBUTING.md) | Contribution and review rules |
-| [Roadmap](roadmap.md) | Development stages and acceptance criteria |
-| [Build reference](build.md) | Recorded toolchain and source revisions |
-| [Kernel history](kernel-history.md) | Experimental images 1–25 |
-| [Dependencies](dependencies.md) | Provenance and publication gates |
-| [Qualification matrix](qualification-matrix.md) | Confirmed results and remaining tests |
-| [Testing](testing.md) | Evidence classes and verification requirements |
 | [Architecture decisions](adr/README.md) | Accepted project decisions |
+
+### Build, test and reproduce
+
+| Document | Purpose |
+| --- | --- |
+| [Build reference](build.md) | Recorded toolchain and source revisions |
+| [Dependencies](dependencies.md) | Provenance and publication gates |
+| [Testing](testing.md) | Evidence classes and verification requirements |
+| [Reproduction](reproduction.md) | Evidence and replay requirements |
+| [Qualification matrix](qualification-matrix.md) | Confirmed results and remaining tests |
+
+### Research and contribution
+
+| Document | Purpose |
+| --- | --- |
 | [Research journal](../research/README.md) | Experimental results and limitations |
+| [Kernel history](kernel-history.md) | Experimental images 1–25 |
+| [Contributing](../CONTRIBUTING.md) | Contribution and review rules |
+| [Maintainer handbook](maintainers/README.md) | Review, triage, publication and releases |
 | [AI methodology](../AI-METHODOLOGY.md) | Parallel research and evidence policy |
+| [Wiki plan](wiki-plan.md) | Proposed documentation navigation |
+
+### Evidence and downloads
+
+| Document | Purpose |
+| --- | --- |
+| [Evidence index](evidence/README.md) | Measured results and future real visual evidence |
+| [Distribution plan](maintainers/distribution-plan.md) | Release stages, prerequisites and packaging rules |
 
 These documents describe an experimental project. Supported installation instructions will be added only after the corresponding workflows have been verified.
 

@@ -39,3 +39,5 @@ Public guides start with the practical question, explain abbreviations on first 
 ## Editorial standard
 
 Write public documentation for human readers from macOS, Hackintosh and Linux communities. Put the current scope and practical entry points before the research history; use precise technical English and restrained dry humor in introductory prose. Preserve the exact wording and meaning of evidence, historical records, license notices and safety boundaries. Personal acknowledgments are not contributor attribution or endorsements. The human maintainer owns editorial decisions; AI-assisted drafting must not invent authorship or results.
+
+The public reader-facing layout uses concise navigation, scoped status text, an intended-architecture diagram with a plain-text alternative and a separate evidence index. Detailed history remains accessible. Do not manufacture visual evidence, popularity claims or unsupported badges.

@@ -74,6 +74,6 @@ Check the [current status](../README.md#current-status) and [hardware evidence](
 
 There is no public installable x86_64 release or complete clean-source build recipe yet. When those exist, this is where the verified instructions belong. Until then, leave the production machine alone. A research repository is not an installation procedure.
 
-[Back to the project](../README.md) | [FAQ](faq.md) | [Developer documentation](README.md)
+[Back to the project](../README.md) | [FAQ](faq.md) | [Developer documentation](README.md) | [Evidence](evidence/README.md)
 
 For the planned sequence of downloadable research tools and later runtime distributions, see [distribution plan](maintainers/distribution-plan.md). The plan is not a download or installer.
