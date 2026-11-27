@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 629,
-  "documentation_through": 629,
+  "research_checkpoint": 630,
+  "documentation_through": 630,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 12,
-    "verified_primary_evidence_hashes": 132,
+    "partial_records": 13,
+    "verified_primary_evidence_hashes": 133,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 608,
+    "indexed_source_records": 609,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -34,7 +34,9 @@
     "fresh_objects_cp616_617": 3,
     "retained_objects_cp617": 1111,
     "cp444_exact_matches": 1069,
-    "current_unmatched": 45
+    "current_unmatched": 45,
+    "regenerated_objects_cp630": 22,
+    "retained_objects_cp630": 1092
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -65,9 +67,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Continue independent Monterey build-input source regeneration; preserve AMD and hosted qualification requirements.",
+  "next": "Begin bounded Tahoe source/toolchain/target preparation on Ryzen; preserve Monterey as active baseline and continue clean-source and AMD qualification independently.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-629.md",
+    "current_report": "research/2026-11/checkpoint-630.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -96,7 +98,7 @@
       "entry_plan": {
         "preparation_recommended_after_checkpoint": 630,
         "implementation_gate": "Stable physical Linux-hosted Monterey Intel baseline; independent qualification and existing approvals",
-        "status": "PLANNED",
+        "status": "PREPARATION_ELIGIBLE",
         "reference": "docs/version-targets.md"
       }
     },
