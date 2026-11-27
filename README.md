@@ -30,7 +30,7 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP640 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-640.md)**
+**CP641 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-641.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
@@ -145,11 +145,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 27, 2026, CP640. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP641. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Seven recorded 20-checkpoint windows (CP498-637) remain open for technical review, with three subsequent checkpoints; all 143 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Seven recorded 20-checkpoint windows (CP498-637) remain open for technical review, with four subsequent checkpoints; all 144 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-**Next:** continue Monterey source closure and hosted/AMD qualification, Tahoe release mapping and version-specific generated headers. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
+**Next:** continue Monterey source closure and hosted/AMD qualification, Tahoe preparation and the scoped post-kernel reuse plan. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 
 <details>
 <summary>Detailed engineering evidence and checkpoint history</summary>
@@ -193,6 +193,8 @@ CP637: four fresh GCC builds pass; same-environment binaries match, different co
 CP638: self-contained source archive reproduced on both hosts, and both Python sources match the retained CP335 manifest. Attribution and common binary build remain HOLD. [CP638](research/2026-11/checkpoint-638.md).
 
 CP639: 28 regenerated inputs in each exact 1,114-input relink. [CP639](research/2026-11/checkpoint-639.md). CP640: targeted Monterey/Tahoe source comparison; 21 of 25 utility units identical, but generated header and ABI compatibility remain open. [CP640](research/2026-11/checkpoint-640.md).
+
+CP641: all 68 ARM-reference GPU and 45 kext files are retained exactly; x86 driver and runtime qualification remain open. [Post-kernel platform plan](docs/post-kernel-platform.md), [CP641](research/2026-11/checkpoint-641.md).
 
 **Next:** continue Monterey source closure and independent Tahoe preparation; Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 

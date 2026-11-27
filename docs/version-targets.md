@@ -56,3 +56,5 @@ The [distribution and staged migration plan](maintainers/distribution-plan.md) s
 CP632 adds [provisional dependency references](../targets/tahoe/dependency-references.json), with exact tag identities but no authoritative release mapping or build qualification.
 
 CP640: 21 of 25 compared utility source units match across versions, but only three have identical directly referenced pinned paths; other generated and exported dependencies remain unqualified. [CP640](../research/2026-11/checkpoint-640.md).
+
+CP641: [post-kernel platform reuse](post-kernel-platform.md) is a shared architectural plan; the Darwin runtime, IOKit/graphics interfaces and target build remain version-specific until compatible behavior is demonstrated.

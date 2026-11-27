@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP640, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP641, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -85,3 +85,5 @@ CP637: four strict GCC builds pass 916 synthetic checks; each environment reprod
 CP638: self-contained source staging and historical CP335 Python source identity PASS; attribution and common pinned binary build HOLD.
 
 CP639: six additional libkern source objects regenerated per host, 28 regenerated inputs in each exact relink; CP640: scoped Tahoe source/dependency comparison only. No runtime qualification change.
+
+CP641: ARM post-kernel source inventory PASS; retained GPU/kext identity does not qualify x86 graphics, desktop, headless, or seamless execution. Component and transitive license closure remains open. See [platform reuse](post-kernel-platform.md).

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 640,
-  "documentation_through": 640,
+  "research_checkpoint": 641,
+  "documentation_through": 641,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       638,
       657
     ],
-    "partial_records": 3,
-    "verified_primary_evidence_hashes": 143,
+    "partial_records": 4,
+    "verified_primary_evidence_hashes": 144,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 619,
+    "indexed_source_records": 620,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -111,14 +111,15 @@
       "release": "HOLD"
     }
   },
-  "next": "Continue Monterey independent build-source closure and hosted/AMD qualification; Tahoe release mapping and version-specific generated header closure remain open. Stage A release remains HOLD.",
+  "next": "Continue Monterey hosted/source and AMD qualification and independent Tahoe preparation; track post-kernel reuse, version-specific runtime and Linux GPU backend prerequisites.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-640.md",
+    "current_report": "research/2026-11/checkpoint-641.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
     "publication": "docs/maintainers/publication-workflow.md",
-    "monograph": "research/monograph/README.md"
+    "monograph": "research/monograph/README.md",
+    "post_kernel_platform": "docs/post-kernel-platform.md"
   },
   "version_targets": {
     "goal": "One XNULINUX; shared compatible platform and product layers; per-version and per-vendor qualification",
@@ -192,5 +193,17 @@
       ],
       "reference": "docs/version-targets.md"
     }
+  },
+  "post_kernel_platform": {
+    "checkpoint": 641,
+    "report": "docs/post-kernel-platform.md",
+    "status": "SOURCE_INVENTORY_ONLY",
+    "gpu_reference_files_exact": 68,
+    "kext_reference_files_exact": 45,
+    "selected_spdx_files": 82,
+    "upstream_commit": "e0835348aedf89b95dbf3cc1f48a98f91ade89db",
+    "runtime": "HOLD",
+    "graphics": "HOLD",
+    "license_closure": "HOLD"
   }
 }
