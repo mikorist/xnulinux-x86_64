@@ -10,7 +10,7 @@ This is an independent open-source research project. You can follow the research
 
 Think of XNU as the kernel underneath Darwin and macOS, rather than the entire operating system. Finder, WindowServer, application frameworks and your .app bundles are separate layers. The project aims to bring compatible Darwin software and, eventually, graphical macOS applications to Linux.
 
-The three planned modes are headless (command-line software and services), desktop (a compatible graphical environment), and seamless (individual macOS windows alongside Linux applications). None is a supported product today. Monterey is the active kernel target; Tahoe is the next planned version target. Neither the Apple frameworks nor a proprietary macOS installation is included.
+The three planned modes are headless (command-line software and services), desktop (a compatible graphical environment), and seamless (individual macOS windows alongside Linux applications). None is a supported product today. Monterey is the active kernel target; Tahoe is an active development target in preparation. Golden Gate is research only. Neither the Apple frameworks nor a proprietary macOS installation is included.
 
 Start with the [FAQ](faq.md), [three-mode architecture](architecture.md) and [current status](../README.md#current-status).
 

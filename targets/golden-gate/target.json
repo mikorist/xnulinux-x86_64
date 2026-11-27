@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "target": "golden-gate",
+  "release": "macOS 27",
+  "architecture": "x86_64",
+  "development_status": "RESEARCH_ONLY",
+  "source": {
+    "tag": null,
+    "commit": null,
+    "status": "HOLD_UNVERIFIED"
+  },
+  "qualification": {
+    "intel": "HOLD",
+    "amd": "HOLD",
+    "build": "HOLD",
+    "hosted": "HOLD",
+    "runtime": "HOLD",
+    "scope": "feasibility research only"
+  },
+  "reference": "docs/golden-gate-research.md"
+}

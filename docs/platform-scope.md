@@ -42,7 +42,7 @@ Getting a kernel to boot is a milestone. Making it reproducible, portable across
 
 ## Version targets
 
-One platform retains Monterey as its active baseline and prepares Tahoe as the next version. Shared layers are reused only where qualified; each target has its own source, runtime, build inputs and Intel/AMD qualification. See [version targets](version-targets.md) and [ADR 0005](adr/0005-extensible-version-targets.md).
+One platform retains Monterey as its active baseline and develops Tahoe as an active preparation target. Golden Gate is research only. Shared layers are reused only where qualified; each target has its own source, runtime, build inputs and Intel/AMD qualification. See [version targets](version-targets.md) and [ADR 0005](adr/0005-extensible-version-targets.md).
 
 The [post-kernel plan](post-kernel-platform.md) separates version-matched open runtime, device services, software display, CPU rendering, Linux-owned GPU backends and the independent desktop/seamless acceptance paths. Hardware acceleration is not a prerequisite for headless or basic software graphics. The Monterey hosted gate for Tahoe implementation remains unchanged.
 

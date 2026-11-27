@@ -58,8 +58,8 @@ See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roa
 | Target | XNU family | Current status |
 | --- | --- | --- |
 | Monterey 12.5 | 8020.140.41 | Active development baseline; [validated descriptor](targets/monterey/target.json) |
-| Tahoe 26 | 12377 | Research preparation; [descriptor](targets/tahoe/target.json), [dependency comparison](research/2026-11/checkpoint-640.md); no qualified build |
-| Future targets | To be selected | Extend the shared infrastructure rather than fork the entire project |
+| Tahoe 26 | 12377 | Active development (preparation; implementation gated); [descriptor](targets/tahoe/target.json), [dependency comparison](research/2026-11/checkpoint-640.md); no qualified build |
+| Golden Gate 27 | Source pin unverified | Research only; [x86_64 feasibility](docs/golden-gate-research.md) |
 
 Shared platform contracts, build/test infrastructure and Linux backends are reused where compatibility is demonstrated. Source pins, generated headers, patches, binaries, Darwin runtimes and qualification remain version-specific. Intel and AMD qualification is independent for each target. See [version targets and entry gates](docs/version-targets.md).
 
@@ -156,7 +156,7 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Twelve recorded 20-checkpoint windows (CP498-737) remain open for technical review, with 18 subsequent checkpoints; all 258 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-**Next:** Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; preserve Tahoe research-only status and review open technical windows in order. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
+**Next:** Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; continue active Tahoe preparation and Golden Gate feasibility research and review open technical windows in order. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 
 <details>
 <summary>Detailed engineering evidence and checkpoint history</summary>
@@ -207,7 +207,7 @@ CP642: retained framebuffer conversion helper passes independent synthetic tests
 
 CP643-755: CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retained inputs. CP745-747 establish scoped dual-host compiler and Blocks compile/link regressions; CP754 reaches 249 staged SDK headers. CP755 reproduces an instrumented object from one shared preprocessed input and passes 229 native checks per host; independent preprocessing and final binaries still differ. Complete AMD boot, physical hosted XNU, clean-source build, full SDK/runtime, graphics and release remain HOLD. [CP643-755 research update](research/2026-11/updates-643-755/README.md).
 
-**Next:** Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; preserve Tahoe research-only status and review open technical windows in order. Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+**Next:** Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; continue active Tahoe preparation and Golden Gate feasibility research and review open technical windows in order. Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 
@@ -277,9 +277,10 @@ The historical kernel matrix covers specific components and configurations, not 
 | Target | XNU source family | Status |
 | --- | --- | --- |
 | macOS Monterey 12.5 | `8020.140.41` | Current shared x86_64 development baseline |
-| macOS Tahoe 26 | `12377` | Next planned x86_64 source target |
+| macOS Tahoe 26 | `12377` | Active development; implementation gated |
+| macOS Golden Gate 27 | Unverified | Research only; Intel/AMD feasibility unproven |
 
-**Project goal: one XNULINUX, multiple version targets.** Monterey is the active target and Tahoe is planned; the goal is to retain both rather than replace one with the other. Share the versioned FKI contract, build orchestration, regression infrastructure, Linux backends and compatible application integration. Keep source pins, generated headers, patches, binaries and version-matched Darwin runtime separate. Qualify Intel and AMD independently for each target. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe; preparatory source research can proceed earlier. Develop headless, desktop and seamless modes for both without requiring a completed Monterey desktop before Tahoe work. The upstream `12377.121.6` revision is a research reference; the exact Tahoe target pin remains to be qualified.
+**Project goal: one XNULINUX, multiple version targets.** Monterey is the active baseline and Tahoe is an active development target; the goal is to retain both rather than replace one with the other. Share the versioned FKI contract, build orchestration, regression infrastructure, Linux backends and compatible application integration. Keep source pins, generated headers, patches, binaries and version-matched Darwin runtime separate. Qualify Intel and AMD independently for each target. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe; preparatory source research can proceed earlier. Develop headless, desktop and seamless modes for both without requiring a completed Monterey desktop before Tahoe work. The upstream `12377.121.6` revision is the verified Tahoe 26.5 source reference; the build and runtime remain unqualified. Golden Gate is a separate [research-only target](docs/golden-gate-research.md), not a supported x86_64 system.
 
 The intention is to reuse validated common FKI infrastructure through version-specific adapters, without mixing incompatible source revisions or build artifacts.
 
@@ -300,7 +301,8 @@ The intention is to reuse validated common FKI infrastructure through version-sp
 - [ ] Open headless Darwin runtime and compatible application execution.
 - [ ] Optional graphical desktop and seamless application-window integration.
 - [ ] Reproducible source release, installation and hardware compatibility documentation.
-- [ ] Subsequent XNU 12377 / Tahoe port.
+- [ ] Active XNU 12377 / Tahoe preparation and gated implementation.
+- [ ] Golden Gate 27 research: source availability, x86_64 kernel and userspace feasibility.
 - [ ] Continue parallel AMD-model regressions and qualify native AMD execution on Linux PCs.
 
 ## Source availability and research documentation

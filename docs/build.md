@@ -37,7 +37,7 @@ CP616-617 independently recompiled three retained source units and relinked the 
 
 ## Versioned build identity
 
-The [Monterey descriptor](../targets/monterey/target.json) records the retained source pin, toolchain identity and four CP626/627 artifacts. CP629 validates identity offline on both hosts and rejects nine negative controls each. It is not a generic build recipe. Tahoe is source research only; use separate version-specific inputs and qualify build orchestration before advertising it. See [version targets](version-targets.md).
+The [Monterey descriptor](../targets/monterey/target.json) records the retained source pin, toolchain identity and four CP626/627 artifacts. CP629 validates identity offline on both hosts and rejects nine negative controls each. It is not a generic build recipe. Tahoe is in active preparation, with build and implementation gates unchanged; use separate version-specific inputs and qualify build orchestration before advertising it. See [version targets](version-targets.md).
 
 ## Retained-input boundary through CP755
 

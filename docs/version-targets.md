@@ -7,7 +7,7 @@ Adding another XNU version target must extend the existing XNULINUX platform rat
 | Stage | Work | Gate |
 | --- | --- | --- |
 | CP628-630 | Finish current Monterey development series; retain source comparison | No migration |
-| After CP630 | Bounded Tahoe preparation: source pin review, toolchain and dependencies, interface and configuration inventory, proposed target descriptor | Source research only |
+| After CP630 | Active Tahoe preparation: source pin review, toolchain and dependencies, interface and configuration inventory, proposed target descriptor | Implementation gate unchanged |
 | Monterey hosted development | Introduce explicit target identity in common build/test orchestration where justified by actual requirements | Existing Monterey regression evidence preserved |
 | Tahoe implementation | Separate pinned source, build/link qualification, owned userspace and hosted qualification | Stable physical Linux-hosted Monterey Intel baseline |
 | Product layers | Headless, desktop and seamless for both | Version-matched runtime and independently qualified shared layers |
@@ -22,7 +22,7 @@ Keep sources, generated headers, binaries and runtime dependencies separate per 
 
 ## Current evidence
 
-[CP628](../research/2026-11/checkpoint-628.md) compares the public source trees. Its 95.9% retained-line statistic covers only common x86 paths; it is not evidence of ABI or runtime compatibility. The Tahoe reference revision remains research-only; no build or boot is qualified.
+[CP628](../research/2026-11/checkpoint-628.md) compares the public source trees. Its 95.9% retained-line statistic covers only common x86 paths; it is not evidence of ABI or runtime compatibility. Tahoe is an active development target in preparation; the reference revision is not a qualified build or boot. Golden Gate is [research only](golden-gate-research.md).
 
 Approved target layout (logical; implementation staged):
 
@@ -36,6 +36,7 @@ XNULINUX/
     targets/
         monterey/
         tahoe/
+        golden-gate/
         future/
     xnu-patches/
     tests/

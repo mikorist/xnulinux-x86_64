@@ -4,7 +4,7 @@ Planning decision: November 27, 2026, CP631. The maintainer delegates technical 
 
 ## Repository layout
 
-Continue the approved version-target layout incrementally. Monterey and Tahoe descriptors already exist, with Tahoe research-only. Add new qualified sources, target-specific build recipes and tests at their intended paths. Keep the existing shared FKI, loader and Linux interfaces in place. Do not move code merely to make the directory tree look finished.
+Continue the approved version-target layout incrementally. Monterey and Tahoe descriptors already exist, with Tahoe in active preparation; build and release gates unchanged. Add new qualified sources, target-specific build recipes and tests at their intended paths. Keep the existing shared FKI, loader and Linux interfaces in place. Do not move code merely to make the directory tree look finished.
 
 CP637 is the first scheduled layout and distribution readiness assessment, not a promised release date or permission to skip earlier technical reviews. At subsequent regular reviews, identify small migration candidates, inspect consumers and paths, verify source and license identity, test the actual build and regressions before and after, and publish a separately reviewable move. Shared components remain shared only where compatibility is established. Keep historical evidence and the ARM64 reference intact. Earlier open technical review windows remain open until their own criteria are met.
 

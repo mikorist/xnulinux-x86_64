@@ -4,6 +4,10 @@
 
 There is no x86_64 product release represented by this document. The entries below distinguish recorded research milestones from integrated, supported functionality.
 
+### Target planning (2026-11-27)
+
+- Tahoe designated active development (preparation; implementation gate unchanged). Golden Gate 27 added as research only. No new technical checkpoint, qualification or release.
+
 ### Research milestones (2026-11-25)
 
 - First strict diagnostic x86_64 Mach-O executable: 993 inputs and zero undefined symbols.

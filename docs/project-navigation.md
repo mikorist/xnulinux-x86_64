@@ -17,7 +17,7 @@ The [getting-started guide](getting-started.md) is for new readers. Use this pag
 | scripts/, tools/ | Build and research tooling |
 | tests/ | [Public test index](../tests/README.md), reviewed fixtures and regression tests |
 | gpu/, kexts/ | Retained components for later qualification |
-| targets/ | Version descriptors; Monterey identity validated, Tahoe preparation planned |
+| targets/ | Version descriptors; Monterey identity validated, Tahoe preparation active; Golden Gate research only |
 | docs/ | Current design, build, testing and maintenance reference |
 | docs/evidence/ | Verified report links and future genuine screenshots/recordings |
 | research/ | Chronological and thematic experimental reports |

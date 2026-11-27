@@ -31,7 +31,8 @@ The architecture is intended as a complete PC-oriented compatibility platform, b
 | Architecture | XNU baseline |
 | --- | --- |
 | x86_64 Monterey (active) | 8020.140.41 |
-| x86_64 Tahoe (research only) | 12377 family; 12377.121.6 comparison reference |
+| x86_64 Tahoe (active development) | 12377 family; 12377.121.6 comparison reference |
+| x86_64 Golden Gate (research only) | Source pin and feasibility unverified; [research plan](golden-gate-research.md) |
 | ARM64 reference | Upstream 12377.121.6, preserved separately |
 
 Independent source pins, build configurations and patch series are intentional. The shared FKI contract requires explicit version compatibility.
@@ -60,7 +61,7 @@ The design goal is a single x86_64 implementation across Intel and AMD, analogou
 
 ## Multi-version platform goal
 
-One XNULINUX is intended to maintain Monterey 8020 and Tahoe 12377 targets for Intel and AMD x86_64; only Monterey is the active implementation. Share versioned FKI contracts, build orchestration, regression tests, Linux backends and compatible application integration. Keep each XNU source pin, build configuration, generated headers, patches, binaries and Darwin runtime/SDK version matched. Use version and vendor adapters only where necessary. All three product modes are intended for both qualified targets. Source similarity is not a binary ABI guarantee. The existing ARM64 reference is unchanged. See [CP628 comparison](../research/2026-11/checkpoint-628.md).
+One XNULINUX is intended to maintain Monterey 8020 and Tahoe 12377 targets for Intel and AMD x86_64; Monterey is the active implementation baseline and Tahoe is an active preparation target with its implementation gate unchanged. Golden Gate is research only. Share versioned FKI contracts, build orchestration, regression tests, Linux backends and compatible application integration. Keep each XNU source pin, build configuration, generated headers, patches, binaries and Darwin runtime/SDK version matched. Use version and vendor adapters only where necessary. All three product modes are intended for both qualified targets. Source similarity is not a binary ABI guarantee. The existing ARM64 reference is unchanged. See [CP628 comparison](../research/2026-11/checkpoint-628.md).
 
 Adding a version target must extend the existing platform rather than duplicate it. Use explicit target descriptors and validated common interfaces, with per-version artifacts and regression evidence. See [version-target entry plan](version-targets.md).
 

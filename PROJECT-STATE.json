@@ -144,7 +144,7 @@
       "release": "HOLD"
     }
   },
-  "next": "Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; preserve Tahoe research-only status and review open technical windows in order.",
+  "next": "Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; continue active Tahoe preparation and Golden Gate feasibility research and review open technical windows in order.",
   "references": {
     "current_report": "research/2026-11/updates-643-755/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
@@ -171,7 +171,7 @@
       "family": "12377",
       "reference": "12377.121.6",
       "reference_commit": "ac9718fb1af618d5ce8678d0dc6e8a58f252216f",
-      "status": "SOURCE_RESEARCH_ONLY",
+      "status": "ACTIVE_DEVELOPMENT_PREPARATION",
       "comparison_checkpoint": 628,
       "entry_plan": {
         "preparation_recommended_after_checkpoint": 630,
@@ -231,6 +231,25 @@
       "status": "OWNER_APPROVED_DEVELOPMENT_DIRECTION",
       "reference": "research/2026-11/updates-643-755/sdk-direction.md",
       "full_sdk": "HOLD"
+    },
+    "GoldenGate": {
+      "release": "macOS 27",
+      "status": "RESEARCH_ONLY",
+      "source_pin": null,
+      "source_availability": "HOLD_UNVERIFIED",
+      "architecture_target": "x86_64",
+      "vendors": [
+        "Intel",
+        "AMD"
+      ],
+      "qualification": {
+        "build": "HOLD",
+        "hosted": "HOLD",
+        "runtime": "HOLD",
+        "intel": "HOLD",
+        "amd": "HOLD"
+      },
+      "reference": "docs/golden-gate-research.md"
     }
   },
   "post_kernel_platform": {

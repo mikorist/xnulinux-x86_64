@@ -56,7 +56,7 @@ CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retain
 
 ## Is Tahoe replacing Monterey?
 
-No. Monterey remains the active baseline. Tahoe source preparation can proceed separately; implementation requires stable physical Linux-hosted Monterey Intel execution. Both targets are intended to share qualified platform infrastructure and retain version-matched runtimes. See [version targets](version-targets.md).
+No. Monterey remains the active baseline. Tahoe is an active development target in preparation; implementation requires stable physical Linux-hosted Monterey Intel execution. Both targets are intended to share qualified platform infrastructure and retain version-matched runtimes. Golden Gate is a separate [research-only feasibility target](golden-gate-research.md). See [version targets](version-targets.md).
 
 ## Does a PASS mean my machine is supported?
 

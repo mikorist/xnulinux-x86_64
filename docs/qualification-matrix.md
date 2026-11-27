@@ -66,7 +66,8 @@ The [project state manifest](../PROJECT-STATE.json) records the distinct current
 | Target | Current evidence | Open qualification |
 | --- | --- | --- |
 | Monterey 8020.140.41 | CP627 scoped Intel-model ordinary PID 1 PASS | AMD admission, native/hosted execution, clean-source build |
-| Tahoe 12377 | CP631 descriptor; CP652 release mapping for 13 dependencies | Qualified target build, ABI, Intel/AMD runtime, native/hosted execution |
+| Tahoe 12377 (active development) | CP631 descriptor; CP652 release mapping for 13 dependencies | Qualified target build, ABI, Intel/AMD runtime, native/hosted execution |
+| Golden Gate 27 (research only) | No verified source pin or x86_64 build | Source availability, architecture and userspace feasibility; all qualification HOLD |
 
 CP629: Monterey descriptor identity validation PASS on both hosts; no new build or runtime qualification.
 

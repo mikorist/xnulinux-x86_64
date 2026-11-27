@@ -4,7 +4,7 @@ Date: 2026-11-27. Status: Accepted architecture direction; staged implementation
 
 ## Decision
 
-Retain one XNULINUX repository and a common Intel/AMD platform. Monterey 8020.140.41 remains the active baseline. Tahoe 12377 is the next planned version target; future targets extend the same infrastructure. Share versioned FKI contracts, compatible Linux backends, build/test orchestration and application integration where evidence supports reuse. Keep each target's source pin, configuration, generated headers, patches, artifacts and Darwin runtime separate.
+Retain one XNULINUX repository and a common Intel/AMD platform. Monterey 8020.140.41 remains the active baseline. Tahoe 12377 is an active development target (preparation; implementation gate unchanged). Golden Gate 27 is research only; future targets extend the same infrastructure. Share versioned FKI contracts, compatible Linux backends, build/test orchestration and application integration where evidence supports reuse. Keep each target's source pin, configuration, generated headers, patches, artifacts and Darwin runtime separate.
 
 Use small declarative descriptors under targets/ rather than duplicating complete source trees. The approved layout is introduced incrementally without wholesale relocation.
 

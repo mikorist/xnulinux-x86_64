@@ -31,5 +31,7 @@
     "KDK_required_by_readme": false,
     "KERNEL_CONFIGS": "RELEASE",
     "SDKROOT": "macosx"
-  }
+  },
+  "development_status": "ACTIVE_DEVELOPMENT_PREPARATION",
+  "implementation_gate": "Stable physical Linux-hosted Monterey Intel baseline; unchanged"
 }
