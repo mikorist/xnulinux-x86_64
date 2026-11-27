@@ -99,6 +99,26 @@
       "desktop",
       "seamless"
     ],
-    "extension_principle": "Adding a version target extends XNULINUX rather than creating a separate project."
+    "extension_principle": "Adding a version target extends XNULINUX rather than creating a separate project.",
+    "repository_layout": {
+      "status": "OWNER_APPROVED",
+      "date": "2026-11-27",
+      "implementation": "STAGED_NOT_IMPLEMENTED",
+      "paths": [
+        "fki-ko/",
+        "xnu-ko/",
+        "linux/",
+        "scripts/",
+        "tools/",
+        "targets/monterey/",
+        "targets/tahoe/",
+        "targets/future/",
+        "xnu-patches/",
+        "tests/",
+        "docs/",
+        "research/"
+      ],
+      "reference": "docs/version-targets.md"
+    }
   }
 }

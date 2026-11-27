@@ -14,12 +14,33 @@ Adding another XNU version target must extend the existing XNULINUX platform rat
 
 The hosted entry gate requires genuine hosted user-program execution, repeatable lifecycle and host recovery, preserved protections, documented inputs and regression evidence. Physical testing requires its existing approvals. Monterey desktop completion and full AMD boot are not extra prerequisites for Tahoe implementation; AMD development continues in parallel.
 
-## Proposed logical organization
+## Owner-approved logical organization
 
-Keep existing fki-ko/, linux/, scripts/ and tools/ responsibilities. Retain the shared loader interfaces in xnu-ko/. Introduce small declarative version descriptors (proposed targets/monterey/ and targets/tahoe/) for source pins, build profiles, runtime manifests and references to version-specific adapters, patches and tests. Validate the first descriptor against the existing Monterey artifacts before claiming generic build support. This is a proposed layout, not a relocation of existing files.
+Keep existing fki-ko/, linux/, scripts/ and tools/ responsibilities. Retain the shared loader interfaces in xnu-ko/. Introduce small declarative version descriptors (targets/monterey/, targets/tahoe/ and reserved targets/future/) for source pins, build profiles, runtime manifests and references to version-specific adapters, patches and tests. Validate the first descriptor against the existing Monterey artifacts before claiming generic build support. The owner approved this layout on November 27, 2026. Adopt it incrementally; no immediate relocation of existing files is implied. Preserve existing auxiliary directories and licensing boundaries.
 
 Keep sources, generated headers, binaries and runtime dependencies separate per target. Qualify each CPU vendor and version independently. The original ARM64 reference stays unchanged.
 
 ## Current evidence
 
 [CP628](../research/2026-11/checkpoint-628.md) compares the public source trees. Its 95.9% retained-line statistic covers only common x86 paths; it is not evidence of ABI or runtime compatibility. The Tahoe reference revision remains research-only; no build or boot is qualified.
+
+Approved target layout (logical; implementation staged):
+
+```text
+XNULINUX/
+    fki-ko/
+    xnu-ko/
+    linux/
+    scripts/
+    tools/
+    targets/
+        monterey/
+        tahoe/
+        future/
+    xnu-patches/
+    tests/
+    docs/
+    research/
+```
+
+The future/ entry reserves a logical place for subsequent versions, not a requirement to commit an empty directory. Start with a Monterey descriptor validated against existing artifacts, then prepare the Tahoe descriptor after CP630. Existing build and regression evidence must remain valid.

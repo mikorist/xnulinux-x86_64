@@ -177,7 +177,7 @@ The historical kernel matrix covers specific components and configurations, not 
 
 The intention is to reuse validated common FKI infrastructure through version-specific adapters, without mixing incompatible source revisions or build artifacts.
 
-**Extensibility principle:** adding a future XNU version target should extend the existing platform, not create another project. See the [version-target entry plan](docs/version-targets.md). Tahoe preparation is recommended after CP630; implementation retains the stable physical Linux-hosted Monterey Intel gate.
+**Extensibility principle:** adding a future XNU version target should extend the existing platform, not create another project. See the [version-target entry plan](docs/version-targets.md). Tahoe preparation is recommended after CP630; implementation retains the stable physical Linux-hosted Monterey Intel gate. The logical repository layout in the entry plan is owner-approved; implementation is staged.
 
 ## Roadmap
 
