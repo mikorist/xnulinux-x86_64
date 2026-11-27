@@ -79,3 +79,5 @@ No GPU support list is qualified yet. The design uses Linux-owned graphics servi
 The two [public userspace tests](../tests/README.md) are available as source. CP742 and CP744 reproduce separate private source-only packages; CP755 matches shared-input objects but not final binaries. No package or release has been published. See the [distribution plan](maintainers/distribution-plan.md).
 
 CP642 independently checks the retained framebuffer-to-PNG helper using owned synthetic buffers. It is not a working x86 display driver or GPU demonstration.
+
+Latest evidence: CP756-775: original Monterey declaration probes expose 18 missing generated userspace headers; retained-header Stage A preprocessing and object identities match, and source-built UBSan passes 916 unchanged fixture checks plus 24 arithmetic diagnostics. Native executable identity remains HOLD. CP771-775 independently regenerate 26 more kernel inputs (121 regenerated, 993 retained); the complete 1,114-input CP602 image remains byte-identical on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP756-775](../research/2026-11/updates-756-775/README.md).

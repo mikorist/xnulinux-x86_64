@@ -23,7 +23,7 @@ These are intended capabilities, not a shipping platform. QEMU/KVM are developme
 
 Sources: [full executable reproduction and machine-layer research](../research/2026-11/hosted/amd-machine-layer.md), [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md), [qualification matrix](qualification-matrix.md).
 
-## Current research snapshot through CP755 (November 27, 2026)
+## Current research snapshot through CP775 (November 27, 2026)
 
 - CP602 independently reproduces the same 1,114-input unstripped executable on Intel and Ryzen; six strict Broadwell TCG UP runs pass the owned Darwin PID 1 fixture and Mach/BSD returns.
 - AMD Milan TCG UP startup now passes MCA, VM/bootstrap, UP CPU/FPU initialization, memory-type initialization and machine_init. Earlier observations reached the RTC/lock-timeout boundary; CP622 records an explicit unqualified AMD admission rejection. Full clock return and AMD userspace are not established.
@@ -47,3 +47,5 @@ One platform retains Monterey as its active baseline and develops Tahoe as an ac
 The [post-kernel plan](post-kernel-platform.md) separates version-matched open runtime, device services, software display, CPU rendering, Linux-owned GPU backends and the independent desktop/seamless acceptance paths. Hardware acceleration is not a prerequisite for headless or basic software graphics. The Monterey hosted gate for Tahoe implementation remains unchanged.
 
 [CP642](../research/2026-11/checkpoint-642.md) verifies a retained offline image conversion helper only; graphics and hosted execution remain separate gates.
+
+Latest evidence: CP756-775: original Monterey declaration probes expose 18 missing generated userspace headers; retained-header Stage A preprocessing and object identities match, and source-built UBSan passes 916 unchanged fixture checks plus 24 arithmetic diagnostics. Native executable identity remains HOLD. CP771-775 independently regenerate 26 more kernel inputs (121 regenerated, 993 retained); the complete 1,114-input CP602 image remains byte-identical on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP756-775](../research/2026-11/updates-756-775/README.md).

@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP755, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP775, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -104,3 +104,7 @@ CP642: retained framebuffer helper passes six synthetic packed BGRA conversions 
 - CP755: shared preprocessed input produced byte-identical instrumented ELF objects; 229/229 native checks on each host. Independent preprocessing and final binaries differ; full common environment and Stage A release remain HOLD.
 
 See [CP643-755 research update](../research/2026-11/updates-643-755/README.md). No new boot qualification or closed technical review is implied.
+
+## CP756-775 scoped results
+
+CP756-775: original Monterey declaration probes expose 18 missing generated userspace headers; retained-header Stage A preprocessing and object identities match, and source-built UBSan passes 916 unchanged fixture checks plus 24 arithmetic diagnostics. Native executable identity remains HOLD. CP771-775 independently regenerate 26 more kernel inputs (121 regenerated, 993 retained); the complete 1,114-input CP602 image remains byte-identical on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-756-775/README.md).

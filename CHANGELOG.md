@@ -103,3 +103,7 @@ Future entries should describe actual integrated changes by release or Unrelease
 - Complete AMD boot, physical hosted XNU, clean-source build, full SDK/runtime, graphics and release remain HOLD. This increment changes documentation and the public status snapshot only; no source integration, release or regular technical review closure.
 
 [CP643-755 research update](research/2026-11/updates-643-755/README.md).
+
+## Research through CP775
+
+CP756-775: original Monterey declaration probes expose 18 missing generated userspace headers; retained-header Stage A preprocessing and object identities match, and source-built UBSan passes 916 unchanged fixture checks plus 24 arithmetic diagnostics. Native executable identity remains HOLD. CP771-775 independently regenerate 26 more kernel inputs (121 regenerated, 993 retained); the complete 1,114-input CP602 image remains byte-identical on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP756-775 research update](research/2026-11/updates-756-775/README.md).

@@ -46,7 +46,7 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP755)
+## Current research boundary (CP775)
 
 **Parallel priorities:** preserve CP627 Intel-model ordinary boot; close Monterey source regeneration and hosted/AMD gates; continue active Tahoe preparation; complete Stage A package review and common pinned native build; review outstanding technical windows in order. The approved post-kernel plan adds independent source/host-only preparation, not a requirement to finish graphics before kernel qualification.
 
@@ -96,8 +96,14 @@ CP641 records the [post-kernel platform reuse plan](post-kernel-platform.md): ve
 
 CP642 independently validates the retained offline framebuffer conversion helper on both x86 hosts; the next display prerequisite is a version-appropriate framebuffer contract, including stride. This does not change the Monterey hosted or Tahoe entry gates. [CP642](../research/2026-11/checkpoint-642.md).
 
-## Current work after CP755
+## CP755 historical boundary
 
 CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retained inputs. CP745-747 establish scoped dual-host compiler and Blocks compile/link regressions; CP754 reaches 249 staged SDK headers. CP755 reproduces an instrumented object from one shared preprocessed input and passes 229 native checks per host; independent preprocessing and final binaries still differ.
 
 Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; continue active Tahoe preparation and Golden Gate research-only feasibility and review open technical windows in order. For the open SDK and toolchain direction see [the approved plan](../research/2026-11/updates-643-755/sdk-direction.md). For graphics, continue scoped source/provenance and software rendering work; no live display or complete graphics framework is qualified. CP652 resolves the selected Tahoe release association, but Tahoe implementation remains gated on stable physical Linux-hosted Monterey Intel execution. Stage A still requires common native build reproduction, reviewed source packages and separate release approval. [CP643-755 research update](../research/2026-11/updates-643-755/README.md).
+
+## Current work after CP775
+
+CP756-775: original Monterey declaration probes expose 18 missing generated userspace headers; retained-header Stage A preprocessing and object identities match, and source-built UBSan passes 916 unchanged fixture checks plus 24 arithmetic diagnostics. Native executable identity remains HOLD. CP771-775 independently regenerate 26 more kernel inputs (121 regenerated, 993 retained); the complete 1,114-input CP602 image remains byte-identical on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification.
+
+Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. [Research update](../research/2026-11/updates-756-775/README.md).

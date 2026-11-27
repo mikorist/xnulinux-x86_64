@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 755,
-  "documentation_through": 755,
+  "research_checkpoint": 775,
+  "documentation_through": 775,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_windows": 12,
-    "completed_window_records": 240,
+    "completed_windows": 13,
+    "completed_window_records": 260,
     "partial_window": [
-      738,
-      757
+      758,
+      777
     ],
     "partial_records": 18,
-    "verified_primary_evidence_hashes": 258,
+    "verified_primary_evidence_hashes": 278,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 734,
+    "indexed_source_records": 754,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -45,7 +45,9 @@
       "units": 91,
       "paths": 896,
       "status": "PASS_SCOPED_SOURCE_STAGE_AND_OBJECTS"
-    }
+    },
+    "regenerated_objects_cp775": 121,
+    "retained_objects_cp775": 993
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -142,11 +144,22 @@
       "independent_native_preprocessing_identity": false,
       "final_binary_identity": false,
       "release": "HOLD"
+    },
+    "research_cp756_775": {
+      "status": "PASS_SCOPED",
+      "stage_a_retained_header_object_identity": true,
+      "source_built_ubsan_fixture_checks": 916,
+      "arithmetic_checks": 24,
+      "native_binary_identity": false,
+      "generated_userspace_headers_missing": 18,
+      "new_kernel_objects": 26,
+      "clean_source_build": "HOLD",
+      "release": "HOLD"
     }
   },
-  "next": "Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; continue active Tahoe preparation and Golden Gate feasibility research and review open technical windows in order.",
+  "next": "Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates.",
   "references": {
-    "current_report": "research/2026-11/updates-643-755/README.md",
+    "current_report": "research/2026-11/updates-756-775/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",

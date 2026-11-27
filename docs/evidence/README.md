@@ -27,6 +27,8 @@ CP642: [synthetic framebuffer conversion](../../research/2026-11/checkpoint-642.
 - [CP643-755 research update](../../research/2026-11/updates-643-755/README.md): 113 individually identified outcomes with primary evidence SHA256 values; retained evidence records are not downloadable here.
 - [CP754-755](../../research/2026-11/updates-643-755/checkpoint-742-755.md): partial SDK declarations and shared-input object reproduction, not runtime or release qualification.
 
+- [CP756-775 research update](../../research/2026-11/updates-756-775/README.md): 20 reviewed outcomes and primary hashes; no new boot or full replay bundle.
+
 ---
 
 <p align="center">
