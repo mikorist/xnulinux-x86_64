@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP637, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP638, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -81,3 +81,5 @@ CP634: physical Intel Clang runtime repair and unmodified validator PASS; isolat
 CP636: private source archive reproduction and unpacked tests PASS on both development environments; Python verifier copyright attribution and binary distribution HOLD.
 
 CP637: four strict GCC builds pass 916 synthetic checks; each environment reproduces its own executable, cross-environment identity and Stage A release remain HOLD. Seven recorded review windows remain technically open.
+
+CP638: self-contained source staging and historical CP335 Python source identity PASS; attribution and common pinned binary build HOLD.

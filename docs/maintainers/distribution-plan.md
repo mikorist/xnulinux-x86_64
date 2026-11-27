@@ -44,3 +44,5 @@ CP634-635: physical Intel Clang UBSan dependency restored (isolated MCP dependen
 CP636: identical source-only archive and unpacked tests on both hosts. The Python verifier references a generic MIT template with unfilled copyright attribution. Attribution and binary reproducibility remain HOLD; no archive or executable published. [CP636](../../research/2026-11/checkpoint-636.md).
 
 CP637 readiness assessment completed: four fresh GCC builds pass, byte-identical within each environment but different between GCC 14.2 and 15.2 environments. Stage A remains HOLD for attribution, common pinned binary reproduction, self-contained documentation and separate release approval. No release or tag created. [CP637](../../research/2026-11/checkpoint-637.md).
+
+CP638: identical self-contained private source archives and unpacked tests on both hosts; the Python sources match the retained CP335 manifest. Copyright attribution and common pinned binary build still HOLD. No archive or executable released. [CP638](../../research/2026-11/checkpoint-638.md).

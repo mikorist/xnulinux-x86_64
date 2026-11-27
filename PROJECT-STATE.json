@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 637,
-  "documentation_through": 637,
+  "research_checkpoint": 638,
+  "documentation_through": 638,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       638,
       657
     ],
-    "partial_records": 0,
-    "verified_primary_evidence_hashes": 140,
+    "partial_records": 1,
+    "verified_primary_evidence_hashes": 141,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 616,
+    "indexed_source_records": 617,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -98,11 +98,20 @@
       "cross_environment_binary_identity": false,
       "fresh_checks": 916,
       "release_approval": "REQUIRED"
+    },
+    "research_tools_portable_source": {
+      "checkpoint": 638,
+      "status": "PASS_SELF_CONTAINED_SOURCE_STAGING",
+      "archive_sha256": "ac5d05a7b1ce5c6aa23b19f5b703b9c63938b4eed88d915bd1fb686ac0ae5245",
+      "historical_python_source_checkpoint": 335,
+      "attribution": "HOLD",
+      "common_binary_build": "HOLD",
+      "release": "HOLD"
     }
   },
-  "next": "Resolve scoped tool attribution and common pinned build recipe; continue ordered technical review and independent Monterey/Tahoe research.",
+  "next": "Prepare common pinned build environment through approved infrastructure; continue Monterey independent source and Tahoe dependency qualification; release remains HOLD.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-637.md",
+    "current_report": "research/2026-11/checkpoint-638.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
