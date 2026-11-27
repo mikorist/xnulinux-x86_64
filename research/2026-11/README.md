@@ -56,3 +56,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 ## Chronological development log
 
 - [CP613-620: all recorded outcomes](checkpoint-613-620.md)
+- [CP621: observer-free standalone smoke (HOLD)](checkpoint-621.md)

@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP620, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP621, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -53,6 +53,7 @@ Snapshot: research documentation through CP620, 2026-11-27. Last closed regular 
 | Commpage lifecycle | CP602-604: six strict Broadwell TCG UP passes after scoped initialization correction; original mapping API reports data R/R and text RX/RX | General stability, effective hardware permissions, SMP and AMD full boot |
 | CP602 dependency provenance | CP607-610: 402 unique paths, 328 upstream content matches, 44 generated outputs matched, 27 inherited headers matched to predecessor | Original local authorship/licensing and clean full-source regeneration |
 | CP616-620 build closure | Three independently compiled objects; exact 1,114-input relink with 1,111 retained inputs; compiler inputs and linker metadata verified; 1,069 exact CP444 object matches | Full clean-source regeneration and source/license clearance |
+| Ordinary standalone boot observation | CP621: four bounded unobserved launches reach loader metadata-ready; completion unverified (HOLD) | Validated independent completion signal; not a demonstrated kernel failure |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
