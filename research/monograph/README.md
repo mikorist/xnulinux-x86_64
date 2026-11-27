@@ -69,3 +69,12 @@ Coverage snapshot: 47 individual chapters through R0047 (CP68). The retained jou
 These drafts do not constitute a complete public reproduction bundle. Historical commands, results and hashes require independent review. No new runtime tests were performed for this series.
 
 [Back to research journal](../README.md)
+
+---
+
+<p align="center">
+  <sub>Support the maintainer via the existing <a href="https://diyaudio.rs/">diyAudio.rs</a> donation button. Thank you!</sub>
+</p>
+<p align="center">
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AEXH39XRNHZQ2&amp;currency_code=EUR"><img src="https://img.shields.io/badge/PayPal-donate-0070BA?logo=paypal&amp;logoColor=white" alt="Donate via PayPal"></a>
+</p>

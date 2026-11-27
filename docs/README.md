@@ -88,3 +88,12 @@ These documents describe an experimental project. Supported installation instruc
 For a first visit, use [Getting started](getting-started.md); for a quick explanation of unfamiliar terminology, use the [glossary](glossary.md). Historical research is kept at its original level of technical detail.
 
 [Post-kernel platform reuse](post-kernel-platform.md): approved development direction, ARM reference inventory, GPU/device portability, open runtime, desktop/seamless backlog, licensing and qualification sequence.
+
+---
+
+<p align="center">
+  <sub>Support the maintainer via the existing <a href="https://diyaudio.rs/">diyAudio.rs</a> donation button. Thank you!</sub>
+</p>
+<p align="center">
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AEXH39XRNHZQ2&amp;currency_code=EUR"><img src="https://img.shields.io/badge/PayPal-donate-0070BA?logo=paypal&amp;logoColor=white" alt="Donate via PayPal"></a>
+</p>

@@ -20,3 +20,12 @@ The inherited host and graphics-related test material is retained for investigat
 A passing component test establishes only its documented acceptance criteria. A guest test, a physical host component test and a complete hosted boot are different evidence classes. See [qualification matrix](../docs/qualification-matrix.md) and [evidence index](../docs/evidence/README.md).
 
 [Home](../README.md) · [Report a problem](../CONTRIBUTING.md) · [Research](../research/README.md)
+
+---
+
+<p align="center">
+  <sub>Support the maintainer via the existing <a href="https://diyaudio.rs/">diyAudio.rs</a> donation button. Thank you!</sub>
+</p>
+<p align="center">
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AEXH39XRNHZQ2&amp;currency_code=EUR"><img src="https://img.shields.io/badge/PayPal-donate-0070BA?logo=paypal&amp;logoColor=white" alt="Donate via PayPal"></a>
+</p>
