@@ -4,15 +4,15 @@ The project brings XNU to standard x86_64 PCs running Linux, targeting Intel and
 
 ```mermaid
 flowchart TD
-    H[Headless] --> R[Version-matched Darwin runtime]
-    D[Desktop] --> R
-    S[Seamless applications] --> R
-    R --> X[XNU version target x86_64]
-    X --> L[xnu.ko / hosted execution]
-    L --> F[fki.ko / host interface]
-    F --> K[Linux x86_64 kernel]
-    N[Linux applications] --> K
-    K --> P[Physical x86_64 PC (Intel and AMD target)]
+    H["Headless"] --> R["Version-matched Darwin runtime"]
+    D["Desktop"] --> R
+    S["Seamless applications"] --> R
+    R --> X["XNU version target x86_64"]
+    X --> L["xnu.ko / hosted execution"]
+    L --> F["fki.ko / host interface"]
+    F --> K["Linux x86_64 kernel"]
+    N["Linux applications"] --> K
+    K --> P["Physical x86_64 PC (Intel and AMD target)"]
 ```
 
 *Proposed architecture, not a demonstrated end-to-end implementation.*
