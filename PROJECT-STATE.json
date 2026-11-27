@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 631,
-  "documentation_through": 631,
+  "research_checkpoint": 632,
+  "documentation_through": 632,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 14,
-    "verified_primary_evidence_hashes": 134,
+    "partial_records": 15,
+    "verified_primary_evidence_hashes": 135,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 610,
+    "indexed_source_records": 611,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -67,9 +67,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Resolve Tahoe version-matched open build dependency pins and tool availability; preserve Monterey active baseline and hosted implementation gate.",
+  "next": "Confirm Tahoe authoritative release association; independently audit public userspace tools for CP637 readiness; preserve Monterey and hosted gate.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-631.md",
+    "current_report": "research/2026-11/checkpoint-632.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -106,6 +106,12 @@
         "checkpoint": 631,
         "status": "RESEARCH_ONLY",
         "dependency_versions": "HOLD"
+      },
+      "dependency_references": {
+        "path": "targets/tahoe/dependency-references.json",
+        "checkpoint": 632,
+        "tag_identities_verified": 13,
+        "release_mapping": "HOLD_PROVISIONAL"
       }
     },
     "product_modes": [

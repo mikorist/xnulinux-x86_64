@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP631, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP632, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -71,3 +71,5 @@ The [project state manifest](../PROJECT-STATE.json) records the distinct current
 CP629: Monterey descriptor identity validation PASS on both hosts; no new build or runtime qualification.
 
 CP630: 19 newly regenerated objects per host, 22 regenerated inputs in each exact 1,114-input relink; retained headers/toolchain and 1,092 other objects. Clean-source build and runtime qualification remain open.
+
+CP632 verifies 13 Tahoe candidate source tag identities, but authoritative release association and tool compatibility remain HOLD; no Tahoe build or runtime.

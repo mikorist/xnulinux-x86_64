@@ -67,3 +67,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP629: Monterey descriptor (offline PASS)](checkpoint-629.md)
 - [CP630: utility source regeneration and exact relink (scoped PASS)](checkpoint-630.md)
 - [CP631: Tahoe source and build-input inventory (source-only PASS)](checkpoint-631.md)
+- [CP632: Tahoe dependency references (tag PASS, release mapping HOLD)](checkpoint-632.md)

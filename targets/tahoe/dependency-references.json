@@ -1,0 +1,89 @@
+{
+  "candidate_release": "macOS 26.5",
+  "checkpoint": 632,
+  "official_distribution_head": "4e290a9b9d3723c65d2a606223d41eb90ecdbf99 macOS 26.0",
+  "official_distribution_matches_target": false,
+  "release_mapping": "PROVISIONAL_THIRD_PARTY_LIST",
+  "scope": "13 candidate tags verified in official Apple repositories; exact release grouping, licenses, dependencies, build and runtime remain unqualified.",
+  "sources": {
+    "AvailabilityVersions": {
+      "commit": "149b1777f3e8c2133042d8e188f72e3adf6a7110",
+      "repository": "https://github.com/apple-oss-distributions/AvailabilityVersions.git",
+      "tag": "refs/tags/AvailabilityVersions-157.2",
+      "version": "157.2"
+    },
+    "Libc": {
+      "commit": "4e34d0559e3a1b081afeb8604d9e204a1f31321d",
+      "repository": "https://github.com/apple-oss-distributions/Libc.git",
+      "tag": "refs/tags/Libc-1752.120.2",
+      "version": "1752.120.2"
+    },
+    "Libsystem": {
+      "commit": "c23b51183e46e613375dc7639fb4bf11fbf59ba8",
+      "repository": "https://github.com/apple-oss-distributions/Libsystem.git",
+      "tag": "refs/tags/Libsystem-1356",
+      "version": "1356"
+    },
+    "bootstrap_cmds": {
+      "commit": "c71d2d72f48995baaea76148f61002e5299841de",
+      "repository": "https://github.com/apple-oss-distributions/bootstrap_cmds.git",
+      "tag": "refs/tags/bootstrap_cmds-138",
+      "version": "138"
+    },
+    "dtrace": {
+      "commit": "4e57fe5c4dcf71e455817e7f26fc1f68e6eb4fe2",
+      "repository": "https://github.com/apple-oss-distributions/dtrace.git",
+      "tag": "refs/tags/dtrace-413",
+      "version": "413"
+    },
+    "dyld": {
+      "commit": "fd8d0c4d52320ebf64db34f3cb280310d905c5ae",
+      "repository": "https://github.com/apple-oss-distributions/dyld.git",
+      "tag": "refs/tags/dyld-1378",
+      "version": "1378"
+    },
+    "hfs": {
+      "commit": "124b970fd5390f1c2cd6f985478616a04f6eeb1f",
+      "repository": "https://github.com/apple-oss-distributions/hfs.git",
+      "tag": "refs/tags/hfs-715.120.4",
+      "version": "715.120.4"
+    },
+    "libclosure": {
+      "commit": "3668b0837f47be3cc1c404fb5e360f4ff178ca13",
+      "repository": "https://github.com/apple-oss-distributions/libclosure.git",
+      "tag": "refs/tags/libclosure-96",
+      "version": "96"
+    },
+    "libdispatch": {
+      "commit": "701f4d1a24ae9c6863901bbbb22624b7d1b87321",
+      "repository": "https://github.com/apple-oss-distributions/libdispatch.git",
+      "tag": "refs/tags/libdispatch-1542.100.32",
+      "version": "1542.100.32"
+    },
+    "libmalloc": {
+      "commit": "c49dafa25f1efe8607701ae6014a663ad2ee437f",
+      "repository": "https://github.com/apple-oss-distributions/libmalloc.git",
+      "tag": "refs/tags/libmalloc-812.100.31",
+      "version": "812.100.31"
+    },
+    "libplatform": {
+      "commit": "b7ed7cf5cf7dd12b98672435db2225a860f199d8",
+      "repository": "https://github.com/apple-oss-distributions/libplatform.git",
+      "tag": "refs/tags/libplatform-375.120.2",
+      "version": "375.120.2"
+    },
+    "libpthread": {
+      "commit": "1f4f5265b319111142f1bf3a27d4484ef5a98314",
+      "repository": "https://github.com/apple-oss-distributions/libpthread.git",
+      "tag": "refs/tags/libpthread-539.100.4",
+      "version": "539.100.4"
+    },
+    "xnu": {
+      "commit": "ac9718fb1af618d5ce8678d0dc6e8a58f252216f",
+      "repository": "https://github.com/apple-oss-distributions/xnu.git",
+      "tag": "refs/tags/xnu-12377.121.6",
+      "version": "12377.121.6"
+    }
+  },
+  "status": "HOLD_RELEASE_MAPPING_TAG_IDENTITIES_VERIFIED"
+}
