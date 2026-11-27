@@ -59,3 +59,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP621: observer-free standalone smoke (HOLD)](checkpoint-621.md)
 - [CP622: ordinary serial console and AMD admission rejection (HOLD)](checkpoint-622.md)
 - [CP623: serial-only observation and silent PID 1 fixture (HOLD)](checkpoint-623.md)
+- [CP624: separate PID 1 console fixture (build PASS, runtime HOLD)](checkpoint-624.md)

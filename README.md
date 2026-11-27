@@ -13,7 +13,7 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
-> **Current research: CP623.** CP602 remains the standalone baseline with six prior strict observed Broadwell TCG passes. Ordinary serial observation confirms BSD initialization on Broadwell and explicit admission rejection on Milan. The original PID 1 fixture has silent success/failure loops; ordinary completion remains unverified. [Latest result](research/2026-11/checkpoint-623.md).
+> **Current research: CP624.** CP602 remains the standalone baseline with six prior strict observed Broadwell TCG passes. A separate console-reporting PID 1 diagnostic builds identically on both hosts; its runtime is untested. Ordinary boot and AMD admission remain HOLD. [Latest result](research/2026-11/checkpoint-624.md).
 >
 > Checkpoint 497: independent 1,109-input strict links, all 35 runtime sections and 47,220 non-STAB symbol tuples agree; same-candidate Intel PID 1 and Milan TCG pre-admission checks pass. [Topology and state report](research/2026-11/hosted/topology-state-and-reproducibility.md).
 
@@ -79,7 +79,7 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Current published research snapshot: November 27, 2026, CP623. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP624. Last closed regular integration review: CP497.**
 
 The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and four subsequent checkpoints remain open; all 124 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
 
@@ -93,7 +93,9 @@ CP622 corrects the missing serial observation in CP621. Both Broadwell runs reac
 
 CP623: on both hosts the unchanged Broadwell serial output remains at 1,312 bytes from 12 through 60 seconds. The owned PID 1 fixture has no console completion output; silence cannot distinguish success from failure. [CP623 report](research/2026-11/checkpoint-623.md).
 
-**Next:** define a separate owned userspace completion-output fixture and independently validate it. Preserve CP602 and existing AMD admission requirements. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP624: a separate owned console-reporting diagnostic builds byte-identically on both hosts and passes offline executable checks. Its diya HFS image passes read-only verification and payload extraction. No new guest run. [CP624 report](research/2026-11/checkpoint-624.md).
+
+**Next:** prepare the matching separate boot fixture and validate ordinary Intel completion; preserve CP602 and AMD admission requirements. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

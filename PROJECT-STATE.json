@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 623,
-  "documentation_through": 623,
+  "research_checkpoint": 624,
+  "documentation_through": 624,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 6,
-    "verified_primary_evidence_hashes": 126,
+    "partial_records": 7,
+    "verified_primary_evidence_hashes": 127,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 602,
+    "indexed_source_records": 603,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -53,7 +53,14 @@
         60
       ],
       "serial_bytes_each": 1312,
-      "scope": "Original owned fixture has silent terminal loops. No independent completion verdict. CP622 AMD admission rejection remains confirmed."
+      "scope": "Original owned fixture has silent terminal loops. No independent completion verdict. CP622 AMD admission rejection remains confirmed.",
+      "fixture_build": {
+        "checkpoint": 624,
+        "status": "PASS_STATIC",
+        "cross_host_identical": true,
+        "diya_hfs_check": "PASS",
+        "runtime": "HOLD"
+      }
     },
     "amd_clock_and_admission": "HOLD",
     "complete_amd_boot": "HOLD",
@@ -61,9 +68,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Define separate owned userspace completion-output fixture and independent acceptance test; preserve CP602 and existing AMD admission requirements.",
+  "next": "Prepare matching separate boot fixture and validate ordinary Intel console completion; preserve original CP602 and AMD admission requirements.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-623.md",
+    "current_report": "research/2026-11/checkpoint-624.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
