@@ -15,6 +15,10 @@ The broader engineering task is a PC compatibility platform, not just a successf
 5. Distinguish guest failures from verification-harness failures.
 6. Review and integrate logically complete changes; retain failed experiments and their explanations.
 
+## Tooling interruptions and historical record
+
+AI tooling interruptions are documented separately from kernel and test failures. The [November 26 support escalation](research/2026-11/history/ai-assisted-tooling-incident-2026-11-26.md) records the maintainer-reported disruption and subsequent observation without asserting a confirmed internal cause or resolution. Preserve authorization, isolation and host-ownership requirements. The [engineering history through CP612](research/2026-11/history/engineering-history-through-612.md) records the wider research progression.
+
 ## Evidence policy
 
 A successful object compilation is not a kernel boot. A relocatable link is not a complete kernel link. A standalone QEMU boot is not a Linux-hosted boot. An observed mount does not prove user-mode execution.

@@ -49,6 +49,11 @@ The [platform scope and evidence overview](../docs/platform-scope.md) connects t
 | Machine layer | [Topology, Darwin ABI, extended-state metadata and build reproducibility](2026-11/hosted/topology-state-and-reproducibility.md) |
 | Machine layer | [Vendor-aware machine-layer contracts and early runtime validation](2026-11/hosted/amd-machine-layer-followup.md) |
 | Hardware qualification | [Native AMD KVM component replay and SRSO qualification](2026-11/hosted/native-amd-kvm.md) |
+| Machine layer | [AMD standalone startup (CP498-555)](2026-11/hosted/amd-startup-498-555.md) |
+| Machine layer | [Machine lifecycle and image reproduction (CP556-598)](2026-11/hosted/amd-machine-lifecycle-556-598.md) |
+| Machine layer | [Commpage and provenance (CP599-612)](2026-11/hosted/commpage-reproduction-599-612.md) |
+| Project history | [Engineering history and evidence audit through CP612](2026-11/history/engineering-history-through-612.md) |
+| Development tooling | [AI tooling interruption and support escalation](2026-11/history/ai-assisted-tooling-incident-2026-11-26.md) |
 | Cross-cutting | [Failed approaches and lessons](2026-11/lessons-learned.md) |
 
 See also the [selected evidence manifest](2026-11/evidence-manifest.md).

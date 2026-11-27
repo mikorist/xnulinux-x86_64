@@ -195,6 +195,8 @@ Reviewed development source, tests and research reports are integrated after eac
 
 ## Documentation and research archive
 
+The [engineering history through CP612](research/2026-11/history/engineering-history-through-612.md) connects the original port investigation with the shared PC-platform effort, retained evidence and development-tool incidents.
+
 - [Developer documentation](docs/README.md)
 - [Research journal and chronological monograph](research/README.md)
 - [Architecture decisions](docs/adr/README.md)
