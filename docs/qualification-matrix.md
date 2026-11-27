@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP625, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP626, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Snapshot: research documentation through CP625, 2026-11-27. Last closed regular 
 | Commpage lifecycle | CP602-604: six strict Broadwell TCG UP passes after scoped initialization correction; original mapping API reports data R/R and text RX/RX | General stability, effective hardware permissions, SMP and AMD full boot |
 | CP602 dependency provenance | CP607-610: 402 unique paths, 328 upstream content matches, 44 generated outputs matched, 27 inherited headers matched to predecessor | Original local authorship/licensing and clean full-source regeneration |
 | CP616-620 build closure | Three independently compiled objects; exact 1,114-input relink with 1,111 retained inputs; compiler inputs and linker metadata verified; 1,069 exact CP444 object matches | Full clean-source regeneration and source/license clearance |
-| Ordinary standalone boot observation | CP625: diya Broadwell root mount and init load attempt reported; devfs mount error 2, no terminal marker by 100s | Successful exec, ordinary PID 1, devfs cause and AMD admission remain HOLD |
+| Ordinary standalone boot observation | CP626: diya Broadwell owned PID 1 console marker PASS at 92.08s; missing /dev corrected, no prior devfs error or panic | Ryzen replay, independent CPL measurement, Apple launchd, AMD admission and hosted boot remain HOLD |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 

@@ -61,3 +61,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP623: serial-only observation and silent PID 1 fixture (HOLD)](checkpoint-623.md)
 - [CP624: separate PID 1 console fixture (build PASS, runtime HOLD)](checkpoint-624.md)
 - [CP625: ordinary root mount and init load attempt (scoped PASS, PID 1 HOLD)](checkpoint-625.md)
+- [CP626: ordinary Intel-model PID 1 completion (scoped PASS)](checkpoint-626.md)

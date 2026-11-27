@@ -13,7 +13,7 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
-> **Current research: CP625.** The unchanged CP602 kernel reports ordinary HFS root mount and an init load attempt on diya Broadwell TCG without a debugger. A devfs mount error is observed; PID 1 completion and AMD admission remain HOLD. Six prior strict observed Broadwell passes remain scoped evidence. [Latest result](research/2026-11/checkpoint-625.md).
+> **Current research: CP626.** Ordinary Intel-model standalone boot reaches the owned PID 1 diagnostic on diya without a debugger. Adding the missing /dev mount directory eliminates the previous reported devfs error; the success marker appears at 92.08 seconds. Original CP602 kernel unchanged. Ryzen replay, AMD admission and hosted boot remain open. [Latest result](research/2026-11/checkpoint-626.md).
 >
 > Checkpoint 497: independent 1,109-input strict links, all 35 runtime sections and 47,220 non-STAB symbol tuples agree; same-candidate Intel PID 1 and Milan TCG pre-admission checks pass. [Topology and state report](research/2026-11/hosted/topology-state-and-reproducibility.md).
 
@@ -79,7 +79,7 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Current published research snapshot: November 27, 2026, CP625. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP626. Last closed regular integration review: CP497.**
 
 The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and four subsequent checkpoints remain open; all 124 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
 
@@ -97,7 +97,9 @@ CP624: a separate owned console-reporting diagnostic builds byte-identically on 
 
 CP625: separate console fixture reports ordinary HFS root mount and init load attempt by 92.08 seconds, with devfs mount error 2 and no terminal marker by 100 seconds. [CP625 report](research/2026-11/checkpoint-625.md).
 
-**Next:** review devfs mount prerequisites and ordinary console availability; preserve CP602 and existing admission requirements. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP626: corrected standalone fixture reports XNUL_PID1_624_PASS at 92.08 seconds without a debugger on diya Broadwell TCG. No prior devfs error, failure marker or panic is reported. [CP626 report](research/2026-11/checkpoint-626.md).
+
+**Next:** independently reproduce the corrected fixture and ordinary Intel-model completion on Ryzen; preserve CP602 and existing AMD admission requirements. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

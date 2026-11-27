@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 625,
-  "documentation_through": 625,
+  "research_checkpoint": 626,
+  "documentation_through": 626,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 8,
-    "verified_primary_evidence_hashes": 128,
+    "partial_records": 9,
+    "verified_primary_evidence_hashes": 129,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 604,
+    "indexed_source_records": 605,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -44,16 +44,14 @@
       "scope": "Owned signed Darwin PID 1 fixture, not launchd"
     },
     "ordinary_boot": {
-      "status": "HOLD",
-      "checkpoint": 625,
+      "status": "PASS_SCOPED",
+      "checkpoint": 626,
       "host": "diya",
       "model": "Broadwell-v2 TCG UP",
-      "root_mount_reported": true,
-      "init_load_attempt_reported": true,
-      "devfs_mount_error": 2,
-      "budget_seconds": 100,
-      "completion_observed": false,
-      "scope": "Root mount console evidence PASS scoped; exec, ordinary PID1 and devfs causal diagnosis HOLD. Ryzen runtime not performed."
+      "completion_observed": true,
+      "marker_seconds": 92.08,
+      "devfs_error_reported": false,
+      "scope": "Owned PID 1 diagnostic console completion, no debugger; Ryzen replay, independent CPL measurement, Apple launchd, AMD admission, native and hosted execution remain unqualified."
     },
     "amd_clock_and_admission": "HOLD",
     "complete_amd_boot": "HOLD",
@@ -61,9 +59,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Review devfs mount prerequisite and ordinary console availability; preserve CP602 and existing AMD admission requirements.",
+  "next": "Independently reproduce corrected fixture and ordinary Intel-model completion on Ryzen; preserve CP602 and existing AMD admission requirements.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-625.md",
+    "current_report": "research/2026-11/checkpoint-626.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
