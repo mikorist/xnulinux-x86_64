@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 638,
-  "documentation_through": 638,
+  "research_checkpoint": 640,
+  "documentation_through": 640,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       638,
       657
     ],
-    "partial_records": 1,
-    "verified_primary_evidence_hashes": 141,
+    "partial_records": 3,
+    "verified_primary_evidence_hashes": 143,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 617,
+    "indexed_source_records": 619,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -36,7 +36,9 @@
     "cp444_exact_matches": 1069,
     "current_unmatched": 45,
     "regenerated_objects_cp630": 22,
-    "retained_objects_cp630": 1092
+    "retained_objects_cp630": 1092,
+    "regenerated_objects_cp639": 28,
+    "retained_objects_cp639": 1086
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -109,9 +111,9 @@
       "release": "HOLD"
     }
   },
-  "next": "Prepare common pinned build environment through approved infrastructure; continue Monterey independent source and Tahoe dependency qualification; release remains HOLD.",
+  "next": "Continue Monterey independent build-source closure and hosted/AMD qualification; Tahoe release mapping and version-specific generated header closure remain open. Stage A release remains HOLD.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-638.md",
+    "current_report": "research/2026-11/checkpoint-640.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -154,6 +156,14 @@
         "checkpoint": 632,
         "tag_identities_verified": 13,
         "release_mapping": "HOLD_PROVISIONAL"
+      },
+      "utility_comparison": {
+        "checkpoint": 640,
+        "source_units": 25,
+        "identical_source_units": 21,
+        "direct_paths": 186,
+        "identical_direct_paths": 121,
+        "build": "HOLD"
       }
     },
     "product_modes": [

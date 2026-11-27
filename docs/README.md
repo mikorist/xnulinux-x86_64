@@ -27,7 +27,7 @@ GPU acceleration is deferred until the shared x86_64 runtime reaches the require
 
 ## Current research: Intel reference and parallel AMD development
 
-The current research snapshot is CP638; the last closed regular review is CP497. See the [project state manifest](../PROJECT-STATE.json) and [CP638 portable source staging](../research/2026-11/checkpoint-638.md). See [project navigation](project-navigation.md) and [chronological outcomes CP613-620](../research/2026-11/checkpoint-613-620.md). See the [qualification matrix](qualification-matrix.md), [CP599-612 report](../research/2026-11/hosted/commpage-reproduction-599-612.md) and [research journal](../research/README.md). The [Mach-O validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable in userspace.
+The current research snapshot is CP640; the last closed regular review is CP497. See the [project state manifest](../PROJECT-STATE.json) and [CP640 source comparison](../research/2026-11/checkpoint-640.md). See [project navigation](project-navigation.md) and [chronological outcomes CP613-620](../research/2026-11/checkpoint-613-620.md). See the [qualification matrix](qualification-matrix.md), [CP599-612 report](../research/2026-11/hosted/commpage-reproduction-599-612.md) and [research journal](../research/README.md). The [Mach-O validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable in userspace.
 
 ## Developer documentation
 

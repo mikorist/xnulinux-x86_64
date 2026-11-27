@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP638, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP640, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -83,3 +83,5 @@ CP636: private source archive reproduction and unpacked tests PASS on both devel
 CP637: four strict GCC builds pass 916 synthetic checks; each environment reproduces its own executable, cross-environment identity and Stage A release remain HOLD. Seven recorded review windows remain technically open.
 
 CP638: self-contained source staging and historical CP335 Python source identity PASS; attribution and common pinned binary build HOLD.
+
+CP639: six additional libkern source objects regenerated per host, 28 regenerated inputs in each exact relink; CP640: scoped Tahoe source/dependency comparison only. No runtime qualification change.

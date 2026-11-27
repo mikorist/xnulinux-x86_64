@@ -54,3 +54,5 @@ CP631 adds the [Tahoe research descriptor](../targets/tahoe/target.json); it is 
 The [distribution and staged migration plan](maintainers/distribution-plan.md) schedules the first readiness assessment at CP637. This does not change the Tahoe implementation gate or close any technical review.
 
 CP632 adds [provisional dependency references](../targets/tahoe/dependency-references.json), with exact tag identities but no authoritative release mapping or build qualification.
+
+CP640: 21 of 25 compared utility source units match across versions, but only three have identical directly referenced pinned paths; other generated and exported dependencies remain unqualified. [CP640](../research/2026-11/checkpoint-640.md).
