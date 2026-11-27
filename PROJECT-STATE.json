@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 775,
-  "documentation_through": 775,
+  "research_checkpoint": 795,
+  "documentation_through": 795,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_windows": 13,
-    "completed_window_records": 260,
+    "completed_windows": 14,
+    "completed_window_records": 280,
     "partial_window": [
-      758,
-      777
+      778,
+      797
     ],
     "partial_records": 18,
-    "verified_primary_evidence_hashes": 278,
+    "verified_primary_evidence_hashes": 298,
     "technical_closure": false
   },
   "monograph": {
@@ -47,7 +47,9 @@
       "status": "PASS_SCOPED_SOURCE_STAGE_AND_OBJECTS"
     },
     "regenerated_objects_cp775": 121,
-    "retained_objects_cp775": 993
+    "retained_objects_cp775": 993,
+    "regenerated_objects_cp795": 599,
+    "retained_objects_cp795": 515
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -155,17 +157,28 @@
       "new_kernel_objects": 26,
       "clean_source_build": "HOLD",
       "release": "HOLD"
+    },
+    "research_cp776_795": {
+      "status": "PASS_SCOPED",
+      "new_regenerated_inputs": 478,
+      "batch_01_accepted": 263,
+      "batch_02_accepted": 119,
+      "retained_link_identity": true,
+      "clean_source_build": "HOLD",
+      "runtime": "HOLD",
+      "portable_batch_tool": "HOLD"
     }
   },
-  "next": "Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates.",
+  "next": "Resolve shared generated dependency gaps and original-source recipe provenance; maintain existing SDK, AMD, hosted, oldest technical review, license and release gates.",
   "references": {
-    "current_report": "research/2026-11/updates-756-775/README.md",
+    "current_report": "research/2026-11/updates-776-795/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
     "publication": "docs/maintainers/publication-workflow.md",
     "monograph": "research/monograph/README.md",
-    "post_kernel_platform": "docs/post-kernel-platform.md"
+    "post_kernel_platform": "docs/post-kernel-platform.md",
+    "batch_workflow": "docs/maintainers/dual-host-batch-build.md"
   },
   "version_targets": {
     "goal": "One XNULINUX; shared compatible platform and product layers; per-version and per-vendor qualification",

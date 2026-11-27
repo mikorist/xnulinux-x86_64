@@ -83,3 +83,5 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP643-755: chronological research update (113 outcomes)](updates-643-755/README.md)
 
 [CP756-775 chronological research update](updates-756-775/README.md).
+
+[CP776-795 chronological research update](updates-776-795/README.md).

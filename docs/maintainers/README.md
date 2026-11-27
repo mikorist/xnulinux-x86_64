@@ -6,6 +6,7 @@
 | [Triage](triage.md) | Classify issues and evidence |
 | [Versioning](versioning.md) | Separate source pins, images, ABI and releases |
 | [Release checklist](release-checklist.md) | Review gates before distribution |
+| [Dual-host batch build workflow](dual-host-batch-build.md) | Independent build and evidence admission |
 | [Publication workflow](publication-workflow.md) | Incremental research publication |
 | [Repository integration](repository-integration.md) | Preserve existing upstream layout |
 | [Release note template](release-note-template.md) | Consistent release descriptions |

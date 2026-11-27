@@ -46,13 +46,13 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP775)
+## Current research boundary (CP795)
 
 **Parallel priorities:** preserve CP627 Intel-model ordinary boot; close Monterey source regeneration and hosted/AMD gates; continue active Tahoe preparation; complete Stage A package review and common pinned native build; review outstanding technical windows in order. The approved post-kernel plan adds independent source/host-only preparation, not a requirement to finish graphics before kernel qualification.
 
 Earlier Milan TCG UP observations establish machine_init return and the RTC/lock-timeout observation boundary; CP622 separately records the explicit unqualified admission rejection. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
-Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, then qualify SMP, physical and hosted execution separately. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP755 does not close it.
+Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, then qualify SMP, physical and hosted execution separately. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP795 does not close it.
 
 Historical CP621: an independent completion-evidence gap was identified: four ordinary smoke launches time out without a validated completion marker. The subsequent CP626/627 Intel-model control resolves that scoped evidence gap; AMD qualification remains separate. No new AMD clock return or boot is qualified. [CP621 report](../research/2026-11/checkpoint-621.md).
 
@@ -102,8 +102,12 @@ CP700 reproduces the exact CP602 executable with 95 regenerated and 1,019 retain
 
 Continue genuine Monterey locale and numeric conversion dependencies, independent source regeneration, common native build environment and AMD/hosted qualification; continue active Tahoe preparation and Golden Gate research-only feasibility and review open technical windows in order. For the open SDK and toolchain direction see [the approved plan](../research/2026-11/updates-643-755/sdk-direction.md). For graphics, continue scoped source/provenance and software rendering work; no live display or complete graphics framework is qualified. CP652 resolves the selected Tahoe release association, but Tahoe implementation remains gated on stable physical Linux-hosted Monterey Intel execution. Stage A still requires common native build reproduction, reviewed source packages and separate release approval. [CP643-755 research update](../research/2026-11/updates-643-755/README.md).
 
-## Current work after CP775
+## Historical boundary CP775
 
 CP756-775: original Monterey declaration probes expose 18 missing generated userspace headers; retained-header Stage A preprocessing and object identities match, and source-built UBSan passes 916 unchanged fixture checks plus 24 arithmetic diagnostics. Native executable identity remains HOLD. CP771-775 independently regenerate 26 more kernel inputs (121 regenerated, 993 retained); the complete 1,114-input CP602 image remains byte-identical on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification.
 
 Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. [Research update](../research/2026-11/updates-756-775/README.md).
+
+## Current work after CP795
+
+CP776-795: independent source regeneration and two local batch runs increased accepted regenerated inputs from 121 to 599 of 1,114; 515 remain retained. Both complete retained-input links match CP602. Shared generated-header blockers were resolved for selected groups; unresolved recipes and dependencies remain HOLD. No new boot, full clean-source build, runtime, licensing or release qualification. Continue shared generated dependency closure and original-source recipe qualification. Maintain separate AMD, hosted, SDK, license and release gates. [Research update](../research/2026-11/updates-776-795/README.md).
