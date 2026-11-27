@@ -31,3 +31,7 @@ Technical integration reviews occur every 20 significant research checkpoints. R
 ## Multi-version evidence and ordinary boot
 
 Record target identity separately from CPU model and physical host. CP621-627 illustrate why a missing completion observation must remain HOLD until a separate valid fixture and actual completion establish the narrower result. CP628 source similarity does not establish ABI compatibility; CP629 offline identity validation is not build or runtime qualification. Keep per-target regression and source evidence distinct.
+
+## Writing for humans
+
+Public guides start with the practical question, explain abbreviations on first use and link to the exact evidence. Readers may come from macOS, Hackintosh or Linux. Keep the navigation approachable, the engineering record exact and the humor restrained. Do not turn research measurements or security and licensing rules into jokes. A confident AI paragraph is not a test result; neither is a particularly entertaining one.

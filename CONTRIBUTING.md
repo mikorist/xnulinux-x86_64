@@ -9,6 +9,8 @@ This is experimental kernel research. Contributions are welcome in the form of s
 
 ## Start here
 
+Mac users, Hackintosh users, Linux users and curious readers are welcome. You do not need a kernel patch to contribute. A precise question or a well-documented failure is useful. If you are new to the project, [start here](docs/getting-started.md).
+
 Read the [architecture](docs/architecture.md), [roadmap](docs/roadmap.md), [qualification matrix](docs/qualification-matrix.md) and [testing policy](docs/testing.md). For source provenance and licensing, consult [dependencies](docs/dependencies.md) and the existing upstream license notices.
 
 ## Repository workflow
@@ -30,7 +32,7 @@ Review the current remote state before integration. Never force-push the referen
 
 ## Source and build rules
 
-- Keep shared x86_64 and ARM64 configurations, generated headers and patch series separate; Intel and AMD share the x86_64 source baseline.
+- Keep XNU version targets and ARM64 configurations, generated headers and patch series separate; Intel and AMD share the appropriate x86_64 target baseline.
 - Preserve pinned source checkouts; record necessary source changes as reviewable patches.
 - Avoid placeholder implementations presented as real providers, fake SDK headers and silent test bypasses.
 - Preserve relevant diagnostic failures and document the reason for changing approach.
@@ -69,3 +71,7 @@ Be concrete and respectful. Disagree with an implementation or conclusion using 
 ## Parallel Intel and AMD development
 
 Use one shared x86_64 source tree and FKI ABI. Ryzen and Intel work may proceed in separate workspaces, with one integration history and a common checkpoint review cycle. Identify CPU, accelerator, Linux kernel, compiler, input hashes and evidence scope in contributions. Do not equate AMD-model TCG or nested WSL2 virtualization with bare-metal AMD Linux qualification.
+
+## A small rule about tone
+
+Be direct, be curious, and keep the jokes aimed at the technology rather than the people using it. A patch may be wrong; the person who sent it is welcome to try again. Facts first, dry humor second. The compiler is already doing enough shouting.

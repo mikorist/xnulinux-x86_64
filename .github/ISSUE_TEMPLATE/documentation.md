@@ -4,6 +4,8 @@ about: Report stale instructions, unsupported claims or broken links
 title: "[Docs] "
 ---
 
+Found a broken link, an unexplained acronym or a misleading sentence? That is a useful report.
+
 ## Affected page and revision
 
 ## Current statement

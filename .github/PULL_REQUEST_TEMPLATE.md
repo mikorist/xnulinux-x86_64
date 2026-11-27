@@ -1,6 +1,6 @@
 ## Summary
 
-Describe the change and its purpose.
+Describe the change and its purpose. A small documentation improvement is welcome; mark technical fields not applicable when appropriate.
 
 ## Scope
 

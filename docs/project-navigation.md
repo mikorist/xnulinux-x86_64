@@ -2,6 +2,10 @@
 
 Start with the [root README](../README.md) and [project state manifest](../PROJECT-STATE.json) for the current checkpoint, qualified scope, blockers and next step. The [qualification matrix](qualification-matrix.md) separates evidence classes; the [roadmap](roadmap.md) gives the acceptance order. The [research journal](../research/README.md) preserves history. The [architecture](architecture.md) describes the intended design, and the [source map](source-map.md) describes the pinned upstream tree.
 
+## Choose your starting point
+
+The [getting-started guide](getting-started.md) is for new readers. Use this page for the repository map and engineering workflow. You do not need to read the entire monograph before filing a documentation issue.
+
 ## Repository map
 
 | Path | Purpose |

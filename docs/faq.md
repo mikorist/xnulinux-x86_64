@@ -1,5 +1,7 @@
 # Frequently asked questions
 
+New to XNU? Start with the [guide for macOS, Hackintosh and Linux users](getting-started.md). No kernel-development vocabulary test is required.
+
 ## Is this a Hackintosh?
 
 No. The goal is to adapt XNU to standard PC hardware through Linux, rather than make a PC pretend to be a Mac. The intended design hosts XNU within Linux rather than replacing Linux with a conventional macOS installation. See [project philosophy](project-philosophy.md).
@@ -11,6 +13,14 @@ The initial port is now part of a larger engineering goal: one PC-oriented XNU/D
 ## Why PC rather than Intel?
 
 PC describes the intended platform, x86_64 the architecture, and Intel the established reference and qualification lane. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. AMD-model standalone startup now reaches the RTC/lock-timeout observation boundary after machine_init returns; native AMD KVM component replay is qualified at CP460. CP525 separately records native Linux SMCA inventory. Complete AMD boot and hosted execution remain open. Other configurations likewise require separate evidence.
+
+## Can I download an installer or an EFI folder?
+
+Not yet. There is no supported x86_64 release, no verified installation procedure and no new Hackintosh EFI here. The current public material includes research reports, reviewed source components and a few small userspace tests. See [what you can run today](getting-started.md#what-you-can-run-today).
+
+## Is XNU Linux?
+
+No. XNU is Apple's kernel; Linux is the intended host. Darwin is not all of macOS, either. XNULINUX is the project name, not a declaration that the two kernels have suddenly become the same thing.
 
 ## Does it need QEMU?
 
@@ -47,3 +57,7 @@ CP629 validates the first Monterey version descriptor offline on both hosts. CP6
 ## Is Tahoe replacing Monterey?
 
 No. Monterey remains the active baseline. Tahoe source preparation can proceed separately; implementation requires stable physical Linux-hosted Monterey Intel execution. Both targets are intended to share qualified platform infrastructure and retain version-matched runtimes. See [version targets](version-targets.md).
+
+## Does a PASS mean my machine is supported?
+
+Only if the documented test actually covers your configuration and the feature you are asking about. A build on Ryzen, a Broadwell TCG guest on Ryzen, and native Ryzen execution are three different things. See [hardware evidence](hardware-compatibility.md). A green checkmark cannot do the work of a driver.

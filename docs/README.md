@@ -1,5 +1,7 @@
 <!-- SPDX-License-Identifier: GPL-2.0-only -->
-# x86_64 development tree: Intel and AMD Ryzen
+# Documentation
+
+Start with [Getting started](getting-started.md) if you are new here. For current engineering status use the [root README](../README.md#current-status); for exact evidence use the [qualification matrix](qualification-matrix.md). The rest of this page also records the original repository separation and retained reference components.
 
 The original ARM64 implementation is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference), pinned at `7ed7153bd34b4d906a0f02320efc774850d5a5b0`. Its [original README](https://github.com/mikorist/xnulinux-x86_64/blob/arm64-reference/README.md), documentation, graphics screenshots, build scripts, CI and source remain available there. The historical license notice about the screenshots refers to those archived files.
 
@@ -31,6 +33,7 @@ The current research snapshot is CP629; the last closed regular review is CP497.
 
 | Document | Purpose |
 | --- | --- |
+| [Getting started](getting-started.md) | macOS, Hackintosh, Linux and developer starting points |
 | [Platform scope](platform-scope.md) | Complete PC platform goal and reviewed evidence |
 | [Architecture](architecture.md) | Target hosted execution model |
 | [Version targets](version-targets.md) | Monterey, Tahoe and extensible target layout |

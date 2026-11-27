@@ -22,3 +22,8 @@
 | POST | Diagnostic power-on self-test in the provider research |
 | ADR | Architecture decision record |
 | Checkpoint | Recorded experiment with an explicit observed boundary |
+| PID 1 | First userspace process; the project test program is not Apple launchd |
+| HOLD | The stated acceptance criteria or evidence are incomplete; not automatically a failure |
+| Version target | Independently pinned XNU source, runtime and qualification profile |
+| EFI | Firmware boot environment; a Hackintosh EFI folder is not the intended XNULINUX deployment model |
+| Seamless | Intended individual application windows alongside ordinary Linux applications |

@@ -4,6 +4,8 @@ about: Report a reproducible non-sensitive build or runtime defect
 title: "[Bug] "
 ---
 
+You do not need to understand XNU internals to report a problem. Please provide the details you know; mark unknown items as unknown. This is research software, not a supported installer.
+
 ## Environment
 
 Project commit, XNU pin, architecture, host kernel, CPU model, toolchain and execution mode (standalone TCG, standalone KVM, hosted or physical hosted).

@@ -2,10 +2,26 @@
 
 **XNU for the PC. One platform, multiple XNU versions, Intel and AMD.**
 
+*XNU is not Linux. That's the point of XNULINUX.*
+
 XNULINUX is an independent experimental open-source project building a PC-oriented XNU/Darwin compatibility platform on Linux, derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux). The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs through Linux-hosted XNU and a versioned Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or Hackintosh installation.
 
 > [!IMPORTANT]
 > **Research project, not an installable release.** Ordinary standalone execution of an owned Darwin PID 1 test program has been demonstrated under Intel-model emulation on both development hosts. Complete AMD boot, physical Linux-hosted XNU, Apple launchd and macOS application execution are not yet qualified.
+
+## Start here
+
+Coming from macOS, OpenCore or a Linux terminal? You are in the right repository. You do not need to know Mach internals to understand what we are building.
+
+| I am here because... | Start with |
+| --- | --- |
+| I use a Mac and want to know what might run on Linux | [A guide for macOS users](docs/getting-started.md#coming-from-macos) |
+| I have spent too much time editing EFI folders | [A guide for Hackintosh users](docs/getting-started.md#coming-from-hackintosh) |
+| I would rather keep Linux in charge of my PC | [A guide for Linux users](docs/getting-started.md#coming-from-linux) |
+| I want to run a test, read the code or contribute | [Developer starting point](docs/getting-started.md#for-developers-and-testers) |
+| I just want to know whether this works yet | [FAQ](docs/faq.md) and [hardware evidence](docs/hardware-compatibility.md) |
+
+No magic EFI folder, no mystery installer, no promise that your graphics card works because someone put its name in a table.
 
 ## Current status
 
@@ -95,6 +111,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and twelve subsequent checkpoints remain open; all 132 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
 
+**Next:** continue independent Monterey build-input regeneration and AMD qualification; prepare Tahoe source research after the active series. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
+
+<details>
+<summary>Detailed engineering evidence and checkpoint history</summary>
+
 The current CP602 standalone candidate has 1,114 inputs, zero undefined symbols and byte-identical Intel/Ryzen builds. Six strict Broadwell-v2 TCG UP runs pass the HFS/PID 1/Mach/BSD gate. Earlier Milan observations reached the RTC/lock-timeout boundary; CP622 captured the deliberate unqualified AMD admission rejection. Complete clock return and AMD admission remain unqualified. See [current qualification matrix](docs/qualification-matrix.md) and [CP599-612 research](research/2026-11/hosted/commpage-reproduction-599-612.md).
 
 CP613-620: offline clock calibration agrees on both hosts; three current source units were freshly compiled on each host, and both relinks reproduced the exact 1,114-input CP602 kernel using 1,111 retained objects. The compiler patch and 290 resource headers match; both linker metadata files were regenerated. Of the current input objects, 1,069 match CP444 byte-for-byte. The remaining 45 require further provenance assessment. The historical clock candidate is unqualified and not integrated. No new guest boot was performed.
@@ -168,6 +189,8 @@ Through checkpoint 457, all 1,089 baseline named inputs and the full strict exec
 
 **Native AMD update (CP460):** [Native AMD KVM component replay and SRSO qualification](research/2026-11/hosted/native-amd-kvm.md). Both selected guest kernels pass the original strict 94-group verifier on native Ryzen Linux. SRSO is Safe RET on host and guests. Guest TSA and CPU feature dependency remain open; full AMD XNU boot is not qualified.
 
+</details>
+
 ## Hardware and Linux compatibility
 
 The project targets standard x86_64 PCs, not a single CPU model. Current development proceeds on both Intel and AMD Ryzen, including investigation of older Intel generations, rather than matching a particular Mac model.
@@ -238,6 +261,8 @@ macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated
 Reviewed research outcomes are published chronologically, including PASS, FAIL and HOLD. Each reporting increment updates this README and the affected status documents. The 20-checkpoint technical integration review remains separate; unqualified code is not promoted merely because its results are published. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. The fourth documents task/thread and IPC resource qualification through checkpoint 377. The fifth reports provenance and reference reproduction through checkpoint 397. Parallel development continues with a single integration history. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
 
 ## Documentation and research archive
+
+New here? Read the [getting-started guide](docs/getting-started.md). If you are looking for installation commands, there are none yet. We do have two small [public userspace tests](docs/getting-started.md#what-you-can-run-today) that require neither a Mac image nor a kernel module.
 
 The [engineering history through CP612](research/2026-11/history/engineering-history-through-612.md) connects the original port investigation with the shared PC-platform effort, retained evidence and development-tool incidents.
 

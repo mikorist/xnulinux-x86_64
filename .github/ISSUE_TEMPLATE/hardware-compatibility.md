@@ -4,6 +4,8 @@ about: Report a tested CPU, host or firmware configuration
 title: "[Hardware] "
 ---
 
+A hardware model name is useful context, but actual test evidence is what establishes compatibility. Questions about untested configurations are welcome as questions, not as confirmed results.
+
 ## Hardware and software
 
 CPU model/stepping, RAM, firmware, host OS/kernel, relevant GPU/device models. Do not include serial numbers.

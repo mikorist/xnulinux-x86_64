@@ -13,3 +13,7 @@ See the [target architecture](architecture.md), [hardware qualification](hardwar
 The intended platform includes both Intel and AMD x86_64 Linux PCs through a shared implementation and hardware-aware selection, not two independent products. The scope extends from processor discovery and machine-layer semantics through Linux resource ownership and Darwin runtime integration to three application modes. Kernel boot is one milestone within this platform. See [platform scope and evidence](platform-scope.md). See the [cross-vendor test strategy](testing.md#planned-cross-vendor-x86_64-test-strategy).
 
 The same principle applies to XNU versions: adding Tahoe or a later target should extend the platform without discarding Monterey. Share validated infrastructure, not assumed ABI compatibility. See [version targets](version-targets.md).
+
+## A note about the name
+
+GNU's Not Unix. XNU's Not Unix. XNU is not Linux. XNULINUX is what we call the attempt to make two very different kernels cooperate. Linux remains Linux, XNU remains XNU, and nobody has to win an operating-system argument for the project to work.

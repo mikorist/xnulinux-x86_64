@@ -23,3 +23,7 @@ Avoid repeating a stream of intermediate diagnostic images in upstream discussio
 Identify the owner of each task and use separate worktrees for concurrent changes. Notify the maintainer before work crosses shared ABI, build, license or architecture boundaries. Prefer independent verification before integrating a significant result.
 
 The maintainer decides when a change is ready for the fork and when a self-contained contribution is appropriate for upstream.
+
+## Welcoming new readers
+
+Point first-time visitors to [Getting started](../getting-started.md), the FAQ and the current status. Accept questions from every operating-system community without expecting prior kernel expertise. Keep disagreements technical. It is fine to laugh at an awkward interface; it is not fine to laugh at a contributor.
