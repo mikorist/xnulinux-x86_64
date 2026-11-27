@@ -13,7 +13,7 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
-> Checkpoint 612 research update: byte-identical 1,114-input images on both hosts; six strict CP602 Broadwell TCG standalone passes; Milan TCG reaches the RTC/lock-timeout observation boundary after machine_init returns. AMD admission, complete hosted boot and full source clearance remain open. [Current research report](research/2026-11/hosted/commpage-reproduction-599-612.md).
+> **Current research: CP620.** CP602 remains the standalone baseline. Independent CP616-617 compilation and relink reproduce the exact kernel on both hosts; CP618-620 verify compiler inputs, linker metadata and retained binary lineage. Intel standalone PID 1 is confirmed in the prior six strict Broadwell TCG runs. AMD clock return and full boot remain HOLD. [Latest chronological outcomes](research/2026-11/checkpoint-613-620.md).
 >
 > Checkpoint 497: independent 1,109-input strict links, all 35 runtime sections and 47,220 non-STAB symbol tuples agree; same-candidate Intel PID 1 and Milan TCG pre-admission checks pass. [Topology and state report](research/2026-11/hosted/topology-state-and-reproducibility.md).
 
@@ -79,9 +79,13 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Current published research snapshot: November 27, 2026, CP612 (selected documentation). Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP620. Last closed regular integration review: CP497.**
 
 The current CP602 standalone candidate has 1,114 inputs, zero undefined symbols and byte-identical Intel/Ryzen builds. Six strict Broadwell-v2 TCG UP runs pass the HFS/PID 1/Mach/BSD gate. Milan TCG reaches the RTC/lock-timeout observation boundary after machine_init returns; CPU admission and complete clock return are not qualified. See [current qualification matrix](docs/qualification-matrix.md) and [CP599-612 research](research/2026-11/hosted/commpage-reproduction-599-612.md).
+
+CP613-620: offline clock calibration agrees on both hosts; three current source units were freshly compiled on each host, and both relinks reproduced the exact 1,114-input CP602 kernel using 1,111 retained objects. The compiler patch and 290 resource headers match; both linker metadata files were regenerated. Of the current input objects, 1,069 match CP444 byte-for-byte. The remaining 45 require further provenance assessment. The historical clock candidate is unqualified and not integrated. No new guest boot was performed.
+
+**Next:** qualify the remaining AMD clock lifecycle in an isolated test while preserving the Intel baseline, then progress toward AMD standalone PID 1; keep clean-source reproduction and hosted qualification separate. See [CP613-620](research/2026-11/checkpoint-613-620.md), [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 
@@ -193,12 +197,13 @@ macOS, Metal and XNU are trademarks of Apple Inc. This project is not affiliated
 
 ## Incremental public development
 
-Reviewed development source, tests and research reports are integrated after each series of 20 significant research checkpoints. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. The fourth documents task/thread and IPC resource qualification through checkpoint 377. The fifth reports provenance and reference reproduction through checkpoint 397. Parallel development continues with a single integration history. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
+Reviewed research outcomes are published chronologically, including PASS, FAIL and HOLD. Each reporting increment updates this README and the affected status documents. The 20-checkpoint technical integration review remains separate; unqualified code is not promoted merely because its results are published. The first public increment includes the [research journal](research/README.md), [qualification matrix](docs/qualification-matrix.md) and [standalone Intel Mach-O metadata validator test](tests/hosted/monterey/mach-header-validator/README.md). The next increment adds a [standalone replay evidence verifier](tests/hosted/monterey/replay-verifier/README.md) and the research update through checkpoint 337. The third increment publishes the task and ledger report through checkpoint 357. The fourth documents task/thread and IPC resource qualification through checkpoint 377. The fifth reports provenance and reference reproduction through checkpoint 397. Parallel development continues with a single integration history. Passing research tests are not automatically production-ready; unresolved source, license or build dependencies are held for review.
 
 ## Documentation and research archive
 
 The [engineering history through CP612](research/2026-11/history/engineering-history-through-612.md) connects the original port investigation with the shared PC-platform effort, retained evidence and development-tool incidents.
 
+- [Project navigation and responsibilities](docs/project-navigation.md)
 - [Developer documentation](docs/README.md)
 - [Research journal and chronological monograph](research/README.md)
 - [Architecture decisions](docs/adr/README.md)

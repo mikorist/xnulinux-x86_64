@@ -2,6 +2,7 @@
 
 | Reference | Purpose |
 | --- | --- |
+| [Project navigation and responsibilities](../project-navigation.md) | Current entry points, roles and ordered handoff |
 | [Triage](triage.md) | Classify issues and evidence |
 | [Versioning](versioning.md) | Separate source pins, images, ABI and releases |
 | [Release checklist](release-checklist.md) | Review gates before distribution |
