@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 622,
-  "documentation_through": 622,
+  "research_checkpoint": 623,
+  "documentation_through": 623,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 5,
-    "verified_primary_evidence_hashes": 125,
+    "partial_records": 6,
+    "verified_primary_evidence_hashes": 126,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 601,
+    "indexed_source_records": 602,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -45,13 +45,15 @@
     },
     "ordinary_boot": {
       "status": "HOLD",
-      "checkpoint": 622,
-      "runs": 4,
-      "timeout_seconds": 12,
-      "intel_bsd_buffer_initialization": 2,
-      "amd_explicit_admission_rejections": 2,
-      "completion_observed": 0,
-      "scope": "Ordinary serial evidence, no debugger; deliberate AMD admission rejection; no autonomous PID1 proof"
+      "checkpoint": 623,
+      "runs": 2,
+      "sample_seconds": [
+        12,
+        30,
+        60
+      ],
+      "serial_bytes_each": 1312,
+      "scope": "Original owned fixture has silent terminal loops. No independent completion verdict. CP622 AMD admission rejection remains confirmed."
     },
     "amd_clock_and_admission": "HOLD",
     "complete_amd_boot": "HOLD",
@@ -59,9 +61,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Establish independent ordinary Intel boot completion; retain AMD admission HOLD and existing requirements. Continue separately permitted source/build qualification.",
+  "next": "Define separate owned userspace completion-output fixture and independent acceptance test; preserve CP602 and existing AMD admission requirements.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-622.md",
+    "current_report": "research/2026-11/checkpoint-623.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",

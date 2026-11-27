@@ -43,7 +43,7 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP622)
+## Current research boundary (CP623)
 
 The AMD Milan TCG UP path now returns from machine_init and reaches the RTC/lock-timeout observation boundary. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
@@ -54,3 +54,5 @@ CP621 exposes an independent completion-evidence gap: four ordinary smoke launch
 The [project state manifest](../PROJECT-STATE.json) separates current research from the ordered technical-review backlog and source-build clearance. Technical acceptance does not depend on how quickly historical documents are published.
 
 CP622 captures the ordinary serial console: Broadwell reaches BSD buffer initialization; Milan explicitly rejects unqualified AMD admission. Neither establishes ordinary PID 1 completion. Preserve admission requirements. Next qualify ordinary Intel completion independently. [CP622 report](../research/2026-11/checkpoint-622.md).
+
+CP623 confirms that serial-only observation cannot validate the original silent PID 1 fixture. Next define a separate owned completion-output fixture and validate its acceptance evidence without changing CP602 or admission requirements. [CP623 report](../research/2026-11/checkpoint-623.md).
