@@ -38,3 +38,7 @@ For reader-facing changes, check the entry paths in the root README, getting-sta
 ## Reader-facing layout
 
 Keep a compact navigation line and short status summary above the detailed engineering history. Retain stable section headings used by publication updates, fold long historical detail without deleting it, and give diagrams a plain-text alternative. Group documentation by reader task rather than file chronology. Use accessible labels and genuine evidence links; do not add a build or release badge for an unqualified result. Keep [evidence navigation](../evidence/README.md) aligned with reviewed reports.
+
+## Mobile-first presentation
+
+Treat narrow phone screens as a normal reading environment. Keep the first README screen focused on purpose, navigation and current status. Use compact, wrapping text summaries for architecture; place tall or wide diagrams in collapsed details or on linked technical pages. Avoid oversized banners, wide decorative tables, large badge rows and autoplay media. Keep essential results visible without expanding anything. Use responsive images with meaningful alt text and readable captions; do not crop evidence for decoration. Preserve a plain-text alternative. Check the rendered page at desktop and phone widths when browser access is available; otherwise record that rendering was not verified. Maintain this rule for future screenshots and release documentation.

@@ -92,7 +92,12 @@ Seamless application execution is a major practical goal of the x86_64 project. 
 
 ## Intended architecture
 
-The diagram is the intended hosted architecture. It is not a screenshot or evidence of a completed runtime.
+**Applications → Darwin runtime → XNU → FKI → Linux → Intel/AMD PC.**
+
+This is the intended hosted architecture, not a demonstrated end-to-end runtime.
+
+<details>
+<summary>Expand architecture diagram</summary>
 
 ```mermaid
 flowchart TD
@@ -106,6 +111,8 @@ flowchart TD
     N["Linux applications"] --> K
     K --> P["Intel or AMD PC"]
 ```
+
+</details>
 
 <details>
 <summary>Plain-text architecture diagram</summary>
