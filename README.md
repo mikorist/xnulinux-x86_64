@@ -13,7 +13,7 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
-> **Current research: CP621.** CP602 remains the standalone baseline. Independent CP616-617 compilation and relink reproduce the exact kernel on both hosts; CP618-620 verify compiler inputs, linker metadata and retained binary lineage. Intel standalone PID 1 is confirmed in the prior six strict Broadwell TCG runs. AMD clock return and full boot remain HOLD. [Latest chronological outcomes](research/2026-11/checkpoint-613-620.md).
+> **Current research: CP622.** CP602 remains the standalone baseline. Six prior strict observed Broadwell TCG runs pass. Ordinary serial capture now confirms BSD initialization on Broadwell and explicit admission rejection on Milan, on both hosts. Ordinary PID 1 completion and AMD admission remain HOLD. [Latest result](research/2026-11/checkpoint-622.md).
 >
 > Checkpoint 497: independent 1,109-input strict links, all 35 runtime sections and 47,220 non-STAB symbol tuples agree; same-candidate Intel PID 1 and Milan TCG pre-admission checks pass. [Topology and state report](research/2026-11/hosted/topology-state-and-reproducibility.md).
 
@@ -79,7 +79,7 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Current published research snapshot: November 27, 2026, CP621. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP622. Last closed regular integration review: CP497.**
 
 The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and four subsequent checkpoints remain open; all 124 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
 
@@ -89,7 +89,9 @@ CP613-620: offline clock calibration agrees on both hosts; three current source 
 
 CP621: four observer-free CP602 launches reached the loader metadata-ready marker but timed out after eight seconds without a validated completion signal. This is a HOLD on ordinary boot evidence, not proof of a kernel failure. See [CP621](research/2026-11/checkpoint-621.md).
 
-**Next:** validate an independent normal boot completion contract with the Intel reference as a control, then compare AMD and qualify its remaining clock lifecycle. Preserve prior strict Intel evidence and keep clean-source reproduction and hosted qualification separate. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP622 corrects the missing serial observation in CP621. Both Broadwell runs reach BSD buffer initialization; both Milan runs explicitly report that AMD admission is unqualified. No independent ordinary PID 1 completion was observed. [CP622 report](research/2026-11/checkpoint-622.md).
+
+**Next:** establish independent ordinary Intel completion with validated evidence; preserve the AMD admission requirements and continue source/build qualification separately. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

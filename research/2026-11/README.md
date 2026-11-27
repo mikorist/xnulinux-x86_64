@@ -57,3 +57,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 
 - [CP613-620: all recorded outcomes](checkpoint-613-620.md)
 - [CP621: observer-free standalone smoke (HOLD)](checkpoint-621.md)
+- [CP622: ordinary serial console and AMD admission rejection (HOLD)](checkpoint-622.md)

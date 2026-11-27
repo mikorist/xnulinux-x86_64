@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 621,
-  "documentation_through": 621,
+  "research_checkpoint": 622,
+  "documentation_through": 622,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 4,
-    "verified_primary_evidence_hashes": 124,
+    "partial_records": 5,
+    "verified_primary_evidence_hashes": 125,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 600,
+    "indexed_source_records": 601,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -45,12 +45,13 @@
     },
     "ordinary_boot": {
       "status": "HOLD",
-      "checkpoint": 621,
+      "checkpoint": 622,
       "runs": 4,
-      "timeout_seconds": 8,
-      "metadata_ready": 4,
+      "timeout_seconds": 12,
+      "intel_bsd_buffer_initialization": 2,
+      "amd_explicit_admission_rejections": 2,
       "completion_observed": 0,
-      "scope": "No independent completion evidence; not proof of panic or hang"
+      "scope": "Ordinary serial evidence, no debugger; deliberate AMD admission rejection; no autonomous PID1 proof"
     },
     "amd_clock_and_admission": "HOLD",
     "complete_amd_boot": "HOLD",
@@ -58,9 +59,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Validate an independent normal boot completion contract with an Intel control before AMD comparison; preserve existing strict evidence and protection boundaries.",
+  "next": "Establish independent ordinary Intel boot completion; retain AMD admission HOLD and existing requirements. Continue separately permitted source/build qualification.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-621.md",
+    "current_report": "research/2026-11/checkpoint-622.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
