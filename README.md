@@ -4,7 +4,7 @@
 
 *GNU's Not Unix. XNU's Not Unix. XNU is not Linux. Hence XNULINUX.*
 
-**[Start here](docs/getting-started.md) · [Status](#current-status) · [Architecture](docs/architecture.md) · [Tests](docs/getting-started.md#what-you-can-run-today) · [Evidence](docs/evidence/README.md) · [Documentation](docs/README.md)**
+**[Start here](docs/getting-started.md) · [Status](#current-status) · [Architecture](docs/architecture.md) · [Tests](tests/README.md) · [Evidence](docs/evidence/README.md) · [Documentation](docs/README.md)**
 
 ---
 
@@ -17,18 +17,16 @@ XNULINUX is an independent experimental open-source project building a PC-orient
 
 Coming from macOS, OpenCore or a Linux terminal? You are in the right repository. You do not need to know Mach internals to understand what we are building.
 
-| I am here because... | Start with |
-| --- | --- |
-| I use a Mac and want to know what might run on Linux | [A guide for macOS users](docs/getting-started.md#coming-from-macos) |
-| I have spent too much time editing EFI folders | [A guide for Hackintosh users](docs/getting-started.md#coming-from-hackintosh) |
-| I would rather keep Linux in charge of my PC | [A guide for Linux users](docs/getting-started.md#coming-from-linux) |
-| I want to run a test, read the code or contribute | [Developer starting point](docs/getting-started.md#for-developers-and-testers) |
-| I just want to know whether this works yet | [FAQ](docs/faq.md) and [hardware evidence](docs/hardware-compatibility.md) |
+- **[macOS users](docs/getting-started.md#coming-from-macos):** What might run on Linux?
+- **[Hackintosh users](docs/getting-started.md#coming-from-hackintosh):** Why a different approach to PC hardware?
+- **[Linux users](docs/getting-started.md#coming-from-linux):** How does XNU fit into the existing system?
+- **[Developers and testers](docs/getting-started.md#for-developers-and-testers):** Where are the code, tests and evidence?
+- **[FAQ](docs/faq.md) and [hardware evidence](docs/hardware-compatibility.md):** Does it work on my machine?
 
 No magic EFI folder, no mystery installer. If your GPU appears in a source directory, that is not yet a driver for your GPU.
 
 > [!TIP]
-> Want to try something today? The [public userspace tests](docs/getting-started.md#what-you-can-run-today) run on a suitable Linux development system without root, a macOS image or kernel module insertion. They test components, not the complete kernel. For downloadable packages, see the [distribution plan](docs/maintainers/distribution-plan.md).
+> Want to try something today? Start with [Tests](tests/README.md). No root, macOS image or kernel module insertion is needed for the two public userspace tests. Downloadable packages are subject to the [distribution gates](docs/maintainers/distribution-plan.md).
 
 ## Current status
 

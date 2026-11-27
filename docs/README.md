@@ -58,6 +58,7 @@ The current research snapshot is CP636; the last closed regular review is CP497.
 | --- | --- |
 | [Build reference](build.md) | Recorded toolchain and source revisions |
 | [Dependencies](dependencies.md) | Provenance and publication gates |
+| [Public tests](../tests/README.md) | Runnable userspace tests and scope |
 | [Testing](testing.md) | Evidence classes and verification requirements |
 | [Reproduction](reproduction.md) | Evidence and replay requirements |
 | [Qualification matrix](qualification-matrix.md) | Confirmed results and remaining tests |

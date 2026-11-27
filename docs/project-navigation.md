@@ -15,7 +15,7 @@ The [getting-started guide](getting-started.md) is for new readers. Use this pag
 | xnu-patches/ | Version-specific patch and reference material |
 | linux/ | Linux-side interface material |
 | scripts/, tools/ | Build and research tooling |
-| tests/ | Reviewed fixtures and regression tests |
+| tests/ | [Public test index](../tests/README.md), reviewed fixtures and regression tests |
 | gpu/, kexts/ | Retained components for later qualification |
 | targets/ | Version descriptors; Monterey identity validated, Tahoe preparation planned |
 | docs/ | Current design, build, testing and maintenance reference |
