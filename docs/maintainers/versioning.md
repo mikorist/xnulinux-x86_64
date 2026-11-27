@@ -23,3 +23,5 @@ Breaking FKI contract changes require an explicit ABI revision and compatible lo
 A release note should identify the exact commit, source pins, supported host and CPU combinations, execution modes, verified checksums, unresolved limitations and recovery instructions.
 
 The approved target layout uses version-specific descriptors and artifacts. A new target does not imply a new product repository or ABI compatibility. See [version targets](../version-targets.md).
+
+Research prereleases use target-specific milestone tags only after the applicable [distribution gates](distribution-plan.md) pass. Keep generated binary assets in GitHub Releases, not the tracked source tree. No tag or release is created by this decision.

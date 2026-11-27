@@ -38,3 +38,7 @@ Use this checklist for an actual public distribution. A documentation-only resea
 - [ ] Remote commit and published contents independently confirmed.
 
 Do not mark these items complete from local notes alone. If a gate is not applicable, record why. An unresolved safety or licensing gate blocks the affected distribution.
+
+## Research-only distributions
+
+Use the scoped stages in [distribution plan](distribution-plan.md). A userspace tool release does not require hosted lifecycle qualification for functionality it does not contain; record non-applicability explicitly. Every distributed artifact still requires clean source, independent verification, licensing and release review. No binary kernel or installable release is implied by a documentation checkpoint.

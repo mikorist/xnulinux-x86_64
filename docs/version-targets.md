@@ -50,3 +50,5 @@ CP629 introduces the first [Monterey descriptor](../targets/monterey/target.json
 CP630 completes the work series. The bounded Tahoe source and toolchain preparation stage is now eligible; the implementation gate is unchanged. [CP630 report](../research/2026-11/checkpoint-630.md).
 
 CP631 adds the [Tahoe research descriptor](../targets/tahoe/target.json); it is not a qualified build profile. [CP631 report](../research/2026-11/checkpoint-631.md).
+
+The [distribution and staged migration plan](maintainers/distribution-plan.md) schedules the first readiness assessment at CP637. This does not change the Tahoe implementation gate or close any technical review.

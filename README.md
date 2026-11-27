@@ -278,6 +278,7 @@ The [engineering history through CP612](research/2026-11/history/engineering-his
 - [Architecture decisions](docs/adr/README.md)
 - [Contributing](CONTRIBUTING.md) and [security reporting](SECURITY.md)
 - [Changelog](CHANGELOG.md) and [AI-assisted development](AI-METHODOLOGY.md)
+- [Planned downloads and distribution gates](docs/maintainers/distribution-plan.md)
 
 The historical reports are edited accounts of recorded experiments; they are not a full public reproduction bundle or a certification of every underlying test.
 

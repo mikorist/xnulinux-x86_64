@@ -14,3 +14,5 @@
 | [Compatibility policy](../hardware-compatibility.md) | Report actual tested environments |
 
 The handbook proposes operational conventions for maintainer review. It does not enable GitHub settings, create releases or alter existing branch protection.
+
+See [distribution plan](distribution-plan.md) for staged tree migration, research binary packages, standalone and hosted release gates, and visual evidence.
