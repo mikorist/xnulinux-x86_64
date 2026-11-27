@@ -15,10 +15,14 @@ Do not publish raw register traces or entropy-bearing logs without review. Expor
 
 A reproduction run must use its own output directory and independently check both verifier outcome and actual guest boundary.
 
-## Latest retained reproduction evidence (CP612)
+## Retained reproduction evidence through CP612
 
 CP602: matching unstripped 1,114-input kernel, ordered input manifest, loader and fixture across Intel/Ryzen; six strict Broadwell TCG UP passes. CP605-610 verify patch lineage, dependency identity and generated-header closure. All 44 generated dependencies match recorded generation outputs; 27 inherited candidate-local headers match the direct predecessor. Clean full-source generation and public replay remain open. The [current report](../research/2026-11/hosted/commpage-reproduction-599-612.md) records candidate identifiers. The [history audit](../research/2026-11/history/engineering-history-through-612.md) distinguishes 371 verified primary evidence hashes from older entries using other formats.
 
 ## CP621 follow-up
 
 The exact CP602 relink with three regenerated and 1,111 retained inputs is not a clean full-source build. Four independent observer-free smoke launches did not yield a validated completion signal. Keep this HOLD distinct from the six earlier observed Intel standalone passes. See [CP613-620](../research/2026-11/checkpoint-613-620.md) and [CP621](../research/2026-11/checkpoint-621.md).
+
+## Current CP629 boundary
+
+CP627 ordinary Intel-model owned PID 1 completion passes on both hosts with identical kernel, root, loader and initrd. CP629 validates their identity via the Monterey descriptor. HFS was transferred, not independently regenerated on Ryzen. Clean-source and complete public replay remain HOLD. Tahoe uses separate future source/build/runtime qualification. See [CP627](../research/2026-11/checkpoint-627.md) and [CP629](../research/2026-11/checkpoint-629.md).

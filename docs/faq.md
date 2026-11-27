@@ -26,7 +26,7 @@ The shared Monterey development baseline uses XNU 8020.140.41 as an independent 
 
 ## Will I need the whole macOS desktop?
 
-The intended modes are headless, desktop and seamless. They share a runtime; the minimal open headless path should not require a complete proprietary macOS installation.
+The intended modes are headless, desktop and seamless. For each version target they share its runtime; the minimal open headless path should not require a complete proprietary macOS installation.
 
 ## Can you distribute macOS or its frameworks?
 
@@ -42,4 +42,8 @@ A Ryzen 7 5700X WSL2 development environment is now operational alongside the In
 
 ## What is the latest documented result?
 
-CP621 is the current public research snapshot. Four observer-free launches reached loader metadata but lacked independently observed completion; this remains HOLD, not a demonstrated kernel failure. The retained CP602 image has 1,114 link inputs and matches byte-for-byte across both development hosts. Six strict Intel-model standalone replays pass; AMD Milan TCG has not reached PID 1. The last closed regular integration review remains CP497, and the full source bundle is held. See the [qualification matrix](qualification-matrix.md).
+CP629 validates the first Monterey version descriptor offline on both hosts. CP627 confirms ordinary standalone owned Darwin PID 1 completion without debugger on both hosts under Broadwell TCG UP. The historical CP621 smoke HOLD was resolved within this scoped Intel-model fixture; AMD admission, physical hosted execution, Apple launchd and a clean-source build remain unqualified. See [project state](../PROJECT-STATE.json) and [qualification matrix](qualification-matrix.md).
+
+## Is Tahoe replacing Monterey?
+
+No. Monterey remains the active baseline. Tahoe source preparation can proceed separately; implementation requires stable physical Linux-hosted Monterey Intel execution. Both targets are intended to share qualified platform infrastructure and retain version-matched runtimes. See [version targets](version-targets.md).

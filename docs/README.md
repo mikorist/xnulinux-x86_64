@@ -25,7 +25,7 @@ GPU acceleration is deferred until the shared x86_64 runtime reaches the require
 
 ## Current research: Intel reference and parallel AMD development
 
-The current research snapshot is CP629; the last closed regular review is CP497. See the [project state manifest](../PROJECT-STATE.json) and [CP629 target descriptor](../research/2026-11/checkpoint-629.md). See [project navigation](project-navigation.md) and [chronological outcomes CP613-620](../research/2026-11/checkpoint-613-620.md). See the [qualification matrix](qualification-matrix.md), [latest report](../research/2026-11/hosted/commpage-reproduction-599-612.md) and [research journal](../research/README.md). The [Mach-O validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable in userspace.
+The current research snapshot is CP629; the last closed regular review is CP497. See the [project state manifest](../PROJECT-STATE.json) and [CP629 target descriptor](../research/2026-11/checkpoint-629.md). See [project navigation](project-navigation.md) and [chronological outcomes CP613-620](../research/2026-11/checkpoint-613-620.md). See the [qualification matrix](qualification-matrix.md), [CP599-612 report](../research/2026-11/hosted/commpage-reproduction-599-612.md) and [research journal](../research/README.md). The [Mach-O validator regression](../tests/hosted/monterey/mach-header-validator/README.md) is independently runnable in userspace.
 
 ## Developer documentation
 
@@ -33,6 +33,7 @@ The current research snapshot is CP629; the last closed regular review is CP497.
 | --- | --- |
 | [Platform scope](platform-scope.md) | Complete PC platform goal and reviewed evidence |
 | [Architecture](architecture.md) | Target hosted execution model |
+| [Version targets](version-targets.md) | Monterey, Tahoe and extensible target layout |
 | [Subsystem reference](subsystems/README.md) | Boot, Mach, scheduler, IOKit, BSD and FKI |
 | [Source map](source-map.md) | Pinned XNU source layout |
 | [Glossary](glossary.md) | Technical terminology |

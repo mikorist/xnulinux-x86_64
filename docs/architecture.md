@@ -4,10 +4,10 @@ The project brings XNU to standard x86_64 PCs running Linux, targeting Intel and
 
 ```mermaid
 flowchart TD
-    H[Headless] --> R[Shared Darwin runtime]
+    H[Headless] --> R[Version-matched Darwin runtime]
     D[Desktop] --> R
     S[Seamless applications] --> R
-    R --> X[XNU x86_64]
+    R --> X[XNU version target x86_64]
     X --> L[xnu.ko / hosted execution]
     L --> F[fki.ko / host interface]
     F --> K[Linux x86_64 kernel]
@@ -25,8 +25,9 @@ The architecture is intended as a complete PC-oriented compatibility platform, b
 
 | Architecture | XNU baseline |
 | --- | --- |
-| x86_64 | 8020.140.41 (Monterey 12.5) |
-| ARM64 | Upstream 12377.121.6 |
+| x86_64 Monterey (active) | 8020.140.41 |
+| x86_64 Tahoe (research only) | 12377 family; 12377.121.6 comparison reference |
+| ARM64 reference | Upstream 12377.121.6, preserved separately |
 
 Independent source pins, build configurations and patch series are intentional. The shared FKI contract requires explicit version compatibility.
 
@@ -44,11 +45,11 @@ The APSL and GPL components retain their existing license separation. Proprietar
 
 Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. AMD-aware standalone startup under Milan TCG UP now passes machine_init and reaches the RTC/lock-timeout observation boundary. Complete clock return, CPU admission, SMP and hosted ownership remain open. See [current qualification matrix](qualification-matrix.md).
 
-The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common source, FKI ABI, build system and runtime, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).
+The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common platform source, FKI ABI, build system and a version-matched runtime for each target, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).
 
 ## Multi-version platform goal
 
-One XNULINUX maintains Monterey 8020 and Tahoe 12377 targets for Intel and AMD x86_64. Share versioned FKI contracts, build orchestration, regression tests, Linux backends and compatible application integration. Keep each XNU source pin, build configuration, generated headers, patches, binaries and Darwin runtime/SDK version matched. Use version and vendor adapters only where necessary. All three product modes are intended for both qualified targets. Source similarity is not a binary ABI guarantee. The existing ARM64 reference is unchanged. See [CP628 comparison](../research/2026-11/checkpoint-628.md).
+One XNULINUX is intended to maintain Monterey 8020 and Tahoe 12377 targets for Intel and AMD x86_64; only Monterey is the active implementation. Share versioned FKI contracts, build orchestration, regression tests, Linux backends and compatible application integration. Keep each XNU source pin, build configuration, generated headers, patches, binaries and Darwin runtime/SDK version matched. Use version and vendor adapters only where necessary. All three product modes are intended for both qualified targets. Source similarity is not a binary ABI guarantee. The existing ARM64 reference is unchanged. See [CP628 comparison](../research/2026-11/checkpoint-628.md).
 
 Adding a version target must extend the existing platform rather than duplicate it. Use explicit target descriptors and validated common interfaces, with per-version artifacts and regression evidence. See [version-target entry plan](version-targets.md).
 

@@ -49,7 +49,7 @@ The AMD Milan TCG UP path now returns from machine_init and reaches the RTC/lock
 
 Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, then qualify SMP, physical and hosted execution separately. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP620 does not close it.
 
-CP621 exposes an independent completion-evidence gap: four ordinary smoke launches time out without a validated completion marker. First establish an independent normal boot acceptance contract with an Intel control, then compare AMD. No new AMD clock return or boot is qualified. [CP621 report](../research/2026-11/checkpoint-621.md).
+Historical CP621: an independent completion-evidence gap was identified: four ordinary smoke launches time out without a validated completion marker. The subsequent CP626/627 Intel-model control resolves that scoped evidence gap; AMD qualification remains separate. No new AMD clock return or boot is qualified. [CP621 report](../research/2026-11/checkpoint-621.md).
 
 The [project state manifest](../PROJECT-STATE.json) separates current research from the ordered technical-review backlog and source-build clearance. Technical acceptance does not depend on how quickly historical documents are published.
 
@@ -67,4 +67,4 @@ CP627 independently reproduces ordinary Intel-model console completion on Ryzen 
 
 CP628 documents the initial public-source comparison: 165 common x86 paths, 98 identical blobs, 95.9% retained lines across common Monterey paths. No Tahoe build or runtime qualification. [CP628 report](../research/2026-11/checkpoint-628.md).
 
-CP629 validates the first Monterey target descriptor against actual retained artifacts on both hosts. Generic build orchestration remains open. [CP629 report](../research/2026-11/checkpoint-629.md).
+CP629 validates the first Monterey target descriptor against actual retained artifacts on both hosts. Generic build orchestration remains open. Current priorities: independent Monterey build-input regeneration and AMD qualification, followed by bounded Tahoe source preparation after the active series. The Tahoe implementation gate remains stable physical Linux-hosted Monterey Intel execution. [CP629 report](../research/2026-11/checkpoint-629.md).

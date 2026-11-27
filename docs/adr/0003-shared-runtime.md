@@ -14,3 +14,7 @@ Headless execution can progress without graphics. Desktop mode provides a graphi
 The minimal open runtime must remain independent of a complete proprietary macOS installation. Compatibility and applicable license restrictions remain separate concerns.
 
 See [architecture](../architecture.md).
+
+## Clarification (November 27, 2026)
+
+The original shared-runtime decision applies within each version target and across qualified CPU vendors. Monterey and Tahoe require version-matched runtimes; common Linux backends and FKI contracts are reused only when validated. See [ADR 0005](0005-extensible-version-targets.md).

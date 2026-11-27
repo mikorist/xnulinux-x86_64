@@ -1,9 +1,10 @@
 # Versioning and milestones
 
-Keep four identifiers independent:
+Keep target identity and the following identifiers independent:
 
 | Identifier | Meaning |
 | --- | --- |
+| Version target | Monterey, Tahoe or a future target; independent qualification |
 | XNU source version and commit | Exact Apple kernel baseline |
 | Experimental image number | Local diagnostic lineage |
 | FKI ABI version | Host/guest contract compatibility |
@@ -20,3 +21,5 @@ For a future distributable x86_64 product, consider a separate pre-1.0 version s
 Breaking FKI contract changes require an explicit ABI revision and compatible loader/runtime selection. Do not infer ABI compatibility merely from matching product versions.
 
 A release note should identify the exact commit, source pins, supported host and CPU combinations, execution modes, verified checksums, unresolved limitations and recovery instructions.
+
+The approved target layout uses version-specific descriptors and artifacts. A new target does not imply a new product repository or ABI compatibility. See [version targets](../version-targets.md).

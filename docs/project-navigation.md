@@ -13,6 +13,7 @@ Start with the [root README](../README.md) and [project state manifest](../PROJE
 | scripts/, tools/ | Build and research tooling |
 | tests/ | Reviewed fixtures and regression tests |
 | gpu/, kexts/ | Retained components for later qualification |
+| targets/ | Version descriptors; Monterey identity validated, Tahoe preparation planned |
 | docs/ | Current design, build, testing and maintenance reference |
 | research/ | Chronological and thematic experimental reports |
 | CHANGELOG.md | Reviewed changes and research milestones |

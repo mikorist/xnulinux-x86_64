@@ -11,3 +11,5 @@ PC is the project identity and x86_64 is the target architecture. Intel and AMD 
 See the [target architecture](architecture.md), [hardware qualification](hardware-compatibility.md) and [roadmap](roadmap.md). The goal is not a claim of current PC-wide compatibility, a completed hosted boot, or permission to distribute proprietary macOS components.
 
 The intended platform includes both Intel and AMD x86_64 Linux PCs through a shared implementation and hardware-aware selection, not two independent products. The scope extends from processor discovery and machine-layer semantics through Linux resource ownership and Darwin runtime integration to three application modes. Kernel boot is one milestone within this platform. See [platform scope and evidence](platform-scope.md). See the [cross-vendor test strategy](testing.md#planned-cross-vendor-x86_64-test-strategy).
+
+The same principle applies to XNU versions: adding Tahoe or a later target should extend the platform without discarding Monterey. Share validated infrastructure, not assumed ABI compatibility. See [version targets](version-targets.md).

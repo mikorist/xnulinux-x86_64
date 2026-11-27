@@ -21,3 +21,5 @@ The following paths were inspected in the pinned Apple XNU 8020.140.41 checkout.
 The intended fork also retains the upstream xnulinux FKI, loader, patch and tool separation. Exact new x86_64 public paths must be verified against the integration branch before publication.
 
 The pinned source is not a place for undocumented experiments. Keep source provenance and architecture-specific patches separate.
+
+The fork now contains [targets/monterey](../targets/monterey/) with a declarative identity descriptor, not a second XNU source tree. The approved layout reserves targets/tahoe and targets/future for subsequent work. CP628 compares a separate Tahoe source reference; the upstream path table above describes Monterey, not a verified Tahoe build map. See [version targets](version-targets.md).

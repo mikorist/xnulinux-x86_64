@@ -1,31 +1,43 @@
-# xnulinux-x86_64
+# XNULINUX x86_64
 
-**XNU for the PC: building a shared XNU/Darwin compatibility platform for Intel and AMD x86_64 Linux systems.**
+**XNU for the PC. One platform, multiple XNU versions, Intel and AMD.**
 
-An independently maintained x86_64 development project derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux), the original ARM64 implementation.
-
-The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs running Linux, targeting both Intel and AMD x86_64 processors, using Apple's open-source XNU kernel and a Linux Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or a Hackintosh installation.
+XNULINUX is an independent experimental open-source project building a PC-oriented XNU/Darwin compatibility platform on Linux, derived from [AFK-surf/xnulinux](https://github.com/AFK-surf/xnulinux). The goal is to run compatible Darwin and macOS software directly on standard x86_64 PCs through Linux-hosted XNU and a versioned Foreign Kernel Interface (FKI), without requiring a conventional macOS virtual machine or Hackintosh installation.
 
 > [!IMPORTANT]
-> **Experimental research project, not an installable release.**
->
-> The Intel research has reached native standalone Darwin userspace execution, physical ring-0 execution of selected XNU components, and integrated hosted memory, clock, CPU and scheduler-facing experiments. A complete hosted XNU boot and macOS application execution on Linux have not yet been demonstrated.
->
-> Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
->
-> **Current research: CP629.** CP627 confirms ordinary Intel-model owned PID 1 completion on both hosts. CP628 establishes source similarity with Tahoe; CP629 validates the first Monterey target descriptor against identical retained artifacts on both hosts. AMD, hosted and clean-source qualification remain HOLD. [Latest result](research/2026-11/checkpoint-629.md).
->
-> Checkpoint 497: independent 1,109-input strict links, all 35 runtime sections and 47,220 non-STAB symbol tuples agree; same-candidate Intel PID 1 and Milan TCG pre-admission checks pass. [Topology and state report](research/2026-11/hosted/topology-state-and-reproducibility.md).
+> **Research project, not an installable release.** Ordinary standalone execution of an owned Darwin PID 1 test program has been demonstrated under Intel-model emulation on both development hosts. Complete AMD boot, physical Linux-hosted XNU, Apple launchd and macOS application execution are not yet qualified.
 
-> Checkpoint 477: independent 1,102-input strict links and Milan TCG pre-admission checks pass on both hosts; full Intel PID 1 regression through CP475. [Machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md).
+## Current status
 
-> Checkpoint 457: all 1,089 baseline inputs and the full standalone executable were reproduced byte-for-byte across Intel and Ryzen. A separate AMD-aware early initialization candidate passed EPYC Milan diagnostics on both hosts and the complete Intel standalone PID 1 regression. AMD admission remains HOLD. Checkpoint 460 separately confirms native Ryzen Linux KVM CP426 component replay (strict 94/94 on both guest kernels) and SRSO Safe RET; guest TSA and Hyper-V SRSO remain HOLD. See [the full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md).
->
-> Most experimental development is still local. The original ARM64 project is preserved in the [arm64-reference branch](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree has been cleared of the original ARM-only boot path, DGX tools, screenshots and CI, while retaining potentially reusable components for review. See [the retained-component inventory](docs/README.md). No inherited component should be treated as x86_64-qualified merely because it is present.
+**CP629 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-629.md)**
+
+| Research milestone | Evidence |
+| --- | --- |
+| Monterey standalone Intel-model PID 1 | CP627: ordinary boot without debugger on both hosts, 92.08 s and 91.35 s |
+| Reproducible retained executable | CP602/617: 1,114 link inputs, zero undefined symbols, byte-identical image |
+| AMD model startup | CP622: admission remains deliberately unqualified; full boot HOLD |
+| Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
+| Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
+| Tahoe source preparation | CP628: source comparison only; no build or boot |
+| Clean-source build and complete hosted runtime | HOLD |
+
+See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roadmap.md) and [research chronology](research/README.md). The current public research snapshot is distinct from the last closed regular integration review (CP497).
+
+## One platform, extensible version targets
+
+| Target | XNU family | Current status |
+| --- | --- | --- |
+| Monterey 12.5 | 8020.140.41 | Active development baseline; [validated descriptor](targets/monterey/target.json) |
+| Tahoe 26 | 12377 | Next version target; [source comparison](research/2026-11/checkpoint-628.md) and preparation plan |
+| Future targets | To be selected | Extend the shared infrastructure rather than fork the entire project |
+
+Shared platform contracts, build/test infrastructure and Linux backends are reused where compatibility is demonstrated. Source pins, generated headers, patches, binaries, Darwin runtimes and qualification remain version-specific. Intel and AMD qualification is independent for each target. See [version targets and entry gates](docs/version-targets.md).
+
+The original ARM64 implementation remains preserved in [arm64-reference](https://github.com/mikorist/xnulinux-x86_64/tree/arm64-reference). The active tree retains potentially reusable components for review, not an inherited claim of x86_64 support. See [repository inventory](docs/README.md).
 
 ## Beyond a conventional port
 
-XNULINUX x86_64 is developing a complete PC-oriented compatibility platform, not merely a kernel port for one CPU or a set of CPU-specific patches. The intended platform combines a vendor-aware XNU machine layer, Linux-hosted execution and a shared Darwin runtime supporting headless, desktop and seamless application modes. The complete platform is the engineering goal, not a claim of present functionality.
+XNULINUX x86_64 is developing a complete PC-oriented compatibility platform, not merely a kernel port for one CPU or a set of CPU-specific patches. The intended platform combines a vendor-aware XNU machine layer, Linux-hosted execution and version-matched Darwin runtimes supporting headless, desktop and seamless application modes. The complete platform is the engineering goal, not a claim of present functionality.
 
 Independent Intel and Ryzen builds, CPU-model experiments, negative tests, cross-vendor regressions and native hardware measurements are central to this work. The reviewed baseline includes byte-identical reproduction of the 1,089-input standalone executable, early AMD machine-layer diagnostics under Milan TCG, a full Intel PID 1 regression, and native AMD KVM component replay with strict 94/94 results on each of two Linux guest kernels. SRSO qualification applies to that native KVM configuration; guest TSA and Hyper-V SRSO remain open. See [platform scope and evidence](docs/platform-scope.md).
 
@@ -43,7 +55,7 @@ See [project philosophy](docs/project-philosophy.md) for the design principles.
 
 ## What we want to build
 
-One hosted XNU kernel and a shared Darwin runtime, with three ways to use them:
+For each qualified version target, one hosted XNU kernel and its shared, version-matched Darwin runtime support three intended modes:
 
 | Mode | Goal |
 | --- | --- |
@@ -60,9 +72,9 @@ Seamless application execution is a major practical goal of the x86_64 project. 
       |                   |                     |
       +-------------------+---------------------+
                           |
-                  Shared Darwin runtime
+             Version-matched Darwin runtime
                           |
-                 XNU (x86_64)
+             XNU version target (x86_64)
                           |
            xnu.ko / x86_64 machine-layer adapter
                           |
@@ -81,9 +93,9 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 **Current published research snapshot: November 27, 2026, CP629. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and four subsequent checkpoints remain open; all 124 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and twelve subsequent checkpoints remain open; all 132 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
 
-The current CP602 standalone candidate has 1,114 inputs, zero undefined symbols and byte-identical Intel/Ryzen builds. Six strict Broadwell-v2 TCG UP runs pass the HFS/PID 1/Mach/BSD gate. Milan TCG reaches the RTC/lock-timeout observation boundary after machine_init returns; CPU admission and complete clock return are not qualified. See [current qualification matrix](docs/qualification-matrix.md) and [CP599-612 research](research/2026-11/hosted/commpage-reproduction-599-612.md).
+The current CP602 standalone candidate has 1,114 inputs, zero undefined symbols and byte-identical Intel/Ryzen builds. Six strict Broadwell-v2 TCG UP runs pass the HFS/PID 1/Mach/BSD gate. Earlier Milan observations reached the RTC/lock-timeout boundary; CP622 captured the deliberate unqualified AMD admission rejection. Complete clock return and AMD admission remain unqualified. See [current qualification matrix](docs/qualification-matrix.md) and [CP599-612 research](research/2026-11/hosted/commpage-reproduction-599-612.md).
 
 CP613-620: offline clock calibration agrees on both hosts; three current source units were freshly compiled on each host, and both relinks reproduced the exact 1,114-input CP602 kernel using 1,111 retained objects. The compiler patch and 290 resource headers match; both linker metadata files were regenerated. Of the current input objects, 1,069 match CP444 byte-for-byte. The remaining 45 require further provenance assessment. The historical clock candidate is unqualified and not integrated. No new guest boot was performed.
 
@@ -113,11 +125,11 @@ The following results are recorded in the local development journal and experime
 
 ### Standalone Intel XNU
 
-- Built and linked an experimental XNU 8020.140.41 x86_64 kernel from 1,089 input objects with zero undefined symbols.
+- Historical baseline: 1,089 exact link inputs; current CP602 candidate: 1,114 inputs and zero undefined symbols.
 - Verified Mach VM startup, kernel scheduler round trips, timer interrupts, Mach IPC initialization, IOKit and BSD startup.
 - Mounted a real read-only HFS+ root filesystem and verified native file lookup and reads.
 - Executed an owned, ad hoc signed Darwin Mach-O program as PID 1 at ring 3, with native BSD system calls and Mach traps.
-- Reproduced standalone user-program execution with terminal-only debugger observation and verified restricted HFS filesystem rejection paths.
+- Reproduced standalone user-program execution with terminal-only observation and verified restricted HFS filesystem rejection paths. CP626/627 separately establish ordinary console completion without debugger on both hosts.
 
 These milestones were established in isolated standalone QEMU tests. The PID 1 fixture is not Apple's launchd.
 
@@ -175,7 +187,7 @@ The historical kernel matrix covers specific components and configurations, not 
 | macOS Monterey 12.5 | `8020.140.41` | Current shared x86_64 development baseline |
 | macOS Tahoe 26 | `12377` | Next planned x86_64 source target |
 
-**Project goal: one XNULINUX, multiple version targets.** Monterey and Tahoe are maintained targets, not replacement releases of the platform. Share the versioned FKI contract, build orchestration, regression infrastructure, Linux backends and compatible application integration. Keep source pins, generated headers, patches, binaries and version-matched Darwin runtime separate. Qualify Intel and AMD independently for each target. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe; preparatory source research can proceed earlier. Develop headless, desktop and seamless modes for both without requiring a completed Monterey desktop before Tahoe work. The upstream `12377.121.6` revision is a research reference; the exact Tahoe target pin remains to be qualified.
+**Project goal: one XNULINUX, multiple version targets.** Monterey is the active target and Tahoe is planned; the goal is to retain both rather than replace one with the other. Share the versioned FKI contract, build orchestration, regression infrastructure, Linux backends and compatible application integration. Keep source pins, generated headers, patches, binaries and version-matched Darwin runtime separate. Qualify Intel and AMD independently for each target. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe; preparatory source research can proceed earlier. Develop headless, desktop and seamless modes for both without requiring a completed Monterey desktop before Tahoe work. The upstream `12377.121.6` revision is a research reference; the exact Tahoe target pin remains to be qualified.
 
 The intention is to reuse validated common FKI infrastructure through version-specific adapters, without mixing incompatible source revisions or build artifacts.
 
@@ -183,7 +195,11 @@ The intention is to reuse validated common FKI infrastructure through version-sp
 
 ## Roadmap
 
-- [x] Standalone Intel XNU build and native test-program execution.
+- [x] Standalone Intel-model XNU build and owned test-program completion, including ordinary boot without debugger.
+- [x] First declarative Monterey target descriptor, offline identity validation.
+- [ ] Complete AMD-model standalone admission and userspace qualification.
+- [ ] Clean-source regeneration and versioned build orchestration.
+- [ ] Tahoe preparation, then implementation after the approved Monterey hosted gate.
 - [x] Bounded physical execution of selected XNU source components and FKI services.
 - [x] Initial source-backed hosted VM, startup, clock and scheduler-facing integration tests.
 - [x] Establish parallel Intel and Ryzen development environments.

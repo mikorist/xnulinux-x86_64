@@ -66,6 +66,13 @@ See the [kernel image history](docs/kernel-history.md), [research journal](resea
 - CP621: four observer-free smoke launches reach loader metadata but no independent completion marker within eight seconds; ordinary boot completion remains HOLD. Six earlier observed Intel passes retain their scope.
 - Consolidated current project status and technical review queue, separately from historical monograph coverage. No new source qualification or release.
 
+### Research milestones (CP622-629)
+
+- CP622-625: corrected console capture, documented silent fixture and separate console-reporting owned PID 1 diagnostic; ordinary root mount and devfs error retained.
+- CP626-627: ordinary Intel-model owned PID 1 completion without debugger on both development hosts, identical retained artifacts.
+- CP628: Monterey/Tahoe source comparison and approved extensible multi-version direction.
+- CP629: first Monterey target descriptor validated offline on both hosts, nine negative controls rejected each. No generic build orchestration or Tahoe runtime qualification.
+
 ### Not established by these milestones
 
 Complete physical Linux-hosted XNU boot and world switch, a complete Darwin application runtime, desktop or seamless integration, general hardware compatibility and an end-user installer.

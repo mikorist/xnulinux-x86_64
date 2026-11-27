@@ -27,3 +27,7 @@ Public documentation is prepared incrementally in English. Reports state what ea
 
 
 Technical integration reviews occur every 20 significant research checkpoints. Reviewed chronological outcomes, including PASS, FAIL, HOLD and incomplete experiments, are published independently under the rule adopted after CP620. Keep the current [project state](PROJECT-STATE.json), README and qualification documents aligned. No report automatically qualifies source, closes a technical review or triggers an unreviewed push.
+
+## Multi-version evidence and ordinary boot
+
+Record target identity separately from CPU model and physical host. CP621-627 illustrate why a missing completion observation must remain HOLD until a separate valid fixture and actual completion establish the narrower result. CP628 source similarity does not establish ABI compatibility; CP629 offline identity validation is not build or runtime qualification. Keep per-target regression and source evidence distinct.
