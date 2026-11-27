@@ -48,3 +48,5 @@ The future/ entry reserves a logical place for subsequent versions, not a requir
 CP629 introduces the first [Monterey descriptor](../targets/monterey/target.json), validated offline on both hosts. The wider approved layout remains staged.
 
 CP630 completes the work series. The bounded Tahoe source and toolchain preparation stage is now eligible; the implementation gate is unchanged. [CP630 report](../research/2026-11/checkpoint-630.md).
+
+CP631 adds the [Tahoe research descriptor](../targets/tahoe/target.json); it is not a qualified build profile. [CP631 report](../research/2026-11/checkpoint-631.md).

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 630,
-  "documentation_through": 630,
+  "research_checkpoint": 631,
+  "documentation_through": 631,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 13,
-    "verified_primary_evidence_hashes": 133,
+    "partial_records": 14,
+    "verified_primary_evidence_hashes": 134,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 609,
+    "indexed_source_records": 610,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -67,9 +67,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Begin bounded Tahoe source/toolchain/target preparation on Ryzen; preserve Monterey as active baseline and continue clean-source and AMD qualification independently.",
+  "next": "Resolve Tahoe version-matched open build dependency pins and tool availability; preserve Monterey active baseline and hosted implementation gate.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-630.md",
+    "current_report": "research/2026-11/checkpoint-631.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -98,8 +98,14 @@
       "entry_plan": {
         "preparation_recommended_after_checkpoint": 630,
         "implementation_gate": "Stable physical Linux-hosted Monterey Intel baseline; independent qualification and existing approvals",
-        "status": "PREPARATION_ELIGIBLE",
+        "status": "PREPARATION_IN_PROGRESS",
         "reference": "docs/version-targets.md"
+      },
+      "descriptor": {
+        "path": "targets/tahoe/target.json",
+        "checkpoint": 631,
+        "status": "RESEARCH_ONLY",
+        "dependency_versions": "HOLD"
       }
     },
     "product_modes": [
@@ -111,7 +117,7 @@
     "repository_layout": {
       "status": "OWNER_APPROVED",
       "date": "2026-11-27",
-      "implementation": "FIRST_MONTEREY_DESCRIPTOR_VALIDATED",
+      "implementation": "MONTEREY_DESCRIPTOR_VALIDATED_TAHOE_RESEARCH_DESCRIPTOR_ADDED",
       "paths": [
         "fki-ko/",
         "xnu-ko/",
