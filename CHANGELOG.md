@@ -111,3 +111,7 @@ CP756-775: original Monterey declaration probes expose 18 missing generated user
 ## Research through CP795
 
 CP776-795: independent source regeneration and two local batch runs increased accepted regenerated inputs from 121 to 599 of 1,114; 515 remain retained. Both complete retained-input links match CP602. Shared generated-header blockers were resolved for selected groups; unresolved recipes and dependencies remain HOLD. No new boot, full clean-source build, runtime, licensing or release qualification. [CP776-795 research update](research/2026-11/updates-776-795/README.md). Added [dual-host batch build workflow](docs/maintainers/dual-host-batch-build.md); portable code not yet published.
+
+## Research through CP815
+
+CP796-815: accepted regenerated inputs increased from 599 to 692 of 1,114; 422 remain retained. Batch 02 completed all 209 candidates. Original C++ and assembly source staging advanced; derived-header provenance and historical assembler byte identity remain HOLD. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP796-815 research update](research/2026-11/updates-796-815/README.md).

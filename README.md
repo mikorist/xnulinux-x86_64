@@ -34,12 +34,12 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP795 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-776-795/README.md)**
+**CP815 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-796-815/README.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
 | Monterey standalone Intel-model PID 1 | CP627: ordinary boot without debugger on both hosts, 92.08 s and 91.35 s |
-| Reproducible retained executable | CP795: 599 regenerated and 515 retained of 1,114 inputs; exact CP602 image |
+| Reproducible retained executable | CP815: 692 regenerated and 422 retained of 1,114 inputs; exact CP602 retained-link image |
 | AMD model startup | CP622: admission remains deliberately unqualified; full boot HOLD |
 | Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
 | Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
@@ -152,9 +152,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 27, 2026, CP795. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP815. Last closed regular integration review: CP497.**
 
 The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Fourteen recorded 20-checkpoint windows (CP498-777) remain open for technical review, with 18 subsequent checkpoints; all 298 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+
+CP796-815: accepted regenerated inputs increased from 599 to 692 of 1,114; 422 remain retained. Batch 02 completed all 209 candidates. Original C++ and assembly source staging advanced; derived-header provenance and historical assembler byte identity remain HOLD. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP796-815 research update](research/2026-11/updates-796-815/README.md).
 
 **Next:** Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 

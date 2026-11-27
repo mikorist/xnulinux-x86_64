@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP795, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP815, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -112,3 +112,7 @@ CP756-775: original Monterey declaration probes expose 18 missing generated user
 ## CP776-795 scoped results
 
 CP776-795: independent source regeneration and two local batch runs increased accepted regenerated inputs from 121 to 599 of 1,114; 515 remain retained. Both complete retained-input links match CP602. Shared generated-header blockers were resolved for selected groups; unresolved recipes and dependencies remain HOLD. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-776-795/README.md).
+
+## CP796-815 scoped results
+
+CP796-815: accepted regenerated inputs increased from 599 to 692 of 1,114; 422 remain retained. Batch 02 completed all 209 candidates. Original C++ and assembly source staging advanced; derived-header provenance and historical assembler byte identity remain HOLD. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-796-815/README.md).

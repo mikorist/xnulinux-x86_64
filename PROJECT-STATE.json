@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 795,
-  "documentation_through": 795,
+  "research_checkpoint": 815,
+  "documentation_through": 815,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_windows": 14,
-    "completed_window_records": 280,
+    "completed_windows": 15,
+    "completed_window_records": 300,
     "partial_window": [
-      778,
-      797
+      798,
+      817
     ],
     "partial_records": 18,
-    "verified_primary_evidence_hashes": 298,
+    "verified_primary_evidence_hashes": 318,
     "technical_closure": false
   },
   "monograph": {
@@ -49,7 +49,9 @@
     "regenerated_objects_cp775": 121,
     "retained_objects_cp775": 993,
     "regenerated_objects_cp795": 599,
-    "retained_objects_cp795": 515
+    "retained_objects_cp795": 515,
+    "regenerated_objects_cp815": 692,
+    "retained_objects_cp815": 422
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -167,11 +169,25 @@
       "clean_source_build": "HOLD",
       "runtime": "HOLD",
       "portable_batch_tool": "HOLD"
+    },
+    "research_cp796_815": {
+      "status": "PASS_SCOPED_WITH_HOLD",
+      "new_regenerated_inputs": 93,
+      "batch_02_accepted": 209,
+      "batch_02_remaining": 0,
+      "retained_link_identity": true,
+      "cxx_candidates_held": 64,
+      "derived_dependency_paths_remaining": 18,
+      "assembler_cross_host_matches": 8,
+      "historical_assembler_matches": 4,
+      "clean_source_build": "HOLD",
+      "runtime": "HOLD",
+      "portable_batch_tool": "HOLD"
     }
   },
-  "next": "Resolve shared generated dependency gaps and original-source recipe provenance; maintain existing SDK, AMD, hosted, oldest technical review, license and release gates.",
+  "next": "Resolve remaining derived C++ dependencies and historical assembler backend identity; maintain AMD, hosted, SDK, license and release gates.",
   "references": {
-    "current_report": "research/2026-11/updates-776-795/README.md",
+    "current_report": "research/2026-11/updates-796-815/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",

@@ -38,3 +38,5 @@ CP642: [synthetic framebuffer conversion](../../research/2026-11/checkpoint-642.
 <p align="center">
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=AEXH39XRNHZQ2&amp;currency_code=EUR"><img src="https://img.shields.io/badge/PayPal-donate-0070BA?logo=paypal&amp;logoColor=white" alt="Donate via PayPal"></a>
 </p>
+
+- [CP796-815 research update](../../research/2026-11/updates-796-815/README.md): 20 reviewed outcomes and primary hashes; no new boot or complete replay bundle.
