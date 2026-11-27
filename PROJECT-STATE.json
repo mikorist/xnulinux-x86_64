@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 628,
-  "documentation_through": 628,
+  "research_checkpoint": 629,
+  "documentation_through": 629,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 11,
-    "verified_primary_evidence_hashes": 131,
+    "partial_records": 12,
+    "verified_primary_evidence_hashes": 132,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 607,
+    "indexed_source_records": 608,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -65,9 +65,9 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Resume Monterey AMD qualification and independent source/build work; retain Tahoe source inventory for later target preparation.",
+  "next": "Continue independent Monterey build-input source regeneration; preserve AMD and hosted qualification requirements.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-628.md",
+    "current_report": "research/2026-11/checkpoint-629.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -79,7 +79,13 @@
     "Monterey": {
       "family": "8020",
       "pin": "8020.140.41",
-      "status": "ACTIVE_BASELINE"
+      "status": "ACTIVE_BASELINE",
+      "descriptor": {
+        "path": "targets/monterey/target.json",
+        "checkpoint": 629,
+        "status": "PASS_OFFLINE_IDENTITY",
+        "build_orchestration": "HOLD"
+      }
     },
     "Tahoe": {
       "family": "12377",
@@ -103,7 +109,7 @@
     "repository_layout": {
       "status": "OWNER_APPROVED",
       "date": "2026-11-27",
-      "implementation": "STAGED_NOT_IMPLEMENTED",
+      "implementation": "FIRST_MONTEREY_DESCRIPTOR_VALIDATED",
       "paths": [
         "fki-ko/",
         "xnu-ko/",

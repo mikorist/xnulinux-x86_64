@@ -43,7 +43,7 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP628)
+## Current research boundary (CP629)
 
 The AMD Milan TCG UP path now returns from machine_init and reaches the RTC/lock-timeout observation boundary. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
@@ -66,3 +66,5 @@ CP626 reports scoped ordinary Intel-model owned PID 1 completion on diya after c
 CP627 independently reproduces ordinary Intel-model console completion on Ryzen with the exact corrected fixture. AMD-model admission and hosted qualification remain separate. [CP627 report](../research/2026-11/checkpoint-627.md).
 
 CP628 documents the initial public-source comparison: 165 common x86 paths, 98 identical blobs, 95.9% retained lines across common Monterey paths. No Tahoe build or runtime qualification. [CP628 report](../research/2026-11/checkpoint-628.md).
+
+CP629 validates the first Monterey target descriptor against actual retained artifacts on both hosts. Generic build orchestration remains open. [CP629 report](../research/2026-11/checkpoint-629.md).

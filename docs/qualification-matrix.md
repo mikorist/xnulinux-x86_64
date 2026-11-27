@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP628, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP629, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -67,3 +67,5 @@ The [project state manifest](../PROJECT-STATE.json) records the distinct current
 | --- | --- | --- |
 | Monterey 8020.140.41 | CP627 scoped Intel-model ordinary PID 1 PASS | AMD admission, native/hosted execution, clean-source build |
 | Tahoe 12377 | CP628 public source comparison only | Target pin, build, ABI, Intel/AMD runtime, native/hosted execution |
+
+CP629: Monterey descriptor identity validation PASS on both hosts; no new build or runtime qualification.

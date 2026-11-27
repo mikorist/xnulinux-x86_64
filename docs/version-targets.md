@@ -44,3 +44,5 @@ XNULINUX/
 ```
 
 The future/ entry reserves a logical place for subsequent versions, not a requirement to commit an empty directory. Start with a Monterey descriptor validated against existing artifacts, then prepare the Tahoe descriptor after CP630. Existing build and regression evidence must remain valid.
+
+CP629 introduces the first [Monterey descriptor](../targets/monterey/target.json), validated offline on both hosts. The wider approved layout remains staged.

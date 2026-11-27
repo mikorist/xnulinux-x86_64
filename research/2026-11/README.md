@@ -64,3 +64,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP626: ordinary Intel-model PID 1 completion (scoped PASS)](checkpoint-626.md)
 - [CP627: cross-host ordinary Intel-model PID 1 completion (scoped PASS)](checkpoint-627.md)
 - [CP628: Monterey/Tahoe source comparison (source-only PASS)](checkpoint-628.md)
+- [CP629: Monterey descriptor (offline PASS)](checkpoint-629.md)

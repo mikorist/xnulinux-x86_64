@@ -1,0 +1,31 @@
+{
+  "architecture": "x86_64",
+  "baseline": {
+    "artifacts": {
+      "initrd": "81536c93217f47eec6b2a044cea17335c76e7b966f62ec048cab45d7a8c36521",
+      "kernel": "49d24b6512f178a5d9b19dfd7f10946f936f78c7725e1a7e6e2f8089055720b2",
+      "loader": "6408362ba1e725fb4a18dc2c8b39920cfda3de58cdca90e2c761242e2f3b1f0b",
+      "root": "184319e0491c68cd9f2cf2a79b531c31ac04fa1d10431bec30a61460bd125064"
+    },
+    "cross_host_checkpoint": 627,
+    "fixture_checkpoint": 626,
+    "kernel_checkpoint": 602
+  },
+  "darwin_major": 21,
+  "qualification": {
+    "amd": "HOLD",
+    "clean_source_build": "HOLD",
+    "hosted": "HOLD",
+    "scope": "standalone Broadwell-v2 TCG UP owned PID1 console only"
+  },
+  "schema_version": 1,
+  "source": {
+    "commit": "27b03b360a988dfd3dfdf34262bb0042026747cc",
+    "tag": "xnu-8020.140.41"
+  },
+  "target": "monterey",
+  "toolchain": {
+    "linker": "ld64-711",
+    "llvm_commit": "58c46bae21181fb4240cf964461bea738d96d50e"
+  }
+}
