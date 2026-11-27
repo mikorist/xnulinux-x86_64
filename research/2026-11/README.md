@@ -52,3 +52,7 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 | [Commpage initialization, regressions and build provenance (CP599-612)](hosted/commpage-reproduction-599-612.md) | machine layer |
 | [Engineering history and evidence audit through CP612](history/engineering-history-through-612.md) | history |
 | [AI-assisted tooling interruption and support escalation](history/ai-assisted-tooling-incident-2026-11-26.md) | development tooling |
+
+## Chronological development log
+
+- [CP613-620: all recorded outcomes](checkpoint-613-620.md)
