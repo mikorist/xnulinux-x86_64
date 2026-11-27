@@ -23,14 +23,14 @@ These are intended capabilities, not a shipping platform. QEMU/KVM are developme
 
 Sources: [full executable reproduction and machine-layer research](../research/2026-11/hosted/amd-machine-layer.md), [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md), [qualification matrix](qualification-matrix.md).
 
-## Current research snapshot through CP612 (November 27, 2026)
+## Current research snapshot through CP621 (November 27, 2026)
 
 - CP602 independently reproduces the same 1,114-input unstripped executable on Intel and Ryzen; six strict Broadwell TCG UP runs pass the owned Darwin PID 1 fixture and Mach/BSD returns.
 - AMD Milan TCG UP startup now passes MCA, VM/bootstrap, UP CPU/FPU initialization, memory-type initialization and machine_init. The current observed boundary is RTC/lock-timeout initialization; full clock return, CPU admission and AMD userspace are not established.
 - CP525 records a native Linux Ryzen SMCA inventory, not physical XNU SMCA handling.
 - CP607-610 classify 402 unique dependencies, verify all 44 generated dependencies and trace 27 candidate-local headers to the direct predecessor. Full provenance and clean public source regeneration remain open.
 
-See [AMD startup](../research/2026-11/hosted/amd-startup-498-555.md), [machine lifecycle](../research/2026-11/hosted/amd-machine-lifecycle-556-598.md) and [latest research](../research/2026-11/hosted/commpage-reproduction-599-612.md). The last closed regular review remains CP497; CP612 is a selected documentation update, not full integration or source clearance.
+See [AMD startup](../research/2026-11/hosted/amd-startup-498-555.md), [machine lifecycle](../research/2026-11/hosted/amd-machine-lifecycle-556-598.md) and [latest research](../research/2026-11/hosted/commpage-reproduction-599-612.md). The last closed regular review remains CP497. CP616-617 reproduced the kernel with three newly compiled and 1,111 retained objects; CP621 observer-free smoke completion remains HOLD. Current chronological documentation reaches CP621, not full integration or source clearance. See [current state](../PROJECT-STATE.json).
 
 ## Engineering discipline
 

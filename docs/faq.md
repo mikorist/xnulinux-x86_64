@@ -42,4 +42,4 @@ A Ryzen 7 5700X WSL2 development environment is now operational alongside the In
 
 ## What is the latest documented result?
 
-CP612 is the selected public research snapshot. The retained CP602 image has 1,114 link inputs and matches byte-for-byte across both development hosts. Six strict Intel-model standalone replays pass; AMD Milan TCG has not reached PID 1. The last closed regular integration review remains CP497, and the full source bundle is held. See the [qualification matrix](qualification-matrix.md).
+CP621 is the current public research snapshot. Four observer-free launches reached loader metadata but lacked independently observed completion; this remains HOLD, not a demonstrated kernel failure. The retained CP602 image has 1,114 link inputs and matches byte-for-byte across both development hosts. Six strict Intel-model standalone replays pass; AMD Milan TCG has not reached PID 1. The last closed regular integration review remains CP497, and the full source bundle is held. See the [qualification matrix](qualification-matrix.md).

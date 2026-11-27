@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "research_checkpoint": 621,
+  "documentation_through": 621,
+  "last_closed_regular_review": 497,
+  "active_review_window": [
+    498,
+    517
+  ],
+  "review_backlog": {
+    "completed_windows": 6,
+    "completed_window_records": 120,
+    "partial_window": [
+      618,
+      637
+    ],
+    "partial_records": 4,
+    "verified_primary_evidence_hashes": 124,
+    "technical_closure": false
+  },
+  "monograph": {
+    "public_chapters": 47,
+    "indexed_source_records": 600,
+    "through_checkpoint": 68,
+    "next_record": "R0048",
+    "next_checkpoint": 69,
+    "complete_individual_ledger_records": 0
+  },
+  "candidate": {
+    "checkpoint": 602,
+    "link_inputs": 1114,
+    "undefined_symbols": 0,
+    "kernel_sha256": "49d24b6512f178a5d9b19dfd7f10946f936f78c7725e1a7e6e2f8089055720b2",
+    "fresh_objects_cp616_617": 3,
+    "retained_objects_cp617": 1111,
+    "cp444_exact_matches": 1069,
+    "current_unmatched": 45
+  },
+  "qualification": {
+    "intel_observed_standalone": {
+      "status": "PASS_SCOPED",
+      "runs": 6,
+      "model": "Broadwell-v2 TCG UP",
+      "scope": "Owned signed Darwin PID 1 fixture, not launchd"
+    },
+    "ordinary_boot": {
+      "status": "HOLD",
+      "checkpoint": 621,
+      "runs": 4,
+      "timeout_seconds": 8,
+      "metadata_ready": 4,
+      "completion_observed": 0,
+      "scope": "No independent completion evidence; not proof of panic or hang"
+    },
+    "amd_clock_and_admission": "HOLD",
+    "complete_amd_boot": "HOLD",
+    "complete_hosted_boot": "HOLD",
+    "clean_source_build": "HOLD",
+    "source_license_clearance": "HOLD"
+  },
+  "next": "Validate an independent normal boot completion contract with an Intel control before AMD comparison; preserve existing strict evidence and protection boundaries.",
+  "references": {
+    "current_report": "research/2026-11/checkpoint-621.md",
+    "build_report": "research/2026-11/checkpoint-613-620.md",
+    "qualification_matrix": "docs/qualification-matrix.md",
+    "roadmap": "docs/roadmap.md",
+    "publication": "docs/maintainers/publication-workflow.md",
+    "monograph": "research/monograph/README.md"
+  }
+}

@@ -60,6 +60,12 @@ See the [kernel image history](docs/kernel-history.md), [research journal](resea
 - CP599-612: scoped commpage initialization correction, six strict CP602 Broadwell TCG UP passes, dependency and patch provenance audit, all 44 generated dependencies matched, isolated timeout and fixed-point arithmetic tests pass on both hosts.
 - Historical integrity audit and maintainer-reported AI tooling interruption documented. Selected documentation-only updates; regular review remains CP497, full source and AMD admission remain held.
 
+### Research and documentation (2026-11-27, CP613-621)
+
+- CP613-620: retained clock calibration, source/header lineage and independent three-object regeneration; exact 1,114-input relink with retained inputs, compiler identity and final metadata reproduction.
+- CP621: four observer-free smoke launches reach loader metadata but no independent completion marker within eight seconds; ordinary boot completion remains HOLD. Six earlier observed Intel passes retain their scope.
+- Consolidated current project status and technical review queue, separately from historical monograph coverage. No new source qualification or release.
+
 ### Not established by these milestones
 
 Complete physical Linux-hosted XNU boot and world switch, a complete Darwin application runtime, desktop or seamless integration, general hardware compatibility and an end-user installer.

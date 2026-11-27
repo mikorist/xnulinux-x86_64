@@ -26,4 +26,4 @@ A successful object compilation is not a kernel boot. A relocatable link is not 
 Public documentation is prepared incrementally in English. Reports state what each experiment demonstrates and what remains unverified. Publication requires provenance, license and privacy review. No automatic publication is implied by a successful experiment.
 
 
-Reviewed incremental source, test and documentation updates are prepared after every 20 significant research checkpoints. Unresolved components remain held; a successful experiment does not automatically trigger a push.
+Technical integration reviews occur every 20 significant research checkpoints. Reviewed chronological outcomes, including PASS, FAIL, HOLD and incomplete experiments, are published independently under the rule adopted after CP620. Keep the current [project state](PROJECT-STATE.json), README and qualification documents aligned. No report automatically qualifies source, closes a technical review or triggers an unreviewed push.

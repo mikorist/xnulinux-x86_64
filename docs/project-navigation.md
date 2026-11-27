@@ -1,6 +1,6 @@
 # Project navigation and responsibilities
 
-Start with the [root README](../README.md) for the current checkpoint, qualified scope, blockers and next step. The [qualification matrix](qualification-matrix.md) separates evidence classes; the [roadmap](roadmap.md) gives the acceptance order. The [research journal](../research/README.md) preserves history. The [architecture](architecture.md) describes the intended design, and the [source map](source-map.md) describes the pinned upstream tree.
+Start with the [root README](../README.md) and [project state manifest](../PROJECT-STATE.json) for the current checkpoint, qualified scope, blockers and next step. The [qualification matrix](qualification-matrix.md) separates evidence classes; the [roadmap](roadmap.md) gives the acceptance order. The [research journal](../research/README.md) preserves history. The [architecture](architecture.md) describes the intended design, and the [source map](source-map.md) describes the pinned upstream tree.
 
 ## Repository map
 

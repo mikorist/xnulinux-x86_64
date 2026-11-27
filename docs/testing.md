@@ -53,3 +53,7 @@ Record host and guest CPU, effective capabilities, accelerator, kernel, source a
 ## Current strict replay and evidence snapshot (CP612)
 
 CP561 introduced a strict offline Intel standalone evidence gate with 19 rejected negative controls. It distinguishes a diagnostic exit from verified HFS contents, ENOENT, unchanged disk, owned Darwin PID 1 in user mode and native Mach/BSD returns. CP602-604 recorded six qualifying Broadwell TCG UP runs. The corresponding Milan replays reach the RTC/lock-timeout observation boundary; they are not AMD PID 1 runs. CP525 native Linux SMCA inventory is distinct from XNU hardware execution. See [latest report](../research/2026-11/hosted/commpage-reproduction-599-612.md) and [native inventory context](../research/2026-11/hosted/amd-startup-498-555.md).
+
+## Ordinary standalone boot acceptance
+
+CP621 establishes a missing evidence channel, not a demonstrated boot failure. An ordinary boot qualification must record exact candidate identity, configuration, a bounded timeout, an independent userspace completion observation and distinct failure/incomplete outcomes. A loader marker or exit code alone is insufficient. Establish the Intel control before comparing AMD. This is an acceptance requirement, not an implemented test or a new PASS. See [CP621](../research/2026-11/checkpoint-621.md).

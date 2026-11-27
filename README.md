@@ -81,6 +81,8 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 **Current published research snapshot: November 27, 2026, CP621. Last closed regular integration review: CP497.**
 
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and four subsequent checkpoints remain open; all 124 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
+
 The current CP602 standalone candidate has 1,114 inputs, zero undefined symbols and byte-identical Intel/Ryzen builds. Six strict Broadwell-v2 TCG UP runs pass the HFS/PID 1/Mach/BSD gate. Milan TCG reaches the RTC/lock-timeout observation boundary after machine_init returns; CPU admission and complete clock return are not qualified. See [current qualification matrix](docs/qualification-matrix.md) and [CP599-612 research](research/2026-11/hosted/commpage-reproduction-599-612.md).
 
 CP613-620: offline clock calibration agrees on both hosts; three current source units were freshly compiled on each host, and both relinks reproduced the exact 1,114-input CP602 kernel using 1,111 retained objects. The compiler patch and 290 resource headers match; both linker metadata files were regenerated. Of the current input objects, 1,069 match CP444 byte-for-byte. The remaining 45 require further provenance assessment. The historical clock candidate is unqualified and not integrated. No new guest boot was performed.

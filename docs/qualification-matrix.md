@@ -58,3 +58,5 @@ Snapshot: research documentation through CP621, 2026-11-27. Last closed regular 
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 
 The latest research checkpoint must be consulted before using this snapshot for a public status announcement.
+
+The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. The six completed review windows remain open; verified evidence hashes are not equivalent to technical closure.
