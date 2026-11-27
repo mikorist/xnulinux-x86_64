@@ -2,6 +2,9 @@
 
 The project brings XNU to standard x86_64 PCs running Linux, targeting Intel and AMD x86_64 hardware. [Adapt XNU to the PC, not the PC to the Mac](project-philosophy.md). QEMU is a development and regression environment, not a required production layer.
 
+<details>
+<summary>Expand diagram</summary>
+
 ```mermaid
 flowchart TD
     H["Headless"] --> R["Version-matched Darwin runtime"]
@@ -14,6 +17,8 @@ flowchart TD
     N["Linux applications"] --> K
     K --> P["Physical x86_64 PC (Intel and AMD target)"]
 ```
+
+</details>
 
 *Proposed architecture, not a demonstrated end-to-end implementation.*
 
@@ -49,7 +54,7 @@ The APSL and GPL components retain their existing license separation. Proprietar
 
 ## CPU vendor portability
 
-Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. AMD-aware standalone startup under Milan TCG UP now passes machine_init and reaches the RTC/lock-timeout observation boundary. Complete clock return, CPU admission, SMP and hosted ownership remain open. See [current qualification matrix](qualification-matrix.md).
+Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. Earlier Milan TCG UP observations establish machine_init return and the RTC/lock-timeout observation boundary. CP622 records a separate explicit unqualified admission rejection. Complete clock return, CPU admission, SMP and hosted ownership remain open. See [current qualification matrix](qualification-matrix.md).
 
 The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common platform source, FKI ABI, build system and a version-matched runtime for each target, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).
 

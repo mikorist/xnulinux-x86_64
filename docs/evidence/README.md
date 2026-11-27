@@ -7,10 +7,11 @@ Measured results belong here. Planned functionality belongs in the roadmap. A sc
 | Evidence | Report | What it establishes |
 | --- | --- | --- |
 | Ordinary standalone Monterey PID 1 | [CP627](../../research/2026-11/checkpoint-627.md) | Broadwell TCG UP console completion without debugger on both development hosts |
-| Retained executable reproduction | [CP630](../../research/2026-11/checkpoint-630.md) | Matching CP602 executable with 22 regenerated and 1,092 retained inputs |
+| Retained executable reproduction | [CP639](../../research/2026-11/checkpoint-639.md) | Matching CP602 executable with 28 regenerated and 1,086 retained inputs |
 | Native Ryzen Linux KVM components | [CP460](../../research/2026-11/hosted/native-amd-kvm.md) | Scoped component replay, not full hosted XNU |
 | Public userspace tests | [CP633](../../research/2026-11/checkpoint-633.md), [CP634](../../research/2026-11/checkpoint-634.md), [CP635](../../research/2026-11/checkpoint-635.md) | Structural validator and synthetic replay verifier results |
-| Source-only tools archive | [CP636](../../research/2026-11/checkpoint-636.md) | Identical private source archive; attribution and binary distribution HOLD |
+| Source-only tools archive | [CP638](../../research/2026-11/checkpoint-638.md) | Identical self-contained private source archive; attribution and binary distribution HOLD |
+| Platform reuse inventory | [CP641](../../research/2026-11/checkpoint-641.md) | 113 retained GPU/kext file identities; no graphics execution or license clearance |
 
 These are linked reports, not downloadable kernel artifacts. Consult the [current state](../../PROJECT-STATE.json) and [qualification matrix](../qualification-matrix.md) for the latest evidence and limits.
 

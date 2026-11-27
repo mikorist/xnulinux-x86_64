@@ -73,6 +73,13 @@ See the [kernel image history](docs/kernel-history.md), [research journal](resea
 - CP628: Monterey/Tahoe source comparison and approved extensible multi-version direction.
 - CP629: first Monterey target descriptor validated offline on both hosts, nine negative controls rejected each. No generic build orchestration or Tahoe runtime qualification.
 
+### Research milestones (CP630-641)
+
+- CP630/639: exact retained Monterey link reproduced with 28 regenerated and 1,086 retained inputs by CP639.
+- CP631/632/640: Tahoe research descriptor, provisional dependency references and utility source/dependency comparison; no Tahoe build qualification.
+- CP633-638: public component test replays, scoped Clang runtime repair, reproducible source staging and same-environment binary reproduction. Attribution, common pinned binary reproduction and release approval remain open.
+- CP641: retained ARM platform inventory and approved post-kernel development direction; no source import, runtime or graphics qualification.
+
 ### Not established by these milestones
 
 Complete physical Linux-hosted XNU boot and world switch, a complete Darwin application runtime, desktop or seamless integration, general hardware compatibility and an end-user installer.

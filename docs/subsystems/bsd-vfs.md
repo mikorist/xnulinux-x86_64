@@ -2,6 +2,9 @@
 
 The standalone reference reached BSD after commpage initialization and lockdown. Pthread and diagnostic crypto integration removed distinct initialization blockers before root discovery.
 
+<details>
+<summary>Expand diagram</summary>
+
 ```mermaid
 flowchart TD
     A[BSD initialization] --> B[IOFindBSDRoot]
@@ -14,6 +17,8 @@ flowchart TD
     H --> I[vnode_lookup]
     I --> J[vn_rdwr and HFS read]
 ```
+
+</details>
 
 This is a conceptual dependency diagram of the diagnostic sequence, not a literal call stack.
 

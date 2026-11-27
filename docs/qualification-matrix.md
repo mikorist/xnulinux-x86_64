@@ -59,7 +59,7 @@ Snapshot: research documentation through CP641, 2026-11-27. Last closed regular 
 
 The latest research checkpoint must be consulted before using this snapshot for a public status announcement.
 
-The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. The six completed review windows remain open; verified evidence hashes are not equivalent to technical closure.
+The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. Seven recorded 20-checkpoint windows through CP637 and four later records remain open; verified evidence hashes are not equivalent to technical closure.
 
 ## Version target boundary
 

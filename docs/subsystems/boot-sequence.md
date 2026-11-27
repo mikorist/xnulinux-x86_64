@@ -2,6 +2,9 @@
 
 This diagram summarizes observed boundaries across the experimental kernel lineage, rather than claiming a single instruction trace of every stage.
 
+<details>
+<summary>Expand diagram</summary>
+
 ```mermaid
 flowchart TD
     A[Legacy loader and validated metadata] --> B[pstart]
@@ -21,6 +24,8 @@ flowchart TD
     O --> P[Named file lookup and read]
     P -. future qualification .-> Q[PID 1 and user execution]
 ```
+
+</details>
 
 ## Verification boundaries
 

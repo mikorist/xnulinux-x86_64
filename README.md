@@ -40,6 +40,8 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 | Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
 | Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
 | Tahoe source preparation | CP632: 13 candidate source tag identities verified; release mapping and build HOLD |
+| Research tools distribution | CP638: self-contained source staging PASS; attribution, common binary build and release HOLD |
+| Post-kernel platform | CP641: reuse inventory and approved direction; runtime and graphics HOLD |
 | Clean-source build and complete hosted runtime | HOLD |
 
 See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roadmap.md) and [research chronology](research/README.md). The current public research snapshot is distinct from the last closed regular integration review (CP497).
@@ -51,7 +53,7 @@ See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roa
 | Target | XNU family | Current status |
 | --- | --- | --- |
 | Monterey 12.5 | 8020.140.41 | Active development baseline; [validated descriptor](targets/monterey/target.json) |
-| Tahoe 26 | 12377 | Next version target; [source comparison](research/2026-11/checkpoint-628.md) and preparation plan |
+| Tahoe 26 | 12377 | Research preparation; [descriptor](targets/tahoe/target.json), [dependency comparison](research/2026-11/checkpoint-640.md); no qualified build |
 | Future targets | To be selected | Extend the shared infrastructure rather than fork the entire project |
 
 Shared platform contracts, build/test infrastructure and Linux backends are reused where compatibility is demonstrated. Source pins, generated headers, patches, binaries, Darwin runtimes and qualification remain version-specific. Intel and AMD qualification is independent for each target. See [version targets and entry gates](docs/version-targets.md).

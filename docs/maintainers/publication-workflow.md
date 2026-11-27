@@ -2,6 +2,9 @@
 
 The research journal is a chronological record, not the entire public repository. Keep canonical reports linked to their source checkpoints and actual evidence.
 
+<details>
+<summary>Expand diagram</summary>
+
 ```mermaid
 flowchart TD
     A[Recorded checkpoint] --> B[Identify scope and changed source]
@@ -14,6 +17,8 @@ flowchart TD
     H --> I[Verify remote commit]
     I --> J[Record publication]
 ```
+
+</details>
 
 ## Report content
 
@@ -48,3 +53,7 @@ Keep entry-point navigation short and wrapping on narrow screens. The public tes
 ## Documentation rendering gate
 
 Before publishing documentation, parse all changed Mermaid blocks with a recorded Mermaid version, and run a full-tree Markdown syntax, local link/anchor, fence, table and details audit when navigation or shared documentation changes. Quote flowchart labels containing punctuation; prefer quoted labels generally. Verify diagram SVG generation and narrow-screen behavior in a browser when available. Syntax and link checks alone do not establish correct visual rendering. Preserve the audit report, tool versions, exact reviewed revision and any limitations. Do not treat a render error as a technical kernel failure, and do not alter experimental results to repair presentation.
+
+## Status ownership and reconciliation
+
+The current project state manifest is the short verified snapshot; the research reports are the evidence, and the roadmap describes future acceptance. Keep the FAQ, evidence index, scope overview, build/reproduction references, changelog and monograph coverage consistent with that snapshot. Historic next steps remain dated history. Count recorded review windows separately from closed reviews. Do not copy a historical snapshot over the live public tree or label a planning decision as a qualification result.

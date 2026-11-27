@@ -52,7 +52,7 @@ A Ryzen 7 5700X WSL2 development environment is now operational alongside the In
 
 ## What is the latest documented result?
 
-CP629 validates the first Monterey version descriptor offline on both hosts. CP627 confirms ordinary standalone owned Darwin PID 1 completion without debugger on both hosts under Broadwell TCG UP. The historical CP621 smoke HOLD was resolved within this scoped Intel-model fixture; AMD admission, physical hosted execution, Apple launchd and a clean-source build remain unqualified. See [project state](../PROJECT-STATE.json) and [qualification matrix](qualification-matrix.md).
+CP641 inventories retained ARM device and GPU sources and records the approved post-kernel development direction. CP639 reproduces the 1,114-input Monterey link with 28 freshly regenerated and 1,086 retained objects. CP627 remains the ordinary Intel-model owned PID 1 boot result. AMD admission, physical hosted execution, Apple launchd, graphics and full clean-source build remain unqualified. See [project state](../PROJECT-STATE.json) and [qualification matrix](qualification-matrix.md).
 
 ## Is Tahoe replacing Monterey?
 
@@ -69,3 +69,11 @@ No. GNU/Linux refers to a system using Linux and GNU components. XNU is a separa
 ## What does PID 1 actually mean here?
 
 The current standalone test executes a small project-owned Darwin program as the first userspace process. It is not Apple launchd, Finder or an application compatibility demonstration. [CP627](../research/2026-11/checkpoint-627.md) describes the ordinary boot evidence.
+
+## Do I need a particular GPU?
+
+No GPU support list is qualified yet. The design uses Linux-owned graphics services and targets a software-display path before hardware acceleration. A GPU vendor is independent of the CPU vendor. See the [post-kernel plan](post-kernel-platform.md); source presence is not a working driver.
+
+## Can I download the research tools yet?
+
+The two [public userspace tests](../tests/README.md) are available as source. CP638 confirms self-contained private source staging, but attribution, common pinned binary build and release approval remain open. See the [distribution plan](maintainers/distribution-plan.md).

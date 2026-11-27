@@ -35,7 +35,7 @@ Directory presence does not establish runtime support. Some material is retained
 
 Public main and x86_64-port normally contain the same reviewed increments. The arm64-reference branch preserves the original ARM64 implementation. Experimental candidates remain separate from the qualified baseline. Ten-checkpoint development series and twenty-checkpoint technical reviews do not delay publication of reviewed outcomes.
 
-The technical sequence is standalone reference qualification, shared hosted machine layer, hosted Darwin userspace, headless, desktop and seamless modes, with reproducibility and source review throughout. See the roadmap for the actual acceptance gates. The current standalone AMD clock lifecycle and full hosted boot remain open.
+The technical sequence is standalone reference qualification, shared hosted machine layer, hosted Darwin userspace and open headless runtime, then software display and graphics integration, with separate desktop and seamless acceptance. Independent host-only GPU work may proceed earlier. Reproducibility and source review apply throughout; see [post-kernel platform](post-kernel-platform.md). See the roadmap for the actual acceptance gates. The current standalone AMD clock lifecycle and full hosted boot remain open.
 
 Version targets share one repository and central chronology. Monterey is the active baseline; Tahoe source preparation is separate. Track evidence and qualification per version and CPU vendor. See [architecture](architecture.md) and [CP628 comparison](../research/2026-11/checkpoint-628.md).
 

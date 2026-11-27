@@ -9,7 +9,7 @@ Run from a local checkout on a suitable Linux development system, as an ordinary
 - [Mach-O structural validator](hosted/monterey/mach-header-validator/README.md): synthetic executable metadata, C11 and UBSan.
 - [Replay evidence verifier](hosted/monterey/replay-verifier/README.md): synthetic evidence-handling tests, Python 3 standard library.
 
-Both have reviewed cross-host test evidence. The private source-only archive reproduction and remaining attribution/distribution holds are documented in [CP636](../research/2026-11/checkpoint-636.md). This is not an available binary package. See the [distribution plan](../docs/maintainers/distribution-plan.md) for release gates.
+Both have reviewed cross-host test evidence. The private source-only archive reproduction and remaining attribution/distribution holds are documented in [CP636](../research/2026-11/checkpoint-636.md), [CP637](../research/2026-11/checkpoint-637.md) and [CP638](../research/2026-11/checkpoint-638.md). This is not an available binary package. See the [distribution plan](../docs/maintainers/distribution-plan.md) for release gates.
 
 ## Other test files
 

@@ -48,7 +48,9 @@ CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component confi
 
 ## Current research boundary (CP641)
 
-The AMD Milan TCG UP path now returns from machine_init and reaches the RTC/lock-timeout observation boundary. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
+**Parallel priorities:** preserve CP627 Intel-model ordinary boot; close Monterey source regeneration and hosted/AMD gates; continue Tahoe source-only preparation; resolve Stage A attribution and pinned build; review outstanding technical windows in order. The approved post-kernel plan adds independent source/host-only preparation, not a requirement to finish graphics before kernel qualification.
+
+Earlier Milan TCG UP observations establish machine_init return and the RTC/lock-timeout observation boundary; CP622 separately records the explicit unqualified admission rejection. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
 Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, then qualify SMP, physical and hosted execution separately. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP620 does not close it.
 
