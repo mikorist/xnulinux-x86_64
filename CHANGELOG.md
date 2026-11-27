@@ -53,6 +53,13 @@ There is no x86_64 product release represented by this document. The entries bel
 
 See the [kernel image history](docs/kernel-history.md), [research journal](research/README.md) and [qualification matrix](docs/qualification-matrix.md).
 
+### Research milestones (2026-11-26 to 2026-11-27, selected documentation through CP612)
+
+- CP498-555: AMD-model MCA, bootstrap, pmap/VM, zone, credential and MAC startup progress; native Ryzen Linux SMCA inventory recorded separately at CP525.
+- CP556-598: byte-identical 1,114-input image and canonical loader, strict Intel gate rejecting 19 negative controls; Milan UP/FPU, memory-type and machine lifecycle advances to the RTC observation boundary.
+- CP599-612: scoped commpage initialization correction, six strict CP602 Broadwell TCG UP passes, dependency and patch provenance audit, all 44 generated dependencies matched, isolated timeout and fixed-point arithmetic tests pass on both hosts.
+- Historical integrity audit and maintainer-reported AI tooling interruption documented. Selected documentation-only updates; regular review remains CP497, full source and AMD admission remain held.
+
 ### Not established by these milestones
 
 Complete physical Linux-hosted XNU boot and world switch, a complete Darwin application runtime, desktop or seamless integration, general hardware compatibility and an end-user installer.

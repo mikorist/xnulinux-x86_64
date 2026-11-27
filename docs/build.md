@@ -28,3 +28,7 @@ The development host recorded Debian 13 and system Clang 19.1.7. These are obser
 The existing local toolchain scripts are named `build-xnu-clang-x86_64.sh` and `verify-xnu-clang-builtins.sh`. The latter checks builtin availability and produces an x86_64 Mach-O probe object. They are not yet shipped in the public repository.
 
 The strict-link result and remaining gates are covered in the [build research](../research/2026-11/toolchain/build-and-link.md). Do not substitute a generic ELF linker or mix generated artifacts across XNU versions.
+
+## Current retained build result (CP612)
+
+Independent Intel/Ryzen builds reproduce the CP602 1,114-input unstripped executable byte-for-byte with zero undefined symbols. The retained canonical loader and fixture match across hosts. This uses retained inputs and is not an independently regenerated clean full-source build. CP605-610 trace patch lineage, all 44 generated dependencies and 27 inherited local headers. See [the build provenance report](../research/2026-11/hosted/commpage-reproduction-599-612.md).

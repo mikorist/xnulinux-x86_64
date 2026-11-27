@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research checkpoint 497, including CP460 native AMD update, 2026-11-26. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: selected research documentation through CP612, 2026-11-27. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ Snapshot: research checkpoint 497, including CP460 native AMD update, 2026-11-26
 | Crypto | Diagnostic 40-slot registration | Full production security/ABI review |
 | pthread | Static initialization | User synchronization ABI |
 | HFS+ | Restricted read-only fixture mount/read, tested negative paths | General media, writable HFS and journal support |
-| PID 1 / ring 3 | Standalone native execution and terminal-only replay confirmed | Debugger-free boot, general userspace, hosted replay |
+| PID 1 / ring 3 | CP602: six strict Broadwell TCG UP standalone passes, owned signed Darwin test program | General userspace including launchd, full boot stability, hosted replay |
 | FKI ordinary Linux services | Guest runtime and physical bounded CPL0 adapter confirmed | Cross-context integration |
 | Original linked XNU PE instructions | Selected Mach-O bytes executed in Linux userspace on physical Intel | Privileged original Mach-O entry |
 | Original XNU PE source components | Recompiled ELF subset executed in physical CPL0 | Complete XNU machine layer, pmap and scheduler |
@@ -39,14 +39,19 @@ Snapshot: research checkpoint 497, including CP460 native AMD update, 2026-11-26
 | Ryzen development environment | Independent dual-kernel builds, 94 strict marker groups under Broadwell-v2 TCG; actual Ryzen nested KVM component tests | Native AMD qualification and full hosted boot |
 | AMD nested KVM component replay | Actual Ryzen nested KVM: 94/94 functional marker groups on both kernels; strict HOLD on SRSO warning | Hyper-V-specific clean strict replay |
 | Native AMD Linux KVM component replay | CP460 strict 94/94 on both guests; SRSO Safe RET on host and guests | Guest TSA and CPU feature dependency; complete native AMD XNU runtime |
-| Ryzen source toolchain | Independently rebuilt custom Clang 24; 15 reference objects and dependencies exact; expanded OSFMK C closure | Complete XNU build and link |
+| Ryzen source toolchain | Independently rebuilt custom Clang 24; byte-identical 1,114-input executable using retained inputs | Clean full-source build and public reproduction |
 | Cross-host OSFMK C reproduction | 290 original, four historical compatibility, three new strict reference objects match; byte-identical 297-object relocatable after canonical paths and input timestamps | Integrated MIG ABI, other subsystems and complete kernel link/runtime |
 | Cross-compiler IPC/reference objects | Historical stock compiler limits superseded for the 15-unit custom Clang 24 closure; selected IPC layouts remain static evidence | Executable ABI and native runtime |
 | Cross-host full executable | 1,089 exact selected inputs, identical strict Mach-O and Broadwell standalone PID 1 on both hosts | Independent regeneration of retained text inputs and public source review |
 | AMD-aware early machine layer | Actual Milan TCG pre-admission discovery on both hosts; 1,092-input links, 35 matching sections; Intel full PID 1 regression | AMD admission and downstream machine services |
 | AMD downstream machine metadata | CP495-v2: 1,109-input strict links, actual Milan TCG pre-admission on both hosts; full same-candidate Intel PID 1 CP497 | Actual AMD admission, FPU activation, MCA handling, memory-type ownership, timer activation and hosted runtime |
-| Cross-host section reproducibility | CP495-v2: 35/35 section content hashes and 47,220 non-STAB tuples match | Full raw binary identity and public retained-input regeneration |
+| Cross-host section reproducibility | CP495-v2: matching sections and symbols; CP562 and CP602 later achieve complete executable byte identity on both hosts | Clean public retained-input regeneration |
 | AMD APIC/LLC and Darwin ABI | Linux guest membership masks and actual UP XNU previews; generic ARCH1 grading helper passes | Numeric legacy cache ID HOLD, XNU SMP, actual AMD exec |
+| AMD startup lifecycle | Milan TCG UP: normal MCA, VM/bootstrap, UP CPU and FPU initialization, memory-type initialization and machine_init return observed | Complete clock lifecycle, CPU admission, AMD PID 1, SMP and hosted ownership |
+| Native AMD SMCA inventory | CP525 native Linux: 16 logical CPUs, 448 sysfs attributes, 114 readable and 334 ENODEV | Physical XNU SMCA handling; attribute count is not hardware bank count |
+| AMD RTC and timeout boundary | CP593/602 Milan TCG RTC and downstream feature-query boundary; CP611/612 isolated arithmetic tests pass | Full clock return and timer delivery; observation boundary is not proof of failed timeout routine |
+| Commpage lifecycle | CP602-604: six strict Broadwell TCG UP passes after scoped initialization correction; original mapping API reports data R/R and text RX/RX | General stability, effective hardware permissions, SMP and AMD full boot |
+| CP602 dependency provenance | CP607-610: 402 unique paths, 328 upstream content matches, 44 generated outputs matched, 27 inherited headers matched to predecessor | Original local authorship/licensing and clean full-source regeneration |
 | Complete Linux-hosted XNU | Not demonstrated | Actual hosted boot and userspace |
 | Headless / desktop / seamless | Goals | End-to-end implementation |
 

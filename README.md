@@ -79,7 +79,9 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Reviewed technical snapshot: November 26, 2026, checkpoint 497.**
+**Current published research snapshot: November 27, 2026, CP612 (selected documentation). Last closed regular integration review: CP497.**
+
+The current CP602 standalone candidate has 1,114 inputs, zero undefined symbols and byte-identical Intel/Ryzen builds. Six strict Broadwell-v2 TCG UP runs pass the HFS/PID 1/Mach/BSD gate. Milan TCG reaches the RTC/lock-timeout observation boundary after machine_init returns; CPU admission and complete clock return are not qualified. See [current qualification matrix](docs/qualification-matrix.md) and [CP599-612 research](research/2026-11/hosted/commpage-reproduction-599-612.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

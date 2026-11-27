@@ -10,7 +10,7 @@ The initial port is now part of a larger engineering goal: one PC-oriented XNU/D
 
 ## Why PC rather than Intel?
 
-PC describes the intended platform, x86_64 the architecture, and Intel the established reference and qualification lane. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. Early AMD-aware machine-layer discovery is qualified as a diagnostic under Milan TCG; native AMD KVM component replay is qualified at CP460. Complete AMD boot and hosted execution remain open. Other configurations likewise require separate evidence.
+PC describes the intended platform, x86_64 the architecture, and Intel the established reference and qualification lane. AMD development now runs in parallel on a Ryzen 7 5700X WSL2 environment and the established Intel Linux lane. AMD-model standalone startup now reaches the RTC/lock-timeout observation boundary after machine_init returns; native AMD KVM component replay is qualified at CP460. CP525 separately records native Linux SMCA inventory. Complete AMD boot and hosted execution remain open. Other configurations likewise require separate evidence.
 
 ## Does it need QEMU?
 
@@ -39,3 +39,7 @@ They record actual constraints and prevent repeated work. See [lessons learned](
 ## How is AMD development organized?
 
 A Ryzen 7 5700X WSL2 development environment is now operational alongside the Intel Linux host. Both use the shared source and kernel targets. TCG establishes scoped emulated behavior; nested KVM component runs on actual Ryzen now match 94/94 functional marker groups on both selected kernels, with strict SRSO HOLD in Hyper-V. Native Ryzen Linux KVM subsequently passed strict 94/94 on both selected kernels (CP460); SRSO Safe RET is confirmed for that configuration. Guest TSA, CPU feature dependency and complete AMD XNU boot remain open. See [testing](testing.md#planned-cross-vendor-x86_64-test-strategy).
+
+## What is the latest documented result?
+
+CP612 is the selected public research snapshot. The retained CP602 image has 1,114 link inputs and matches byte-for-byte across both development hosts. Six strict Intel-model standalone replays pass; AMD Milan TCG has not reached PID 1. The last closed regular integration review remains CP497, and the full source bundle is held. See the [qualification matrix](qualification-matrix.md).

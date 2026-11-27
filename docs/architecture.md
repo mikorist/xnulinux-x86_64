@@ -42,6 +42,6 @@ The APSL and GPL components retain their existing license separation. Proprietar
 
 ## CPU vendor portability
 
-Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. Early native AMD-aware discovery has executed under Milan TCG; full AMD admission, downstream machine services and hosted ownership remain open.
+Intel is the established reference lane, not the platform boundary. AMD compatibility development is now active in parallel with Intel. Keep reusable host interfaces vendor-neutral where their semantics permit, and qualify vendor-specific machine-layer behavior separately. AMD-aware standalone startup under Milan TCG UP now passes machine_init and reaches the RTC/lock-timeout observation boundary. Complete clock return, CPU admission, SMP and hosted ownership remain open. See [current qualification matrix](qualification-matrix.md).
 
 The design goal is a single x86_64 implementation across Intel and AMD, analogous to Linux CPU portability: common source, FKI ABI, build system and runtime, with capability-driven selection of vendor-specific machine-layer behavior. See [cross-vendor testing](testing.md#planned-cross-vendor-x86_64-test-strategy).

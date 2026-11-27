@@ -14,3 +14,7 @@ See [selected evidence manifest](../research/2026-11/evidence-manifest.md).
 Do not publish raw register traces or entropy-bearing logs without review. Export minimal reviewed evidence and license-compatible reproduction scripts instead. Historical result hashes identify artifacts; they are not a replacement for the artifacts or build procedures.
 
 A reproduction run must use its own output directory and independently check both verifier outcome and actual guest boundary.
+
+## Latest retained reproduction evidence (CP612)
+
+CP602: matching unstripped 1,114-input kernel, ordered input manifest, loader and fixture across Intel/Ryzen; six strict Broadwell TCG UP passes. CP605-610 verify patch lineage, dependency identity and generated-header closure. All 44 generated dependencies match recorded generation outputs; 27 inherited candidate-local headers match the direct predecessor. Clean full-source generation and public replay remain open. The [current report](../research/2026-11/hosted/commpage-reproduction-599-612.md) records candidate identifiers. The [history audit](../research/2026-11/history/engineering-history-through-612.md) distinguishes 371 verified primary evidence hashes from older entries using other formats.

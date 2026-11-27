@@ -14,7 +14,7 @@ XNULINUX x86_64 began as an architecture port of [AFK-surf/xnulinux](https://git
 
 These are intended capabilities, not a shipping platform. QEMU/KVM are development and qualification tools, not a required production architecture. See [architecture](architecture.md) and [roadmap](roadmap.md).
 
-## Reviewed evidence through CP460 (November 26, 2026)
+## Historical reviewed evidence through CP460 (November 26, 2026)
 
 - Independent Intel and Ryzen development hosts reproduced the complete 1,089-input standalone reference executable byte-for-byte with zero undefined symbols.
 - The AMD-aware diagnostic candidate uses 1,092 inputs. All 35 final section contents and addresses agree across hosts; whole-file identity is not asserted for that candidate. Actual early AMD discovery under Milan TCG passed on both hosts. The new candidate also passed the full Intel standalone regression, including owned signed Darwin PID 1 at ring 3, read-only HFS+ operations, BSD syscalls and Mach traps.
@@ -22,6 +22,15 @@ These are intended capabilities, not a shipping platform. QEMU/KVM are developme
 - CP460 used a dedicated bootable Linux USB to repeat the retained CP426 component regression on physical Ryzen with native KVM and microcode 0x0a201213. Linux 6.19.14 and 7.3.5 guests each passed 94/94 marker groups with the original strict verifier and exit code zero. Host and guests report SRSO Safe RET. Guest TSA and CPU feature dependency warnings, the broad control HOLD, and Hyper-V SRSO exposure remain separate open items.
 
 Sources: [full executable reproduction and machine-layer research](../research/2026-11/hosted/amd-machine-layer.md), [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md), [qualification matrix](qualification-matrix.md).
+
+## Current research snapshot through CP612 (November 27, 2026)
+
+- CP602 independently reproduces the same 1,114-input unstripped executable on Intel and Ryzen; six strict Broadwell TCG UP runs pass the owned Darwin PID 1 fixture and Mach/BSD returns.
+- AMD Milan TCG UP startup now passes MCA, VM/bootstrap, UP CPU/FPU initialization, memory-type initialization and machine_init. The current observed boundary is RTC/lock-timeout initialization; full clock return, CPU admission and AMD userspace are not established.
+- CP525 records a native Linux Ryzen SMCA inventory, not physical XNU SMCA handling.
+- CP607-610 classify 402 unique dependencies, verify all 44 generated dependencies and trace 27 candidate-local headers to the direct predecessor. Full provenance and clean public source regeneration remain open.
+
+See [AMD startup](../research/2026-11/hosted/amd-startup-498-555.md), [machine lifecycle](../research/2026-11/hosted/amd-machine-lifecycle-556-598.md) and [latest research](../research/2026-11/hosted/commpage-reproduction-599-612.md). The last closed regular review remains CP497; CP612 is a selected documentation update, not full integration or source clearance.
 
 ## Engineering discipline
 
