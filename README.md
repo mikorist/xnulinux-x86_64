@@ -30,7 +30,7 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP636 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-636.md)**
+**CP637 | November 27, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/checkpoint-637.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
@@ -145,11 +145,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 27, 2026, CP636. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP637. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and nineteen subsequent checkpoints remain open; all 139 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Seven recorded 20-checkpoint windows (CP498-637) remain open for technical review; all 140 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-**Next:** assess Stage A readiness at CP637; source archive reproduction passes, attribution and binary reproducibility remain open. Tahoe release mapping and Monterey clean-source/AMD work remain open. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
+**Next:** resolve scoped tool attribution and common pinned build recipe; Stage A release remains HOLD. Tahoe release mapping and Monterey clean-source/AMD work remain open. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 
 <details>
 <summary>Detailed engineering evidence and checkpoint history</summary>
@@ -188,7 +188,9 @@ CP634: physical Intel Clang runtime restored, original test passes; isolated MCP
 
 CP636: both development environments reproduce an identical private source-only research tools archive and pass the unpacked tests. Attribution and binary distribution remain HOLD. [CP636](research/2026-11/checkpoint-636.md).
 
-**Next:** CP637 distribution readiness assessment; Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP637: four fresh GCC builds pass; same-environment binaries match, different compiler environments produce different binaries. Stage A release remains HOLD. [CP637](research/2026-11/checkpoint-637.md).
+
+**Next:** resolve attribution and pinned build recipe; Monterey remains the active implementation target. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 

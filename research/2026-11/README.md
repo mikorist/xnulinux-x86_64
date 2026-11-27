@@ -72,3 +72,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP634: physical host Clang runtime repair (host PASS, MCP HOLD)](checkpoint-634.md)
 - [CP635: public Python verifier replay (synthetic PASS)](checkpoint-635.md)
 - [CP636: reproducible source package (source PASS, attribution HOLD)](checkpoint-636.md)
+- [CP637: first research distribution readiness assessment (release HOLD)](checkpoint-637.md)

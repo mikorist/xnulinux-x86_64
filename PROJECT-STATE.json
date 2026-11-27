@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 636,
-  "documentation_through": 636,
+  "research_checkpoint": 637,
+  "documentation_through": 637,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_windows": 6,
-    "completed_window_records": 120,
+    "completed_windows": 7,
+    "completed_window_records": 140,
     "partial_window": [
-      618,
-      637
+      638,
+      657
     ],
-    "partial_records": 19,
-    "verified_primary_evidence_hashes": 139,
+    "partial_records": 0,
+    "verified_primary_evidence_hashes": 140,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 615,
+    "indexed_source_records": 616,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -90,11 +90,19 @@
       "archive_sha256": "57bc2e36755befa24f9b8c9328479ce9a08d91b7c23c1162d7a84da7292fe847",
       "attribution": "HOLD",
       "binary_distribution": "HOLD"
+    },
+    "research_tools_distribution": {
+      "checkpoint": 637,
+      "status": "HOLD",
+      "same_environment_binary_reproduction": "PASS",
+      "cross_environment_binary_identity": false,
+      "fresh_checks": 916,
+      "release_approval": "REQUIRED"
     }
   },
-  "next": "CP637 Stage A readiness assessment; attribution and binary reproducibility remain open, preserve Tahoe and Monterey gates.",
+  "next": "Resolve scoped tool attribution and common pinned build recipe; continue ordered technical review and independent Monterey/Tahoe research.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-636.md",
+    "current_report": "research/2026-11/checkpoint-637.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
