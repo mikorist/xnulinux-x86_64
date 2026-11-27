@@ -47,3 +47,6 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 | [Topology, Darwin ABI, extended-state metadata and build reproducibility](hosted/topology-state-and-reproducibility.md) | machine layer |
 | [Vendor-aware machine-layer contracts and early runtime validation](hosted/amd-machine-layer-followup.md) | machine layer |
 | [Native AMD KVM component replay and SRSO qualification](hosted/native-amd-kvm.md) | Hardware qualification |
+| [AMD standalone startup: early CPU state to machine initialization (CP498-555)](hosted/amd-startup-498-555.md) | machine layer |
+| [Reproducible image and AMD machine lifecycle (CP556-598)](hosted/amd-machine-lifecycle-556-598.md) | machine layer |
+| [Commpage initialization, regressions and build provenance (CP599-612)](hosted/commpage-reproduction-599-612.md) | machine layer |

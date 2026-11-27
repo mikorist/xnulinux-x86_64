@@ -13,6 +13,8 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
+> Checkpoint 612 research update: byte-identical 1,114-input images on both hosts; six strict CP602 Broadwell TCG standalone passes; Milan TCG reaches the RTC/lock-timeout observation boundary after machine_init returns. AMD admission, complete hosted boot and full source clearance remain open. [Current research report](research/2026-11/hosted/commpage-reproduction-599-612.md).
+>
 > Checkpoint 497: independent 1,109-input strict links, all 35 runtime sections and 47,220 non-STAB symbol tuples agree; same-candidate Intel PID 1 and Milan TCG pre-admission checks pass. [Topology and state report](research/2026-11/hosted/topology-state-and-reproducibility.md).
 
 > Checkpoint 477: independent 1,102-input strict links and Milan TCG pre-admission checks pass on both hosts; full Intel PID 1 regression through CP475. [Machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md).
