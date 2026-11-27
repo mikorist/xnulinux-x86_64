@@ -63,3 +63,4 @@ Reports cover the recorded November 2026 research; their scope and limits are st
 - [CP625: ordinary root mount and init load attempt (scoped PASS, PID 1 HOLD)](checkpoint-625.md)
 - [CP626: ordinary Intel-model PID 1 completion (scoped PASS)](checkpoint-626.md)
 - [CP627: cross-host ordinary Intel-model PID 1 completion (scoped PASS)](checkpoint-627.md)
+- [CP628: Monterey/Tahoe source comparison (source-only PASS)](checkpoint-628.md)

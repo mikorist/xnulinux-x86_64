@@ -25,7 +25,7 @@ Hosted integration may proceed in parallel with standalone reference tests. GPU 
 
 ## Subsequent x86_64 source target
 
-After stable physical Linux-hosted execution of the Monterey baseline, the next planned x86_64 port targets XNU 12377 (Tahoe). Retain Monterey as a separate version target; reuse validated host infrastructure through version-specific adapters. The exact Tahoe source pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory.
+One XNULINUX supports multiple version targets. Monterey remains the active baseline; Tahoe preparatory source analysis may proceed in parallel. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe. Retain both targets and develop headless, desktop and seamless for both with shared compatible layers and per-version adapters. The exact Tahoe target pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory.
 
 ## Parallel Intel and AMD x86_64 development
 
@@ -43,7 +43,7 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP627)
+## Current research boundary (CP628)
 
 The AMD Milan TCG UP path now returns from machine_init and reaches the RTC/lock-timeout observation boundary. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
@@ -64,3 +64,5 @@ CP625 reports ordinary HFS root mount and init load attempt on diya without a de
 CP626 reports scoped ordinary Intel-model owned PID 1 completion on diya after correcting the missing /dev directory in a separate fixture. Cross-host replay and further qualification remain open. [CP626 report](../research/2026-11/checkpoint-626.md).
 
 CP627 independently reproduces ordinary Intel-model console completion on Ryzen with the exact corrected fixture. AMD-model admission and hosted qualification remain separate. [CP627 report](../research/2026-11/checkpoint-627.md).
+
+CP628 documents the initial public-source comparison: 165 common x86 paths, 98 identical blobs, 95.9% retained lines across common Monterey paths. No Tahoe build or runtime qualification. [CP628 report](../research/2026-11/checkpoint-628.md).

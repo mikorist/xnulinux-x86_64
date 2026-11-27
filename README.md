@@ -13,7 +13,7 @@ The goal is to run compatible Darwin and macOS software directly on standard x86
 >
 > Parallel development is active on an Intel Core i5-7500T Debian host and an AMD Ryzen 7 5700X WSL2 host. Ryzen is the primary compute environment; Intel remains the reference and regression host. Neither a complete hosted boot nor bare-metal AMD compatibility is established.
 >
-> **Current research: CP627.** Ordinary Intel-model standalone boot reaches the owned PID 1 diagnostic on both diya and Ryzen without a debugger, using identical kernel, HFS, loader and initrd. Success markers at 92.08s and 91.35s. AMD-model admission and hosted boot remain open. [Latest result](research/2026-11/checkpoint-627.md).
+> **Current research: CP628.** CP627 confirms ordinary Intel-model owned PID 1 completion on both hosts. CP628 compares Monterey and Tahoe public sources: 98 identical files and 95.9% retained Monterey lines across 165 common x86 paths. One multi-version XNULINUX is the project goal; Tahoe build and runtime are not qualified. [Latest result](research/2026-11/checkpoint-628.md).
 >
 > Checkpoint 497: independent 1,109-input strict links, all 35 runtime sections and 47,220 non-STAB symbol tuples agree; same-candidate Intel PID 1 and Milan TCG pre-admission checks pass. [Topology and state report](research/2026-11/hosted/topology-state-and-reproducibility.md).
 
@@ -51,7 +51,7 @@ One hosted XNU kernel and a shared Darwin runtime, with three ways to use them:
 | **Desktop** | Run a complete compatible macOS graphical environment, including its system services, Finder and Dock, in a Linux window or fullscreen. |
 | **Headless** | Run Darwin command-line programs, development tools and services without a graphical environment or a mandatory proprietary macOS installation. |
 
-Seamless application execution is a major practical goal of the x86_64 project. The complete desktop is a separate, optional mode. All three modes are intended to share the same hosted kernel and runtime rather than starting a separate kernel for every application.
+Seamless application execution is a major practical goal of the x86_64 project. The complete desktop is a separate, optional mode. For each version target, all three modes are intended to share its hosted kernel and version-matched runtime rather than starting a separate kernel for every application.
 
 ## Intended architecture
 
@@ -79,7 +79,7 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Current development status
 
-**Current published research snapshot: November 27, 2026, CP627. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 27, 2026, CP628. Last closed regular integration review: CP497.**
 
 The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Six completed technical review windows (CP498-617) and four subsequent checkpoints remain open; all 124 primary evidence hashes were independently checked. Historical chapters and full individual evidence clearance are tracked separately.
 
@@ -101,7 +101,9 @@ CP626: corrected standalone fixture reports XNUL_PID1_624_PASS at 92.08 seconds 
 
 CP627: both hosts reproduce ordinary Intel-model owned PID 1 completion with identical artifacts. Ryzen independently rebuilt the loader; the verified HFS image was transferred. [CP627 report](research/2026-11/checkpoint-627.md).
 
-**Next:** preserve this cross-host baseline and review remaining AMD qualification requirements and independent source/build work. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
+CP628: source comparison supports investigating shared infrastructure across Monterey and Tahoe. This is source similarity, not compatibility qualification. [CP628 report](research/2026-11/checkpoint-628.md).
+
+**Next:** resume Monterey AMD qualification and independent source/build work while retaining Tahoe source preparation. See [roadmap](docs/roadmap.md) and [project navigation](docs/project-navigation.md).
 
 The development infrastructure includes a dedicated Ryzen compute host in parallel with Intel. The latest reviewed evidence includes the [parallel development report](research/2026-11/hosted/parallel-intel-ryzen.md) through checkpoint 417 and the [cross-host OSFMK and AMD KVM report](research/2026-11/hosted/osfmk-cross-host-reproduction.md) through checkpoint 437, followed by the [full-image and AMD machine-layer report](research/2026-11/hosted/amd-machine-layer.md) through checkpoint 457 and the [machine-layer follow-up](research/2026-11/hosted/amd-machine-layer-followup.md) through checkpoint 477 and the [topology and extended-state report](research/2026-11/hosted/topology-state-and-reproducibility.md) through checkpoint 497.
 
@@ -171,7 +173,7 @@ The historical kernel matrix covers specific components and configurations, not 
 | macOS Monterey 12.5 | `8020.140.41` | Current shared x86_64 development baseline |
 | macOS Tahoe 26 | `12377` | Next planned x86_64 source target |
 
-Monterey remains an independent target for older Intel hardware. After stable physical Linux-hosted Monterey execution is established, the next planned target is Tahoe, the final macOS generation supporting Intel. The upstream `12377.121.6` revision is a reference for that work; the exact Tahoe x86_64 source pin will be qualified separately.
+**Project goal: one XNULINUX, multiple version targets.** Monterey and Tahoe are maintained targets, not replacement releases of the platform. Share the versioned FKI contract, build orchestration, regression infrastructure, Linux backends and compatible application integration. Keep source pins, generated headers, patches, binaries and version-matched Darwin runtime separate. Qualify Intel and AMD independently for each target. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe; preparatory source research can proceed earlier. Develop headless, desktop and seamless modes for both without requiring a completed Monterey desktop before Tahoe work. The upstream `12377.121.6` revision is a research reference; the exact Tahoe target pin remains to be qualified.
 
 The intention is to reuse validated common FKI infrastructure through version-specific adapters, without mixing incompatible source revisions or build artifacts.
 

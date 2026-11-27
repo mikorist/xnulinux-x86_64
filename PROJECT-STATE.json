@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 627,
-  "documentation_through": 627,
+  "research_checkpoint": 628,
+  "documentation_through": 628,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
@@ -14,13 +14,13 @@
       618,
       637
     ],
-    "partial_records": 10,
-    "verified_primary_evidence_hashes": 130,
+    "partial_records": 11,
+    "verified_primary_evidence_hashes": 131,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 606,
+    "indexed_source_records": 607,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -65,13 +65,33 @@
     "clean_source_build": "HOLD",
     "source_license_clearance": "HOLD"
   },
-  "next": "Preserve cross-host Intel baseline; review remaining AMD qualification requirements and independent source/build work.",
+  "next": "Resume Monterey AMD qualification and independent source/build work; retain Tahoe source inventory for later target preparation.",
   "references": {
-    "current_report": "research/2026-11/checkpoint-627.md",
+    "current_report": "research/2026-11/checkpoint-628.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
     "publication": "docs/maintainers/publication-workflow.md",
     "monograph": "research/monograph/README.md"
+  },
+  "version_targets": {
+    "goal": "One XNULINUX; shared compatible platform and product layers; per-version and per-vendor qualification",
+    "Monterey": {
+      "family": "8020",
+      "pin": "8020.140.41",
+      "status": "ACTIVE_BASELINE"
+    },
+    "Tahoe": {
+      "family": "12377",
+      "reference": "12377.121.6",
+      "reference_commit": "ac9718fb1af618d5ce8678d0dc6e8a58f252216f",
+      "status": "SOURCE_RESEARCH_ONLY",
+      "comparison_checkpoint": 628
+    },
+    "product_modes": [
+      "headless",
+      "desktop",
+      "seamless"
+    ]
   }
 }
