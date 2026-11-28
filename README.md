@@ -36,12 +36,12 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP915 | November 28, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-896-915/README.md)**
+**CP935 | November 28, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-916-935/README.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
 | Monterey standalone Intel-model PID 1 | CP627: ordinary boot without debugger on both hosts, 92.08 s and 91.35 s |
-| Reproducible retained executable | CP915: 1,050 regenerated and 64 retained of 1,114 inputs; exact CP602 retained-link image |
+| Reproducible retained executable | CP935: 1,071 regenerated and 43 retained of 1,114 inputs; exact CP602 retained-link image |
 | AMD model startup | CP622: admission remains deliberately unqualified; full boot HOLD |
 | Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
 | Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
@@ -51,7 +51,7 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 | Versioned open SDK | CP754: 249 staged headers; declarations only |
 | Clean-source build and complete hosted runtime | HOLD |
 
-**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+**A: Historical reproduction.** 1,071/1,114 regenerated inputs; 43 retained. This is CP602 byte identity, not product completion.
 
 **B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
 
@@ -166,11 +166,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 28, 2026, CP915. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 28, 2026, CP935. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Twenty recorded 20-checkpoint windows (CP498-897) remain open for technical review, with 18 subsequent checkpoints; all 418 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Twenty-one recorded 20-checkpoint windows (CP498-917) remain open for technical review, with 18 subsequent checkpoints; all 438 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-CP896-915: accepted regenerated inputs increased from 1,012 to 1,050 of 1,114 (94.25%); 64 remain retained. Of the 1,050 regenerated inputs, 1,046 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. Scoped hosted userspace component and recovery regressions do not establish native XNU execution. AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [CP896-915 research update](research/2026-11/updates-896-915/README.md).
+CP916-935: accepted regenerated inputs increased from 1,050 to 1,071 of 1,114 (96.14%); 43 remain retained. Of the 1,071 regenerated inputs, 1,067 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. All 20 checkpoints advance historical reproduction; no new boot or runtime qualification. AMD clock return and timer delivery, full clean-source build, native hosted execution, source licensing and release remain HOLD. [CP916-935 research update](research/2026-11/updates-916-935/README.md).
 
 **Next:** Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 

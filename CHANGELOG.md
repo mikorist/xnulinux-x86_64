@@ -135,3 +135,7 @@ CP876-895: accepted regenerated inputs increased from 920 to 1,012 of 1,114 (90.
 ## Research through CP915
 
 CP896-915: accepted regenerated inputs increased from 1,012 to 1,050 of 1,114 (94.25%); 64 remain retained. Of the 1,050 regenerated inputs, 1,046 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. Scoped hosted userspace component and recovery regressions do not establish native XNU execution. AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [CP896-915 research update](research/2026-11/updates-896-915/README.md).
+
+## Research through CP935
+
+CP916-935: accepted regenerated inputs increased from 1,050 to 1,071 of 1,114 (96.14%); 43 remain retained. Of the 1,071 regenerated inputs, 1,067 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. All 20 checkpoints advance historical reproduction; no new boot or runtime qualification. AMD clock return and timer delivery, full clean-source build, native hosted execution, source licensing and release remain HOLD. [CP916-935 research update](research/2026-11/updates-916-935/README.md).

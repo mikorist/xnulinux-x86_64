@@ -34,3 +34,5 @@ Use an example configuration with placeholders and keep deployment settings loca
 CP895 reaches 1,012 regenerated and 102 retained inputs. See the [CP876-895 report](../../research/2026-11/updates-876-895/README.md).
 
 CP915 reaches 1,050 regenerated and 64 retained inputs. See the [CP896-915 report](../../research/2026-11/updates-896-915/README.md).
+
+CP935 reaches 1,071 regenerated and 43 retained inputs. See the [CP916-935 report](../../research/2026-11/updates-916-935/README.md).

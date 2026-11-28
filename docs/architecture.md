@@ -67,9 +67,9 @@ Adding a version target must extend the existing platform rather than duplicate 
 
 The repository layout in the version-target entry plan was approved by the owner on November 27, 2026. Introduce it incrementally without invalidating existing builds or moving historical artifacts.
 
-## Hosted-first architecture review (CP915 publication)
+## Hosted-first architecture review (CP915; status updated through CP935)
 
-**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+**A: Historical reproduction.** 1,071/1,114 regenerated inputs; 43 retained. This is CP602 byte identity, not product completion.
 
 **B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
 

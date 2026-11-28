@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP915, 2026-11-28. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP935, 2026-11-28. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ Snapshot: research documentation through CP915, 2026-11-28. Last closed regular 
 
 The latest research checkpoint must be consulted before using this snapshot for a public status announcement.
 
-The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. Twenty recorded 20-checkpoint windows through CP897 and 18 later records remain open; 418 primary hashes verified; verified evidence hashes are not equivalent to technical closure.
+The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. Twenty-one recorded 20-checkpoint windows through CP917 and 18 later records remain open; 438 primary hashes verified; verified evidence hashes are not equivalent to technical closure.
 
 ## Version target boundary
 
@@ -137,7 +137,11 @@ CP876-895: accepted regenerated inputs increased from 920 to 1,012 of 1,114 (90.
 
 CP896-915: accepted regenerated inputs increased from 1,012 to 1,050 of 1,114 (94.25%); 64 remain retained. Of the 1,050 regenerated inputs, 1,046 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. Scoped hosted userspace component and recovery regressions do not establish native XNU execution. AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-896-915/README.md).
 
-**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+## CP916-935 scoped results
+
+CP916-935: accepted regenerated inputs increased from 1,050 to 1,071 of 1,114 (96.14%); 43 remain retained. Of the 1,071 regenerated inputs, 1,067 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. All 20 checkpoints advance historical reproduction; no new boot or runtime qualification. AMD clock return and timer delivery, full clean-source build, native hosted execution, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-916-935/README.md).
+
+**A: Historical reproduction.** 1,071/1,114 regenerated inputs; 43 retained. This is CP602 byte identity, not product completion.
 
 **B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
 

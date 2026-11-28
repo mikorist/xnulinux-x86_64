@@ -46,13 +46,13 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP915)
+## Current research boundary (CP935)
 
 **Parallel priorities:** prioritize qualified hosted and AMD functional prerequisites, preserve CP627 Intel-model ordinary boot, continue independently eligible source regeneration; continue active Tahoe preparation; complete Stage A package review and common pinned native build; review outstanding technical windows in order. The approved post-kernel plan adds independent source/host-only preparation, not a requirement to finish graphics before kernel qualification.
 
 Earlier Milan TCG UP observations establish machine_init return and the RTC/lock-timeout observation boundary; CP622 separately records the explicit unqualified admission rejection. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
-Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, and qualify SMP and physical execution separately. Hosted integration progresses independently when its prerequisites are eligible. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/updates-896-915/README.md) and [earlier retained-link report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP915 does not close it.
+Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, and qualify SMP and physical execution separately. Hosted integration progresses independently when its prerequisites are eligible. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/updates-916-935/README.md) and [earlier retained-link report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP935 does not close it.
 
 Historical CP621: an independent completion-evidence gap was identified: four ordinary smoke launches time out without a validated completion marker. The subsequent CP626/627 Intel-model control resolves that scoped evidence gap; AMD qualification remains separate. No new AMD clock return or boot is qualified. [CP621 report](../research/2026-11/checkpoint-621.md).
 
@@ -108,13 +108,13 @@ CP756-775: original Monterey declaration probes expose 18 missing generated user
 
 Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. [Research update](../research/2026-11/updates-756-775/README.md).
 
-## Current work after CP915
+## Current work after CP935
 
-Latest evidence: CP896-915: accepted regenerated inputs increased from 1,012 to 1,050 of 1,114 (94.25%); 64 remain retained. Of the 1,050 regenerated inputs, 1,046 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. Scoped hosted userspace component and recovery regressions do not establish native XNU execution. AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-896-915/README.md).
+Latest evidence: CP916-935: accepted regenerated inputs increased from 1,050 to 1,071 of 1,114 (96.14%); 43 remain retained. Of the 1,071 regenerated inputs, 1,067 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. All 20 checkpoints advance historical reproduction; no new boot or runtime qualification. AMD clock return and timer delivery, full clean-source build, native hosted execution, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-916-935/README.md).
 
-## Functional priorities after CP915
+## Functional priorities after CP935
 
-**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+**A: Historical reproduction.** 1,071/1,114 regenerated inputs; 43 retained. This is CP602 byte identity, not product completion.
 
 **B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
 

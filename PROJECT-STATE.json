@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 915,
-  "documentation_through": 915,
+  "research_checkpoint": 935,
+  "documentation_through": 935,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_window_records": 400,
-    "completed_windows": 20,
+    "completed_window_records": 420,
+    "completed_windows": 21,
     "partial_records": 18,
     "partial_window": [
-      898,
-      917
+      918,
+      937
     ],
     "technical_closure": false,
-    "verified_primary_evidence_hashes": 418
+    "verified_primary_evidence_hashes": 438
   },
   "monograph": {
     "public_chapters": 47,
@@ -66,7 +66,10 @@
     "independent_source_stage_objects_cp895": 1008,
     "regenerated_objects_cp915": 1050,
     "retained_objects_cp915": 64,
-    "independent_source_stage_objects_cp915": 1046
+    "independent_source_stage_objects_cp915": 1046,
+    "regenerated_objects_cp935": 1071,
+    "retained_objects_cp935": 43,
+    "independent_source_stage_objects_cp935": 1067
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -260,11 +263,19 @@
       "amd_clock_timer_admission": "HOLD",
       "clean_source_build": "HOLD",
       "source_license_clearance": "HOLD"
+    },
+    "research_cp916_935": {
+      "new_regenerated_inputs": 21,
+      "retained_link_identity": true,
+      "native_hosted": "HOLD",
+      "amd_clock_timer_admission": "HOLD",
+      "clean_source_build": "HOLD",
+      "source_license_clearance": "HOLD"
     }
   },
   "next": "Prioritize eligible hosted and AMD functional prerequisites; independently advance source reproduction, SDK and license work. Tahoe preparation remains active; implementation gate unchanged.",
   "references": {
-    "current_report": "research/2026-11/updates-896-915/README.md",
+    "current_report": "research/2026-11/updates-916-935/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -413,11 +424,11 @@
     }
   },
   "development_tracks": {
-    "as_of_checkpoint": 915,
+    "as_of_checkpoint": 935,
     "historical_reproduction": {
-      "regenerated": 1050,
-      "independent_source_stage": 1046,
-      "retained": 64,
+      "regenerated": 1071,
+      "independent_source_stage": 1067,
+      "retained": 43,
       "total": 1114,
       "scope": "CP602 byte identity only"
     },
