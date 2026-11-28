@@ -360,6 +360,8 @@ The [engineering history through CP612](research/2026-11/history/engineering-his
 The historical reports are edited accounts of recorded experiments; they are not a full public reproduction bundle or a certification of every underlying test.
 
 
+> If you’re in a hurry, remember: What’s the point of replacing Hackintosh if all we’re building is another Hackintosh with a different sticker?
+
 <p align="center">
   <sub>Support the maintainer via the existing <a href="https://diyaudio.rs/">diyAudio.rs</a> donation button. Thank you!</sub>
 </p>
