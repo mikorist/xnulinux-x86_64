@@ -34,12 +34,12 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP835 | November 28, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-816-835/README.md)**
+**CP855 | November 28, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-836-855/README.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
 | Monterey standalone Intel-model PID 1 | CP627: ordinary boot without debugger on both hosts, 92.08 s and 91.35 s |
-| Reproducible retained executable | CP835: 764 regenerated and 350 retained of 1,114 inputs; exact CP602 retained-link image |
+| Reproducible retained executable | CP855: 839 regenerated and 275 retained of 1,114 inputs; exact CP602 retained-link image |
 | AMD model startup | CP622: admission remains deliberately unqualified; full boot HOLD |
 | Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
 | Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
@@ -49,7 +49,7 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 | Versioned open SDK | CP754: 249 staged headers; declarations only |
 | Clean-source build and complete hosted runtime | HOLD |
 
-**Next:** qualify the remaining retained source inputs and generated C++ declarations (17 distinct paths across 64 candidates). AMD admission, source licensing, SDK/runtime and release remain HOLD.
+**Next:** qualify the remaining 275 retained inputs, including generated implementation recipes and source provenance. The 64 original C++ candidates have scoped compile/link qualification. AMD admission, source licensing, SDK/runtime and release remain HOLD.
 
 See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roadmap.md) and [research chronology](research/README.md). The current public research snapshot is distinct from the last closed regular integration review (CP497).
 
@@ -154,11 +154,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 28, 2026, CP835. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 28, 2026, CP855. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Sixteen recorded 20-checkpoint windows (CP498-817) remain open for technical review, with 18 subsequent checkpoints; all 338 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Seventeen recorded 20-checkpoint windows (CP498-837) remain open for technical review, with 18 subsequent checkpoints; all 358 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-CP816-835: accepted regenerated inputs increased from 692 to 764 of 1,114; 350 remain retained. Historical assembler identities and residual Batch 01 recipes are resolved within their tested scope. Twelve historical UIO compatibility objects now match, while 17 distinct derived C++ dependency paths remain HOLD. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP816-835 research update](research/2026-11/updates-816-835/README.md).
+CP836-855: accepted regenerated inputs increased from 764 to 839 of 1,114; 275 remain retained. Historical IIG declarations and compatibility-header prerequisites are qualified within their tested scope, and all 64 CP811 original C++ candidates now match. Final build metadata and additional BSD objects also match. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP836-855 research update](research/2026-11/updates-836-855/README.md).
 
 **Next:** Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 

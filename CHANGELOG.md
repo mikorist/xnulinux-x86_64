@@ -119,3 +119,7 @@ CP796-815: accepted regenerated inputs increased from 599 to 692 of 1,114; 422 r
 ## Research through CP835
 
 CP816-835: accepted regenerated inputs increased from 692 to 764 of 1,114; 350 remain retained. Historical assembler identities and residual Batch 01 recipes are resolved within their tested scope. Twelve historical UIO compatibility objects now match, while 17 distinct derived C++ dependency paths remain HOLD. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP816-835 research update](research/2026-11/updates-816-835/README.md).
+
+## Research through CP855
+
+CP836-855: accepted regenerated inputs increased from 764 to 839 of 1,114; 275 remain retained. Historical IIG declarations and compatibility-header prerequisites are qualified within their tested scope, and all 64 CP811 original C++ candidates now match. Final build metadata and additional BSD objects also match. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [CP836-855 research update](research/2026-11/updates-836-855/README.md).
