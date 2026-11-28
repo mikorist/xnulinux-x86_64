@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 875,
-  "documentation_through": 875,
+  "research_checkpoint": 895,
+  "documentation_through": 895,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_windows": 18,
-    "completed_window_records": 360,
-    "partial_window": [
-      858,
-      877
-    ],
+    "completed_window_records": 380,
+    "completed_windows": 19,
     "partial_records": 18,
-    "verified_primary_evidence_hashes": 378,
-    "technical_closure": false
+    "partial_window": [
+      878,
+      897
+    ],
+    "technical_closure": false,
+    "verified_primary_evidence_hashes": 398
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 854,
+    "indexed_source_records": 874,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -60,7 +60,10 @@
     "independent_source_stage_objects_cp855": 835,
     "regenerated_objects_cp875": 920,
     "retained_objects_cp875": 194,
-    "independent_source_stage_objects_cp875": 916
+    "independent_source_stage_objects_cp875": 916,
+    "regenerated_objects_cp895": 1012,
+    "retained_objects_cp895": 102,
+    "independent_source_stage_objects_cp895": 1008
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -231,11 +234,25 @@
       "clean_source_build": "HOLD",
       "runtime": "HOLD",
       "portable_batch_tool": "HOLD"
+    },
+    "research_cp876_895": {
+      "new_regenerated_inputs": 92,
+      "mig_source_prerequisites_matched": 38,
+      "mig_objects_admitted": 35,
+      "mig_objects_held": 3,
+      "retained_link_identity": true,
+      "duplicate_worker_rejection": "PASS_SCOPED",
+      "post_group_resume": "PASS_SCOPED_SIMULATED",
+      "corrupted_object_rejection": "PASS_SCOPED",
+      "clean_source_build": "HOLD",
+      "runtime": "HOLD",
+      "portable_batch_tool": "HOLD",
+      "source_license_clearance": "HOLD"
     }
   },
-  "next": "Continue reviewed Batch 03 recipe families and independent P0 functional prerequisites. Preserve AMD admission, hosted, SDK, licensing and release gates.",
+  "next": "Continue eligible reviewed source families and feasible P0 functional prerequisites; preserve AMD admission, hosted, SDK, licensing and release gates.",
   "references": {
-    "current_report": "research/2026-11/updates-856-875/README.md",
+    "current_report": "research/2026-11/updates-876-895/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
