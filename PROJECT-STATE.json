@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 855,
-  "documentation_through": 855,
+  "research_checkpoint": 875,
+  "documentation_through": 875,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_windows": 17,
-    "completed_window_records": 340,
+    "completed_windows": 18,
+    "completed_window_records": 360,
     "partial_window": [
-      838,
-      857
+      858,
+      877
     ],
     "partial_records": 18,
-    "verified_primary_evidence_hashes": 358,
+    "verified_primary_evidence_hashes": 378,
     "technical_closure": false
   },
   "monograph": {
     "public_chapters": 47,
-    "indexed_source_records": 834,
+    "indexed_source_records": 854,
     "through_checkpoint": 68,
     "next_record": "R0048",
     "next_checkpoint": 69,
@@ -57,7 +57,10 @@
     "independent_source_stage_objects_cp835": 760,
     "regenerated_objects_cp855": 839,
     "retained_objects_cp855": 275,
-    "independent_source_stage_objects_cp855": 835
+    "independent_source_stage_objects_cp855": 835,
+    "regenerated_objects_cp875": 920,
+    "retained_objects_cp875": 194,
+    "independent_source_stage_objects_cp875": 916
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -214,11 +217,25 @@
       "clean_source_build": "HOLD",
       "runtime": "HOLD",
       "portable_batch_tool": "HOLD"
+    },
+    "research_cp856_875": {
+      "new_regenerated_inputs": 81,
+      "hfs_matched": 37,
+      "hfs_retained": 3,
+      "batch03_initial_queues": 2,
+      "batch03_objects": 23,
+      "retained_link_identity": true,
+      "clock_arithmetic": "PASS_SCOPED_SYNTHETIC",
+      "clock_return": "HOLD",
+      "timer_delivery": "HOLD",
+      "clean_source_build": "HOLD",
+      "runtime": "HOLD",
+      "portable_batch_tool": "HOLD"
     }
   },
-  "next": "Continue qualified source regeneration, remaining generated implementation recipes and retained-source provenance; maintain AMD, hosted, SDK, licensing and release gates. Batch 03 remains unqualified.",
+  "next": "Continue reviewed Batch 03 recipe families and independent P0 functional prerequisites. Preserve AMD admission, hosted, SDK, licensing and release gates.",
   "references": {
-    "current_report": "research/2026-11/updates-836-855/README.md",
+    "current_report": "research/2026-11/updates-856-875/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",

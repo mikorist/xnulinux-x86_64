@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP855, 2026-11-28. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP875, 2026-11-28. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -124,3 +124,7 @@ CP816-835: accepted regenerated inputs increased from 692 to 764 of 1,114; 350 r
 ## CP836-855 scoped results
 
 CP836-855: accepted regenerated inputs increased from 764 to 839 of 1,114; 275 remain retained. Historical IIG declarations and compatibility-header prerequisites are qualified within their tested scope, and all 64 CP811 original C++ candidates now match. Final build metadata and additional BSD objects also match. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-836-855/README.md).
+
+## CP856-875 scoped results
+
+CP856-875: accepted regenerated inputs increased from 839 to 920 of 1,114; 194 remain retained. Thirty-seven of forty HFS inputs match, and the first two bounded Batch 03 queues accept 23 original-source or existing project-authored objects. All complete retained-input links match CP602 on both hosts. Synthetic clock arithmetic passes; actual AMD clock return and timer delivery remain HOLD. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-856-875/README.md).

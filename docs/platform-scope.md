@@ -23,7 +23,7 @@ These are intended capabilities, not a shipping platform. QEMU/KVM are developme
 
 Sources: [full executable reproduction and machine-layer research](../research/2026-11/hosted/amd-machine-layer.md), [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md), [qualification matrix](qualification-matrix.md).
 
-## Current research snapshot through CP855 (November 28, 2026)
+## Current research snapshot through CP875 (November 28, 2026)
 
 - CP602 independently reproduces the same 1,114-input unstripped executable on Intel and Ryzen; six strict Broadwell TCG UP runs pass the owned Darwin PID 1 fixture and Mach/BSD returns.
 - AMD Milan TCG UP startup now passes MCA, VM/bootstrap, UP CPU/FPU initialization, memory-type initialization and machine_init. Earlier observations reached the RTC/lock-timeout boundary; CP622 records an explicit unqualified AMD admission rejection. Full clock return and AMD userspace are not established.
@@ -48,4 +48,4 @@ The [post-kernel plan](post-kernel-platform.md) separates version-matched open r
 
 [CP642](../research/2026-11/checkpoint-642.md) verifies a retained offline image conversion helper only; graphics and hosted execution remain separate gates.
 
-Latest evidence: CP836-855: accepted regenerated inputs increased from 764 to 839 of 1,114; 275 remain retained. Historical IIG declarations and compatibility-header prerequisites are qualified within their tested scope, and all 64 CP811 original C++ candidates now match. Final build metadata and additional BSD objects also match. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-836-855/README.md).
+Latest evidence: CP856-875: accepted regenerated inputs increased from 839 to 920 of 1,114; 194 remain retained. Thirty-seven of forty HFS inputs match, and the first two bounded Batch 03 queues accept 23 original-source or existing project-authored objects. All complete retained-input links match CP602 on both hosts. Synthetic clock arithmetic passes; actual AMD clock return and timer delivery remain HOLD. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-856-875/README.md).
