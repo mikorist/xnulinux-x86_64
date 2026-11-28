@@ -36,12 +36,12 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 
 ## Current status
 
-**CP895 | November 28, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-876-895/README.md)**
+**CP915 | November 28, 2026 | [Project state](PROJECT-STATE.json) | [Latest research](research/2026-11/updates-896-915/README.md)**
 
 | Research milestone | Evidence |
 | --- | --- |
 | Monterey standalone Intel-model PID 1 | CP627: ordinary boot without debugger on both hosts, 92.08 s and 91.35 s |
-| Reproducible retained executable | CP895: 1,012 regenerated and 102 retained of 1,114 inputs; exact CP602 retained-link image |
+| Reproducible retained executable | CP915: 1,050 regenerated and 64 retained of 1,114 inputs; exact CP602 retained-link image |
 | AMD model startup | CP622: admission remains deliberately unqualified; full boot HOLD |
 | Native Ryzen Linux KVM components | CP460: strict 94/94 on each of two guest kernels; not full hosted XNU |
 | Monterey version descriptor | CP629: offline identity PASS on both hosts, nine negative controls rejected on each |
@@ -51,7 +51,15 @@ No magic EFI folder, no mystery installer. If your GPU appears in a source direc
 | Versioned open SDK | CP754: 249 staged headers; declarations only |
 | Clean-source build and complete hosted runtime | HOLD |
 
-**Next:** qualify the remaining 102 retained inputs in reviewed recipe families using bounded batch workers. Batch 03 queues 1-11 have scoped dispositions, including the held fourth queue; duplicate-worker rejection and post-group resume are qualified in controlled fixtures. AMD admission, source licensing, SDK/runtime and release remain HOLD.
+**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+
+**B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
+
+**C: Linux-hosted Monterey.** Primary architecture objective: bounded hosted kernel execution and dependable lifecycle/recovery, then a controlled project-owned Darwin program in that hosted context. CP899/900/911/912 are scoped userspace fixtures, not native hosted XNU. No execution architecture has been selected; A need not finish before eligible B/C work.
+
+The public ARM64 FKI v0 header is a reference, not a qualified x86 ABI. Compare hosted execution models using compatibility, failure containment, maintainability, host ownership and existing evidence before choosing one; the historical shadow-CR3 proposal is a hypothesis. A versioned semantic host-service contract and version/vendor adapters are intended, not an implemented production interface.
+
+**Next:** prioritize eligible hosted and AMD functional prerequisites, with independent source reproduction and license review in parallel.
 
 See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roadmap.md) and [research chronology](research/README.md). The current public research snapshot is distinct from the last closed regular integration review (CP497).
 
@@ -62,7 +70,7 @@ See the [qualification matrix](docs/qualification-matrix.md), [roadmap](docs/roa
 | Target | XNU family | Current status |
 | --- | --- | --- |
 | Monterey 12.5 | 8020.140.41 | Active development baseline; [validated descriptor](targets/monterey/target.json) |
-| Tahoe 26 | 12377 | Active development (preparation; implementation gated); [descriptor](targets/tahoe/target.json), [dependency comparison](research/2026-11/checkpoint-640.md); no qualified build |
+| Tahoe 26 | 12377 | Active preparation; implementation gated; [descriptor](targets/tahoe/target.json), [dependency comparison](research/2026-11/checkpoint-640.md); no qualified build |
 | Golden Gate 27 | Source pin unverified | Research only; [x86_64 feasibility](docs/golden-gate-research.md) |
 
 Shared platform contracts, build/test infrastructure and Linux backends are reused where compatibility is demonstrated. Source pins, generated headers, patches, binaries, Darwin runtimes and qualification remain version-specific. Intel and AMD qualification is independent for each target. See [version targets and entry gates](docs/version-targets.md).
@@ -73,7 +81,7 @@ The original ARM64 implementation remains preserved in [arm64-reference](https:/
 
 XNULINUX x86_64 is developing a complete PC-oriented compatibility platform, not merely a kernel port for one CPU or a set of CPU-specific patches. The intended platform combines a vendor-aware XNU machine layer, Linux-hosted execution and version-matched Darwin runtimes supporting headless, desktop and seamless application modes. The complete platform is the engineering goal, not a claim of present functionality. The [approved post-kernel plan](docs/post-kernel-platform.md) maps retained ARM device and GPU sources, software rendering, Linux GPU backends, open runtime and the new desktop/seamless work. We reuse proven components rather than write a new hardware driver for every PC.
 
-Independent Intel and Ryzen builds, CPU-model experiments, negative tests, cross-vendor regressions and native hardware measurements are central to this work. The reviewed baseline includes byte-identical reproduction of the 1,089-input standalone executable, early AMD machine-layer diagnostics under Milan TCG, a full Intel PID 1 regression, and native AMD KVM component replay with strict 94/94 results on each of two Linux guest kernels. SRSO qualification applies to that native KVM configuration; guest TSA and Hyper-V SRSO remain open. See [platform scope and evidence](docs/platform-scope.md).
+Independent Intel and Ryzen builds, CPU-model experiments, negative tests, cross-vendor regressions and native hardware measurements are central to this work. The reviewed historical milestones include byte-identical reproduction of the earlier 1,089-input standalone executable; the current CP602 retained-link reference has 1,114 inputs. Other milestones include early AMD machine-layer diagnostics under Milan TCG, a full Intel PID 1 regression, and native AMD KVM component replay with strict 94/94 results on each of two Linux guest kernels. SRSO qualification applies to that native KVM configuration; guest TSA and Hyper-V SRSO remain open. See [platform scope and evidence](docs/platform-scope.md).
 
 ## Project philosophy
 
@@ -98,6 +106,8 @@ For each qualified version target, one hosted XNU kernel and its shared, version
 | **Headless** | Run Darwin command-line programs, development tools and services without a graphical environment or a mandatory proprietary macOS installation. |
 
 Seamless application execution is a major practical goal of the x86_64 project. The complete desktop is a separate, optional mode. For each version target, all three modes are intended to share its hosted kernel and version-matched runtime rather than starting a separate kernel for every application.
+
+The intended product runs on the same physical Intel or AMD CPU as its Linux host, without mandatory conventional VM or instruction emulation. Linux retains hardware ownership. Real GPU acceleration through qualified Linux graphics infrastructure and maximum practical measured performance are goals, not demonstrated capabilities. Desktop may be the primary fullscreen startup session; Headless and Seamless remain separate modes of the shared runtime. Prefer compact maintainable code, mature host services, measured memory and runtime cost, focused defect regressions and preserved negative evidence. Lossless distribution compression is separate from runtime optimization. No fixed performance ratio, universal device support, bug-free claim or new release gate.
 
 ## Intended architecture
 
@@ -156,11 +166,11 @@ CPU-specific behavior is selected by detected capabilities and vendor-aware adap
 
 ## Detailed engineering status
 
-**Current published research snapshot: November 28, 2026, CP895. Last closed regular integration review: CP497.**
+**Current published research snapshot: November 28, 2026, CP915. Last closed regular integration review: CP497.**
 
-The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Nineteen recorded 20-checkpoint windows (CP498-877) remain open for technical review, with 18 subsequent checkpoints; all 398 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
+The [project state manifest](PROJECT-STATE.json) is the compact status snapshot for this publication. Twenty recorded 20-checkpoint windows (CP498-897) remain open for technical review, with 18 subsequent checkpoints; all 418 primary evidence hashes were verified. Historical chapters and full individual evidence clearance are tracked separately.
 
-CP876-895: accepted regenerated inputs increased from 920 to 1,012 of 1,114 (90.84%); 102 remain retained. All 38 historical MIG C source prerequisites match, with 35 corresponding objects admitted and three declaration compile failures held. Additional IOKit, CPU contract, libdispatch, compiler-rt, Mbed TLS and BearSSL objects match within their recorded scope. Complete retained-input links match CP602 on both hosts. Actual AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [CP876-895 research update](research/2026-11/updates-876-895/README.md).
+CP896-915: accepted regenerated inputs increased from 1,012 to 1,050 of 1,114 (94.25%); 64 remain retained. Of the 1,050 regenerated inputs, 1,046 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. Scoped hosted userspace component and recovery regressions do not establish native XNU execution. AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [CP896-915 research update](research/2026-11/updates-896-915/README.md).
 
 **Next:** Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. Stage A release remains HOLD. The current [roadmap](docs/roadmap.md) and [state manifest](PROJECT-STATE.json) track the exact gates.
 
@@ -287,10 +297,10 @@ The historical kernel matrix covers specific components and configurations, not 
 | Target | XNU source family | Status |
 | --- | --- | --- |
 | macOS Monterey 12.5 | `8020.140.41` | Current shared x86_64 development baseline |
-| macOS Tahoe 26 | `12377` | Active development; implementation gated |
+| macOS Tahoe 26 | `12377` | Active preparation; implementation gated |
 | macOS Golden Gate 27 | Unverified | Research only; Intel/AMD feasibility unproven |
 
-**Project goal: one XNULINUX, multiple version targets.** Monterey is the active baseline and Tahoe is an active development target; the goal is to retain both rather than replace one with the other. Share the versioned FKI contract, build orchestration, regression infrastructure, Linux backends and compatible application integration. Keep source pins, generated headers, patches, binaries and version-matched Darwin runtime separate. Qualify Intel and AMD independently for each target. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe; preparatory source research can proceed earlier. Develop headless, desktop and seamless modes for both without requiring a completed Monterey desktop before Tahoe work. The upstream `12377.121.6` revision is the verified Tahoe 26.5 source reference; the build and runtime remain unqualified. Golden Gate is a separate [research-only target](docs/golden-gate-research.md), not a supported x86_64 system.
+**Project goal: one XNULINUX, multiple version targets.** Monterey is the active baseline and Tahoe is an active preparation target; the goal is to retain both rather than replace one with the other. Share the versioned FKI contract, build orchestration, regression infrastructure, Linux backends and compatible application integration. Keep source pins, generated headers, patches, binaries and version-matched Darwin runtime separate. Qualify Intel and AMD independently for each target. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe; preparatory source research can proceed earlier. Develop headless, desktop and seamless modes for both without requiring a completed Monterey desktop before Tahoe work. The upstream `12377.121.6` revision is the verified Tahoe 26.5 source reference; the build and runtime remain unqualified. Golden Gate is a separate [research-only target](docs/golden-gate-research.md), not a supported x86_64 system.
 
 The intention is to reuse validated common FKI infrastructure through version-specific adapters, without mixing incompatible source revisions or build artifacts.
 

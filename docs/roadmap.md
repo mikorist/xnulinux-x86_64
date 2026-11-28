@@ -28,7 +28,7 @@ Hosted integration may proceed in parallel with standalone reference tests. GPU 
 
 ## Subsequent x86_64 source target
 
-One XNULINUX supports multiple version targets. Monterey remains the active baseline; Tahoe is an active development target; preparatory source analysis and version-matched build planning proceed in parallel. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe. Retain both targets and develop headless, desktop and seamless for both with shared compatible layers and per-version adapters. The exact Tahoe target pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory. Bounded preparation is recommended after CP630; the implementation gate remains stable physical Linux-hosted Monterey Intel execution. See [version-target entry plan](version-targets.md).
+One XNULINUX supports multiple version targets. Monterey remains the active baseline; Tahoe is an active preparation target; preparatory source analysis and version-matched build planning proceed in parallel. After stable physical Linux-hosted Monterey execution, implement and qualify Tahoe. Retain both targets and develop headless, desktop and seamless for both with shared compatible layers and per-version adapters. The exact Tahoe target pin and hardware/userspace requirements require separate qualification. No intermediate macOS version port is mandatory. Bounded preparation is recommended after CP630; the implementation gate remains stable physical Linux-hosted Monterey Intel execution. See [version-target entry plan](version-targets.md).
 
 ## Parallel Intel and AMD x86_64 development
 
@@ -46,13 +46,13 @@ CP477 extends early AMD discovery with independently tested clock, performance, 
 
 CP460 closes the native SRSO gate for the tested Ryzen Linux KVM component configuration. Guest TSA and CPU feature dependency are separate open items, as is Hyper-V SRSO exposure. Continue AMD machine-layer development; see [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md).
 
-## Current research boundary (CP895)
+## Current research boundary (CP915)
 
-**Parallel priorities:** preserve CP627 Intel-model ordinary boot; close Monterey source regeneration and hosted/AMD gates; continue active Tahoe preparation; complete Stage A package review and common pinned native build; review outstanding technical windows in order. The approved post-kernel plan adds independent source/host-only preparation, not a requirement to finish graphics before kernel qualification.
+**Parallel priorities:** prioritize qualified hosted and AMD functional prerequisites, preserve CP627 Intel-model ordinary boot, continue independently eligible source regeneration; continue active Tahoe preparation; complete Stage A package review and common pinned native build; review outstanding technical windows in order. The approved post-kernel plan adds independent source/host-only preparation, not a requirement to finish graphics before kernel qualification.
 
 Earlier Milan TCG UP observations establish machine_init return and the RTC/lock-timeout observation boundary; CP622 separately records the explicit unqualified admission rejection. CP602 is the current retained standalone candidate, with six strict Broadwell reference passes. Prior early discovery, normal MCA and UP/FPU lifecycle milestones are historical completed scoped tests rather than the immediate next tasks.
 
-Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, then qualify SMP, physical and hosted execution separately. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/updates-876-895/README.md) and [earlier retained-link report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP895 does not close it.
+Next: establish the complete AMD clock lifecycle, timer delivery and CPU admission; progress toward full AMD standalone PID 1, retain Intel regression, and qualify SMP and physical execution separately. Hosted integration progresses independently when its prerequisites are eligible. Continue source provenance and public reproducibility independently. See [current report](../research/2026-11/updates-896-915/README.md) and [earlier retained-link report](../research/2026-11/hosted/commpage-reproduction-599-612.md). CP613-620 establish additional offline and build reproducibility evidence, not a new boot. See [chronological outcomes](../research/2026-11/checkpoint-613-620.md). The regular technical review remains open from CP498; chronological documentation through CP915 does not close it.
 
 Historical CP621: an independent completion-evidence gap was identified: four ordinary smoke launches time out without a validated completion marker. The subsequent CP626/627 Intel-model control resolves that scoped evidence gap; AMD qualification remains separate. No new AMD clock return or boot is qualified. [CP621 report](../research/2026-11/checkpoint-621.md).
 
@@ -108,6 +108,16 @@ CP756-775: original Monterey declaration probes expose 18 missing generated user
 
 Prioritize actionable existing HOLD prerequisites, including independent kernel source regeneration, genuine Monterey SDK declarations, common native build environment and AMD/hosted qualification; review the oldest open technical window. Continue Tahoe preparation and Golden Gate feasibility research without changing implementation gates. [Research update](../research/2026-11/updates-756-775/README.md).
 
-## Current work after CP895
+## Current work after CP915
 
-Latest evidence: CP876-895: accepted regenerated inputs increased from 920 to 1,012 of 1,114 (90.84%); 102 remain retained. All 38 historical MIG C source prerequisites match, with 35 corresponding objects admitted and three declaration compile failures held. Additional IOKit, CPU contract, libdispatch, compiler-rt, Mbed TLS and BearSSL objects match within their recorded scope. Complete retained-input links match CP602 on both hosts. Actual AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-876-895/README.md).
+Latest evidence: CP896-915: accepted regenerated inputs increased from 1,012 to 1,050 of 1,114 (94.25%); 64 remain retained. Of the 1,050 regenerated inputs, 1,046 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. Scoped hosted userspace component and recovery regressions do not establish native XNU execution. AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-896-915/README.md).
+
+## Functional priorities after CP915
+
+**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+
+**B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
+
+**C: Linux-hosted Monterey.** Primary architecture objective: bounded hosted kernel execution and dependable lifecycle/recovery, then a controlled project-owned Darwin program in that hosted context. CP899/900/911/912 are scoped userspace fixtures, not native hosted XNU. No execution architecture has been selected; A need not finish before eligible B/C work.
+
+The intended product runs on the same physical Intel or AMD CPU as its Linux host, without mandatory conventional VM or instruction emulation. Linux retains hardware ownership. Real GPU acceleration through qualified Linux graphics infrastructure and maximum practical measured performance are goals, not demonstrated capabilities. Desktop may be the primary fullscreen startup session; Headless and Seamless remain separate modes of the shared runtime. Prefer compact maintainable code, mature host services, measured memory and runtime cost, focused defect regressions and preserved negative evidence. Lossless distribution compression is separate from runtime optimization. No fixed performance ratio, universal device support, bug-free claim or new release gate.

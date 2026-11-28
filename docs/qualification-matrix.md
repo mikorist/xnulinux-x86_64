@@ -1,6 +1,6 @@
 # Qualification matrix
 
-Snapshot: research documentation through CP895, 2026-11-28. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
+Snapshot: research documentation through CP915, 2026-11-28. Last closed regular integration review: CP497. Historical component results retain their original scope. Results apply to the stated scope only. Parallel Intel/Ryzen development is active.
 
 | Area | Recorded status | Remaining qualification |
 | --- | --- | --- |
@@ -59,14 +59,14 @@ Snapshot: research documentation through CP895, 2026-11-28. Last closed regular 
 
 The latest research checkpoint must be consulted before using this snapshot for a public status announcement.
 
-The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. Twelve recorded 20-checkpoint windows through CP737 and 18 later records remain open; verified evidence hashes are not equivalent to technical closure.
+The [project state manifest](../PROJECT-STATE.json) records the distinct current research, regular review, monograph and ordinary-boot boundaries. Twenty recorded 20-checkpoint windows through CP897 and 18 later records remain open; 418 primary hashes verified; verified evidence hashes are not equivalent to technical closure.
 
 ## Version target boundary
 
 | Target | Current evidence | Open qualification |
 | --- | --- | --- |
 | Monterey 8020.140.41 | CP627 scoped Intel-model ordinary PID 1 PASS | AMD admission, native/hosted execution, clean-source build |
-| Tahoe 12377 (active development) | CP631 descriptor; CP652 release mapping for 13 dependencies | Qualified target build, ABI, Intel/AMD runtime, native/hosted execution |
+| Tahoe 12377 (active preparation; implementation gated) | CP631 descriptor; CP652 release mapping for 13 dependencies | Qualified target build, ABI, Intel/AMD runtime, native/hosted execution |
 | Golden Gate 27 (research only) | No verified source pin or x86_64 build | Source availability, architecture and userspace feasibility; all qualification HOLD |
 
 CP629: Monterey descriptor identity validation PASS on both hosts; no new build or runtime qualification.
@@ -132,3 +132,15 @@ CP856-875: accepted regenerated inputs increased from 839 to 920 of 1,114; 194 r
 ## CP876-895 scoped results
 
 CP876-895: accepted regenerated inputs increased from 920 to 1,012 of 1,114 (90.84%); 102 remain retained. All 38 historical MIG C source prerequisites match, with 35 corresponding objects admitted and three declaration compile failures held. Additional IOKit, CPU contract, libdispatch, compiler-rt, Mbed TLS and BearSSL objects match within their recorded scope. Complete retained-input links match CP602 on both hosts. Actual AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-876-895/README.md).
+
+## CP896-915 scoped results
+
+CP896-915: accepted regenerated inputs increased from 1,012 to 1,050 of 1,114 (94.25%); 64 remain retained. Of the 1,050 regenerated inputs, 1,046 have independent source-stage evidence. Complete retained-input links match CP602 on both hosts. Scoped hosted userspace component and recovery regressions do not establish native XNU execution. AMD clock return and timer delivery, full clean-source build, hosted runtime, source licensing and release remain HOLD. [Research update](../research/2026-11/updates-896-915/README.md).
+
+**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+
+**B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
+
+**C: Linux-hosted Monterey.** Primary architecture objective: bounded hosted kernel execution and dependable lifecycle/recovery, then a controlled project-owned Darwin program in that hosted context. CP899/900/911/912 are scoped userspace fixtures, not native hosted XNU. No execution architecture has been selected; A need not finish before eligible B/C work.
+
+The public ARM64 FKI v0 header is a reference, not a qualified x86 ABI. Compare hosted execution models using compatibility, failure containment, maintainability, host ownership and existing evidence before choosing one; the historical shadow-CR3 proposal is a hypothesis. A versioned semantic host-service contract and version/vendor adapters are intended, not an implemented production interface.

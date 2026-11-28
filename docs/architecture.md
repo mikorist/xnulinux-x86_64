@@ -31,7 +31,7 @@ The architecture is intended as a complete PC-oriented compatibility platform, b
 | Architecture | XNU baseline |
 | --- | --- |
 | x86_64 Monterey (active) | 8020.140.41 |
-| x86_64 Tahoe (active development) | 12377 family; 12377.121.6 comparison reference |
+| x86_64 Tahoe (active preparation; implementation gated) | 12377 family; 12377.121.6 comparison reference |
 | x86_64 Golden Gate (research only) | Source pin and feasibility unverified; [research plan](golden-gate-research.md) |
 | ARM64 reference | Upstream 12377.121.6, preserved separately |
 
@@ -66,3 +66,15 @@ One XNULINUX is intended to maintain Monterey 8020 and Tahoe 12377 targets for I
 Adding a version target must extend the existing platform rather than duplicate it. Use explicit target descriptors and validated common interfaces, with per-version artifacts and regression evidence. See [version-target entry plan](version-targets.md).
 
 The repository layout in the version-target entry plan was approved by the owner on November 27, 2026. Introduce it incrementally without invalidating existing builds or moving historical artifacts.
+
+## Hosted-first architecture review (CP915 publication)
+
+**A: Historical reproduction.** 1,050/1,114 regenerated inputs; 64 retained. This is CP602 byte identity, not product completion.
+
+**B: Functional Monterey.** CP627 remains the Intel-model standalone owned Darwin PID 1 control. Actual AMD clock return, timer delivery and ordinary admission remain HOLD.
+
+**C: Linux-hosted Monterey.** Primary architecture objective: bounded hosted kernel execution and dependable lifecycle/recovery, then a controlled project-owned Darwin program in that hosted context. CP899/900/911/912 are scoped userspace fixtures, not native hosted XNU. No execution architecture has been selected; A need not finish before eligible B/C work.
+
+The public ARM64 FKI v0 header is a reference, not a qualified x86 ABI. Compare hosted execution models using compatibility, failure containment, maintainability, host ownership and existing evidence before choosing one; the historical shadow-CR3 proposal is a hypothesis. A versioned semantic host-service contract and version/vendor adapters are intended, not an implemented production interface.
+
+The intended product runs on the same physical Intel or AMD CPU as its Linux host, without mandatory conventional VM or instruction emulation. Linux retains hardware ownership. Real GPU acceleration through qualified Linux graphics infrastructure and maximum practical measured performance are goals, not demonstrated capabilities. Desktop may be the primary fullscreen startup session; Headless and Seamless remain separate modes of the shared runtime. Prefer compact maintainable code, mature host services, measured memory and runtime cost, focused defect regressions and preserved negative evidence. Lossless distribution compression is separate from runtime optimization. No fixed performance ratio, universal device support, bug-free claim or new release gate.

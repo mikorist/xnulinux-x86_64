@@ -48,3 +48,5 @@ CP642: [synthetic framebuffer conversion](../../research/2026-11/checkpoint-642.
 - [CP856-875 research update](../../research/2026-11/updates-856-875/README.md): 20 reviewed outcomes and primary hashes; no new boot or complete replay bundle.
 
 - [CP876-895 research update](../../research/2026-11/updates-876-895/README.md): 20 reviewed outcomes and primary hashes; no new boot or complete replay bundle.
+
+- [CP896-915 research update](../../research/2026-11/updates-896-915/README.md): 20 reviewed outcomes and primary hashes; no new native boot or complete replay bundle.

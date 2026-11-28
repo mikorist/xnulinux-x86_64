@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "research_checkpoint": 895,
-  "documentation_through": 895,
+  "research_checkpoint": 915,
+  "documentation_through": 915,
   "last_closed_regular_review": 497,
   "active_review_window": [
     498,
     517
   ],
   "review_backlog": {
-    "completed_window_records": 380,
-    "completed_windows": 19,
+    "completed_window_records": 400,
+    "completed_windows": 20,
     "partial_records": 18,
     "partial_window": [
-      878,
-      897
+      898,
+      917
     ],
     "technical_closure": false,
-    "verified_primary_evidence_hashes": 398
+    "verified_primary_evidence_hashes": 418
   },
   "monograph": {
     "public_chapters": 47,
@@ -63,7 +63,10 @@
     "independent_source_stage_objects_cp875": 916,
     "regenerated_objects_cp895": 1012,
     "retained_objects_cp895": 102,
-    "independent_source_stage_objects_cp895": 1008
+    "independent_source_stage_objects_cp895": 1008,
+    "regenerated_objects_cp915": 1050,
+    "retained_objects_cp915": 64,
+    "independent_source_stage_objects_cp915": 1046
   },
   "qualification": {
     "intel_observed_standalone": {
@@ -248,11 +251,20 @@
       "runtime": "HOLD",
       "portable_batch_tool": "HOLD",
       "source_license_clearance": "HOLD"
+    },
+    "research_cp896_915": {
+      "new_regenerated_inputs": 38,
+      "retained_link_identity": true,
+      "hosted_userspace_component_regressions": "PASS_SCOPED",
+      "native_hosted": "HOLD",
+      "amd_clock_timer_admission": "HOLD",
+      "clean_source_build": "HOLD",
+      "source_license_clearance": "HOLD"
     }
   },
-  "next": "Continue eligible reviewed source families and feasible P0 functional prerequisites; preserve AMD admission, hosted, SDK, licensing and release gates.",
+  "next": "Prioritize eligible hosted and AMD functional prerequisites; independently advance source reproduction, SDK and license work. Tahoe preparation remains active; implementation gate unchanged.",
   "references": {
-    "current_report": "research/2026-11/updates-876-895/README.md",
+    "current_report": "research/2026-11/updates-896-915/README.md",
     "build_report": "research/2026-11/checkpoint-613-620.md",
     "qualification_matrix": "docs/qualification-matrix.md",
     "roadmap": "docs/roadmap.md",
@@ -398,6 +410,32 @@
       "full_framework": "HOLD",
       "live_display": "HOLD",
       "license_closure": "HOLD"
+    }
+  },
+  "development_tracks": {
+    "as_of_checkpoint": 915,
+    "historical_reproduction": {
+      "regenerated": 1050,
+      "independent_source_stage": 1046,
+      "retained": 64,
+      "total": 1114,
+      "scope": "CP602 byte identity only"
+    },
+    "functional_monterey": {
+      "status": "HOLD",
+      "intel_control": "CP627 scoped TCG UP",
+      "remaining": [
+        "AMD clock return",
+        "timer delivery",
+        "ordinary admission"
+      ]
+    },
+    "hosted_monterey": {
+      "status": "HOLD",
+      "priority": "Primary architecture objective",
+      "latest_scoped_component": "CP912 userspace harness recovery; no native XNU",
+      "architecture_selection": "OPEN",
+      "public_arm_fki_v0": "Reference only"
     }
   }
 }

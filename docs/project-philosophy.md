@@ -23,3 +23,7 @@ GNU's Not Unix. XNU's Not Unix. XNU is not Linux. XNULINUX is what we call the a
 GNU's Not Unix. XNU's Not Unix. XNU is not Linux. Hence XNULINUX.
 
 The humor ends where the technical distinction begins: Linux remains the host kernel, XNU retains its own semantics, and GNU userspace is neither a requirement nor a target for replacement.
+
+## Physical hardware and engineering goals
+
+The intended product runs on the same physical Intel or AMD CPU as its Linux host, without mandatory conventional VM or instruction emulation. Linux retains hardware ownership. Real GPU acceleration through qualified Linux graphics infrastructure and maximum practical measured performance are goals, not demonstrated capabilities. Desktop may be the primary fullscreen startup session; Headless and Seamless remain separate modes of the shared runtime. Prefer compact maintainable code, mature host services, measured memory and runtime cost, focused defect regressions and preserved negative evidence. Lossless distribution compression is separate from runtime optimization. No fixed performance ratio, universal device support, bug-free claim or new release gate.

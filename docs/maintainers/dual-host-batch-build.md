@@ -32,3 +32,5 @@ The current lab implementation is tied to historical input manifests, specific q
 Use an example configuration with placeholders and keep deployment settings local. Do not distribute authentication material, host identifiers, private paths, transport configuration, raw logs, private plans, workspace snapshots, generated kernel binaries or private dependency manifests. Publish a documented example input set and a reproducible test fixture instead. Public documentation and tool code have separate acceptance gates; no release is implied by this description.
 
 CP895 reaches 1,012 regenerated and 102 retained inputs. See the [CP876-895 report](../../research/2026-11/updates-876-895/README.md).
+
+CP915 reaches 1,050 regenerated and 64 retained inputs. See the [CP896-915 report](../../research/2026-11/updates-896-915/README.md).
