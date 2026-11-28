@@ -23,7 +23,7 @@ These are intended capabilities, not a shipping platform. QEMU/KVM are developme
 
 Sources: [full executable reproduction and machine-layer research](../research/2026-11/hosted/amd-machine-layer.md), [native AMD KVM qualification](../research/2026-11/hosted/native-amd-kvm.md), [qualification matrix](qualification-matrix.md).
 
-## Current research snapshot through CP815 (November 27, 2026)
+## Current research snapshot through CP835 (November 28, 2026)
 
 - CP602 independently reproduces the same 1,114-input unstripped executable on Intel and Ryzen; six strict Broadwell TCG UP runs pass the owned Darwin PID 1 fixture and Mach/BSD returns.
 - AMD Milan TCG UP startup now passes MCA, VM/bootstrap, UP CPU/FPU initialization, memory-type initialization and machine_init. Earlier observations reached the RTC/lock-timeout boundary; CP622 records an explicit unqualified AMD admission rejection. Full clock return and AMD userspace are not established.
@@ -48,4 +48,4 @@ The [post-kernel plan](post-kernel-platform.md) separates version-matched open r
 
 [CP642](../research/2026-11/checkpoint-642.md) verifies a retained offline image conversion helper only; graphics and hosted execution remain separate gates.
 
-Latest evidence: CP796-815: accepted regenerated inputs increased from 599 to 692 of 1,114; 422 remain retained. Batch 02 completed all 209 candidates. Original C++ and assembly source staging advanced; derived-header provenance and historical assembler byte identity remain HOLD. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-796-815/README.md).
+Latest evidence: CP816-835: accepted regenerated inputs increased from 692 to 764 of 1,114; 350 remain retained. Historical assembler identities and residual Batch 01 recipes are resolved within their tested scope. Twelve historical UIO compatibility objects now match, while 17 distinct derived C++ dependency paths remain HOLD. Complete retained-input links match CP602 on both hosts. No new boot, full clean-source build, runtime, licensing or release qualification. [Research update](../research/2026-11/updates-816-835/README.md).
